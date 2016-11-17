@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p>The <strong>onetimecopy</strong> mode of a sync instructs it to temporarily switch from a <a href="/pushdelta" title="wikilink">pushdelta</a> mode to a <a href="/fullcopy" title="wikilink">fullcopy</a> mode. In other words, it will unconditionally copy over all rows for each table in the sync from the master to the slaves. When finished, Bucardo will automatically set this value back to 0.</p>
+
+<p>If this value is set to <strong>2</strong>, tables will only be copied if:</p>
+
+<ul>
+  <li>there is at least one row on the source</li>
+  <li>there are no rows on the target</li>
+</ul>
+
+<p>This is handy for adding new tables to a <a href="/sync" title="wikilink">sync</a>, in which the target table is empty.</p>
+
+<p>If the target table is *not* empty, but is not identical to the source, the best way to get them in sync is to truncate or delete all the rows from the slave, and then set onetimecopy to a value of 2. (While you can do the same thing by simply setting it to 1, that will also copy over all the rows for every other table in the sync).</p>
+
+<p>To change the onetimecopy value of a sync, just run:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl update sync </code><syncname>` onetimecopy=2`</syncname></p>
+
+<p>A onetimecopy event will appear as a <a href="/fullcopy" title="wikilink">fullcopy</a> sync in the <a href="/web_stats" title="wikilink">web stats</a> page.</p>
+
+<p><a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

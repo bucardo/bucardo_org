@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>NOTOC</strong></p>
+
+<p>The <strong>add database</strong> command is used to teach Bucardo about a database that will be involved in replication. It is usually the first step performed after the initial <a href="/Bucardo/install" title="wikilink">install</a>.</p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge"> bucardo add database A host=example.com dbname=sales</code></p>
+
+<p>This will creates a new database entry named <strong>A</strong> which resides on host <strong>example.com</strong> and is named <strong>sales</strong>. Note that “sales” is the actual database name that Bucardo will connect to, while “A” is how Bucardo refers to this specific database, for example when calling <a href="/add_dbgroup" title="wikilink">add dbgroup</a>. A connection to the database will be attempted right away: see the Verification section below.</p>
+
+<p>Usage:</p>
+
+<p><code class="highlighter-rouge"> bucardo add database </code><name>` `&lt;dbname=value&gt;` [optional arguments]`</name></p>
+
+<p>The alternate form <strong>add db</strong> is also accepted.</p>
+
+<h3 id="required-arguments">Required arguments:</h3>
+
+<ul>
+  <li>dbname (can also use ‘db’)
+    <ul>
+      <li>The database to connect to.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="optional-arguments">Optional arguments:</h3>
+
+<ul>
+  <li>dbtype (can also use ‘type’)
+    <ul>
+      <li>The type of database we are connecting to. Defaults to ‘postgres’. Other options are drizzle, mongo, mysql, oracle, redis, and sqlite.</li>
+    </ul>
+  </li>
+  <li>dbuser (can also use ‘username’ or ‘user’)
+    <ul>
+      <li>The username to connect as. Defaults to ‘bucardo’.</li>
+    </ul>
+  </li>
+  <li>dbpass (can also use ‘password’)
+    <ul>
+      <li>The password to connect with. Please avoid if possible by using things such as <a href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">Postgres’ pgpass file</a>.</li>
+    </ul>
+  </li>
+  <li>dbport (can also use ‘port’)
+    <ul>
+      <li>The database port to connect to.</li>
+    </ul>
+  </li>
+  <li>dbhost (can also use ‘host’)
+    <ul>
+      <li>The database host to connect to.</li>
+    </ul>
+  </li>
+  <li>dbconn (can also use ‘conn’)
+    <ul>
+      <li>Additional connection parameters. For example, to specify a SID when using an Oracle target:</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge"> bucardo add db foobar type=oracle host=example.com user=scott conn=sid=abc</code></p>
+
+<ul>
+  <li>status
+    <ul>
+      <li>Defaults to ‘active’; the only other choice is ‘inactive’</li>
+    </ul>
+  </li>
+  <li>dbgroup
+    <ul>
+      <li>Which internal <a href="/database_group" title="wikilink">database group</a> to put this database into. Will be created if needed.</li>
+    </ul>
+  </li>
+  <li>addalltables
+    <ul>
+      <li>Automatically add all tables inside of this database. For finer control, see <a href="/add_table" title="wikilink">add_table</a></li>
+    </ul>
+  </li>
+  <li>addallsequences
+    <ul>
+      <li>Automatically add all sequences inside of this database</li>
+    </ul>
+  </li>
+  <li>server_side_prepares (can also use ‘ssp’)
+    <ul>
+      <li>For Postgres databases only, determines if we should use server-side prepares. The default is 1 (on). This may need to be 0 if you are using a connection pooler such as PgBouncer which may get confused by usage of server-side prepares.</li>
+    </ul>
+  </li>
+  <li>dbservice
+    <ul>
+      <li>For Postgres databases, the “service name” to use</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="verification">Verification</h3>
+
+<p>Before a new database is added, a simple connection test if performed to make sure everything is working. Thus, you will need to have the database up and running, as well as have installed any extra Perl modules needed to reach the database. The additional Perl modules you need depend on the database type:</p>
+
+<ul>
+  <li>Postgres: DBD::Pg</li>
+  <li>Drizzle: DBD::Drizzle</li>
+  <li>Mongo: MongoDB</li>
+  <li>Oracle: DBD::Oracle</li>
+  <li>Redis: Redis</li>
+  <li>SQLite: DBD::SQLite</li>
+</ul>
+
+<h3 id="internals">Internals</h3>
+
+<p>New databases cause an insert to the <a href="/bucardo.db_table" title="wikilink">bucardo.db table</a>. A new database group will cause an insert to the <a href="/bucardo.dbgroup_table" title="wikilink">bucardo.dbgroup table</a>. Databases added to that group will cause an insert to the <a href="/bucardo.dbmap_table" title="wikilink">bucardo.dbmap table</a>. Adding tables and sequences will cause inserts to the <a href="/bucardo.goat_table" title="wikilink">bucardo.goat table</a>.</p>
+
+<h3 id="see-also">See also:</h3>
+
+<ul>
+  <li><a href="/Bucardo/list_database" title="wikilink">list_database</a></li>
+  <li><a href="/Bucardo/update_database" title="wikilink">update_database</a></li>
+  <li><a href="/Bucardo/remove_database" title="wikilink">remove_database</a></li>
+</ul>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

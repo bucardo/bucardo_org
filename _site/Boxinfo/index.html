@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>boxinfo</strong> is a Perl script for quickly gathering all sorts of interesting information about a particular computer, which is then put into a HTML or MediaWiki page. It is very handy for being able to see a quick overview of the boxes that you are responsible for. The script has a highly developed <a href="/Postgres" title="wikilink">Postgres</a> section. It was developed at End Point Corporation by Greg Sabino Mullane.</p>
+
+<h3 id="download">Download</h3>
+
+<p>The latest version, 1.4.0, can be downloaded here:</p>
+
+<ul>
+  <li><a href="http://bucardo.org/downloads/boxinfo.pl">boxinfo.pl</a></li>
+  <li><a href="http://bucardo.org/downloads/boxinfo.pl.asc">boxinfo.pl.asc</a></li>
+</ul>
+
+<h3 id="basic-usage">Basic Usage</h3>
+
+<p>Usage is simply to run:</p>
+
+<p><code class="highlighter-rouge"> perl boxinfo.pl</code></p>
+
+<p>It is preferred that the script gets run as the ‘root’ user, as some of the information can only be gathered by that user. Two files are created by the script:</p>
+
+<h4 id="boxinfohtml">boxinfo.html</h4>
+
+<p>This is the final result, either in HTML or MediaWiki format (see the –format argument below). A <a href="/Boxinfo/Example" title="wikilink">sample output page</a> is available.</p>
+
+<h4 id="boxinfodebug">boxinfo.debug</h4>
+
+<p>This is a copy of each command that was run, and the result. Feel free to delete it, it is only useful for debugging.</p>
+
+<h3 id="command-line-options">Command Line Options</h3>
+
+<ul>
+  <li>–version
+    <ul>
+      <li>Returns the version number.</li>
+    </ul>
+  </li>
+  <li>–verbose
+    <ul>
+      <li>Increases the level of verbosity.</li>
+    </ul>
+  </li>
+  <li>–format=X
+    <ul>
+      <li>Which format to output. Valid options are ‘html’ and ‘wiki’. The default is ‘wiki’, which creates the page with special features to support MediaWiki.</li>
+    </ul>
+  </li>
+  <li>–os=X
+    <ul>
+      <li>Overrides automatic detection of the OS with the given name.</li>
+    </ul>
+  </li>
+  <li>–client=X
+    <ul>
+      <li>Overrides automatic detection of the client name (derived from the first part of the hostname). This is used at the top of the output, and defaults to ‘ACME’ if the name cannot be determined.</li>
+    </ul>
+  </li>
+  <li>–postgresonly
+    <ul>
+      <li>Only perform the Postgres-specific parts of the program.</li>
+    </ul>
+  </li>
+  <li>–nopostgres
+    <ul>
+      <li>Skip the Postgres-specific parts of the program.</li>
+    </ul>
+  </li>
+  <li>–skippgport=X
+    <ul>
+      <li>Do not attempt to connect to the Postgres cluster on the given port number.</li>
+    </ul>
+  </li>
+  <li>–nohost
+    <ul>
+      <li>Do not attempt host lookups of IPs. May greatly speed up the running of the script.</li>
+    </ul>
+  </li>
+  <li>–nomysql
+    <ul>
+      <li>Skip the Mysql-specific parts of the program.</li>
+    </ul>
+  </li>
+  <li>–nosendmail
+    <ul>
+      <li>Skip the Sendmail-specific parts of the program.</li>
+    </ul>
+  </li>
+  <li>–useballoons=X
+    <ul>
+      <li>Whether or not to use tooltip balloons for MediaWiki output. Takes 0 or 1, defaults to 1.</li>
+    </ul>
+  </li>
+  <li>–timeout=X
+    <ul>
+      <li>Sets the maximum time to wait for each command to finish before giving up. The default is 10 seconds.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="bugs-and-feature-requests">Bugs and Feature Requests</h3>
+
+<p>Bugs should be reported through <a href="http://bucardo.org/bugzilla">the bugzilla bug tracking site</a>. Feature requests are welcome there as well, or send us an email.</p>
+
+<h3 id="development">Development</h3>
+
+<p>Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:</p>
+
+<p><code class="highlighter-rouge"> git clone </code><a href="git://bucardo.org/boxinfo.git"><code class="highlighter-rouge">git://bucardo.org/boxinfo.git</code></a></p>
+
+<p>There is also a <a href="http://github.com/bucardo">GitHub mirror</a> for easy patch contribution by the general public.</p>
+
+<h3 id="contributors">Contributors</h3>
+
+<ul>
+  <li>Greg Sabino Mullane (greg@endpoint.com)</li>
+  <li>David Christensen (david@endpoint.com)</li>
+  <li>Greg Smith (gsmith@gregsmith.com)</li>
+  <li>Robert Treat (rob@xzilla.net)</li>
+</ul>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

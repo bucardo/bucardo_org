@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p>Bucardo uses the LISTEN/NOTIFY system to communicate between processes (MCP, CTLs, and KIDs).</p>
+
+<p>Items the <a href="/MCP" title="wikilink">MCP</a> listens for:</p>
+
+<ul>
+  <li>bucardo_mcp_ping</li>
+  <li>bucardo_activate_sync_$syncname</li>
+  <li>bucardo_deactivate_sync_$syncname</li>
+  <li>bucardo_reload_sync_$syncname</li>
+  <li>bucardo_kick_sync_$syncname</li>
+  <li>bucardo_mcp_fullstop</li>
+  <li>bucardo_mcp_reload</li>
+  <li>bucardo_reload_config</li>
+  <li>bucardo_log_message</li>
+</ul>
+
+<p>Notices issued by the <a href="/MCP" title="wikilink">MCP</a>:</p>
+
+<ul>
+  <li>bucardo_mcp_pong</li>
+  <li>bucardo_boot</li>
+  <li>bucardo_reload_config_finished</li>
+  <li>bucardo_reloaded_mcp</li>
+  <li>bucardo_nosyncs</li>
+  <li>bucardo_started</li>
+  <li>bucardo_stopped</li>
+  <li>bucardo_syncerror_$syncname</li>
+  <li>bucardo_reload_config_finished</li>
+  <li>bucardo_reloaded_mcp</li>
+  <li>bucardo_reloaded_sync_$syncname</li>
+  <li>bucardo_activated_sync_$syncname</li>
+  <li>bucardo_deactivated_sync_$syncname</li>
+  <li>bucardo_ctl_kick_$syncname</li>
+</ul>
+
+<p>Items the <a href="/CTL" title="wikilink">CTL</a> listens for:</p>
+
+<ul>
+  <li>bucardo_ctl_$$_ping</li>
+  <li>bucardo_ctl_kick_$syncname</li>
+  <li>bucardo_syncdone_$syncname_$db</li>
+</ul>
+
+<p>Notices issued by the <a href="/CTL" title="wikilink">CTL</a>:</p>
+
+<ul>
+  <li>bucardo_ctl_$$_pong</li>
+  <li>bucardo_syncdone_$syncname</li>
+  <li>bucardo_q_$syncname_$targetdb</li>
+</ul>
+
+<p>Items the <a href="/KID" title="wikilink">KID</a> listens for:</p>
+
+<ul>
+  <li>bucardo_kid_$$_ping</li>
+  <li>bucardo_q_$syncname_$targetdb</li>
+</ul>
+
+<p>Notices issued by the <a href="/KID" title="wikilink">KID</a>:</p>
+
+<ul>
+  <li>bucardo_kid_$$_pong</li>
+  <li>bucardo_syncdone_$syncname_$targetdb</li>
+  <li>bucardo_synckill_$syncname_$targetdb</li>
+  <li>bucardo_synckill_$syncname</li>
+</ul>
+
+<p><a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

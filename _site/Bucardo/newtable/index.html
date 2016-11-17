@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<h2 id="adding-a-new-table-to-an-existing-sync-in-bucardo">Adding a new table to an existing sync in Bucardo</h2>
+
+<p>Adding a new table to an existing <a href="/sync" title="wikilink">sync</a> is a fairly easy process. This process that Bucardo already knows about the table: if not, just run:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add all tables</code></p>
+
+<p>The next step is:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl update sync </code><syncname>` add table `<tab1>` `<tab2>` ...`</tab2></tab1></syncname></p>
+
+<p>This adds one or more tables to an existing sync, by adding them to the source <a href="/herd" title="wikilink">herd</a> for this sync. If the tables are already in the sync, no changes are made.</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl validate </code><syncname></syncname></p>
+
+<p>This tells Bucardo to run the validate_sync() function, which makes any changes needed on the remote databases (such as adding triggers).</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl update sync onetimecopy=2</code></p>
+
+<p>This instructs the sync to enter <a href="/onetimecopy" title="wikilink">onetimecopy</a> mode. This step is not needed if the sync is <a href="/fullcopy" title="wikilink">fullcopy</a>. The value of 2 means that only empty tables will be copied over. We do this to ensure that all rows in the new table are copied from the master to the slave. Once they are all copied, only the differences are copied from that point forward.</p>
+
+<p>Optionally, you can ask Bucardo to defer index processing until the end of the COPY:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl update sync onetimecopy=2 rebuild_index=1</code></p>
+
+<p>This modifies the system tables to “turn off” all indexes on the table before it copies the data in, and then runs a REINDEX immediately afterward. For large tables, this can be a significant speedup.</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl reload </code><syncname></syncname></p>
+
+<p>This lets the Bucardo daemon know that the sync has changed, and to stop it from running, read in the new information from the database, and start it up again.</p>
+
+<p>After that is done, you can tail the <a href="/log.bucardo" title="wikilink">log.bucardo</a> file and watch the changes being made. For large tables, you should see it stop for a while on a line that looks like this:</p>
+
+<p><code class="highlighter-rouge"> KID Running on test_target: COPY public.mytable FROM STDIN</code></p>
+
+<p>Once finished, you can check on the sync’s status. Right after the onetimecopy, the number of inserts for the last run will be very high, with no updates or deletes.</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl status </code><syncname></syncname></p>
+
+<p><a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

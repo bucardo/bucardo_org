@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p>This page describes the <strong>bucardo install</strong> command, which creates the Bucardo master database. For instructions on how to install the Bucardo software itself onto your system, please see <a href="/Bucardo/Installation" title="wikilink">Bucardo/Installation</a></p>
+
+<p><strong>NOTOC</strong></p>
+
+<p>Once the software is installed, the next step getting Bucardo up and running is to install a Bucardo master database. This will contain all the information Bucardo uses to run, such as the tables, databases, and syncs. Usage is simply:</p>
+
+<p><code class="highlighter-rouge"> bucardo install</code></p>
+
+<p>Before attempting to run this, you must have a running Postgres database available, and the language Pl/PerlU must be available for creating. For systems installed via packaging, a ‘plperl’ package can be installed, using something similar to one of these:</p>
+
+<p><code class="highlighter-rouge">yum install postgresql-plperl</code>
+<code class="highlighter-rouge"># or</code>
+<code class="highlighter-rouge">apt-get install postgresql-plperl-9.1</code></p>
+
+<p>Once you run the install, you will be provided with a menu of options. To change them, simply enter the number, then type in the new value. When all looks good, type the letter <strong>P</strong> to proceed. The menu will look similar to this:</p>
+
+<p><code class="highlighter-rouge"> Current connection settings:</code>
+<code class="highlighter-rouge"> 1. Host:          </code><none>
+` 2. Port:          5432`
+` 3. User:          postgres`
+` 4. Database:      postgres`
+` 5. PID directory: /var/run/bucardo`
+` Enter a number to change it, P to proceed, or Q to quit: `</none></p>
+
+<p>(You can force the installation to proceed without any prompting by using the <strong>–batch</strong> option. The settings can also be specified on the command line: host with <strong>–dbhost</strong>, port with <strong>dbport</strong>, and the PID directory with <strong>–piddir</strong>.)</p>
+
+<p>As part of the installation, a superuser named bucardo will be created, along with a random password. This password will be added to the current user’s <strong>.pgpass</strong> file in their home directory.</p>
+
+<p>If all goes well at this point, Bucardo is installed.</p>
+
+<p>TIP: If you run into errors during install or in subsequent steps, the best thing to do is to completely remove the bucardo-owned objects and start fresh with the ‘bucardo install’ step. This includes doing a cascaded drop of the ‘bucardo’ schema and the ‘bucardo’ role. This should completely remove any traces of Bucardo and allow you to run the installation step cleanly again.</p>
+
+<p>Please email the general mailing list (bucardo-general@bucardo.org) with any problems you encounter. Feel free to edit this page as well.</p>
+
+<h3 id="next-steps">Next steps</h3>
+
+<p>Once the install is complete, you should review the current configuration settings and adjust them as needed. To view them all, run:</p>
+
+<p><code class="highlighter-rouge"> bucardo show all</code></p>
+
+<p>To adjust a particular item, just use <strong>bucardo set x=y</strong>, for example:</p>
+
+<p><code class="highlighter-rouge"> bucardo set log_level=verbose</code></p>
+
+<p>Once that looks good, you should use the <a href="/Bucardo/add_database" title="wikilink">add_database</a> command to teach Bucardo about any databases used in your replication.</p>
+
+<h3 id="see-also">See also:</h3>
+
+<ul>
+  <li><a href="/Bucardo/Installation" title="wikilink">Software installation</a></li>
+  <li><a href="/Bucardo/add_database" title="wikilink">add_database</a></li>
+  <li><a href="/Bucardo/upgrading" title="wikilink">Upgrading</a></li>
+</ul>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><a href="/Bucardo" title="wikilink">Bucardo</a> Installation</p>
+
+<p>This page describes how to install Bucardo. If you want a packaged version, skip to <strong>Installation From Packages</strong>. For the impatient, here’s the short version:</p>
+
+<h2 id="quick-version">Quick version</h2>
+
+<p><code class="highlighter-rouge"> * Install DBIx::Safe</code>
+<code class="highlighter-rouge"> * Download and untar the latest Bucardo</code>
+<code class="highlighter-rouge"> * perl Makefile.PL &amp;&amp; make &amp;&amp; sudo make install</code>
+<code class="highlighter-rouge"> * bucardo_ctl install</code></p>
+
+<p>The rest of this document goes into details about the installation process.</p>
+
+<h2 id="install-dbixsafe">Install DBIx::Safe</h2>
+
+<p>Bucardo requires the Perl module DBIx::Safe to be installed. Some distributions have it available as a package, in which case the installation is as simple as:</p>
+
+<p><code class="highlighter-rouge"> yum install perl-DBIx-Safe</code>
+<code class="highlighter-rouge"> # or</code>
+<code class="highlighter-rouge"> apt-get install libdbix-safe-perl</code></p>
+
+<p>To install it manually, grab the <a href="http://bucardo.org/downloads/dbix_safe.tar.gz">latest DBIx::Safe tarball</a>, then unpack the tarball and install as a normal Perl module:</p>
+
+<p><code class="highlighter-rouge"> tar xvfz dbix_safe.tar.gz</code>
+<code class="highlighter-rouge"> cd DBIx-Safe-1.2.5</code>
+<code class="highlighter-rouge"> perl Makefile.PL</code>
+<code class="highlighter-rouge"> make</code>
+<code class="highlighter-rouge"> make test</code>
+<code class="highlighter-rouge"> sudo make install</code></p>
+
+<p>Other Perl prerequisites that may or may not be installed already on your system include:</p>
+
+<p><code class="highlighter-rouge"> DBI</code>
+<code class="highlighter-rouge"> DBD::Pg</code>
+<code class="highlighter-rouge"> Test::Simple</code></p>
+
+<h2 id="download-and-unpack-the-bucardo-tarball">Download and unpack the Bucardo tarball</h2>
+
+<p>The latest version of Bucardo can be found on <a href="/Bucardo#Obtaining_Bucardo" title="wikilink">the Bucardo download page</a>. Untar it and switch to the directory:</p>
+
+<p><code class="highlighter-rouge"> tar xvfz Bucardo-4.4.8.tar.gz</code>
+<code class="highlighter-rouge"> cd Bucardo-4.4.8</code></p>
+
+<h2 id="install-the-bucardo-software">Install the Bucardo software</h2>
+
+<p>Once in the directory:</p>
+
+<p><code class="highlighter-rouge"> perl Makefile.PL</code>
+<code class="highlighter-rouge"> make</code>
+<code class="highlighter-rouge"> sudo make install</code></p>
+
+<p>The last step (make install) needs to be run as an account that can install to system directories.</p>
+
+<p>If you want to install all the files to a single directory, for testing purposes, you can define the environment variable <code class="highlighter-rouge">INSTALL_BUCARDODIR</code> before running <code class="highlighter-rouge">perl</code> <code class="highlighter-rouge">Makefile.PL</code>. Thus, the first step would become:</p>
+
+<p><code class="highlighter-rouge"> INSTALL_BUCARDODIR=/tmp/bucardotest perl Makefile.PL</code></p>
+
+<h2 id="create-the-bucardo-database">Create the Bucardo database</h2>
+
+<p>Bucardo needs to be installed into a database. This database must have the pl/perlu language available. For systems installed via packaging, installing Pl/PerlU may be as simple as:</p>
+
+<p><code class="highlighter-rouge">yum install postgresql-plperl</code>
+<code class="highlighter-rouge"># or</code>
+<code class="highlighter-rouge">apt-get install postgresql-plperl-9.0</code></p>
+
+<p>Once you’ve decided where you want the Bucardo database to be installed, run:</p>
+
+<p><code class="highlighter-rouge">bucardo install</code></p>
+
+<p>You will have an opportunity to change the default parameters:</p>
+
+<p><code class="highlighter-rouge"> This will install the bucardo database into an existing Postgres cluster.</code>
+<code class="highlighter-rouge"> Postgres must have been compiled with Perl support,</code>
+<code class="highlighter-rouge"> and you must connect as a superuser</code>
+<code class="highlighter-rouge">   </code>
+<code class="highlighter-rouge"> Current connection settings:</code>
+<code class="highlighter-rouge"> 1. Host:          </code><none>
+` 2. Port:          5432`
+` 3. User:          postgres`
+` 4. Database:      postgres`
+` 5. PID directory: /var/run/bucardo`</none></p>
+
+<p>Note that the installation will create the bucardo Postgres account without a password, and then attempt to connect to it to continue the installation. However this may fail depending on your pg_hba.conf settings. Some workarounds include:</p>
+
+<p>:* The stock pg_hba.conf includes “trust” entries for local connections. Use a trust method connection (perhaps temporarily) to allow it to connect as the bucardo user.</p>
+
+<p>:* For pg_hba.conf’s “md5” method, create the bucardo Postgres user ahead of time with a password and set that in the .pgpass file of the user running the installation.</p>
+
+<p>:* Use the “ident” method in pg_hba.conf, and create both a bucardo system account and a bucardo Postgres account. The ident method is enabled by default in Debian-based packages, and will allow the installation to log in if run under the bucardo system account.</p>
+
+<p>If all goes well at this point, Bucardo is installed. NOTE: Although you do not need to run the install script on each slave node in your cluster, you will need to manually create the ‘bucardo’ role on each slave node before proceeding with the installation and configuration.</p>
+
+<p>TIP: If you run into errors during install or in subsequent steps, the best thing to do is to completely remove the bucardo-owned objects and start fresh with the ‘bucardo_ctl install’ step. This includes doing a cascaded drop of the ‘bucardo’ schema and the ‘bucardo’ role. This should completely remove any traces of bucardo and allow you to run the installation step cleanly again.</p>
+
+<h2 id="installation-from-packages">Installation From Packages</h2>
+
+<p>Bucardo has been packaged in both rpm and deb formats. The Fedora Project has built rpm’s and has made them available through their EPEL repo. Packages are also available in Debian’s “testing” distribution, and are planned for inclusion in Debian’s “squeeze” release and Ubuntu’s “Maverick” release.</p>
+
+<h2 id="configuring-replication">Configuring Replication</h2>
+
+<p>This is a quick summary. See the specific pages for more information.</p>
+
+<p><a href="/add_database" title="wikilink">Add databases</a>:</p>
+
+<p><code class="highlighter-rouge">bucardo add database </code><dbname></dbname></p>
+
+<p><a href="/add_table" title="wikilink">Add tables and sequences</a>:</p>
+
+<p><code class="highlighter-rouge"> bucardo add all tables</code>
+<code class="highlighter-rouge"> bucardo add all sequences</code></p>
+
+<p><a href="/add_sync" title="wikilink">Add syncs</a>:</p>
+
+<p><code class="highlighter-rouge"> bucardo add sync </code><syncname>` type=`<synctype>` source=`<db>` targetdb=`<db>` tables=tab1,tab2,...`</db></db></synctype></syncname></p>
+
+<p>Start Bucardo:</p>
+
+<p><code class="highlighter-rouge"> bucardo start</code></p>
+
+<p><strong>NOTOC</strong> <a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

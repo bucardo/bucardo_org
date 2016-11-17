@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p>The <strong>add sync</strong> command is used to create a new <a href="/Bucardo_sync" title="wikilink">Bucardo sync</a>.</p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge"> bucardo add sync alpha herd=gill dbs=A,B,C</code></p>
+
+<p>Creates a new sync named <strong>alpha</strong> which replicates tables in the herd <strong>gill</strong> and replicates from source database <strong>A</strong> to target databases <strong>B</strong> and <strong>C</strong></p>
+
+<p>Usages:</p>
+
+<p><code class="highlighter-rouge"> bucardo add sync </code><name>` herd=`<herdname>` dbs=`<database group=""></database></herdname></name></p>
+
+<p><code class="highlighter-rouge"> bucardo add sync </code><name>` herd=`<herdname>` dbs=`<list of="" databases=""></list></herdname></name></p>
+
+<p><code class="highlighter-rouge"> bucardo add sync </code><name>` tables=products,categories,sales dbs=`<list of="" databases=""></list></name></p>
+
+<h3 id="required-arguments">Required arguments:</h3>
+
+<ul>
+  <li>herd
+    <ul>
+      <li>The <a href="/Bucardo_herd" title="wikilink">Bucardo herd</a> containing the tables and sequences to be replicated</li>
+    </ul>
+  </li>
+  <li>dbs
+    <ul>
+      <li>The <a href="/Bucardo_database_group" title="wikilink">Bucardo database group</a> to use in this sync, or a comma-separated list of databases. If the latter, a new database group with the same name as the sync will be created. By default, the first database will be considered the <a href="/source_database" title="wikilink">source</a>, and all others <a href="/target_database" title="wikilink">targets</a>. To specify the <a href="/database_role" title="wikilink">role</a> of a database, add a colon and the role. For example, to create a sync with three source databases and two targets:</li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="highlighter-rouge"> bucardo add sync foobar herd=myherd dbs=A:source,B:target,C:target,D:source,E:source</code></p>
+
+<p>Because the first database given always defaults to a source role, and all others default to a target role, the above sync could also be created with:</p>
+
+<p><code class="highlighter-rouge"> bucardo add sync foobar herd=myherd dbs=A,B,C,D:source,E:source</code></p>
+
+<h3 id="optional-arguments">Optional arguments:</h3>
+
+<ul>
+  <li>tables
+    <ul>
+      <li>A comma-separated list of tables which should be replicated by this sync. A new <a href="/Bucardo_herd" title="wikilink">herd</a> will be created with the same name as the sync to hold these tables.</li>
+    </ul>
+  </li>
+  <li>status
+    <ul>
+      <li>The initial status of this sync. Defaults to “active”. The only other choice at the moment is “inactive”</li>
+    </ul>
+  </li>
+  <li>rebuild_index
+    <ul>
+      <li>Whether to rebuild indexes after each sync, defaults to off (0)</li>
+    </ul>
+  </li>
+  <li>onetimecopy
+    <ul>
+      <li>Controls if we switch to fullcopy mode for normal targets. Default is 0 (off). A setting of 1 indicates a normal onetimecopy. A setting of 2 indicates that we only copy if the source table is not-empty and the target table is empty. After a successful sync, Bucardo will flip this value back to 0 itself. See <a href="/Bucardo/onetimecopy" title="wikilink">onetimecopy</a> for more information.</li>
+    </ul>
+  </li>
+  <li>ping
+    <ul>
+      <li>Determine if triggers are created that signal Bucardo to run when a table on one of the source databases for this sync has changes. Defaults to 1 (on).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="see-also">See also:</h3>
+
+<ul>
+  <li><a href="/Bucardo/list_sync" title="wikilink">list_sync</a></li>
+  <li><a href="/Bucardo/update_sync" title="wikilink">update_sync</a></li>
+  <li><a href="/Bucardo/remove_sync" title="wikilink">remove_sync</a></li>
+</ul>
+
+<p><a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

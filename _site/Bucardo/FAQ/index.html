@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<h2 id="bucardo-frequently-asked-questions">Bucardo Frequently Asked Questions</h2>
+
+<p>If you have a question that is not answered here, try checking the main <a href="/Bucardo" title="wikilink">Bucardo</a> page and see the links and community information there.</p>
+
+<h3 id="what-is-bucardo">What is Bucardo?</h3>
+
+<p>Bucardo is a replication program for two or more Postgres databases. Specifically, it is an asynchronous, multi-master, master-slave table-based replication system. It is written in Perl, and uses extensive use of triggers, PL/PgSQL, and PL/PerlU.</p>
+
+<h3 id="what-are-the-requirements-for-use">What are the requirements for use?</h3>
+
+<p>Bucardo is a Perl script that requires the following modules to be installed before it can be run:</p>
+
+<ul>
+  <li>DBI (at least version 1.51)</li>
+  <li>DBD::Pg (2.0+)</li>
+  <li>Sys::Hostname (1.11+)</li>
+  <li>Sys::Syslog (0.13+)</li>
+  <li>DBIx::Safe (1.2.4+)</li>
+</ul>
+
+<p>Bucardo requires a database to install the main bucardo schema on. This database must be Postgres version 8.1 or higher, and must have both the languages Pl/Pgsql and Pl/perlU available. In addition, the install script requires installation as a superuser: creating a new user named ‘bucardo’ for this purpose is highly recommended.</p>
+
+<p>Databases involved in replication must be Postgres version 8.1 or higher. The language Pl/pgsql must be available as well, unless the database is only used as a target for “fullcopy” syncs, in which case 8.1 is the only requirement.</p>
+
+<p>Bucardo requires a Unix-like system. Currently, it has only been tested on Linux variants, but it should work on BSD, Solaris, and other similar systems. Bucardo will not currently work on Windows, but the ability to do so is probably not that difficult to achieve at this point so let us know if you’d like to help with that.</p>
+
+<h3 id="can-bucardo-do-masterslave-replication">Can Bucardo do master/slave replication?</h3>
+
+<p>Absolutely. While Bucardo can do master/master replication, many people use it only for master/slave replication (one master database sending changes to one or more slave databases).</p>
+
+<h3 id="can-bucardo-replicate-between-more-than-two-masters">Can Bucardo replicate between more than two masters?</h3>
+
+<p>Yes, you can have as many sources (masters) and targets (slaves) as you like.</p>
+
+<h3 id="does-bucardo-need-to-run-on-the-database-that-is-being-replicated">Does Bucardo need to run on the database that is being replicated?</h3>
+
+<p>The Bucardo program itself can run anywhere, and does not have to be on any of the servers involved in replication. The primary advantage to having it run on the same server is reduced network time. A disadvantage is putting all your eggs in one basket.</p>
+
+<h3 id="why-does-bucardo-give-me-warnings-on-startup-about-mismatched-sequences">Why does Bucardo give me warnings on startup about mismatched sequences?</h3>
+
+<p>This is a consequence of the bucardo user having different search paths on different Postgres servers. This has been fixed in version 4.5.0.</p>
+
+<h3 id="how-fast-will-replication-occur">How fast will replication occur?</h3>
+
+<p>There is no simple answer to this question, as it depends on how many tables you are replicating in one <a href="/sync" title="wikilink">sync</a>, how fast your network is, how busy your database is, etc. As a general rule of thumb, however, changes make it to the other databases within a matter of one or two seconds.</p>
+
+<h3 id="can-bucardo-replicate-ddl">Can Bucardo replicate DDL?</h3>
+
+<p>No, Bucardo relies on triggers, and Postgres does not yet provide DDL triggers or triggers on its system tables.</p>
+
+<h3 id="what-does-could-not-add-to-q-mean">What does “Could not add to q” mean</h3>
+
+<p>This message looks bad, but is in fact innocuous. It simply means that Bucardo is getting signaled to sync more quickly than it can complete a sync. That’s quite normal, and Bucardo will catch up.</p>
+
+<p><a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

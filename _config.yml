@@ -1,0 +1,12 @@
+# Site settings
+title: Bucardo
+
+# Build settings
+markdown: kramdown
+
+defaults:
+    -
+        scope:
+            path: "" # Everything
+        values:
+            layout: "default"

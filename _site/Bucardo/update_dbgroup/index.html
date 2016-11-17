@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>NOTOC</strong></p>
+
+<p>The <strong>update dbgroup</strong> command is used to change an existing Bucardo database group.</p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge"> bucardo update dbgroup foobar s1 s2 s3:source</code></p>
+
+<p>Updates the database group <strong>foobar</strong>, setting it to contain the servers s1, s3, and s3. Both s1 and s3 will be source databases, and s2 will be a target.</p>
+
+<p>This command should be used to add a new database to an existing sync. If the bucardo schema is still not created on the new db the sync needs then to be validated.</p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge">  bucardo add db s3...</code>
+<code class="highlighter-rouge">  bucardo update dbgroup </code><dbgroupname>` s1 s2 s3:source`
+`  bucardo validate sync `<syncname></syncname></dbgroupname></p>
+
+<p>Usage:</p>
+
+<p><code class="highlighter-rouge"> bucardo update dbgroup name [servers] [name=newname]</code></p>
+
+<p>Use the name= form to change the name of an existing database group. Otherwise, provide a list of all servers in this group, and the existing servers will be overwritten.</p>
+
+<h3 id="internals">Internals</h3>
+
+<p>Changes will update the <a href="/bucardo.dbmap_table" title="wikilink">bucardo.dbmap table</a>.</p>
+
+<h3 id="see-also">See also:</h3>
+
+<ul>
+  <li><a href="/Bucardo/add_dbgroup" title="wikilink">add_dbgroup</a></li>
+  <li><a href="/Bucardo/list_dbgroup" title="wikilink">list_dbgroup</a></li>
+  <li><a href="/Bucardo/remove_dbgroup" title="wikilink">remove_dbgroup</a></li>
+</ul>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<h2 id="customselect--customcols">CustomSelect / CustomCols</h2>
+
+<p>The <strong>customselect</strong> feature allows you to control what rows &amp; columns get synchronized from one database to another. This functionality works both on the fly (when CRUD invokes a trigger), and when doing a <a href="/Bucardo/fullcopy" title="wikilink">fullcopy</a>.</p>
+
+<p>The command takes a SELECT statement, and is helpful in the following scenarios:</p>
+
+<ul>
+  <li>Tables differ in structure and/or field names between the source and destination databases</li>
+  <li>You want to join different tables from the source, into a single table in the destination</li>
+  <li>You want to apply a filter on what actually gets synchronized (by adding a WHERE clause)</li>
+  <li>Any combination of the above!</li>
+</ul>
+
+<p>The test file <strong>t/20-postgres.t</strong> has a working example (grep for ‘customcols’).</p>
+
+<h2 id="example-usage">Example Usage</h2>
+
+<p>The basic idea is to replace the default ‘SELECT * FROM table’ with a modified select list, by calling:</p>
+
+<p><code class="highlighter-rouge">$ bucardo add customcols mytable "SELECT a,b, foo AS bar"</code></p>
+
+<p>You can optionally constrain to a certain sync:</p>
+
+<p><code class="highlighter-rouge">$ bucardo add customcols mytable "SELECT a,b, foo AS bar" sync=mysync</code></p>
+
+<p>And/or to a certain database (which is probably what you want to do here):</p>
+
+<p><code class="highlighter-rouge">$ bucardo add customcols mytable "SELECT a,b, foo AS bar" db=mymongodb</code></p>
+
+<h2 id="notes">Notes</h2>
+
+<ol>
+  <li>You can’t sync from a view, you can only sync from tables</li>
+  <li>The same view definition can be adapted to become the `customcols` query</li>
+</ol>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

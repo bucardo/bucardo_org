@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>bucardo_ctl</strong> is the main interface to Bucardo - it is used to start, stop, and control Bucardo.</p>
+
+<p>You can tell bucardo_ctl where to find the main <a href="/Bucardo_database" title="wikilink">Bucardo database</a> by use of the following arguments:</p>
+
+<p><code class="highlighter-rouge"> --dbport</code>
+<code class="highlighter-rouge"> --dbhost</code>
+<code class="highlighter-rouge"> --dbname</code>
+<code class="highlighter-rouge"> --dbuser</code></p>
+
+<p>Additional bucardo_ctl arguments include:</p>
+
+<p><code class="highlighter-rouge"> --quiet=0</code>
+<code class="highlighter-rouge"> --verbose=0</code>
+<code class="highlighter-rouge"> --bcverbose=1</code>
+<code class="highlighter-rouge"> --sendmail=0</code>
+<code class="highlighter-rouge"> --extraname=''</code>
+<code class="highlighter-rouge"> --debugfilesep=0</code>
+<code class="highlighter-rouge"> --debugdir='.'</code>
+<code class="highlighter-rouge"> --debugname=''</code>
+<code class="highlighter-rouge"> --debugsyslog=1  Enables/Disables Syslog</code>
+<code class="highlighter-rouge"> --debugfile=1    Enables/Disables local log file ./log.bucardo</code>
+<code class="highlighter-rouge"> --cleandebugs=0</code></p>
+
+<p>Rather than enter those every time, you may place the arguments into a <a href="/bucardorc" title="wikilink">bucardorc</a> file. All of the arguments below, except for “install”, require that enough options exist to find the main Bucardo database.</p>
+
+<h3 id="installing-and-upgrading-bucardo">Installing and upgrading Bucardo</h3>
+
+<p>To install Bucardo for the first time, simply enter</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl install</code></p>
+
+<p>See the <a href="/Bucardo/Installation" title="wikilink">Bucardo installation</a> page for complete details.</p>
+
+<p>To upgrade Bucardo, use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl upgrade</code></p>
+
+<p>See the <a href="/Bucardo/Upgrade" title="wikilink">Bucardo upgrade</a> page for complete details.</p>
+
+<h3 id="controlling-bucardo">Controlling Bucardo</h3>
+
+<h4 id="starting-bucardo">Starting Bucardo</h4>
+
+<p>To start Bucardo, simply enter:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl start "Reason for starting"</code></p>
+
+<p>The reason is optional but recommended.</p>
+
+<h4 id="stopping-bucardo">Stopping Bucardo</h4>
+
+<p>To stop Bucardo, simply enter:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl stop "Reason for stopping"</code></p>
+
+<p>Again, the reason is optional but recommended.</p>
+
+<h4 id="restarting-bucardo">Restarting Bucardo</h4>
+
+<p>Restarting is just:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl restart "Reason for restart"</code></p>
+
+<h4 id="checking-that-bucardo-is-alive">Checking that Bucardo is alive</h4>
+
+<p>To send a “ping” to the <a href="/MCP" title="wikilink">MCP</a> process of a running Bucardo, use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl ping [timeout]</code></p>
+
+<p>If successful, an exit value of 0 will be returned. The string returned by this command is Nagios-friendly, and will start with either OK or CRITICAL. The optional timeout argument indicates how long to wait for a response before giving up and returning a critical failure. The default time is 15 seconds. To wait forever, enter a timeout of 0.</p>
+
+<h3 id="bucardo-configuration">Bucardo configuration</h3>
+
+<p>Bucardo stores important configuration variables in the database inside the bucardo_config table. See the <a href="/Bucardo/configuration" title="wikilink">Bucardo configuration</a> page for a complete list.</p>
+
+<h4 id="viewing-configuration-values">Viewing configuration values</h4>
+
+<p>To view all of the configuration settings:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl show all</code></p>
+
+<p>To view one or more specific items, enter their names:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl show kick_sleep log_showline</code></p>
+
+<p>Note that names are actually regular expressions, so that entering:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl show kid</code></p>
+
+<p>will list all configuration parameters that have the letters ‘kid’ inside of them.</p>
+
+<h4 id="changing-configuration-values">Changing configuration values</h4>
+
+<p>To change a configuration, use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl set name=value</code></p>
+
+<p>For example, to change the syslog logging facility to LOG_LOCAL3:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl set syslog_facility=LOG_LOCAL3</code></p>
+
+<h4 id="reloading-the-configuration-settings">Reloading the configuration settings</h4>
+
+<p>To tell a running Bucardo to re-read the configuration table:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl reload_config</code></p>
+
+<h3 id="controlling-syncs">Controlling syncs</h3>
+
+<p>Bucardo works by running one or more replication events called <a href="/sync" title="wikilink">syncs</a>. The main interface for controlling these is bucardo_ctl</p>
+
+<h4 id="kicking-a-sync">Kicking a sync</h4>
+
+<p>Syncs are fired by changes to the underlying tables, or manually started by <a href="/kick" title="wikilink">kicking</a> them. To kick a sync, use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl kick </code><syncname>` [timeout]`</syncname></p>
+
+<p>The optional timeout argument tells how long bucardo_ctl will wait for a response from Bucardo indicating that the sync has finished. If no timeout argument is given, the program sends the kick signal and returns immediately. If a value of “0” is given, bucardo_ctl will wait indefinitely for the sync to finish, and also give a running tab of how long the sync has taken.</p>
+
+<p>Multiple syncs arguements can be given. If not timeout is given, they will all be kicked at once. Otherwise, they will be kicked in the order given, each starting when the previous one has completed. For example, to kick the syncs “sales” and “marketing”, while while waiting for each to finish, you could use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl kick sales marketing 0</code></p>
+
+<h4 id="reloading-a-sync">Reloading a sync</h4>
+
+<p>To reload a sync:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl reload </code><syncname></syncname></p>
+
+<p>One or more named syncs can be reloaded this way. Each will be reloaded in turn, and bucardo_ctl will let you know when each has been reloaded. When a sync is reloaded, the <a href="/MCP" title="wikilink">MCP</a> process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the <a href="/onetimecopy" title="wikilink">onetimecopy</a> attribute.</p>
+
+<h4 id="activating-a-sync">Activating a sync</h4>
+
+<p>To activate a sync that is not currently running, use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl activate </code><syncname></syncname></p>
+
+<h4 id="deactivating-a-sync">Deactivating a sync</h4>
+
+<p>To deactivate a sync that is currently active and running, use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl deactivate </code><syncname></syncname></p>
+
+<h3 id="viewing-information">Viewing information</h3>
+
+<p>To view general status about the currently running Bucardo process, use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl status</code></p>
+
+<p>This will list general information about each sync</p>
+
+<h4 id="detailed-sync-information">Detailed sync information</h4>
+
+<p><code class="highlighter-rouge"> bucardo_ctl status </code><syncname></syncname></p>
+
+<p>This will show detailed information about a specific sync, including the last time it successfully ran, the number of rows transferred, and the last time it failed.</p>
+
+<h4 id="listing-syncs">Listing syncs</h4>
+
+<p>To get a list of all <a href="/sync" title="wikilink">syncs</a>:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl list syncs</code></p>
+
+<p>This list will show the sync name, it’s type (<a href="/fullcopy" title="wikilink">fullcopy</a>, <a href="/pushdelta" title="wikilink">pushdelta</a>, or <a href="/swap" title="wikilink">swap</a>), the source <a href="/herd" title="wikilink">herd</a>, the target database (or database group), and current status. For more details on a specific sync, use the ‘status’ command above.</p>
+
+<h4 id="listing-databases">Listing databases</h4>
+
+<p>To get a list of all known databases:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl list dbs</code></p>
+
+<p>This will show the name of the database (as used by Bucardo, not its actual name in Postgres), its status, and the connection string used by Bucardo to connect to it.</p>
+
+<h4 id="listing-database-groups">Listing database groups</h4>
+
+<p>To get a list of all known <a href="/database_group" title="wikilink">database groups</a>:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl list dbgroups</code></p>
+
+<h4 id="listing-tables">Listing tables</h4>
+
+<p>To list all known tables:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl list tables</code></p>
+
+<h4 id="listing-sequences">Listing sequences</h4>
+
+<p>To list all known sequences:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl list sequences</code></p>
+
+<h4 id="listing-herds">Listing herds</h4>
+
+<p>To list all <a href="/herd" title="wikilink">herds</a>:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl list herds</code></p>
+
+<p>To list only one or more specific herds, add their names:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl list herd </code><herdname></herdname></p>
+
+<p>To get a list of all tables that belong to a herd, use the verbose argument:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl list herd </code><herdname>` --verbose`</herdname></p>
+
+<h3 id="adding-things">Adding things</h3>
+
+<p>To add new items, the general syntax is:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add </code><thing>` `<name>` additional_information`</name></thing></p>
+
+<h4 id="adding-a-database">Adding a database</h4>
+
+<p>Bucardo needs to know how to connect to each database involved in replication. You can teach it about a new database by using:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add db </code><dbname>` [options]`</dbname></p>
+
+<p>The “dbname” is the name of the database inside of Postgres. The other optional arguments are entered in the format name=value and can include:</p>
+
+<ul>
+  <li>name: the internal name used by Bucardo to refer to this database</li>
+  <li>port: the port this database runs on. Defaults to 5432.</li>
+  <li>host: the host this database is on. Defaults to no host (Unix socket)</li>
+  <li>user: the user to connect as. Defaults to ‘bucardo’</li>
+  <li>pass: the password to connect with. Don’t use this, use a .pgpass file instead!</li>
+  <li>conn: Any additional information add to the connection string, e.g. sslmode=require</li>
+  <li>sourcelimit: The maximum number of replication events that can run at one time using this database as a source. Defaults to 0 (no limit)</li>
+  <li>targetlimit: The maximum number of replication events that can run at one time using this database as a target. Defaults to 0 (no limit)</li>
+  <li>pgpass: Full path and filename of a <a href="/Bucardo/pgpass" title="wikilink">Bucardo/pgpass</a> file to use for this connection</li>
+</ul>
+
+<p>For example, to add three new databases on different hosts:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add database sales name=sales_master host=int-db-sales1 </code>
+<code class="highlighter-rouge"> bucardo_ctl add database sales name=sales_slave1 host=int-db-sales2 </code>
+<code class="highlighter-rouge"> bucardo_ctl add database sales name=sales_slave2 host=int-db-sales3</code></p>
+
+<h4 id="adding-a-database-group">Adding a database group</h4>
+
+<p>Databases can be grouped together, so that one master can push to a group of slave databases rather than a single database. To create a new named group:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add dbgroup [db db]</code></p>
+
+<p>An optional list of databases to add to this group can be given. For example:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add dbgroup sales sales_slave1 sales_slave2</code></p>
+
+<h4 id="adding-tables">Adding tables</h4>
+
+<p>Bucardo needs to know about all tables that might be used in replication. Adding a tables is simply:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add table </code><tablename>` db=dbname`</tablename></p>
+
+<p>The tablename can be schema qualified, but does not have to be. The “dbname” refers to the internal name Bucardo uses to identify databases. The “db=dbname” can be left off if there is only one database in the db table. Note that you only need to add tables from the source database(s).</p>
+
+<p>An easier way to add tables is to simply run:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add all tables [db=dbname]</code></p>
+
+<p>This will not actually change these tables or replicate them, it will merely tell Bucardo about them. Thus, it is safe to run this command at any time.</p>
+
+<h4 id="adding-sequences">Adding sequences</h4>
+
+<p>Bucardo can also replicate sequences that it knows about. To add a sequence:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add sequence </code><seqname>` db=dbname`</seqname></p>
+
+<p>To add all sequences:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add all sequences [db=dbname]</code></p>
+
+<p>All the notes that apply to ‘add table’ above apply here as well.</p>
+
+<h4 id="adding-a-herd">Adding a herd</h4>
+
+<p>A <a href="/herd" title="wikilink">herd</a> is a named group of tables that are replicated together. To add a herd:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add herd </code><name>` [goat goat]`</name></p>
+
+<p>The list of goats are tables or sequences that should be part of this herd.</p>
+
+<h4 id="adding-a-sync">Adding a sync</h4>
+
+<p>To add a sync:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add sync </code><name>` source=`<herdname>` type=`<synctype>` target`</synctype></herdname></name></p>
+
+<p>The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of <a href="/fullcopy" title="wikilink">fullcopy</a>, <a href="/pushdelta" title="wikilink">pushdelta</a>, or <a href="/swap" title="wikilink">swap</a>. The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.</groupname></dbname></p>
+
+<p>As a shortcut for creating new syncs, you can also give a comma-separated list of tables, like so:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl add sync abc source=db1 targetdb=db2 tables=sales,marketing,userdb</code></p>
+
+<p>This will create a herd of the same name as the sync if it does not already exist, add the tables to it, and then create the sync.</p>
+
+<p>Other options that can be added to ‘add sync’, in the format name=value:</p>
+
+<ul>
+  <li>onetimecopy: set the <a href="/onetimecopy" title="wikilink">onetimecopy</a> value for this sync</li>
+  <li>status: set the initial status for the sync. Defaults to ‘active’</li>
+  <li>lifetime: set the <a href="/lifetime" title="wikilink">lifetime</a> for this sync - how long to run before the sync is restarted</li>
+  <li>maxkicks: sets the <a href="/maxkicks" title="wikilink">maxkicks</a> for this sync - how many times it runs before being restarted</li>
+  <li>makedelta: set the <a href="/makedelta" title="wikilink">makedelta</a> value for this sync. Defaults to 0.</li>
+</ul>
+
+<h3 id="other-actions">Other actions</h3>
+
+<h4 id="sending-a-message-to-the-log-file">Sending a message to the log file</h4>
+
+<p>To write a custom message to the log file that a current Bucardo process is writing to, use:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl message "Your message here"</code></p>
+
+<p>The message will be written by the <a href="/MCP" title="wikilink">MCP</a> process to the logs in the format:</p>
+
+<p><code class="highlighter-rouge"> MESSAGE (date): string</code></p>
+
+<p>where date is the timestamp the message was added, and string was the message provided</p>
+
+<p><a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

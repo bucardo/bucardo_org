@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>NOTOC</strong></p>
+
+<p>The <strong>update table</strong> command is used to change an existing table entry in the Bucardo database.</p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge"> bucardo update table t1 ping=true</code></p>
+
+<p>Updates the table <strong>t1</strong>: sets the ping to true</p>
+
+<p>Usage:</p>
+
+<p><code class="highlighter-rouge"> bucardo update table name [setting=value setting2=value2 ...]</code></p>
+
+<p>To see a list of items that can be changed, issue:</p>
+
+<p><code class="highlighter-rouge"> bucardo list table name -vv</code></p>
+
+<p>Note: the following fields cannot be changed: id, cdate, db, reltype</p>
+
+<h3 id="internals">Internals</h3>
+
+<p>Changes will update the <a href="/bucardo.goat_table" title="wikilink">bucardo.goat table</a>.</p>
+
+<h3 id="see-also">See also:</h3>
+
+<ul>
+  <li><a href="/Bucardo/add_table" title="wikilink">add_table</a></li>
+  <li><a href="/Bucardo/list_table" title="wikilink">list_table</a></li>
+  <li><a href="/Bucardo/remove_table" title="wikilink">remove_table</a></li>
+</ul>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

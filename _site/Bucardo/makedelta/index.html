@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p>The <strong>makedelta</strong> process is used by Bucardo to add entries to the <a href="/Bucardo/tables/bucardo_delta" title="wikilink">bucardo_delta</a> and <a href="/Bucardo/tables/bucardo_track" title="wikilink">bucardo_track</a> tables as replication is happening. This is needed if the updates made by a sync need to be read at a later time by a different sync. For example, if you had a <a href="/pushdelta" title="wikilink">pushdelta</a> sync “alpha” replicating rows from database A to database B, and another pushdelta sync replicating rows from database B to database C, you would need to turn on makedelta for sync “alpha”, so that the rows copied from A to B are able to be pikced up as changed rows for the B to C sync.</p>
+
+<p>There are four columns that control the use of makedelta:</p>
+
+<ul>
+  <li><a href="/Bucardo/tables/goat" title="wikilink">goat</a>.target_makedelta. Controls if a specific table should insert makedelta entries on the target. This can be null, in which case the value of whatever sync it is in is used, 0 to not do makedelta, and 1 to always do makedelta.</li>
+  <li>goat.source_makdelta. Same as above, but for the source database. This is only used by <a href="/swap" title="wikilink">swap</a> syncs.</li>
+  <li><a href="/Bucardo/tables/sync" title="wikilink">sync</a>.target_makedelta. Controls if this sync should insert makedelta entries or not for each of the tables within that sync. If this is set to 1, all tables will have makedelta enabled, regardless of the goat.target_makedelta setting. If this is set to 0, then makedelta will not be enabled (again, the goat.target_makedelta setting is ignored). However, if sync.target_makdelta is set to NULL, then any goats set as target_makedelta will be run as makedelta (and only those goats).</li>
+  <li>sync.source_makedelta. Same as above, but for the source database. This is only used by <a href="/swap" title="wikilink">swap</a> syncs.</li>
+</ul>
+
+<p><a href="/swap" title="wikilink">swap</a> syncs require both source and target makedelta settings, at either the goat or sync level.</p>
+
+<p>The easiest way to enable makedelta is to simply set it as needed at the sync level. In the example above, you would do:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl update sync alpha target_makedelta=1</code></p>
+
+<p>However, if you have many syncs using the same tables, it’s easiest to leave the sync level as null, and update the tables:</p>
+
+<p><code class="highlighter-rouge"> bucardo_ctl update table tab1 target_makedelta=1</code></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

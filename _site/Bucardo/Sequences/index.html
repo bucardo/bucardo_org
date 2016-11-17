@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p>Postgres <strong>sequences</strong> can be replicated.</p>
+
+<h2 id="pushdelta-syncs-and-sequences">Pushdelta syncs and sequences</h2>
+
+<p>In most cases, you will not need to replicate sequences, unless your slaves are not read only, or if you want your slaves to be ready for <a href="/failover" title="wikilink">failover</a>. If you do decide to replicate them, just treat them like you would a table - add them to the <a href="/goat_table" title="wikilink">goat table</a>, gather them into <a href="/herds" title="wikilink">herds</a>, and associate them with one or more <a href="/syncs" title="wikilink">syncs</a>.</p>
+
+<h2 id="swap-syncs-and-sequences">Swap syncs and sequences</h2>
+
+<p>If you are using a <a href="/swap_sync" title="wikilink">swap sync</a>, the best practice is to *not* replicate sequences, but to make sure that they are different on both sides, such that an insert on database A will never conflict with an insert on database B. There are three general ways to do this:</p>
+
+<ol>
+  <li>Use interleaving sequences. On database A, define the sequence as START WITH 1 INCREMENT BY 2. On database B, define the sequence as START WITH 2 INCREMENT BY 2. Thus, the two sequences will never have the same value.</li>
+  <li>Use different ranges. For example, database A would use a sequence of START WITH 1, while database B uses START WITH 100000000. This is not foolproof, as A can eventually catch up with B, although you can define A as MAXVALUE 99999999.</li>
+  <li>Use a common sequence. This relies on one or both of the databases using a function that makes a call to an external sequence.</li>
+</ol>
+
+<p><a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

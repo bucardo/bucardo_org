@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p>Failover is possible using Bucardo, although that is not one of its primary goals. For <a href="/swap_syncs" title="wikilink">swap syncs</a>, of course, there is very little that needs to be done - just point your application to the other database. For a <a href="/pushdelta_sync" title="wikilink">pushdelta sync</a> on the other hand, making one of the slaves into a master involves the following steps:</p>
+
+<ul>
+  <li>Set the old master as ‘inactive’ in the <a href="/db_table" title="wikilink">db table</a>.</li>
+  <li>Alter the sync so that the new master is the sourcedb.</li>
+  <li>Run <a href="/validate_sync" title="wikilink">validate_sync</a> so that triggers and other supporting items get created on the new master.</li>
+  <li>If you are in doubt that the slaves are up to date, set <a href="/onetimecopy" title="wikilink">onetimecopy</a> to 2.</li>
+  <li>Restart Bucardo</li>
+</ul>
+
+<p><a href="/Category:Bucardo" title="wikilink">Category:Bucardo</a></p>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>

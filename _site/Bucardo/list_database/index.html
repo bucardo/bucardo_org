@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="" xml:lang="en" lang="en" dir="ltr">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{PageTitle}Bucardo</title>
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/css/common/shared.css";
+			@import "/css/BucardoGreen/main-glossy.css";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="?303" />
+		<!--[if lt IE 7]><meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+	</head>
+<body class="mediawiki  ltr ">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<p><strong>NOTOC</strong></p>
+
+<p>The <strong>list database</strong> command is used to list information about one or more databases that Bucardo knows about. It can also be called as <strong>list db</strong></p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge"> bucardo list database</code></p>
+
+<p>Shows a list of all databases, one per line, in alphabetical order.</p>
+
+<p>Usage:</p>
+
+<p><code class="highlighter-rouge"> bucardo list database </code>&lt;name(s)&gt;</p>
+
+<p>If one or more database names is given, only lists the given ones. Wildcards can be used. To view detailed information, use the <strong>–vv</strong> (very verbose) argument. The alternate forms <strong>list databases</strong>, <em>list db</em>’, and <strong>list dbs</strong> are also accepted.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p><code class="highlighter-rouge"> bucardo list databases</code>
+<code class="highlighter-rouge"> </code>
+<code class="highlighter-rouge"> Database: main       Type: postgres  Status: active  Conn: psql -p 5432 -U bucardo -d postgres</code>
+<code class="highlighter-rouge"> Database: sales      Type: postgres  Status: active  Conn: psql -p 5432 -U bucardo -d sdb</code>
+<code class="highlighter-rouge"> Database: m1         Type: mysql     Status: active  Conn: mysql -u bucardo -D sales</code>
+<code class="highlighter-rouge"> Database: marketing  Type: postgres  Status: active  Conn: psql -p 5432 -U bucardo -d marketing</code></p>
+
+<p><code class="highlighter-rouge"> bucardo list database sales</code>
+<code class="highlighter-rouge"> </code>
+<code class="highlighter-rouge"> Database: sales      Type: postgres  Status: active  Conn: psql -p 5432 -U bucardo -d sdb</code></p>
+
+<p><code class="highlighter-rouge"> bucardo list db ma%</code>
+<code class="highlighter-rouge"> </code>
+<code class="highlighter-rouge"> Database: main       Type: postgres  Status: active  Conn: psql -p 5432 -U bucardo -d postgres</code>
+<code class="highlighter-rouge"> Database: marketing  Type: postgres  Status: active  Conn: psql -p 5432 -U bucardo -d marketing</code></p>
+
+<p><code class="highlighter-rouge"> bucardo list database sales -vv</code>
+<code class="highlighter-rouge"> </code>
+<code class="highlighter-rouge"> Database: sales  Status: active  Conn: psql -p 5432 -U bucardo -d sdb</code>
+<code class="highlighter-rouge">   Belongs to database group fizzy (target)</code>
+<code class="highlighter-rouge">   Used in sync s1 in a role of source</code>
+<code class="highlighter-rouge">     cdate                = 2011-10-10 16:33:02.376544-04</code>
+<code class="highlighter-rouge">     dbconn               = </code>
+<code class="highlighter-rouge">     dbhost               = </code>
+<code class="highlighter-rouge">     dbname               = sales</code>
+<code class="highlighter-rouge">     dbpass               = NULL</code>
+<code class="highlighter-rouge">     dbport               = 5432</code>
+<code class="highlighter-rouge">     dbservice            = NULL</code>
+<code class="highlighter-rouge">     dbtype               = postgres</code>
+<code class="highlighter-rouge">     dbuser               = bucardo</code>
+<code class="highlighter-rouge">     epoch                = 1318278782.37654</code>
+<code class="highlighter-rouge">     makedelta            = 0</code>
+<code class="highlighter-rouge">     name                 = sales</code>
+<code class="highlighter-rouge">     pgpass               = NULL</code>
+<code class="highlighter-rouge">     server_side_prepares = 1</code>
+<code class="highlighter-rouge">     sourcelimit          = 0</code>
+<code class="highlighter-rouge">     status               = active</code>
+<code class="highlighter-rouge">     targetlimit          = 0</code></p>
+
+<h3 id="internals">Internals</h3>
+
+<p>Information is read from the <a href="/bucardo.db_table" title="wikilink">bucardo.db table</a> for the main information, from the <a href="/bucardo.dbmap_table" title="wikilink">bucardo.dbmap table</a> for dbgroup memberships, and from the <a href="/bucardo.sync_table" title="wikilink">bucardo.sync table</a> and <a href="/bucardo.dbgroup" title="wikilink">bucardo.dbgroup</a> table for sync information.</p>
+
+<h3 id="see-also">See also:</h3>
+
+<ul>
+  <li><a href="/Bucardo/add_db" title="wikilink">add_db</a></li>
+  <li><a href="/Bucardo/update_db" title="wikilink">update_db</a></li>
+  <li><a href="/Bucardo/remove_db" title="wikilink">remove_db</a></li>
+</ul>
+
+</div>
+			<div id='catlinks' class='catlinks catlinks-allhidden'></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div class="portlet" id="p-logo">
+	<h2><a href="/"Array>bucardo.org</a></h2>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+</div>
+</body></html>
