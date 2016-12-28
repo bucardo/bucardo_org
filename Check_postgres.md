@@ -3,8 +3,6 @@ title: Check postgres
 permalink: /Check_postgres/
 ---
 
-[Category:check_postgres](/Category:check_postgres "wikilink")
-
 <h1>
 check_postgres
 

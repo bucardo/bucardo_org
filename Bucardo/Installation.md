@@ -144,5 +144,3 @@ Add [syncs](/sync "wikilink"):
 Start Bucardo:
 
 ` bucardo start`
-
-__NOTOC__ [Category:Bucardo](/Category:Bucardo "wikilink")

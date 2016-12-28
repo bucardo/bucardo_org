@@ -128,5 +128,3 @@ This is a quick summary. See the specific pages for more information.
 Start Bucardo:
 
 ` bucardo start`
-
-__NOTOC__ [Category:Bucardo](/Category:Bucardo "wikilink")

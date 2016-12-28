@@ -55,5 +55,3 @@ No, Bucardo relies on triggers, and Postgres does not yet provide DDL triggers o
 ### What does "Could not add to q" mean
 
 This message looks bad, but is in fact innocuous. It simply means that Bucardo is getting signaled to sync more quickly than it can complete a sync. That's quite normal, and Bucardo will catch up.
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

@@ -27,7 +27,6 @@ Online documentation is available for the following parts of Bucardo:
 -   [pgbench tutorial](/Bucardo/pgbench_example "wikilink"): An example of how to use Bucardo to replicate a database
 -   [bucardo_ctl](/bucardo_ctl "wikilink"): A script used to control an existing Bucardo installation
 -   [DBIx::Safe](/DBIx::Safe "wikilink"): Helper module needed by Bucardo that provides safe versions of DBI database handles
--   [:Category:Bucardo](/:Category:Bucardo "wikilink"): All Bucardo pages on this wiki.
 
 Community
 ---------
@@ -61,7 +60,3 @@ Bucardo development is managed in the [Git](http://git-scm.com/) version control
 `git clone `[`git://bucardo.org/dbixsafe.git/`](git://bucardo.org/dbixsafe.git/)
 
 There is also a [GitHub mirror](http://github.com/bucardo) for easy patch contribution by the general public.
-
-__NOTOC__
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

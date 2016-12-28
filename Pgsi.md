@@ -61,5 +61,3 @@ Everyone is encouraged to look over and make improvements to the code. The lates
 ` git clone `[`git://bucardo.org/pgsi.git`](git://bucardo.org/pgsi.git)
 
 There is also a [GitHub mirror](http://github.com/bucardo) for easy patch contribution by the general public.
-
-[Category:pgsi](/Category:pgsi "wikilink")
