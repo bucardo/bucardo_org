@@ -1,6 +1,7 @@
 ---
 title: Bucardo ctl
-permalink: /Bucardo_ctl/
+permalink: /bucardo_ctl/
+redirect_from: "/Bucardo/bucardo_ctl"
 ---
 
 **bucardo_ctl** is the main interface to Bucardo - it is used to start, stop, and control Bucardo.
