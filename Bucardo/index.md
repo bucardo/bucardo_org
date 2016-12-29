@@ -1,6 +1,7 @@
 ---
 title: Bucardo
 permalink: /Bucardo/
+redirect_from: "/Bucardo/Download"
 ---
 
 **Bucardo** is an asynchronous [PostgreSQL](http://www.postgresql.org/) replication system, allowing for both multi-master and multi-slave operations. It was developed at [Backcountry.com](http://www.backcountry.com/) by Jon Jensen and Greg Sabino Mullane of [End Point Corporation](https://www.endpoint.com/), and is now in use at many other organizations. Bucardo is free and open source software released under [the BSD license](/Bucardo/LICENSE "wikilink").

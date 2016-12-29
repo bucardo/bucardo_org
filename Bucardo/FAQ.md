@@ -1,6 +1,7 @@
 ---
 title: Bucardo FAQ
 permalink: /Bucardo/FAQ/
+redirect_from: "/Bucardo/Faq"
 ---
 
 Bucardo Frequently Asked Questions
