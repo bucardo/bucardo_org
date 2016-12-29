@@ -1,6 +1,7 @@
 ---
 title: Bucardo add dbgroup
 permalink: /Bucardo/add_dbgroup/
+redirect_from: "/add_dbgroup"
 ---
 
 The **add dbgroup** command creates a database group and optionally adds one or more databases to it.

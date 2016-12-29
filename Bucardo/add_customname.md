@@ -1,6 +1,7 @@
 ---
 title: Bucardo add customname
 permalink: /Bucardo/add_customname/
+redirect_from: "/add_customname"
 ---
 
 The **add customname** command creates a new Bucardo custom name mapping. This allows the tables involved in replication to have different names on different databases.

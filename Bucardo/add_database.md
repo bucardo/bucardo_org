@@ -1,6 +1,10 @@
 ---
 title: Bucardo add database
 permalink: /Bucardo/add_database/
+redirect_from: "/add_database"
+redirect_from: "/add_databases"
+redirect_from: "/add_db"
+redirect_from: "/Bucardo/add_db"
 ---
 
 __NOTOC__
