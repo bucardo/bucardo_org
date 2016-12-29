@@ -1,6 +1,6 @@
 ---
 title: Swap
-permalink: /Swap/
+permalink: /swap/
 ---
 
 **swap** is a type of Bucardo [sync](/sync "wikilink") in which changes to tables on two databases are exchanged both ways - in other words, a master to master replication system. Note that this type of sync only works for exactly two databases ([TODO at the moment](/TODO_at_the_moment "wikilink")).

@@ -40,7 +40,7 @@ Finally, install as a user with appropriate rights. One way to do this is:
 
 ` sudo make install`
 
-You should now have a global [bucardo_ctl](/Bucardo_ctl) file available. Test that you can run it and that you are using the correct version:
+You should now have a global [bucardo_ctl](/bucardo_ctl) file available. Test that you can run it and that you are using the correct version:
 
 ` bucardo_ctl --version`
 

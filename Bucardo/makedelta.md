@@ -1,6 +1,7 @@
 ---
 title: Bucardo makedelta
 permalink: /Bucardo/makedelta/
+redirect_from: "/makedelta"
 ---
 
 The **makedelta** process is used by Bucardo to add entries to the [bucardo_delta](/Bucardo/tables/bucardo_delta "wikilink") and [bucardo_track](/Bucardo/tables/bucardo_track "wikilink") tables as replication is happening. This is needed if the updates made by a sync need to be read at a later time by a different sync. For example, if you had a [pushdelta](/pushdelta "wikilink") sync "alpha" replicating rows from database A to database B, and another pushdelta sync replicating rows from database B to database C, you would need to turn on makedelta for sync "alpha", so that the rows copied from A to B are able to be pikced up as changed rows for the B to C sync.
