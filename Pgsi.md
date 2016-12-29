@@ -12,7 +12,7 @@ pgsi
 
 The latest version of pgsi, 1.7.1, can be downloaded at:
 
--   [pgsi-1.7.1.tar.gz](http://bucardo.org/downloads/pgsi-1.7.1.tar.gz)
+-   [pgsi-1.7.1.tar.gz](http://bucardo.org/downloads/pgsi-1.7.1.tar.gz) TODO
 
 ### Basic Usage
 
@@ -52,12 +52,12 @@ However pgsi will support additional information following that on the line. For
 
 ### Bugs and Feature Requests
 
-Bugs should be reported through [the bugzilla bug tracking site](http://bucardo.org/bugzilla). Feature requests are welcome there as well, or send us an email.
+Bugs should be reported through [the bugzilla bug tracking site](http://bucardo.org/bugzilla). Feature requests are welcome there as well, or send us an email. TODO
 
 ### Development
 
 Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
 
-` git clone `[`git://bucardo.org/pgsi.git`](git://bucardo.org/pgsi.git)
+` git clone `[`git://bucardo.org/pgsi.git`](git://bucardo.org/pgsi.git) TODO
 
 There is also a [GitHub mirror](http://github.com/bucardo) for easy patch contribution by the general public.
