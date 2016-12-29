@@ -9,8 +9,8 @@ permalink: /Tail_n_mail/
 
 The latest version, 1.27.0, can be downloaded here:
 
--   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail)
--   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc)
+-   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail) TODO
+-   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc) TODO
 
 ### Basic Usage
 
@@ -229,12 +229,12 @@ There are three mailing lists related to tail_n_mail:
 
 ### Bugs and Feature Requests
 
-Bugs should be reported through [the bugzilla bug tracking site](http://bucardo.org/bugzilla). Feature requests are welcome there as well, or send us an email.
+Bugs should be reported through [the bugzilla bug tracking site](http://bucardo.org/bugzilla). Feature requests are welcome there as well, or send us an email. TODO
 
 ### Development
 
 Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
 
-` git clone `[`git://bucardo.org/tail_n_mail.git`](git://bucardo.org/tail_n_mail.git)
+` git clone `[`git://bucardo.org/tail_n_mail.git`](git://bucardo.org/tail_n_mail.git) TODO
 
 There is also a [GitHub mirror](http://github.com/bucardo) for easy patch contribution by the general public.
