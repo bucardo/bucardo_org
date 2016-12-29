@@ -5,8 +5,6 @@ permalink: /Bucardo/install/
 
 This page describes the **bucardo install** command, which creates the Bucardo master database. For instructions on how to install the Bucardo software itself onto your system, please see [Bucardo/Installation](/Bucardo/Installation "wikilink")
 
-__NOTOC__
-
 Once the software is installed, the next step getting Bucardo up and running is to install a Bucardo master database. This will contain all the information Bucardo uses to run, such as the tables, databases, and syncs. Usage is simply:
 
 ` bucardo install`

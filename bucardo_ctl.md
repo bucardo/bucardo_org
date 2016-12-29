@@ -318,5 +318,3 @@ The message will be written by the [MCP](/MCP "wikilink") process to the logs in
 ` MESSAGE (date): string`
 
 where date is the timestamp the message was added, and string was the message provided
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

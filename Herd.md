@@ -10,5 +10,3 @@ Herds can be created by running:
 ` bucardo_ctl add herd `<name>` goat1 goat2 goat3...`
 
 The list of goats is optional.
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

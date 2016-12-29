@@ -689,5 +689,3 @@ Version 3.0.7, released October 11, 2007
 
 Version 3.0.6, first public release, on September 1, 2007
 =========================================================
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

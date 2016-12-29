@@ -17,5 +17,3 @@ Because tables (and sequences) can be updated on both sides, there needs to be a
 -   abort - the sync is aborted on a conflict
 
 You can also provide custom conflict handlers to allow you to use business logic for better conflict resolution.
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

@@ -14,5 +14,3 @@ The format of each file is simply **name=value**, where name is any of the optio
 If the option **--no-bucardorc** is given to bucardo_ctl, none of the bucardorc files will be used.
 
 You can also specify the location of a bucardorc file to use, by using **--bucardorc=filename**. If this option is used, all other default locations above will be ignored, and the program will error out if the file is not found.
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

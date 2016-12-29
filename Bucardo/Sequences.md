@@ -18,5 +18,3 @@ If you are using a [swap sync](/swap_sync "wikilink"), the best practice is to \
 1.  Use interleaving sequences. On database A, define the sequence as START WITH 1 INCREMENT BY 2. On database B, define the sequence as START WITH 2 INCREMENT BY 2. Thus, the two sequences will never have the same value.
 2.  Use different ranges. For example, database A would use a sequence of START WITH 1, while database B uses START WITH 100000000. This is not foolproof, as A can eventually catch up with B, although you can define A as MAXVALUE 99999999.
 3.  Use a common sequence. This relies on one or both of the databases using a function that makes a call to an external sequence.
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

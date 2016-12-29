@@ -23,5 +23,3 @@ Development is managed in the [Git](http://git-scm.com/) version control system.
 `git clone `[`git://bucardo.org/dbixcache.git/`](git://bucardo.org/dbixcache.git/)
 
 There is also a [GitHub mirror](http://github.com/bucardo/dbixcache) for easy patch contribution by the general public.
-
-__NOTOC__

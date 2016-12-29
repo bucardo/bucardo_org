@@ -16,5 +16,3 @@ You can also install it directly from CPAN. If you have the CPAN module installe
 ### See also
 
 -   [Installing Bucardo on CentOS 5](http://imperialwicket.com/installing-bucardo-for-postgresql-replication-on-centos-5)
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

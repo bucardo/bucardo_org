@@ -4,8 +4,6 @@ permalink: /Bucardo/add_table/
 redirect_from: "/add_table"
 ---
 
-__NOTOC__
-
 The **add table** command is used to teach Bucardo about a table.
 
 Example:

@@ -15,5 +15,3 @@ To populate the slave initially, you have two options:
 ` bucardo_ctl update sync `<syncname>` onetimecopy=2`
 
 ` bucardo_ctl reload `<syncname>
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

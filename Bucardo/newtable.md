@@ -41,5 +41,3 @@ After that is done, you can tail the [log.bucardo](/log.bucardo "wikilink") file
 Once finished, you can check on the sync's status. Right after the onetimecopy, the number of inserts for the last run will be very high, with no updates or deletes.
 
 ` bucardo_ctl status `<syncname>
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

@@ -57,5 +57,3 @@ Notices issued by the [KID](/KID "wikilink"):
 -   bucardo_syncdone_$syncname_$targetdb
 -   bucardo_synckill_$syncname_$targetdb
 -   bucardo_synckill_$syncname
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

@@ -19,5 +19,3 @@ To change the onetimecopy value of a sync, just run:
 ` bucardo_ctl update sync `<syncname>` onetimecopy=2`
 
 A onetimecopy event will appear as a [fullcopy](/fullcopy "wikilink") sync in the [web stats](/web_stats "wikilink") page.
-
-[Category:Bucardo](/Category:Bucardo "wikilink")

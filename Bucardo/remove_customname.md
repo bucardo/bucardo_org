@@ -3,8 +3,6 @@ title: Bucardo remove customname
 permalink: /Bucardo/remove_customname/
 ---
 
-__NOTOC__
-
 The **remove customname** command removes one or more custom name mappings from Bucardo's internal tables.
 
 Example:

@@ -3,8 +3,6 @@ title: Bucardo update database
 permalink: /Bucardo/update_database/
 ---
 
-__NOTOC__
-
 The **update database** command is used to change an existing database entry in the Bucardo database.
 
 Example:
