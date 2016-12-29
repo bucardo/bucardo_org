@@ -4,7 +4,7 @@ permalink: /Bucardo/Overview/
 ---
 
 This page gives a quick overview of what Bucardo is and how it works. Please consult the 
-[Bucardo](/Bucardo) page and the rest of the wiki for more details, and be sure and read the [Frequently Asked Questions page](/Bucardo/Faq).
+[Bucardo](/Bucardo) page and the rest of the wiki for more details, and be sure and read the [Frequently Asked Questions page](/Bucardo/FAQ).
 
 Bucardo is at its heart a Perl daemon that listens for NOTIFY requests and acts on them, by connecting to remote databases and copying data back and forth. All the specific information that the daemon needs is stored in the main bucardo database, including a list of all the databases involved in the replication and how to reach them, all the tables that are to be replicated, and how each is to be replicated.
 

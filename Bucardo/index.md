@@ -11,11 +11,11 @@ Obtaining Bucardo
 
 The latest version of Bucardo, 5.4.1, can be downloaded here:
 
--   [Bucardo.tar.gz](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz) - signature: [Bucardo.tar.gz.asc](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz.asc)
+-   [Bucardo.tar.gz](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz) - signature: [Bucardo.tar.gz.asc](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz.asc) TODO
 
 Bucardo also requires DBIx::Safe, which can be downloaded here:
 
--   [DBIx-Safe-1.2.5.tar.gz](http://bucardo.org/downloads/DBIx-Safe-1.2.5.tar.gz)
+-   [DBIx-Safe-1.2.5.tar.gz](http://bucardo.org/downloads/DBIx-Safe-1.2.5.tar.gz) TODO
 
 Documentation
 -------------
