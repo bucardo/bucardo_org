@@ -6,7 +6,7 @@ title: Main Page
 <tr>
 <td>
 <h2 class="bucardo">
-    <a href="/Bucardo">Bucardo</a>
+    <a href="{{ site.baseurl }}/Bucardo/">Bucardo</a>
 </h2>
 <h3 class="bucardo">
 Asynchronous PostgreSQL Replication System
@@ -15,7 +15,7 @@ Asynchronous PostgreSQL Replication System
 </td>
 <td>
 <h2 class="check-postgres">
-    <a href="/Check_postgres">check_postgres</a>
+    <a href="{{ site.baseurl }}/Check_postgres/">check_postgres</a>
 </h2>
 <h3 class="check-postgres">
 Nagios-Friendly PostgreSQL Database Checking Script
@@ -26,7 +26,7 @@ Nagios-Friendly PostgreSQL Database Checking Script
 <tr>
 <td>
 <h2 class="pgsi">
-    <a href="/Pgsi">pgsi</a>
+    <a href="{{ site.baseurl }}/Pgsi/">pgsi</a>
 </h2>
 <h3 class="pgsi">
 Wiki-Ready Query Reports
@@ -35,7 +35,7 @@ Wiki-Ready Query Reports
 </td>
 <td>
 <h2 class="tnm">
-    <a href="/Tail_n_mail">tail_n_mail</a>
+    <a href="{{ site.baseurl }}/Tail_n_mail/">tail_n_mail</a>
 </h2>
 <h3 class="tnm">
 Monitor log files
@@ -46,7 +46,7 @@ Monitor log files
 <tr>
 <td>
 <h2 class="boxinfo">
-    <a href="/Boxinfo">boxinfo</a>
+    <a href="{{ site.baseurl }}/Boxinfo/">boxinfo</a>
 </h2>
 <h3 class="boxinfo">
 Gather system information
@@ -55,7 +55,7 @@ Gather system information
 </td>
 <td>
 <h2 class="dbix">
-    <a href="/DBIx-Safe">DBIx::Safe</a>
+    <a href="{{ site.baseurl }}/DBIx-Safe/">DBIx::Safe</a>
 </h2>
 <h3 class="dbix">
 Safer Access To Database Through A DBI Handle
@@ -66,7 +66,7 @@ Safer Access To Database Through A DBI Handle
 <tr>
 <th colspan="2">
 <h2 class="bucardo">
-    <a href="/Split_postgres_dump">split_postgres_dump</a>
+    <a href="{{ site.baseurl }}/Split_postgres_dump/">split_postgres_dump</a>
 </h2>
 <h3 class="bucardo">
 Break a pg_dump file into predata, data, and postdata segments
@@ -78,5 +78,5 @@ Break a pg_dump file into predata, data, and postdata segments
 
 ------------------------------------------------------------------------
 
-[http://www.endpoint.com](/Image:End_point_light_on_dark-300x80.png "wikilink") bucardo.org is hosted and supported by End Point Corporation. End Point specializes in developing, designing, and marketing effective websites. Since 1995, our diverse team of developers has assembled an excellent record of client satisfaction and proven that End Point can handle your organization's greatest web challenges.
+[<img src="{{ site.baseurl }}/images/End_point_light_on_dark-300x80.png">](http://www.endpoint.com) bucardo.org is hosted and supported by End Point Corporation. End Point specializes in developing, designing, and marketing effective websites. Since 1995, our diverse team of developers has assembled an excellent record of client satisfaction and proven that End Point can handle your organization's greatest web challenges.
 
