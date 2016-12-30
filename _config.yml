@@ -4,7 +4,7 @@ title: Bucardo
 # Build settings
 markdown: kramdown
 
-baseurl: "/bucardotest"
+baseurl: ""
 
 defaults:
     -
