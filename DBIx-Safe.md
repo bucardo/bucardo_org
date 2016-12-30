@@ -1,7 +1,6 @@
 ---
 title: DBIx-Safe
 permalink: /DBIx-Safe/
-redirect_from: "/DBIX::Safe"
 ---
 
 DBIx::Safe
