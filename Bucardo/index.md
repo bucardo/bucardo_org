@@ -4,7 +4,7 @@ permalink: /Bucardo/
 redirect_from: "/Bucardo/Download"
 ---
 
-**Bucardo** is an asynchronous [PostgreSQL](http://www.postgresql.org/) replication system, allowing for both multi-master and multi-slave operations. It was developed at [Backcountry.com](http://www.backcountry.com/) by Jon Jensen and Greg Sabino Mullane of [End Point Corporation](https://www.endpoint.com/), and is now in use at many other organizations. Bucardo is free and open source software released under [the BSD license](/Bucardo/LICENSE "wikilink").
+**Bucardo** is an asynchronous [PostgreSQL](http://www.postgresql.org/) replication system, allowing for both multi-master and multi-slave operations. It was developed at [Backcountry.com](http://www.backcountry.com/) by Jon Jensen and Greg Sabino Mullane of [End Point Corporation](https://www.endpoint.com/), and is now in use at many other organizations. Bucardo is free and open source software released under [the BSD license](LICENSE.md).
 
 Obtaining Bucardo
 -----------------
@@ -22,12 +22,12 @@ Documentation
 
 Online documentation is available for the following parts of Bucardo:
 
--   [Overview of Bucardo](/Bucardo/Overview "wikilink"): A quick overview of Bucardo, explaining what it is and what it is capable of
--   [Bucardo FAQ (Frequently Asked Questions)](/Bucardo/FAQ "wikilink"): Answers to commonly asked questions about Bucardo
--   [Bucardo installation](/Bucardo/Installation "wikilink"): Installation instructions for Bucardo
--   [pgbench tutorial](/Bucardo/pgbench_example "wikilink"): An example of how to use Bucardo to replicate a database
--   [bucardo_ctl](/bucardo_ctl "wikilink"): A script used to control an existing Bucardo installation
--   [DBIx::Safe](/DBIx-Safe): Helper module needed by Bucardo that provides safe versions of DBI database handles
+-   [Overview of Bucardo](Overview.md): A quick overview of Bucardo, explaining what it is and what it is capable of
+-   [Bucardo FAQ (Frequently Asked Questions)](FAQ.md): Answers to commonly asked questions about Bucardo
+-   [Bucardo installation](Installation.md): Installation instructions for Bucardo
+-   [pgbench tutorial](pgbench_example.md): An example of how to use Bucardo to replicate a database
+-   [bucardo_ctl](bucardo_ctl.md): A script used to control an existing Bucardo installation
+-   [DBIx::Safe](../DBIx-Safe.md): Helper module needed by Bucardo that provides safe versions of DBI database handles
 
 Community
 ---------

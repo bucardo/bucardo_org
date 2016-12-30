@@ -35,13 +35,13 @@ To install Bucardo for the first time, simply enter
 
 ` bucardo_ctl install`
 
-See the [Bucardo installation](/Bucardo/Installation "wikilink") page for complete details.
+See the [Bucardo installation](Bucardo/Installation.md) page for complete details.
 
 To upgrade Bucardo, use:
 
 ` bucardo_ctl upgrade`
 
-See the [Bucardo upgrade](/Bucardo/Upgrade "wikilink") page for complete details.
+See the [Bucardo upgrade](Bucardo/Upgrade.md) page for complete details.
 
 ### Controlling Bucardo
 
@@ -113,7 +113,7 @@ To tell a running Bucardo to re-read the configuration table:
 
 ### Controlling syncs
 
-Bucardo works by running one or more replication events called [syncs](/sync "wikilink"). The main interface for controlling these is bucardo_ctl
+Bucardo works by running one or more replication events called [syncs](Sync.md). The main interface for controlling these is bucardo_ctl
 
 #### Kicking a sync
 
@@ -133,7 +133,7 @@ To reload a sync:
 
 ` bucardo_ctl reload `<syncname>
 
-One or more named syncs can be reloaded this way. Each will be reloaded in turn, and bucardo_ctl will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/MCP "wikilink") process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/onetimecopy "wikilink") attribute.
+One or more named syncs can be reloaded this way. Each will be reloaded in turn, and bucardo_ctl will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/MCP "wikilink") process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](onetimecopy.md) attribute.
 
 #### Activating a sync
 
@@ -163,11 +163,11 @@ This will show detailed information about a specific sync, including the last ti
 
 #### Listing syncs
 
-To get a list of all [syncs](/sync "wikilink"):
+To get a list of all [syncs](Sync.md):
 
 ` bucardo_ctl list syncs`
 
-This list will show the sync name, it's type ([fullcopy](/fullcopy "wikilink"), [pushdelta](/pushdelta "wikilink"), or [swap](/swap "wikilink")), the source [herd](/herd "wikilink"), the target database (or database group), and current status. For more details on a specific sync, use the 'status' command above.
+This list will show the sync name, it's type ([fullcopy](fullcopy.md), [pushdelta](pushdelta.md), or [swap](swap.md)), the source [herd](herd.md), the target database (or database group), and current status. For more details on a specific sync, use the 'status' command above.
 
 #### Listing databases
 
@@ -179,7 +179,7 @@ This will show the name of the database (as used by Bucardo, not its actual name
 
 #### Listing database groups
 
-To get a list of all known [database groups](/database_group "wikilink"):
+To get a list of all known [database groups](database_group.md):
 
 ` bucardo_ctl list dbgroups`
 
@@ -197,7 +197,7 @@ To list all known sequences:
 
 #### Listing herds
 
-To list all [herds](/herd "wikilink"):
+To list all [herds](herd.md):
 
 ` bucardo_ctl list herds`
 
@@ -231,7 +231,7 @@ The "dbname" is the name of the database inside of Postgres. The other optional 
 -   conn: Any additional information add to the connection string, e.g. sslmode=require
 -   sourcelimit: The maximum number of replication events that can run at one time using this database as a source. Defaults to 0 (no limit)
 -   targetlimit: The maximum number of replication events that can run at one time using this database as a target. Defaults to 0 (no limit)
--   pgpass: Full path and filename of a [Bucardo/pgpass](/Bucardo/pgpass "wikilink") file to use for this connection
+-   pgpass: Full path and filename of a [Bucardo/pgpass](Bucardo/pgpass.md) file to use for this connection
 
 For example, to add three new databases on different hosts:
 
@@ -289,7 +289,7 @@ To add a sync:
 
 ` bucardo_ctl add sync `<name>` source=`<herdname>` type=`<synctype>` target`
 
-The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](/fullcopy "wikilink"), [pushdelta](/pushdelta "wikilink"), or [swap](/swap "wikilink"). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
+The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](fullcopy.md), [pushdelta](pushdelta.md), or [swap](swap.md). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
 
 As a shortcut for creating new syncs, you can also give a comma-separated list of tables, like so:
 
@@ -299,11 +299,11 @@ This will create a herd of the same name as the sync if it does not already exis
 
 Other options that can be added to 'add sync', in the format name=value:
 
--   onetimecopy: set the [onetimecopy](/onetimecopy "wikilink") value for this sync
+-   onetimecopy: set the [onetimecopy](onetimecopy.md) value for this sync
 -   status: set the initial status for the sync. Defaults to 'active'
 -   lifetime: set the [lifetime](/lifetime "wikilink") for this sync - how long to run before the sync is restarted
 -   maxkicks: sets the [maxkicks](/maxkicks "wikilink") for this sync - how many times it runs before being restarted
--   makedelta: set the [makedelta](/makedelta "wikilink") value for this sync. Defaults to 0.
+-   makedelta: set the [makedelta](makedelta.md) value for this sync. Defaults to 0.
 
 ### Other actions
 
