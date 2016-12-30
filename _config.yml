@@ -12,3 +12,6 @@ defaults:
             path: "" # Everything
         values:
             layout: "default"
+
+gems:
+    - jekyll-redirect-from
