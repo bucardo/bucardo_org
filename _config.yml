@@ -15,3 +15,5 @@ defaults:
 
 gems:
     - jekyll-redirect-from
+
+exclude: ['README', 'Gemfile', 'Gemfile.lock']
