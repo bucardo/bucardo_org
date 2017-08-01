@@ -1,0 +1,17 @@
+This repository contains the source MarkDown documents for the Bucardo.org site,
+including all Bucardo documentation.
+
+This project is intended to be built via Jekyll (https://jekyllrb.org)
+
+The short version for getting this running locally:
+
+    $ gem install bundler jekyll
+    $ alias jekyll='bundler exec jekyll'
+    $ jekyll serve
+
+This will create a static version of this site in the `_site` directory and
+start a server from localhost that you can browse and test any changes.
+
+Submit a pull request with any documentation improvements, etc, and if approved
+we will update the main bucardo.org site to match.
+
