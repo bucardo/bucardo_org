@@ -5,7 +5,7 @@ This project is intended to be built via Jekyll (https://jekyllrb.com/)
 
 The short version for getting this running locally:
 
-    $ gem install bundler jekyll
+    $ gem install bundler jekyll github-pages
     $ alias jekyll='bundler exec jekyll'
     $ jekyll serve
 
