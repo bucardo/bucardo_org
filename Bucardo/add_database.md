@@ -11,13 +11,13 @@ The **add database** command is used to teach Bucardo about a database that will
 
 Example:
 
-` bucardo add database A host=example.com dbname=sales`
+` bucardo add database A host=example.com dbname=sales`
 
 This will creates a new database entry named **A** which resides on host **example.com** and is named **sales**. Note that "sales" is the actual database name that Bucardo will connect to, while "A" is how Bucardo refers to this specific database, for example when calling [add dbgroup](/add_dbgroup "wikilink"). A connection to the database will be attempted right away: see the Verification section below.
 
 Usage:
 
-` bucardo add database `<name>` `<dbname=value>` [optional arguments]`
+` bucardo add database `<name>` `<dbname=value>` [optional arguments]`
 
 The alternate form **add db** is also accepted.
 
@@ -41,7 +41,7 @@ The alternate form **add db** is also accepted.
 -   dbconn (can also use 'conn')
     -   Additional connection parameters. For example, to specify a SID when using an Oracle target:
 
-` bucardo add db foobar type=oracle host=example.com user=scott conn=sid=abc`
+` bucardo add db foobar type=oracle host=example.com user=scott conn=sid=abc`
 
 -   status
     -   Defaults to 'active'; the only other choice is 'inactive'

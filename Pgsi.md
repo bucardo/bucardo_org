@@ -18,18 +18,18 @@ The latest version of pgsi, 1.7.1, can be downloaded at:
 
 To use pgsi, you must run it against a [Postgres](/Postgres "wikilink") logfile that has full logging enabled. Then run:
 
-` perl pgsi.pl --file=logfile > pgsi.html`
+` perl pgsi.pl --file=logfile > pgsi.html`
 
 ### Postgres Logging Options
 
 Make sure the following options are set in your postgresql.conf, or otherwise enabled for the traffic you want pgsi to analyze:
 
-` log_duration = on`
-` log_statement = 'all'`
+` log_duration = on`
+` log_statement = 'all'`
 
 If you're using the stderr log log destination (the default) you'll also need something like the following line prefix at minimum:
 
-` log_line_prefix = '%t %p '`
+` log_line_prefix = '%t %p '`
 
 However pgsi will support additional information following that on the line. For example remote host (*%h*), user name (*%u*), and database name (*%d*) are often useful for filtering the log before analysis, and can be helpful if you need to manually read or track activity through the log itself.
 
@@ -58,6 +58,6 @@ Bugs should be reported through [the bugzilla bug tracking site](http://bucardo.
 
 Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
 
-` git clone `[`git://bucardo.org/pgsi.git`](git://bucardo.org/pgsi.git) TODO
+` git clone `[`git://bucardo.org/pgsi.git`](git://bucardo.org/pgsi.git) TODO
 
 There is also a [GitHub mirror](http://github.com/bucardo) for easy patch contribution by the general public.

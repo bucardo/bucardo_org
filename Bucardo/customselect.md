@@ -22,15 +22,15 @@ Example Usage
 
 The basic idea is to replace the default 'SELECT \* FROM table' with a modified select list, by calling:
 
-`$ bucardo add customcols mytable "SELECT a,b, foo AS bar"`
+`$ bucardo add customcols mytable "SELECT a,b, foo AS bar"`
 
 You can optionally constrain to a certain sync:
 
-`$ bucardo add customcols mytable "SELECT a,b, foo AS bar" sync=mysync`
+`$ bucardo add customcols mytable "SELECT a,b, foo AS bar" sync=mysync`
 
 And/or to a certain database (which is probably what you want to do here):
 
-`$ bucardo add customcols mytable "SELECT a,b, foo AS bar" db=mymongodb`
+`$ bucardo add customcols mytable "SELECT a,b, foo AS bar" db=mymongodb`
 
 Notes
 -----

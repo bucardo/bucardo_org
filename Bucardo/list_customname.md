@@ -7,22 +7,22 @@ The **list customname** command is used to list information about one or more Bu
 
 Example:
 
-` bucardo list customnames`
+` bucardo list customnames`
 
 Shows a list of all custom name mappings with their internal ID.
 
 Usage:
 
-` bucardo list customnames [number] [schema.tablename]`
+` bucardo list customnames [number] [schema.tablename]`
 
 Without any arguments, lists all custom names. Arguments can be a number, representing the internal ID (mainly used for removing custom names), or the argument can be a fully qualified table name.
 
 ### Examples
 
-` bucardo list customnames`
+` bucardo list customnames`
 
-` 1. Table: public.t1 => foobar`
-` 2. Table: public.sales => qs Sync: alpha`
+` 1. Table: public.t1 => foobar`
+` 2. Table: public.sales => qs Sync: alpha`
 
 ### Internals
 

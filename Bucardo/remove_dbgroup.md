@@ -7,13 +7,13 @@ The **remove dbgroup** command removes one or more database groups from Bucardo'
 
 Example:
 
-` bucardo remove dbgroup foo`
+` bucardo remove dbgroup foo`
 
 Removes the database group named **foo**
 
 Usage:
 
-` bucardo remove dbgroup `<name(s)>` <--force>`
+` bucardo remove dbgroup `<name(s)>` <--force>`
 
 If there are any syncs that are using the database groups to be removed, the command will fail unless the --force option is given.
 

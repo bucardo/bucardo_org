@@ -7,13 +7,13 @@ The **remove database** command removes one or more databases from Bucardo's int
 
 Example:
 
-` bucardo remove database A B`
+` bucardo remove database A B`
 
 Removes the database entries **A** and **B**.
 
 Usage:
 
-` bucardo remove database `<name(s)>` <--force>`
+` bucardo remove database `<name(s)>` <--force>`
 
 If there are any tables that Bucardo knows about that reside in this database, or any database groups that this database belongs to, the remove command will fail unless the --force option is given. The alternate form **remove db** is also accepted.
 

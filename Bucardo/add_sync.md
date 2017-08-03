@@ -8,17 +8,17 @@ The **add sync** command is used to create a new [Bucardo sync](/Bucardo_sync "w
 
 Example:
 
-` bucardo add sync alpha herd=gill dbs=A,B,C`
+` bucardo add sync alpha herd=gill dbs=A,B,C`
 
 Creates a new sync named **alpha** which replicates tables in the herd **gill** and replicates from source database **A** to target databases **B** and **C**
 
 Usages:
 
-` bucardo add sync `<name>` herd=`<herdname>` dbs=`<database group>
+` bucardo add sync `<name>` herd=`<herdname>` dbs=`<database group>
 
-` bucardo add sync `<name>` herd=`<herdname>` dbs=`<list of databases>
+` bucardo add sync `<name>` herd=`<herdname>` dbs=`<list of databases>
 
-` bucardo add sync `<name>` tables=products,categories,sales dbs=`<list of databases>
+` bucardo add sync `<name>` tables=products,categories,sales dbs=`<list of databases>
 
 ### Required arguments:
 
@@ -27,11 +27,11 @@ Usages:
 -   dbs
     -   The [Bucardo database group](/Bucardo_database_group "wikilink") to use in this sync, or a comma-separated list of databases. If the latter, a new database group with the same name as the sync will be created. By default, the first database will be considered the [source](/source_database "wikilink"), and all others [targets](/target_database "wikilink"). To specify the [role](/database_role "wikilink") of a database, add a colon and the role. For example, to create a sync with three source databases and two targets:
 
-` bucardo add sync foobar herd=myherd dbs=A:source,B:target,C:target,D:source,E:source`
+` bucardo add sync foobar herd=myherd dbs=A:source,B:target,C:target,D:source,E:source`
 
 Because the first database given always defaults to a source role, and all others default to a target role, the above sync could also be created with:
 
-` bucardo add sync foobar herd=myherd dbs=A,B,C,D:source,E:source`
+` bucardo add sync foobar herd=myherd dbs=A,B,C,D:source,E:source`
 
 ### Optional arguments:
 

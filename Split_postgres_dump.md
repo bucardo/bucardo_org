@@ -16,6 +16,6 @@ Development
 
 Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
 
-`git clone `[`git://bucardo.org/split_postgres_dump.git`](git://bucardo.org/split_postgres_dump.git) TODO
+`git clone `[`git://bucardo.org/split_postgres_dump.git`](git://bucardo.org/split_postgres_dump.git) TODO
 
 There is also a GitHub mirror for easy patch contribution by the general public.

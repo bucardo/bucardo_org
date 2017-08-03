@@ -16,7 +16,7 @@ The latest version, 1.4.0, can be downloaded here:
 
 Usage is simply to run:
 
-` perl boxinfo.pl`
+` perl boxinfo.pl`
 
 It is preferred that the script gets run as the 'root' user, as some of the information can only be gathered by that user. Two files are created by the script:
 
@@ -65,7 +65,7 @@ Bugs should be reported through [the bugzilla bug tracking site](http://bucardo.
 
 Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
 
-` git clone `[`git://bucardo.org/boxinfo.git`](git://bucardo.org/boxinfo.git) TODO
+` git clone `[`git://bucardo.org/boxinfo.git`](git://bucardo.org/boxinfo.git) TODO
 
 There is also a [GitHub mirror](http://github.com/bucardo) for easy patch contribution by the general public.
 

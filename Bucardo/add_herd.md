@@ -7,13 +7,13 @@ The **add herd** command is used to create a new [Bucardo herd](/Bucardo_herd "w
 
 Example:
 
-` bucardo add herd chuck t1 t2`
+` bucardo add herd chuck t1 t2`
 
 Creates a new herd named **chuck** which contains the tables **t1** and **t2**
 
 Usage:
 
-` bucardo add herd `<name>` table1 [table2 table3 ...]`
+` bucardo add herd `<name>` table1 [table2 table3 ...]`
 
 Note that herds can also be implicitly created with the [add sync](/Bucardo/add_sync "wikilink") command and the [add table](/Bucardo/add_table "wikilink") command.
 

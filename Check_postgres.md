@@ -13,7 +13,7 @@ check_postgres
 
 Once installed, you should be able to view the documentation locally by running:
 
-` man check_postgres`
+` man check_postgres`
 
 The documentation is also available in HTML format:
 
@@ -47,6 +47,6 @@ Source code changes (via git-commit) are sent to the 'check_postgres-commit' lis
 
 Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
 
-` git clone `[`git://bucardo.org/check_postgres.git`](git://bucardo.org/check_postgres.git) TODO
+` git clone `[`git://bucardo.org/check_postgres.git`](git://bucardo.org/check_postgres.git) TODO
 
 There is also a [GitHub mirror](http://github.com/bucardo/check_postgres/) for easy patch contribution by the general public.
