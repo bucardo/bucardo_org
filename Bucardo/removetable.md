@@ -12,3 +12,4 @@ To remove a table or a sequence from an existing sync:
 This will not change any running syncs: to do that, you should run:
 
 ` bucardo_ctl reload `<syncname>
+

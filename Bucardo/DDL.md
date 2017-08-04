@@ -7,3 +7,4 @@ Information on how to make schema changes when using [Bucardo](/Bucardo "wikilin
 
 -   Types of changes
 -   Will applications hit new columns, etc.
+

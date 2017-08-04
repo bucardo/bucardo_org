@@ -8,3 +8,4 @@ Postgres has a procedural language called **plpgsql** that Bucardo makes heavy u
 ` CREATE LANGUAGE plpgsql;`
 
 See the [requirements](/Bucardo/Requirements "wikilink") page for information on where the language is needed.
+

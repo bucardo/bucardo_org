@@ -3,6 +3,8 @@ title: Bucardo update table
 permalink: /Bucardo/update_table/
 ---
 
+__NOTOC__
+
 The **update table** command is used to change an existing table entry in the Bucardo database.
 
 Example:

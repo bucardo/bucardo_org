@@ -1,6 +1,6 @@
 ---
 title: Onetimecopy
-permalink: /onetimecopy/
+permalink: /Onetimecopy/
 ---
 
 The **onetimecopy** mode of a sync instructs it to temporarily switch from a [pushdelta](/pushdelta "wikilink") mode to a [fullcopy](/fullcopy "wikilink") mode. In other words, it will unconditionally copy over all rows for each table in the sync from the master to the slaves. When finished, Bucardo will automatically set this value back to 0.
@@ -19,3 +19,4 @@ To change the onetimecopy value of a sync, just run:
 ` bucardo_ctl update sync `<syncname>` onetimecopy=2`
 
 A onetimecopy event will appear as a [fullcopy](/fullcopy "wikilink") sync in the [web stats](/web_stats "wikilink") page.
+

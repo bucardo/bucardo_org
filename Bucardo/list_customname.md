@@ -3,6 +3,8 @@ title: Bucardo list customname
 permalink: /Bucardo/list_customname/
 ---
 
+__NOTOC__
+
 The **list customname** command is used to list information about one or more Bucardo custom name mappings.
 
 Example:

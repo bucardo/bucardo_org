@@ -1,7 +1,6 @@
 ---
 title: Sync
 permalink: /Sync/
-redirect_from: "/Bucardo/sync"
 ---
 
 [Bucardo](/Bucardo "wikilink") replication events happens in **syncs**, which replicate one or more tables and come in one of three types:
@@ -28,3 +27,4 @@ To modify an existing sync, run:
 Where name is one of the columns of the [sync table](/sync_table "wikilink")
 
 To add a database to an existing sync the **update dbgroup** command should be used (see [Bucardo/update_dbgroup](/Bucardo/update_dbgroup "wikilink")).
+

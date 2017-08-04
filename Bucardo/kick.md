@@ -16,3 +16,4 @@ In addition to specifying syncs by their exact name, users can also include SQL 
 After kicking, you can check the status of a sync by running the [status](/status "wikilink") command:
 
 ` bucardo_ctl status foobar`
+

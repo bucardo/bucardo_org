@@ -19,3 +19,4 @@ Then upgrade your existing Bucardo database by running:
 This will modify your existing Bucardo schema as needed. You should also validate all your syncs by running:
 
 ` bucardo_ctl validate all`
+

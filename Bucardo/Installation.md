@@ -5,7 +5,7 @@ permalink: /Bucardo/Installation/
 
 [Bucardo](/Bucardo "wikilink") Installation
 
-This page describes how to install Bucardo. If you want a packaged version, skip to **Installation From Packages**, FreeBSD users can skip to **[Installation From FreeBSD Ports](/Bucardo/Installation#installation-from-freebsd-ports)**. For the impatient, here's the short version:
+This page describes how to install Bucardo. If you want a packaged version, skip to **Installation From Packages**, FreeBSD users can skip to **[Installation From FreeBSD Ports](/Bucardo/Installation#Installation_From_FreeBSD_Ports "wikilink")**. For the impatient, here's the short version:
 
 Quick version
 -------------
@@ -22,13 +22,13 @@ Install DBIx::Safe
 
 Bucardo requires the Perl module DBIx::Safe to be installed. Some distributions have it available as a package, in which case the installation is as simple as:
 
-```bash
+```
 yum install perl-DBIx-Safe
 # or
 apt-get install libdbix-safe-perl
 ```
 
-To install it manually, grab the [latest DBIx::Safe tarball](http://bucardo.org/downloads/dbix_safe.tar.gz) TODO, then unpack the tarball and install as a normal Perl module:
+To install it manually, grab the [latest DBIx::Safe tarball](http://bucardo.org/downloads/dbix_safe.tar.gz), then unpack the tarball and install as a normal Perl module:
 
 ```
 tar xvfz dbix_safe.tar.gz
@@ -41,39 +41,33 @@ sudo make install
 
 Other Perl prerequisites that may or may not be installed already on your system include:
 
-```
-DBI
-DBD::Pg
-Test::Simple
-boolean
-```
+- `DBI`
+- `DBD::Pg`
+- `Test::Simple`
+- `boolean`
 
 Download and unpack the Bucardo tarball
 ---------------------------------------
 
-The latest version of Bucardo can be found on [the Bucardo download page](/Bucardo#obtaining-bucardo). Untar it and switch to the directory:
+The latest version of Bucardo can be found on [the Bucardo download page](/Bucardo#Obtaining_Bucardo "wikilink"). Untar it and switch to the directory:
 
-```bash
-tar xvfz Bucardo-5.3.1.tar.gz
-cd Bucardo-5.3.1
-```
+` tar xvfz Bucardo-5.4.1.tar.gz`
+` cd Bucardo-5.4.1`
 
 Install the Bucardo software
 ----------------------------
 
 Once in the directory:
 
-```bash
-perl Makefile.PL
-make
-sudo make install
-```
+` perl Makefile.PL`
+` make`
+` sudo make install`
 
 The last step (make install) needs to be run as an account that can install to system directories.
 
-If you want to install all the files to a single directory, for testing purposes, you can define the environment variable `INSTALL_BUCARDODIR` before running `perl` `Makefile.PL`. Thus, the first step would become:
+If you want to install all the files to a single directory, for testing purposes, you can define the environment variable `INSTALL_BUCARDODIR` before running `perl Makefile.PL`. Thus, the first step would become:
 
-`INSTALL_BUCARDODIR=/tmp/bucardotest perl Makefile.PL`
+` INSTALL_BUCARDODIR=/tmp/bucardotest perl Makefile.PL`
 
 Create the Bucardo database
 ---------------------------
@@ -144,13 +138,14 @@ Add databases:
 
 Add tables and sequences:
 
-`bucardo add all tables`
-`bucardo add all sequences`
+` bucardo add all tables`
+` bucardo add all sequences`
 
-Add [syncs](/Sync):
+Add [syncs](/sync "wikilink"):
 
-`bucardo add sync `<syncname>` type=`<synctype>` source=`<db>` targetdb=`<db>` tables=tab1,tab2,...`
+` bucardo add sync `<syncname>` type=`<synctype>` source=`<db>` targetdb=`<db>` tables=tab1,tab2,...`
 
 Start Bucardo:
 
-`bucardo start`
+` bucardo start`
+

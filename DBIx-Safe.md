@@ -12,4 +12,4 @@ DBIx::Safe
 
 The latest version, 1.2.5, can be downloaded here:
 
--   [DBIx-Safe.tar.gz](http://bucardo.org/downloads/DBIx-Safe-1.2.5.tar.gz) TODO
+-   [DBIx-Safe.tar.gz](http://bucardo.org/downloads/DBIx-Safe-1.2.5.tar.gz)

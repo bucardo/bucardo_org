@@ -19,9 +19,9 @@ Bucardo requires the following Perl modules to be installed:
 
 ### Download and unpack Bucardo
 
-The latest version of Bucardo can be found at [the download page](/Bucardo#obtaining-bucardo). Alternatively, you can pull the development version from git by doing:
+The latest version of Bucardo can be found at [the download page](/Bucardo/download "wikilink"). Alternatively, you can pull the development version from git by doing:
 
-` git clone `[`git://bucardo.org/bucardo.git`](git://bucardo.org/bucardo.git) TODO
+` git clone `[`git://bucardo.org/bucardo.git`](git://bucardo.org/bucardo.git)
 
 Either way, you should end up in a bucardo directory, and ready for the next step.
 
@@ -40,7 +40,7 @@ Finally, install as a user with appropriate rights. One way to do this is:
 
 ` sudo make install`
 
-You should now have a global [bucardo_ctl](/bucardo_ctl) file available. Test that you can run it and that you are using the correct version:
+You should now have a global [bucardo_ctl](/bucardo_ctl "wikilink") file available. Test that you can run it and that you are using the correct version:
 
 ` bucardo_ctl --version`
 
@@ -228,3 +228,4 @@ As you experiment, you might also want to look at the syncs in more detail with:
 ` bucardo_ctl status`
 ` bucardo_ctl status benchdelta`
 ` bucardo_ctl status benchcopy`
+

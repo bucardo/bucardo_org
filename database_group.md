@@ -1,6 +1,6 @@
 ---
 title: Database group
-permalink: /database_group/
+permalink: /Database_group/
 ---
 
 Databases can be grouped together inside of Bucardo, so that a sync may point to a group of databases (via the "targetgroup" column) rather than to a single database.
@@ -8,3 +8,4 @@ Databases can be grouped together inside of Bucardo, so that a sync may point to
 To create a new database group, run:
 
 ` bucardo_ctl add dbgroup `<name>` db1 db2 db3...`
+

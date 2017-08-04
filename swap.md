@@ -1,6 +1,6 @@
 ---
 title: Swap
-permalink: /swap/
+permalink: /Swap/
 ---
 
 **swap** is a type of Bucardo [sync](/sync "wikilink") in which changes to tables on two databases are exchanged both ways - in other words, a master to master replication system. Note that this type of sync only works for exactly two databases ([TODO at the moment](/TODO_at_the_moment "wikilink")).
@@ -17,3 +17,4 @@ Because tables (and sequences) can be updated on both sides, there needs to be a
 -   abort - the sync is aborted on a conflict
 
 You can also provide custom conflict handlers to allow you to use business logic for better conflict resolution.
+

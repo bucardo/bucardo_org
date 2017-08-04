@@ -8,7 +8,7 @@ DBIx::Cache
 
 **DBIx::Cache** is a Perl module that allows for caching of DBI handles, to reduce the load on a database server. It is currently a proof of concept only. It only supports DBD::Pg at the moment.
 
-Bugs are tracked using [Bugzilla](http://bucardo.org/bugzilla/).
+Bugs are tracked using [GitHub issues](https://github.com/bucardo/dbixcache/issues).
 
 ### Download
 
@@ -18,8 +18,8 @@ The latest version, 1.0.1, can be downloaded here:
 
 ### Development
 
-Development is managed in the [Git](http://git-scm.com/) version control system. You can download the latest development version with:
+Development is managed in the [Git](http://git-scm.com/) version control system. You can download the latest development version from [GitHub](https://github.com/bucardo/dbixcache) with:
 
-`git clone `[`git://bucardo.org/dbixcache.git/`](git://bucardo.org/dbixcache.git/)
+`git clone git@github.com:bucardo/dbixcache.git`
 
-There is also a [GitHub mirror](http://github.com/bucardo/dbixcache) for easy patch contribution by the general public.
+__NOTOC__

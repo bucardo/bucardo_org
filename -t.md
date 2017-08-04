@@ -8,3 +8,4 @@ permalink: /-t/
 Ex. bucardo_ctl add table all -t history db=*somedb*
 
 Would include the *history* table from *somedb*.
+

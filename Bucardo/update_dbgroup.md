@@ -3,6 +3,8 @@ title: Bucardo update dbgroup
 permalink: /Bucardo/update_dbgroup/
 ---
 
+__NOTOC__
+
 The **update dbgroup** command is used to change an existing Bucardo database group.
 
 Example:

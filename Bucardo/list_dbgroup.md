@@ -3,6 +3,8 @@ title: Bucardo list dbgroup
 permalink: /Bucardo/list_dbgroup/
 ---
 
+__NOTOC__
+
 The **list dbgroup** command is used to list information about one or more Bucardo database groups.
 
 Example:

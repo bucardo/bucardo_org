@@ -19,3 +19,4 @@ Bucardo itself is a Perl daemon that communicates with a master Bucardo database
 -   [DBIx::Safe](/DBIx::Safe "wikilink"), at least version 1.2.4
 
 In addition, the Bucardo daemon will not currently work on [Windows](/Bucardo/Windows "wikilink") boxes. However, you can have a Bucardo daemon on a Linux box that replicates Postgres between two Window boxes.
+

@@ -3,6 +3,8 @@ title: Bucardo list table
 permalink: /Bucardo/list_table/
 ---
 
+__NOTOC__
+
 The **list table** command is used to list information about one or more tables that Bucardo knows about. It can also be called as **list tables**
 
 Example:

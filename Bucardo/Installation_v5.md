@@ -60,7 +60,7 @@ Once in the directory:
 
 The last step (make install) needs to be run as an account that can install to system directories.
 
-If you want to install all the files to a single directory, for testing purposes, you can define the environment variable `INSTALL_BUCARDODIR` before running `perl` `Makefile.PL`. Thus, the first step would become:
+If you want to install all the files to a single directory, for testing purposes, you can define the environment variable `INSTALL_BUCARDODIR` before running `perl Makefile.PL`. Thus, the first step would become:
 
 ` INSTALL_BUCARDODIR=/tmp/bucardotest perl Makefile.PL`
 
@@ -128,3 +128,4 @@ This is a quick summary. See the specific pages for more information.
 Start Bucardo:
 
 ` bucardo start`
+

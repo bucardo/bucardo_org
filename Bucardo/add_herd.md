@@ -22,3 +22,4 @@ Note that herds can also be implicitly created with the [add sync](/Bucardo/add_
 -   [list_herd](/Bucardo/list_herd "wikilink")
 -   [update_herd](/Bucardo/update_herd "wikilink")
 -   [remove_herd](/Bucardo/remove_herd "wikilink")
+

@@ -3,6 +3,8 @@ title: Check postgres
 permalink: /Check_postgres/
 ---
 
+[Category:check_postgres](/Category:check_postgres "wikilink")
+
 <h1>
 check_postgres
 
@@ -17,17 +19,17 @@ Once installed, you should be able to view the documentation locally by running:
 
 The documentation is also available in HTML format:
 
--   [check_postgres documentation](/check_postgres/check_postgres.pl.html)
+-   [check_postgres documentation](http://bucardo.org/check_postgres/check_postgres.pl.html)
 
 ### Download
 
 The latest version, 2.22.0, can be downloaded here:
 
--   [check_postgres.tar.gz](http://bucardo.org/downloads/check_postgres-2.22.0.tar.gz) TODO
+-   [check_postgres.tar.gz](http://bucardo.org/downloads/check_postgres-2.22.0.tar.gz)
 
 ### Bugs and Feature Requests
 
-Bugs should be reported at [our github page](https://github.com/bucardo/check_postgres/issues). Feature requests are welcome there as well, or send us an email. TODO
+Bugs should be reported at [our github page](https://github.com/bucardo/check_postgres/issues). Feature requests are welcome there as well, or send us an email.
 
 ### Mailing Lists
 
@@ -45,8 +47,6 @@ Source code changes (via git-commit) are sent to the 'check_postgres-commit' lis
 
 ### Development
 
-Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
+Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained from [GitHub](https://github.com/bucardo/check_postgres/) by running:
 
-` git clone `[`git://bucardo.org/check_postgres.git`](git://bucardo.org/check_postgres.git) TODO
-
-There is also a [GitHub mirror](http://github.com/bucardo/check_postgres/) for easy patch contribution by the general public.
+` git clone git@github.com:bucardo/check_postgres.git`

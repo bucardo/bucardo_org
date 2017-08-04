@@ -1,7 +1,6 @@
 ---
 title: Bucardo add sync
 permalink: /Bucardo/add_sync/
-redirect_from: "/add_sync"
 ---
 
 The **add sync** command is used to create a new [Bucardo sync](/Bucardo_sync "wikilink").
@@ -51,3 +50,4 @@ Because the first database given always defaults to a source role, and all other
 -   [list_sync](/Bucardo/list_sync "wikilink")
 -   [update_sync](/Bucardo/update_sync "wikilink")
 -   [remove_sync](/Bucardo/remove_sync "wikilink")
+

@@ -389,7 +389,7 @@ Active
 
 </td>
 <td>
- 
+
 
 </td>
 </tr>
@@ -411,7 +411,7 @@ N/A
 
 </td>
 <td>
- 
+
 
 </td>
 </tr>
@@ -455,7 +455,7 @@ N/A
 
 </td>
 <td>
- 
+
 
 </td>
 </tr>
@@ -477,7 +477,7 @@ N/A
 
 </td>
 <td>
- 
+
 
 </td>
 </tr>
@@ -650,7 +650,7 @@ sda
 
 </td>
 <td>
-noop anticipatory \[deadline\] cfq
+noop anticipatory [deadline] cfq
 
 </td>
 </tr>
@@ -664,7 +664,7 @@ sdb
 
 </td>
 <td>
-noop anticipatory \[deadline\] cfq
+noop anticipatory [deadline] cfq
 
 </td>
 </tr>
@@ -711,7 +711,7 @@ autoconf
 
 </td>
 <td>
-<b>2.63</b> 
+<b>2.63</b>
 
 </td>
 <td>
@@ -719,7 +719,7 @@ awk
 
 </td>
 <td>
-<b>3.1.6a</b> 
+<b>3.1.6a</b>
 
 </td>
 <td>
@@ -737,7 +737,7 @@ bzip2
 
 </td>
 <td>
-<b>1.0.5</b> 
+<b>1.0.5</b>
 
 </td>
 <td>
@@ -745,7 +745,7 @@ cc
 
 </td>
 <td>
-<b>4.4.1</b> 
+<b>4.4.1</b>
 
 </td>
 <td>
@@ -763,7 +763,7 @@ convert
 
 </td>
 <td>
-<b>6.5.1-2</b> 
+<b>6.5.1-2</b>
 
 </td>
 <td>
@@ -771,7 +771,7 @@ curl
 
 </td>
 <td>
-<b>7.19.7</b> 
+<b>7.19.7</b>
 
 </td>
 <td>
@@ -789,7 +789,7 @@ elinks
 
 </td>
 <td>
-<b>0.12pre3</b> 
+<b>0.12pre3</b>
 
 </td>
 <td>
@@ -797,7 +797,7 @@ emacs
 
 </td>
 <td>
-<b>23.1.1</b> 
+<b>23.1.1</b>
 
 </td>
 <td>
@@ -815,7 +815,7 @@ gcc
 
 </td>
 <td>
-<b>4.4.1</b> 
+<b>4.4.1</b>
 
 </td>
 <td>
@@ -823,7 +823,7 @@ gdb
 
 </td>
 <td>
-<b>6.8.50.20090302-39.fc11</b> 
+<b>6.8.50.20090302-39.fc11</b>
 
 </td>
 <td>
@@ -841,7 +841,7 @@ gnome-panel
 
 </td>
 <td>
-<b>2.26.3</b> 
+<b>2.26.3</b>
 
 </td>
 <td>
@@ -849,7 +849,7 @@ gpg
 
 </td>
 <td>
-<b>2.0.12</b> 
+<b>2.0.12</b>
 
 </td>
 <td>
@@ -867,7 +867,7 @@ iconv
 
 </td>
 <td>
-<b>2.10.2</b> 
+<b>2.10.2</b>
 
 </td>
 <td>
@@ -875,7 +875,7 @@ initdb
 
 </td>
 <td>
-<b>8.5devel</b> 
+<b>8.5devel</b>
 
 </td>
 <td>
@@ -893,7 +893,7 @@ links
 
 </td>
 <td>
-<b>0.12pre3</b> 
+<b>0.12pre3</b>
 
 </td>
 <td>
@@ -901,7 +901,7 @@ make
 
 </td>
 <td>
-<b>3.81</b> 
+<b>3.81</b>
 
 </td>
 <td>
@@ -919,7 +919,7 @@ mysql
 
 </td>
 <td>
-<b>5.1.41 (14.14)</b> 
+<b>5.1.41 (14.14)</b>
 
 </td>
 <td>
@@ -927,7 +927,7 @@ nano
 
 </td>
 <td>
-<b>2.0.6</b> 
+<b>2.0.6</b>
 
 </td>
 <td>
@@ -945,7 +945,7 @@ openssl
 
 </td>
 <td>
-<b>0.9.8k-fips</b> 
+<b>0.9.8k-fips</b>
 
 </td>
 <td>
@@ -953,7 +953,7 @@ perl
 
 </td>
 <td>
-<b>5.10.0</b> 
+<b>5.10.0</b>
 
 </td>
 <td>
@@ -971,7 +971,7 @@ pg_dump
 
 </td>
 <td>
-<b>8.5devel</b> 
+<b>8.5devel</b>
 
 </td>
 <td>
@@ -979,7 +979,7 @@ php
 
 </td>
 <td>
-<b>5.2.11</b> 
+<b>5.2.11</b>
 
 </td>
 <td>
@@ -997,7 +997,7 @@ psql
 
 </td>
 <td>
-<b>8.5devel</b> 
+<b>8.5devel</b>
 
 </td>
 <td>
@@ -1005,7 +1005,7 @@ python
 
 </td>
 <td>
-<b>2.6</b> 
+<b>2.6</b>
 
 </td>
 <td>
@@ -1023,7 +1023,7 @@ rrdtool
 
 </td>
 <td>
-<b>1.3.8</b> 
+<b>1.3.8</b>
 
 </td>
 <td>
@@ -1031,7 +1031,7 @@ rsync
 
 </td>
 <td>
-<b>3.0.6</b> 
+<b>3.0.6</b>
 
 </td>
 <td>
@@ -1049,7 +1049,7 @@ ruby
 
 </td>
 <td>
-<b>1.8.6</b> 
+<b>1.8.6</b>
 
 </td>
 <td>
@@ -1057,7 +1057,7 @@ screen
 
 </td>
 <td>
-<b>4.00.03</b> 
+<b>4.00.03</b>
 
 </td>
 <td>
@@ -1075,7 +1075,7 @@ sendmail
 
 </td>
 <td>
-<b>8.14.3</b> 
+<b>8.14.3</b>
 
 </td>
 <td>
@@ -1083,7 +1083,7 @@ service
 
 </td>
 <td>
-<b>0.91</b> 
+<b>0.91</b>
 
 </td>
 <td>
@@ -1101,7 +1101,7 @@ svn
 
 </td>
 <td>
-<b>1.6.6</b> 
+<b>1.6.6</b>
 
 </td>
 <td>
@@ -1109,7 +1109,7 @@ vi
 
 </td>
 <td>
-<b>7.2</b> 
+<b>7.2</b>
 
 </td>
 <td>
@@ -1127,23 +1127,23 @@ zip
 
 </td>
 <td>
-<b>2.31</b> 
+<b>2.31</b>
 
 </td>
 <td>
- 
+
 
 </td>
 <td>
- 
+
 
 </td>
 <td>
- 
+
 
 </td>
 <td>
- 
+
 
 </td>
 </tr>
@@ -3993,9 +3993,9 @@ Syncs:
 
 </td>
 <td>
-<b>s1 pushdelta uno =&gt; DB slave
-s2 pushdelta dos =&gt; DB slave
-s3 pushdelta tres =&gt; DB slave
+<b>s1 pushdelta uno =\> DB slave
+s2 pushdelta dos =\> DB slave
+s3 pushdelta tres =\> DB slave
 </b>
 
 </td>
