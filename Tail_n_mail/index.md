@@ -7,10 +7,10 @@ permalink: /Tail_n_mail/
 
 ### Download
 
-The latest version, 1.27.0, can be downloaded here:
+The latest version, 1.29.0, can be downloaded here:
 
--   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail) TODO
--   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc) TODO
+-   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail)
+-   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc)
 
 ### Basic Usage
 
@@ -77,7 +77,7 @@ There is only one mandatory command line option, and that is the name of a confi
 -   --tempfile_limit=XXX
     -   If running in tempfile mode, limits the number of matching entries that will be displayed.
 -   --flatten
-    -   Attempt to normalize similar queries by replacing things such as "`VALUES` `(123,` `'abc')`" with "`VALUES` `(?,?)`". This is on by default, so use --noflatten to turn it off
+    -   Attempt to normalize similar queries by replacing things such as "`VALUES (123, 'abc')`" with "`VALUES (?,?)`". This is on by default, so use --noflatten to turn it off
 -   --sqlstate
     -   Off by default. If enabled, this will strip out the SQLSTATE codes that appear after the ERROR and FATAL lines for purposes of regex matching. Handy when you are toggling log_error_verbosity.
 -   --pgmode
@@ -229,12 +229,10 @@ There are three mailing lists related to tail_n_mail:
 
 ### Bugs and Feature Requests
 
-Bugs should be reported through [the bugzilla bug tracking site](http://bucardo.org/bugzilla). Feature requests are welcome there as well, or send us an email. TODO
+Bugs should be reported through the [GitHub issue page](https://github.com/bucardo/tail_n_mail/issues). Feature requests are welcome there as well, or send us an email.
 
 ### Development
 
-Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
+Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained from [GitHub](https://github.com/bucardo/tail_n_mail) by running:
 
-` git clone `[`git://bucardo.org/tail_n_mail.git`](git://bucardo.org/tail_n_mail.git) TODO
-
-There is also a [GitHub mirror](http://github.com/bucardo) for easy patch contribution by the general public.
+` git clone git@github.com:bucardo/tail_n_mail.git`
