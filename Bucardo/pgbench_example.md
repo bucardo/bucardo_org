@@ -21,7 +21,7 @@ Bucardo requires the following Perl modules to be installed:
 
 The latest version of Bucardo can be found at [the download page](/Bucardo/download "wikilink"). Alternatively, you can pull the development version from git by doing:
 
-` git clone `[`git://bucardo.org/bucardo.git`](git://bucardo.org/bucardo.git)
+` git clone `[`git://github.com/bucardo/bucardo.git`](git://github.com/bucardo/bucardo.git)
 
 Either way, you should end up in a bucardo directory, and ready for the next step.
 
