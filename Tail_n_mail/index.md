@@ -221,11 +221,10 @@ If you need to temporarily disable tail_n_mail from running (for example, during
 
 ### Mailing Lists
 
-There are three mailing lists related to tail_n_mail:
+There are two mailing lists related to tail_n_mail:
 
 -   [TNM](https://mail.endcrypt.com/mailman/listinfo/tnm) - General information and discussion
 -   [TNM-announce](https://mail.endcrypt.com/mailman/listinfo/tnm-announce) - Low volume announcement list
--   [TNM-commit](https://mail.endcrypt.com/mailman/listinfo/tnm-commit) - All commits to the project are mailed here
 
 ### Bugs and Feature Requests
 
