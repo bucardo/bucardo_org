@@ -7,7 +7,7 @@ permalink: /Tail_n_mail/
 
 ### Download
 
-The latest version, 1.31, can be downloaded here:
+The latest version, 1.31.1, can be downloaded here:
 
 -   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail)
 -   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc)
