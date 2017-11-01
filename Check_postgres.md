@@ -3,8 +3,6 @@ title: Check postgres
 permalink: /Check_postgres/
 ---
 
-[Category:check_postgres](/Category:check_postgres "wikilink")
-
 <h1>
 check_postgres
 
@@ -23,9 +21,9 @@ The documentation is also available in HTML format:
 
 ### Download
 
-The latest version, 2.22.0, can be downloaded here:
+The latest version, 2.23.0, can be downloaded here:
 
--   [check_postgres.tar.gz](http://bucardo.org/downloads/check_postgres-2.22.0.tar.gz)
+-   [check_postgres.tar.gz](http://bucardo.org/downloads/check_postgres.tar.gz)
 
 ### Bugs and Feature Requests
 
@@ -33,7 +31,7 @@ Bugs should be reported at [our github page](https://github.com/bucardo/check_po
 
 ### Mailing Lists
 
-Three mailing lists are available. For discussions about the program, bug reports, feature requests, and commit notices, send email to check_postgres@bucardo.org
+Two mailing lists are available. For discussions about the program, bug reports, feature requests, and commit notices, send email to check_postgres@bucardo.org
 
 -   <https://mail.endcrypt.com/mailman/listinfo/check_postgres>
 
@@ -41,12 +39,9 @@ A low-volume list for announcement of new versions and important notices is the 
 
 -   <https://mail.endcrypt.com/mailman/listinfo/check_postgres-announce>
 
-Source code changes (via git-commit) are sent to the 'check_postgres-commit' list:
-
--   <https://mail.endcrypt.com/mailman/listinfo/check_postgres-commit>
-
 ### Development
 
 Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained from [GitHub](https://github.com/bucardo/check_postgres/) by running:
 
 ` git clone git@github.com:bucardo/check_postgres.git`
+
