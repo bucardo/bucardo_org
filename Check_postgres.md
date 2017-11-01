@@ -1,12 +1,10 @@
 ---
 title: Check postgres
-permalink: /Check_postgres/
+permalink: /check_postgres/
 ---
 
-<h1>
-check_postgres
+# check_postgres #
 
-</h1>
 **check_postgres** is a script for monitoring various attributes of your database. It is designed to work with Nagios, MRTG, or in standalone scripts.
 
 ### Documentation
@@ -31,7 +29,7 @@ Bugs should be reported at [our github page](https://github.com/bucardo/check_po
 
 ### Mailing Lists
 
-Two mailing lists are available. For discussions about the program, bug reports, feature requests, and commit notices, send email to check_postgres@bucardo.org
+Two mailing lists are available. For discussions about the program, bug reports, and feature requests, send email to check_postgres@bucardo.org
 
 -   <https://mail.endcrypt.com/mailman/listinfo/check_postgres>
 
@@ -50,11 +48,11 @@ Everyone is encouraged to look over and make improvements to the code. The lates
 This project uses GPG signatures for each release. It will be signed by one of the following keys:
 
 * Christoph Berg
-** Key ID: 4096R/12D2A7AE 2009-11-28
-** Fingerprint: 5C48 FE61 57F4 9179 5970  87C6 4C5A 6BAB 12D2 A7AE
+    * Key ID: 4096R/12D2A7AE 2009-11-28
+    * Fingerprint: 5C48 FE61 57F4 9179 5970  87C6 4C5A 6BAB 12D2 A7AE
 * David Christensen
-** Key ID: 4096R/DF9B65B8 2012-05-24
-** Fingerprint: 08A0 3597 8604 7C5E 1E2B  8FDE 374A 23C9 DF9B 65B8
+    * Key ID: 4096R/DF9B65B8 2012-05-24
+    * Fingerprint: 08A0 3597 8604 7C5E 1E2B  8FDE 374A 23C9 DF9B 65B8
 * Greg Sabino Mullane
-** Key ID: 1024D/14964AC8 1999-03-01
-** Fingerprint: 2529 DF6A B8F7 9407 E944  45B4 BC9B 9067 1496 4AC8
+    * Key ID: 1024D/14964AC8 1999-03-01
+    * Fingerprint: 2529 DF6A B8F7 9407 E944  45B4 BC9B 9067 1496 4AC8
