@@ -15,7 +15,7 @@ Asynchronous PostgreSQL Replication System
 </td>
 <td>
 <h2 class="check-postgres">
-    <a href="{{ site.baseurl }}/Check_postgres/">check_postgres</a>
+    <a href="{{ site.baseurl }}/check_postgres/">check_postgres</a>
 </h2>
 <h3 class="check-postgres">
 Nagios-Friendly PostgreSQL Database Checking Script
