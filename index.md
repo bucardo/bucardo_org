@@ -1,5 +1,6 @@
 ---
 title: Main Page
+layout: landing
 ---
 
 <table border="0" cellpadding="20">
