@@ -22,18 +22,22 @@ Install DBIx::Safe
 
 Bucardo requires the Perl module DBIx::Safe to be installed. Some distributions have it available as a package, in which case the installation is as simple as:
 
-` yum install perl-DBIx-Safe`
-` # or`
-` apt-get install libdbix-safe-perl`
+```shell-session
+$ yum install perl-DBIx-Safe
+$ # or
+$ apt-get install libdbix-safe-perl
+```
 
 To install it manually, grab the [latest DBIx::Safe tarball](http://bucardo.org/downloads/dbix_safe.tar.gz), then unpack the tarball and install as a normal Perl module:
 
-` tar xvfz dbix_safe.tar.gz`
-` cd DBIx-Safe-1.2.5`
-` perl Makefile.PL`
-` make`
-` make test`
-` sudo make install`
+```shell-session
+$ tar xvfz dbix_safe.tar.gz
+$ cd DBIx-Safe-1.2.5
+$ perl Makefile.PL
+$ make
+$ make test
+$ sudo make install
+```
 
 Other Perl prerequisites that may or may not be installed already on your system include:
 
