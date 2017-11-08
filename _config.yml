@@ -12,8 +12,9 @@ defaults:
             path: "" # Everything
         values:
             layout: "default"
-            project: "Bucardo"
-            color: "blue"
+            project: "bucardo"
+            color: "primary"
+            icon: "puzzle"
     -
         scope:
             path: "check_postgres"
@@ -24,7 +25,7 @@ defaults:
         scope:
             path: "Dbixsafe"
         values:
-            project: "DBIx::Safe"
+            project: "dbix_safe"
             color: "green"
     -
         scope:
@@ -36,8 +37,8 @@ defaults:
         scope:
             path: "Boxinfo"
         values:
-            project: "Boxinfo"
-            color: "primary"
+            project: "boxinfo"
+            color: "blue"
 
 gems:
     - jekyll-redirect-from
