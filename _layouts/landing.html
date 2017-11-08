@@ -64,68 +64,19 @@
                     <p>Welcome to Bucardo.org.  These are the various projects we host; click on a card below to get more information.</p>
                 </div><!--//intro-->
                 <div id="cards-wrapper" class="cards-wrapper row">
-                    <div class="item item-primary col-md-4 col-sm-6 col-xs-6">
+                  {% for proj in site.data.projects %}
+                    <div class="item item-{{ proj[1].color }} col-md-4 col-sm-6 col-xs-6">
                         <div class="item-inner">
                             <div class="icon-holder">
-                                <i class="icon fa fa-paper-plane"></i>
+                                <i class="icon fa fa-{{ proj[1].icon }}"></i>
                             </div><!--//icon-holder-->
-                            <h3 class="title">Bucardo</h3>
-                            <p class="intro">Multi-master Database Replication</p>
-                            <a class="link" href="/Bucardo/"><span></span></a>
+                            <h3 class="title">{{ proj[1].title }}</h3>
+                            <p class="intro">{{ proj[1].blurb }}</p>
+                            <a class="link" href="{{ proj[1].main_site_link }}"><span></span></a>
                         </div><!--//item-inner-->
                     </div><!--//item-->
-                    <div class="item item-pink item-2 col-md-4 col-sm-6 col-xs-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_puzzle_alt"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">check_postgres</h3>
-                            <p class="intro">PostgreSQL monitoring</p>
-                            <a class="link" href="check_postgres/"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    <div class="item item-green col-md-4 col-sm-6 col-xs-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_datareport_alt"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">DBIx::Safe</h3>
-                            <p class="intro">Restricted SQL access in Perl</p>
-                            <a class="link" href="Dbixsafe"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    <div class="item item-purple col-md-4 col-sm-6 col-xs-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_lifesaver"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Tail_n_mail</h3>
-                            <p class="intro">Email live lines from logfiles</p>
-                            <a class="link" href="tail_n_mail"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    <div class="item item-blue col-md-4 col-sm-6 col-xs-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_genius"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Boxinfo</h3>
-                            <p class="intro">Quickly collect relevant information from managed servers</p>
-                            <a class="link" href="Boxinfo"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                    <div class="item item-orange col-md-4 col-sm-6 col-xs-6">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <span aria-hidden="true" class="icon icon_gift"></span>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Other, lesser projects</h3>
-                            <p class="intro">Because so much awesome can't fit on one page</p>
-                            <a class="link" href="all_projects"><span></span></a>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                </div><!--//cards-->
-                
+                  {% endfor %}
+                </div><!--//cards-->                
             </div><!--//container-->
         </section><!--//cards-section-->
     </div><!--//page-wrapper-->
