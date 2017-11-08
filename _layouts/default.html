@@ -1,3 +1,4 @@
+{% assign project = site.data.projects[ page.project ] %}
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
@@ -45,15 +46,15 @@
                 </div><!--//branding-->
                 <ol class="breadcrumb">
                     <li><a href="/">Home</a></li>
-                    <li class="active">{{ page.project }}</li>
+                    <li class="active">{{ project.title }}</li>
                 </ol>
             </div><!--//container-->
         </header><!--//header-->
         <div class="doc-wrapper">
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
-                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span> {{ page.project }}</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: The future</div>
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span> {{ project.title }}</h1>
+                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: {{ project.release_date }}</div>
                 </div><!--//doc-header-->
                 <div class="doc-body">
                   {{ content }}
