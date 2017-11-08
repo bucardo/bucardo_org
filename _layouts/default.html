@@ -31,7 +31,7 @@
     
 </head> 
 
-<body class="body-{{ page.color }}">
+<body class="body-{{ project.color }}">
     <div class="page-wrapper">
         <!-- ******Header****** -->
         <header id="header" class="header">
@@ -44,6 +44,10 @@
                         </a>
                     </h1>
                 </div><!--//branding-->
+                <div class="cta-container item-{{ project.color }}">
+                    <a class="btn btn-primary btn-cta" href="{{ project.download_url }}"><i class="fa fa-cloud-download"></i>Download {{ project.title }} {{project.version }} Now</a>
+                    <a class="btn btn-primary btn-cta" href="{{ project.clone_url }}"><i class="fa fa-github"></i>{{ project.title }} on GitHub</a>
+                </div>
                 <ol class="breadcrumb">
                     <li><a href="/">Home</a></li>
                     <li class="active">{{ project.title }}</li>
