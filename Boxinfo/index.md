@@ -9,8 +9,8 @@ permalink: /Boxinfo/
 
 The latest version, 1.4.0, can be downloaded here:
 
--   [boxinfo.pl](http://bucardo.org/downloads/boxinfo.pl) TODO
--   [boxinfo.pl.asc](http://bucardo.org/downloads/boxinfo.pl.asc) TODO
+-   [boxinfo.pl](http://bucardo.org/downloads/boxinfo.pl)
+-   [boxinfo.pl.asc](http://bucardo.org/downloads/boxinfo.pl.asc)
 
 ### Basic Usage
 
@@ -59,13 +59,13 @@ This is a copy of each command that was run, and the result. Feel free to delete
 
 ### Bugs and Feature Requests
 
-Bugs should be reported through [the GitHub issues tracker](http://github.com/bucardo/boxinfo/issues). Feature requests are welcome there as well, or send us an email. TODO
+Bugs should be reported through [Github Issues](https://github.com/bucardo/boxinfo/issues). Feature requests are welcome there as well, or send us an email.
 
 ### Development
 
-Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained by running:
+Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained from [GitHub](https://github.com/bucardo/boxinfo/) by running:
 
-` git clone `[`git://github.com/bucardo/boxinfo.git`](git://github.com/bucardo/boxinfo.git)
+` git clone git@github.com:bucardo/boxinfo.git`
 
 ### Contributors
 
