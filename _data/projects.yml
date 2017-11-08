@@ -7,7 +7,7 @@ bucardo:
   clone_url: "https://github.com/bucardo/bucardo"
   blurb: "Multi-master Database Replication"
   main_site_link: "/Bucardo"
-  icon: "puzzle-piece"
+  icon: "database"
   color: "primary"
 check_postgres:
   version: "2.23"
@@ -18,7 +18,7 @@ check_postgres:
   clone_url: "https://github.com/bucardo/check_postgres"
   blurb: "Nagios/Icinga-friendly PostgreSQL monitoring"
   main_site_link: "/check_postgres"
-  icon: "puzzle-piece"
+  icon: "table"
   color: "pink"
 dbix_safe:
   version: "1.2.5"
@@ -29,7 +29,7 @@ dbix_safe:
   clone_url: "https://github.com/bucardo/dbix_safe"
   blurb: "Restricted Database Handles in Perl"
   main_site_link: "/DBIx-Safe"
-  icon: "puzzle-piece"
+  icon: "lock"
   color: "green"
 tail_n_mail:
   version: "1.31.1"
@@ -40,7 +40,7 @@ tail_n_mail:
   clone_url: "https://github.com/bucardo/tail_n_mail"
   blurb: "Live logfile monitoring"
   main_site_link: "/tail_n_mail"
-  icon: "puzzle-piece"
+  icon: "envelope"
   color: "purple"
 boxinfo:
   version: "1.4.0"
@@ -51,7 +51,7 @@ boxinfo:
   clone_url: "https://github.com/bucardo/boxinfo"
   blurb: "Gather host info easily"
   main_site_link: "/Boxinfo"
-  icon: "puzzle-piece"
+  icon: "server"
   color: "blue"
 pgsi:
   version: "1.31.1"
@@ -62,5 +62,5 @@ pgsi:
   clone_url: "https://github.com/bucardo/pgsi"
   blurb: "Wiki-ready query performance reports"
   main_site_link: "/Pgsi"
-  icon: "puzzle-piece"
+  icon: "tachometer"
   color: "orange"
