@@ -20,7 +20,7 @@ defaults:
             project: "check_postgres"
     -
         scope:
-            path: "Dbixsafe"
+            path: "DBIx-Safe"
         values:
             project: "dbix_safe"
     -
@@ -33,6 +33,11 @@ defaults:
             path: "Boxinfo"
         values:
             project: "boxinfo"
+    -
+        scope:
+            path: "Pgsi"
+        values:
+            project: "pgsi"
 
 gems:
     - jekyll-redirect-from
