@@ -1114,8 +1114,8 @@ select {
 .landing-page .fa-heart {
   color: #EA5395;
 }
-.landing-page .cta-container {
-  margin-top: 30px;
+.cta-container {
+  float: right;
 }
 .landing-page .social-container {
   margin-top: 30px;
