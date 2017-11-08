@@ -13,32 +13,26 @@ defaults:
         values:
             layout: "default"
             project: "bucardo"
-            color: "primary"
-            icon: "puzzle"
     -
         scope:
             path: "check_postgres"
         values:
             project: "check_postgres"
-            color: "pink"
     -
         scope:
             path: "Dbixsafe"
         values:
             project: "dbix_safe"
-            color: "green"
     -
         scope:
             path: "tail_n_mail"
         values:
             project: "tail_n_mail"
-            color: "purple"
     -
         scope:
             path: "Boxinfo"
         values:
             project: "boxinfo"
-            color: "blue"
 
 gems:
     - jekyll-redirect-from
