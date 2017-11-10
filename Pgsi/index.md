@@ -59,4 +59,3 @@ Everyone is encouraged to look over and make improvements to the code. The lates
 
 ` git clone git@github.com:bucardo/pgsi.git`
 
-[Category:pgsi](/Category:pgsi "wikilink")

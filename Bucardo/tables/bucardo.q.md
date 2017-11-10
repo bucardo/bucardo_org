@@ -2,7 +2,6 @@
 title: Bucardo tables bucardo.q
 ---
 
-[Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")
 
 <h2>
 Table: bucardo.q

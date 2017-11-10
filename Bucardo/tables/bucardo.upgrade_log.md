@@ -2,7 +2,6 @@
 title: Bucardo tables bucardo.upgrade log
 ---
 
-[Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")
 
 <h2>
 Table: bucardo.upgrade_log

@@ -24,4 +24,3 @@ Once Bucardo has been set up, triggers begin storing information about which row
 9.  If the transaction fails, then any custom exception handlers are run.
 10. The child signals to the controller that it has finished.
 
-[Category:Bucardo](/Category:Bucardo "wikilink")

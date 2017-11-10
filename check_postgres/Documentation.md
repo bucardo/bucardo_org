@@ -10,4 +10,3 @@ The documentation is also available in HTML format:
 
 -   [check_postgres documentation](http://bucardo.org/check_postgres/check_postgres.pl.html)
 
-[Category:check_postgres](/Category:check_postgres "wikilink")
