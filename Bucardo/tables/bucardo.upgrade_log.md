@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.upgrade log
-permalink: /Bucardo/tables/bucardo.upgrade_log/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

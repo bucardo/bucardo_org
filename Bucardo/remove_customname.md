@@ -1,6 +1,5 @@
 ---
 title: Bucardo remove customname
-permalink: /Bucardo/remove_customname/
 ---
 
 __NOTOC__

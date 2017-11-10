@@ -1,6 +1,5 @@
 ---
 title: Bucardo table
-permalink: /Bucardo/table/
 ---
 
 To add a table to Bucardo, run:

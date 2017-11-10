@@ -1,6 +1,5 @@
 ---
 title: Bucardo Windows
-permalink: /Bucardo/Windows/
 ---
 
 Bucardo will not work on Windows boxes, as it has some Unix-specific features. However, the only part of Bucardo that needs to run on a non-Windows box is the Perl daemon: the Bucardo database and all databases to be replicated can be running on Windows.

@@ -1,6 +1,5 @@
 ---
 title: Bucardo Installation v5
-permalink: /Bucardo/Installation_v5/
 ---
 
 [Bucardo](/Bucardo "wikilink") Installation

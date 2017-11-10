@@ -1,6 +1,5 @@
 ---
 title: Bucardo bucardorc
-permalink: /Bucardo/bucardorc/
 ---
 
 Options for [bucardo_ctl](/bucardo_ctl "wikilink") can be specified either at the command line or inside configuration files. There are three files that are checked in order, and the first one that is found is used:

@@ -1,6 +1,5 @@
 ---
 title: Bucardo remove dbgroup
-permalink: /Bucardo/remove_dbgroup/
 ---
 
 __NOTOC__

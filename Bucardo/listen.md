@@ -1,6 +1,5 @@
 ---
 title: Bucardo listen
-permalink: /Bucardo/listen/
 ---
 
 Bucardo uses the LISTEN/NOTIFY system to communicate between processes (MCP, CTLs, and KIDs).

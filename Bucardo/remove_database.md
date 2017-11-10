@@ -1,6 +1,5 @@
 ---
 title: Bucardo remove database
-permalink: /Bucardo/remove_database/
 ---
 
 __NOTOC__

@@ -1,6 +1,5 @@
 ---
 title: Bucardo boolean
-permalink: /Bucardo/boolean/
 ---
 
 Bucardo requires the use of the Perl module named **boolean**. This should be available in your normal packaging system. Try one of:

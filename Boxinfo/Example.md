@@ -1,6 +1,5 @@
 ---
 title: Boxinfo Example
-permalink: /Boxinfo/Example/
 ---
 
 This is a sample output of the [boxinfo](/boxinfo "wikilink") program. Some sections were left out to make the page smaller and more readable

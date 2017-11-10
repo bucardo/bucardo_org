@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.bucardo log message
-permalink: /Bucardo/tables/bucardo.bucardo_log_message/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

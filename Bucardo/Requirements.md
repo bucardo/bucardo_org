@@ -1,6 +1,5 @@
 ---
 title: Bucardo Requirements
-permalink: /Bucardo/Requirements/
 ---
 
 [Bucardo](/Bucardo "wikilink") has a few requirements before it can run.

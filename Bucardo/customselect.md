@@ -1,6 +1,5 @@
 ---
 title: Bucardo customselect
-permalink: /Bucardo/customselect/
 ---
 
 CustomSelect / CustomCols

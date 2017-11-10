@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.customcode map
-permalink: /Bucardo/tables/bucardo.customcode_map/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

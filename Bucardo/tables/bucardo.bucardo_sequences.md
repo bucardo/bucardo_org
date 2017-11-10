@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.bucardo sequences
-permalink: /Bucardo/tables/bucardo.bucardo_sequences/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

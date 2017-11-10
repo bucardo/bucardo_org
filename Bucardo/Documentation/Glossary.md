@@ -1,6 +1,5 @@
 ---
 title: Bucardo Documentation Glossary
-permalink: /Bucardo/Documentation/Glossary/
 ---
 
 Glossary of Terms

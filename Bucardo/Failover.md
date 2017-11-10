@@ -1,6 +1,5 @@
 ---
 title: Bucardo Failover
-permalink: /Bucardo/Failover/
 ---
 
 Failover is possible using Bucardo, although that is not one of its primary goals. For [swap syncs](/swap_syncs "wikilink"), of course, there is very little that needs to be done - just point your application to the other database. For a [pushdelta sync](/pushdelta_sync "wikilink") on the other hand, making one of the slaves into a master involves the following steps:

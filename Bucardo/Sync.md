@@ -1,6 +1,5 @@
 ---
 title: Sync
-permalink: /Sync/
 ---
 
 [Bucardo](/Bucardo "wikilink") replication events happens in **syncs**, which replicate one or more tables and come in one of three types:

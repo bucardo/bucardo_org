@@ -1,6 +1,5 @@
 ---
 title: Bucardo update customname
-permalink: /Bucardo/update_customname/
 ---
 
 __NOTOC__

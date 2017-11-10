@@ -1,6 +1,5 @@
 ---
 title: Bucardo kick
-permalink: /Bucardo/kick/
 ---
 
 A Bucardo **kick** is the action of starting a specific [sync](/sync "wikilink") event. The normal way to kick a sync is through the [bucardo_ctl](/bucardo_ctl "wikilink") program, like so:

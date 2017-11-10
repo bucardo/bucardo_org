@@ -1,6 +1,5 @@
 ---
 title: Test suite
-permalink: /Test_suite/
 ---
 
 The Bucardo test suite is a good test to prove a system can run Bucardo successfully, and is recommended on new installations. It tests several common, and some uncommon Bucardo setups, described here. These tests follow Perl's common Test::

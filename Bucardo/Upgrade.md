@@ -1,6 +1,5 @@
 ---
 title: Bucardo Upgrade
-permalink: /Bucardo/Upgrade/
 ---
 
 Upgrading Bucardo

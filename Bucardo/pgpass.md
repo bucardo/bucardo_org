@@ -1,6 +1,5 @@
 ---
 title: Bucardo pgpass
-permalink: /Bucardo/pgpass/
 ---
 
 .pgpass files

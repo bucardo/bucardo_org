@@ -1,6 +1,5 @@
 ---
 title: Bucardo list customname
-permalink: /Bucardo/list_customname/
 ---
 
 __NOTOC__

@@ -1,6 +1,5 @@
 ---
 title: Bucardo add table
-permalink: /Bucardo/add_table/
 ---
 
 __NOTOC__

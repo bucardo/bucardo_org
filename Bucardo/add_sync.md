@@ -1,6 +1,5 @@
 ---
 title: Bucardo add sync
-permalink: /Bucardo/add_sync/
 ---
 
 The **add sync** command is used to create a new [Bucardo sync](/Bucardo_sync "wikilink").

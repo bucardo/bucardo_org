@@ -1,6 +1,5 @@
 ---
 title: Bucardo Changes
-permalink: /Bucardo/Changes/
 ---
 
 The complete list of changes for Bucardo can also be found in the **Changes** file that ships with Bucardo.

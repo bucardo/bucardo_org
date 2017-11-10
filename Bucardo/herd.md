@@ -1,6 +1,5 @@
 ---
 title: Herd
-permalink: /Herd/
 ---
 
 A **herd** is simply a named group of [goats](/goat "wikilink"). Herds are used to designate the "source" of a [sync](/sync "wikilink").

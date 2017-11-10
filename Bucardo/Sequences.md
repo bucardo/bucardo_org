@@ -1,6 +1,5 @@
 ---
 title: Bucardo Sequences
-permalink: /Bucardo/Sequences/
 ---
 
 Postgres **sequences** can be replicated.

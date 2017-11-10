@@ -1,6 +1,5 @@
 ---
 title: Pushdelta
-permalink: /Pushdelta/
 ---
 
 **pushdelta** is a type of Bucardo [sync](/sync "wikilink") that involves pushing changed rows from one database (the master) to one or more slave databases. It acts very similar to Slony.

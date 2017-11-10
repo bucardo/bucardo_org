@@ -1,6 +1,5 @@
 ---
 title: Bucardo schema
-permalink: /Bucardo/schema/
 ---
 
 The main [Bucardo](/Bucardo "wikilink") schema is contained in the **bucardo.schema** file. This file is processed when running *bucardo_ctl install* to create the Bucardo control database. There are also some tables and functions that are created on the remote databases. All tables and functions are always in the 'bucardo' schema.

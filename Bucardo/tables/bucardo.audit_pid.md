@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.audit pid
-permalink: /Bucardo/tables/bucardo.audit_pid/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

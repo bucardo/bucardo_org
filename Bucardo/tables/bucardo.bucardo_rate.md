@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.bucardo rate
-permalink: /Bucardo/tables/bucardo.bucardo_rate/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

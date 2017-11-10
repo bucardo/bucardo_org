@@ -1,6 +1,5 @@
 ---
 title: Bucardo add database
-permalink: /Bucardo/add_database/
 ---
 
 __NOTOC__

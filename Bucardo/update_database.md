@@ -1,6 +1,5 @@
 ---
 title: Bucardo update database
-permalink: /Bucardo/update_database/
 ---
 
 __NOTOC__

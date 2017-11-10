@@ -1,6 +1,5 @@
 ---
 title: Split postgres dump
-permalink: /Split_postgres_dump/
 ---
 
 **split_postgres_dump** is a small Perl script that breaks a --schema-only dump file into pre and post sections. The pre section contains everything needed to import the data, while the post section contains those actions that should be done after the data is loaded, namely the creation of indexes, constraints, and triggers.

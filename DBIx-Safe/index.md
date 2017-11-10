@@ -1,6 +1,5 @@
 ---
 title: DBIx-Safe
-permalink: /DBIx-Safe/
 ---
 
 DBIx::Safe

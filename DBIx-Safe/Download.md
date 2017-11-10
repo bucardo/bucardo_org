@@ -1,6 +1,5 @@
 ---
 title: Dbixsafe Download
-permalink: /Dbixsafe/Download/
 ---
 
 The latest version of DBIx::Safe is 1.2.5:

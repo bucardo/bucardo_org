@@ -1,6 +1,5 @@
 ---
 title: Bucardo mailing list
-permalink: /Bucardo_mailing_list/
 ---
 
 Mailing Lists

@@ -1,6 +1,5 @@
 ---
 title: Environment variables
-permalink: /Environment_variables/
 ---
 
 All the environment variables used by [Bucardo](/Bucardo "wikilink")

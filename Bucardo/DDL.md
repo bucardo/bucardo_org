@@ -1,6 +1,5 @@
 ---
 title: Bucardo DDL
-permalink: /Bucardo/DDL/
 ---
 
 Information on how to make schema changes when using [Bucardo](/Bucardo "wikilink").

@@ -1,6 +1,5 @@
 ---
 title: Bucardo list dbgroup
-permalink: /Bucardo/list_dbgroup/
 ---
 
 __NOTOC__

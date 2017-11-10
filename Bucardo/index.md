@@ -1,6 +1,5 @@
 ---
 title: Bucardo
-permalink: /Bucardo/
 redirect_from: "/Bucardo/Download"
 ---
 

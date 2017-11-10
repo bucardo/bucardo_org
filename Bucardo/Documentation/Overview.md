@@ -1,6 +1,5 @@
 ---
 title: Bucardo Documentation Overview
-permalink: /Bucardo/Documentation/Overview/
 ---
 
 Bucardo Overview

@@ -1,6 +1,5 @@
 ---
 title: Bucardo add herd
-permalink: /Bucardo/add_herd/
 ---
 
 The **add herd** command is used to create a new [Bucardo herd](/Bucardo_herd "wikilink") (a named group of tables).

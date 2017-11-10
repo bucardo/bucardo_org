@@ -1,6 +1,5 @@
 ---
 title: Bucardo list database
-permalink: /Bucardo/list_database/
 ---
 
 __NOTOC__

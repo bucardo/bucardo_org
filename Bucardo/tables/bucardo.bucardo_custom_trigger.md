@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.bucardo custom trigger
-permalink: /Bucardo/tables/bucardo.bucardo_custom_trigger/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

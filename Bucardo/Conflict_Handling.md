@@ -1,6 +1,5 @@
 ---
 title: Bucardo Conflict Handling
-permalink: /Bucardo/Conflict_Handling/
 ---
 
 Bucardo needs to have ways to solve conflicts when replicating, as more than one source database can be written to at the same time. To do this, one must use a conflict strategy (at a table or sync level), or use a 'conflict' [customcode](/Bucardo/customcode "wikilink").

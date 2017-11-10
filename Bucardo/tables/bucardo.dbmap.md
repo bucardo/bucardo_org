@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.dbmap
-permalink: /Bucardo/tables/bucardo.dbmap/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

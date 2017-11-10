@@ -1,6 +1,5 @@
 ---
 title: Bucardo remove table
-permalink: /Bucardo/remove_table/
 ---
 
 __NOTOC__

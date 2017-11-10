@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.q
-permalink: /Bucardo/tables/bucardo.q/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

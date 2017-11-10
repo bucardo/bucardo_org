@@ -1,6 +1,5 @@
 ---
 title: Bucardo Overview
-permalink: /Bucardo/Overview/
 ---
 
 This page gives a quick overview of what Bucardo is and how it works. Please consult the 

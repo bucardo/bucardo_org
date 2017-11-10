@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.herdmap
-permalink: /Bucardo/tables/bucardo.herdmap/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

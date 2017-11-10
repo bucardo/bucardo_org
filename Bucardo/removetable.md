@@ -1,6 +1,5 @@
 ---
 title: Bucardo removetable
-permalink: /Bucardo/removetable/
 ---
 
 To remove a table or a sequence from an existing sync:

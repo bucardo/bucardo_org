@@ -1,6 +1,5 @@
 ---
 title: Bucardo Cron
-permalink: /Bucardo/Cron/
 ---
 
 **NOTE: This information is for Bucardo 4 only. If you are using version 5 or higher, none of the below is needed**

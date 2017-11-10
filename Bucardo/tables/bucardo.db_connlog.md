@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.db connlog
-permalink: /Bucardo/tables/bucardo.db_connlog/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

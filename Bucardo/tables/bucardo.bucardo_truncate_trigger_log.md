@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.bucardo truncate trigger log
-permalink: /Bucardo/tables/bucardo.bucardo_truncate_trigger_log/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

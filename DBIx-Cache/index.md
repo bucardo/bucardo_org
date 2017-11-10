@@ -1,6 +1,5 @@
 ---
 title: DBIx-Cache
-permalink: /DBIx-Cache/
 ---
 
 DBIx::Cache

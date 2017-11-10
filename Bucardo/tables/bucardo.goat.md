@@ -1,6 +1,5 @@
 ---
 title: Bucardo tables bucardo.goat
-permalink: /Bucardo/tables/bucardo.goat/
 ---
 
 [Category:Bucardo](/Category:Bucardo "wikilink") [Category:Bucardo_Schema](/Category:Bucardo_Schema "wikilink")

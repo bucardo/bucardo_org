@@ -1,6 +1,5 @@
 ---
 title: Bucardo pgbench example
-permalink: /Bucardo/pgbench_example/
 ---
 
 This page describes the steps needed to replicate a sample database, created by the pgbench utility, with Bucardo. This will demonstrate simply master to slave behavior, using the [pushdelta](/pushdelta "wikilink") and [fullcopy](/fullcopy "wikilink") sync types.

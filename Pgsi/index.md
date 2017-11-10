@@ -1,6 +1,5 @@
 ---
 title: Pgsi
-permalink: /Pgsi/
 ---
 
 pgsi

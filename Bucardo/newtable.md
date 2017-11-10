@@ -1,6 +1,5 @@
 ---
 title: Bucardo newtable
-permalink: /Bucardo/newtable/
 ---
 
 Adding a new table to an existing sync in Bucardo

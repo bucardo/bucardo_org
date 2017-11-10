@@ -1,6 +1,5 @@
 ---
 title: Bucardo update dbgroup
-permalink: /Bucardo/update_dbgroup/
 ---
 
 __NOTOC__
