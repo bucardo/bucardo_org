@@ -11,11 +11,11 @@ bucardo:
   color: "primary"
   show_in_index: "1"
 check_postgres:
-  version: "2.23"
+  version: "2.23.0"
   title: "check_postgres"
   release_date: "2017-11-10"
   issue_url: "https://github.com/bucardo/check_postgres/issues"
-  download_url: "https://bucardo.org/downloads/check_postgres-2.23.tar.gz"
+  download_url: "https://bucardo.org/downloads/check_postgres-2.23.0.tar.gz"
   clone_url: "https://github.com/bucardo/check_postgres"
   blurb: "Nagios/Icinga-friendly PostgreSQL monitoring"
   main_site_link: "/check_postgres"
