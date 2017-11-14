@@ -1,5 +1,5 @@
 bucardo:
-  version: "5.41"
+  version: "5.4.1"
   title: "Bucardo"
   release_date: "2017-11-10"
   issue_url: "https://github.com/bucardo/bucardo/issues"
