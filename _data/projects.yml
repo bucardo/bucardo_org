@@ -9,6 +9,7 @@ bucardo:
   main_site_link: "/Bucardo"
   icon: "database"
   color: "primary"
+  show_in_index: "1"
 check_postgres:
   version: "2.23"
   title: "check_postgres"
@@ -20,6 +21,7 @@ check_postgres:
   main_site_link: "/check_postgres"
   icon: "table"
   color: "pink"
+  show_in_index: "1"
 dbix_safe:
   version: "1.2.5"
   title: "DBIx::Safe"
@@ -31,6 +33,7 @@ dbix_safe:
   main_site_link: "/DBIx-Safe"
   icon: "lock"
   color: "green"
+  show_in_index: "1"
 tail_n_mail:
   version: "1.31.1"
   title: "tail_n_mail"
@@ -42,6 +45,7 @@ tail_n_mail:
   main_site_link: "/tail_n_mail"
   icon: "envelope"
   color: "purple"
+  show_in_index: "1"
 boxinfo:
   version: "1.4.0"
   title: "Boxinfo"
@@ -53,6 +57,7 @@ boxinfo:
   main_site_link: "/Boxinfo"
   icon: "server"
   color: "blue"
+  show_in_index: "1"
 pgsi:
   version: "1.31.1"
   title: "pgsi"
@@ -64,3 +69,4 @@ pgsi:
   main_site_link: "/Pgsi"
   icon: "tachometer"
   color: "orange"
+  show_in_index: "1"

@@ -64,15 +64,16 @@
                     <p>Welcome to Bucardo.org.  These are the various projects we host; click on a card below to get more information.</p>
                 </div><!--//intro-->
                 <div id="cards-wrapper" class="cards-wrapper row">
-                  {% for proj in site.data.projects %}
-                    <div class="item item-{{ proj[1].color }} col-md-4 col-sm-6 col-xs-6">
+                  {% assign display_projects = site.data.projects | where: "show_in_index","1" %}
+                  {% for proj in display_projects %}
+                    <div class="item item-{{ proj.color }} col-md-4 col-sm-6 col-xs-6">
                         <div class="item-inner">
                             <div class="icon-holder">
-                                <i class="icon fa fa-{{ proj[1].icon }}"></i>
+                                <i class="icon fa fa-{{ proj.icon }}"></i>
                             </div><!--//icon-holder-->
-                            <h3 class="title">{{ proj[1].title }}</h3>
-                            <p class="intro">{{ proj[1].blurb }}</p>
-                            <a class="link" href="{{ proj[1].main_site_link }}"><span></span></a>
+                            <h3 class="title">{{ proj.title }}</h3>
+                            <p class="intro">{{ proj.blurb }}</p>
+                            <a class="link" href="{{ proj.main_site_link }}"><span></span></a>
                         </div><!--//item-inner-->
                     </div><!--//item-->
                   {% endfor %}
