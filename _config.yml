@@ -6,7 +6,7 @@ markdown: kramdown
 
 baseurl: ""
 
-analytics: "UA-XXXXX-Y"
+analytics: "UA-525312-12"
 
 defaults:
     -
