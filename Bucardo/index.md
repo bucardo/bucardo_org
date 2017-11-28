@@ -1,6 +1,5 @@
 ---
 title: Bucardo
-redirect_from: "/Bucardo/Download"
 ---
 
 **Bucardo** is an asynchronous [PostgreSQL](http://www.postgresql.org/) replication system, allowing for both multi-master and multi-slave operations. It was developed at [Backcountry.com](http://www.backcountry.com/) by Jon Jensen and Greg Sabino Mullane of [End Point Corporation](https://www.endpoint.com/), and is now in use at many other organizations. Bucardo is free and open source software released under [the BSD license](LICENSE.md).
@@ -10,11 +9,12 @@ Obtaining Bucardo
 
 The latest version of Bucardo, 5.4.1, can be downloaded here:
 
--   [Bucardo.tar.gz](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz) - signature: [Bucardo.tar.gz.asc](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz.asc) TODO
+-   [Bucardo.tar.gz](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz)
+- signature: [Bucardo.tar.gz.asc](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz.asc) 
 
 Bucardo also requires DBIx::Safe, which can be downloaded here:
 
--   [DBIx-Safe-1.2.5.tar.gz](http://bucardo.org/downloads/DBIx-Safe-1.2.5.tar.gz) TODO
+-   [DBIx-Safe-1.2.5.tar.gz](http://bucardo.org/downloads/DBIx-Safe-1.2.5.tar.gz)
 
 Documentation
 -------------
