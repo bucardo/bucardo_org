@@ -26,7 +26,7 @@ Online documentation is available for the following parts of Bucardo:
 -   [Bucardo FAQ (Frequently Asked Questions)](FAQ.md): Answers to commonly asked questions about Bucardo
 -   [Bucardo installation](Installation.md): Installation instructions for Bucardo
 -   [pgbench tutorial](pgbench_example.md): An example of how to use Bucardo to replicate a database
--   [bucardo](bucardo.md): A script used to control an existing Bucardo installation
+-   [bucardo_ctl](../bucardo_ctl.md): A script used to control an existing Bucardo installation
 -   [DBIx::Safe](../DBIx-Safe.md): Helper module needed by Bucardo that provides safe versions of DBI database handles
 
 Community
