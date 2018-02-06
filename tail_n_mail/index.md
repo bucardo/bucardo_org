@@ -265,4 +265,4 @@ Bugs should be reported through the [GitHub issue page](https://github.com/bucar
 
 Everyone is encouraged to look over and make improvements to the code. The latest development version can be obtained from [GitHub](https://github.com/bucardo/tail_n_mail) by running:
 
-` git clone git@github.com:bucardo/tail_n_mail.git`
+` git clone https://github.com/bucardo/tail_n_mail.git`
