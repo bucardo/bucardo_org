@@ -7,7 +7,7 @@ permalink: /tail_n_mail/
 
 ### Download
 
-The latest version, 1.31.3, can be downloaded here:
+The latest version, 2.2.0, can be downloaded here:
 
 -   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail)
 -   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc)
@@ -109,6 +109,8 @@ There is only one mandatory command line option, and that is the name of a confi
     -   If running in tempfile mode, limits the number of matching entries that will be displayed.
 -   --flatten
     -   Attempt to normalize similar queries by replacing things such as "`VALUES (123, 'abc')`" with "`VALUES (?,?)`". This is on by default, so use --noflatten to turn it off
+-   --nonparsed_statement_size
+    - Maximum characters in non-parsed output to display. Defaults to 400 characters.
 -   --sqlstate
     -   Off by default. If enabled, this will strip out the SQLSTATE codes that appear after the ERROR and FATAL lines for purposes of regex matching. Handy when you are toggling log_error_verbosity.
 -   --pgmode
@@ -129,10 +131,14 @@ There is only one mandatory command line option, and that is the name of a confi
     -   The port to use when using SMTP mode. Defaults to 465.
 -   --mailzero
     -   If set, then mail is sent even if no items were found.
+-   --html
+    -   Send email as text/html to allow for better formatting via <pre> tags
 -   --mailsig=file
     -   Add the contents of a file to the end of messages that are mailed out. Can have more than one file.
 -   --maxemailsize
     -   The size in bytes before email is broken into separate messages. Defaults to 10 million.
+-   --skipfilebyregex=XXX
+    -   Allows certain files to not get parsed at all, for example for a known downed node.
 -   --tsep
     -   Sets the thousands separator for formatting long numbers. This is usually determined automatically based on your locale, so setting this should not be necessary. You can turn off the formatting of long numbers by setting this to <b>0</b>
 -   --tsepnosub
