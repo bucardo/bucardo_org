@@ -9,9 +9,9 @@ redirect_from: "/Bucardo/Download"
 Obtaining Bucardo
 -----------------
 
-The latest version of Bucardo, 5.4.1, can be downloaded here:
+The latest version of Bucardo, 5.5.0, can be downloaded here:
 
--   [Bucardo.tar.gz](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz) - signature: [Bucardo.tar.gz.asc](http://bucardo.org/downloads/Bucardo-5.4.1.tar.gz.asc) TODO
+-   [Bucardo.tar.gz](http://bucardo.org/downloads/Bucardo-5.5.0.tar.gz) - signature: [Bucardo.tar.gz.asc](http://bucardo.org/downloads/Bucardo-5.5.0.tar.gz.asc) TODO
 
 Bucardo also requires DBIx::Safe, which can be downloaded here:
 

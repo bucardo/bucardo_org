@@ -51,8 +51,8 @@ Download and unpack the Bucardo tarball
 
 The latest version of Bucardo can be found on [the Bucardo download page](/Bucardo#Obtaining_Bucardo "wikilink"). Untar it and switch to the directory:
 
-` tar xvfz Bucardo-5.4.1.tar.gz`
-` cd Bucardo-5.4.1`
+` tar xvfz Bucardo-5.5.0.tar.gz`
+` cd Bucardo-5.5.0`
 
 Install the Bucardo software
 ----------------------------
