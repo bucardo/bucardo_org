@@ -35,7 +35,7 @@ dbix_safe:
   color: "green"
   show_in_index: "1"
 tail_n_mail:
-  version: "2.2.0"
+  version: "1.31.3"
   title: "tail_n_mail"
   release_date: "2018-10-10"
   issue_url: "https://github.com/bucardo/tail_n_mail/issues"
@@ -59,11 +59,11 @@ boxinfo:
   color: "blue"
   show_in_index: "1"
 pgsi:
-  version: "1.31.1"
+  version: "1.7.1"
   title: "pgsi"
   release_date: "2017-11-10"
   issue_url: "https://github.com/bucardo/pgsi/issues"
-  download_url: "http://bucardo.org/downloads/pgsi"
+  download_url: "http://bucardo.org/downloads/pgsi-1.7.1.tar.gz"
   clone_url: "https://github.com/bucardo/pgsi"
   blurb: "Wiki-ready query performance reports"
   main_site_link: "Pgsi"
