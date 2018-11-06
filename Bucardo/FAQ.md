@@ -45,7 +45,7 @@ This is a consequence of the bucardo user having different search paths on diffe
 
 ### How fast will replication occur?
 
-There is no simple answer to this question, as it depends on how many tables you are replicating in one [sync](/sync "wikilink"), how fast your network is, how busy your database is, etc. As a general rule of thumb, however, changes make it to the other databases within a matter of one or two seconds.
+There is no simple answer to this question, as it depends on how many tables you are replicating in one sync, how fast your network is, how busy your database is, etc. As a general rule of thumb, however, changes make it to the other databases within a matter of one or two seconds.
 
 ### Can Bucardo replicate DDL?
 
