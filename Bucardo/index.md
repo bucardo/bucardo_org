@@ -26,7 +26,7 @@ Online documentation is available for the following parts of Bucardo:
 -   [Bucardo installation](Installation.md): Installation instructions for Bucardo
 -   [pgbench tutorial](pgbench_example.md): An example of how to use Bucardo to replicate a database
 -   [bucardo](bucardo.md): A script used to control an existing Bucardo installation
--   [DBIx::Safe](../DBIx-Safe.md): Helper module needed by Bucardo that provides safe versions of DBI database handles
+-   [DBIx::Safe](../DBIx-Safe/index.md): Helper module needed by Bucardo that provides safe versions of DBI database handles
 
 Community
 ---------
@@ -61,4 +61,4 @@ git clone git@github.com:bucardo/bucardo.git
 git clone git@github.com:bucardo/dbixsafe.git
 ```
 
-There is also a [GitHub mirror](http://github.com/bucardo) for easy patch contribution by the general public.
+See the main [GitHub project](http://github.com/bucardo) for easy patch contribution by the general public.
