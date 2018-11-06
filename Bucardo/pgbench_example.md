@@ -39,20 +39,20 @@ Finally, install as a user with appropriate rights. One way to do this is:
 
 ` sudo make install`
 
-You should now have a global [bucardo_ctl](/bucardo_ctl "wikilink") file available. Test that you can run it and that you are using the correct version:
+You should now have a global [bucardo](/bucardo "wikilink") file available. Test that you can run it and that you are using the correct version:
 
-` bucardo_ctl --version`
+` bucardo --version`
 
 ### Create and populate the database
 
-Bucardo needs a central database. The install option of bucardo_ctl will create and install this database for you. All you need to provide is the location of a Postgres instance you want to use, and a valid PID directory. For this example, we'll use the default values of no host, port 5432, and a user named 'Postgres'. We'll use the **/tmp/bucardo** directory as our piddir value.
+Bucardo needs a central database. The install option of bucardo will create and install this database for you. All you need to provide is the location of a Postgres instance you want to use, and a valid PID directory. For this example, we'll use the default values of no host, port 5432, and a user named 'Postgres'. We'll use the **/tmp/bucardo** directory as our piddir value.
 
 ` mkdir /tmp/bucardo`
-` bucardo_ctl install --piddir=/tmp/bucardo`
+` bucardo install --piddir=/tmp/bucardo`
 
 You will need to enter a "P" to tell it to proceed. If all goes well, you should see a message like this:
 
-`$ bucardo_ctl install --piddir=/tmp/bucardo`
+`$ bucardo install --piddir=/tmp/bucardo`
 `This will install the bucardo database into an existing Postgres cluster.`
 `Postgres must have been compiled with Perl support,`
 `and you must connect as a superuser`
@@ -72,8 +72,8 @@ You will need to enter a "P" to tell it to proceed. If all goes well, you should
 `Installation is now complete.`
 `If you see any unexpected errors above, please report them to bucardo-general@bucardo.org`
 `You should probably check over the configuration variables next, by running:`
-`bucardo_ctl show all`
-`Change any setting by using: bucardo_ctl set foo=bar`
+`bucardo show all`
+`Change any setting by using: bucardo set foo=bar`
 
 That's it! Time to setup our test databases. NOTE: In this example the source/master and target/slave databases reside within a single instance of he Postgres server, and this installation step is normally only required for the source/master node. In the real world where source/master and target/slave are hosted in separate Postgres servers, each slave node will need to have the role 'bucardo' manually created before proceeding to the next step.
 
@@ -95,10 +95,10 @@ Now that we have some data, let's get Bucardo to replicate it.
 Add the databases
 -----------------
 
-Bucardo needs to know about each database it needs to talk to. The [bucardo_ctl](/bucardo_ctl "wikilink") program does this with the [add db](/add_db "wikilink") option.
+Bucardo needs to know about each database it needs to talk to. The [bucardo](/bucardo "wikilink") program does this with the [add db](/add_db "wikilink") option.
 
-` bucardo_ctl add db test1`
-` bucardo_ctl add db test2`
+` bucardo add db test1`
+` bucardo add db test2`
 
 We've kept it simple for this example, but you generally will end up replicating databases with the same name, and thus should add an extra internal database name. Since we did not provide one, they default to the actual database names.
 
@@ -107,14 +107,14 @@ Add the tables
 
 Bucardo also needs to know about any tables that it may be called on to replicate. Adding tables by the [add table](/add_table "wikilink") command does not actually start replicating them. In this case, we're going to use the handy **add all tables** feature. Tables are grouped together inside of Bucardo into [herds](/herd "wikilink"), so we'll also place the newly added tables into a named herd. Finally, the history table has no primary key or unique index, so we cannot replicate it by using the [pushdelta](/pushdelta "wikilink") method, so we're going to exclude it from the alpha herd, using the [-T](/-T "wikilink") switch, and add it in the next setup with the [-t](/-t "wikilink") switch.
 
-` $ bucardo_ctl add all tables db=test1 -T history --herd=alpha --verbose`
+` $ bucardo add all tables db=test1 -T history --herd=alpha --verbose`
 ` New tables:`
 `   public.accounts`
 `   public.branches`
 `   public.tellers`
 ` New tables added: 3`
 ` Already added: 0`
-` $ bucardo_ctl add all tables db=test1 -t history --herd=beta --verbose`
+` $ bucardo add all tables db=test1 -t history --herd=beta --verbose`
 ` New tables:`
 `   public.history`
 ` New tables added: 1`
@@ -125,29 +125,29 @@ Add the syncs
 
 A [sync](/sync "wikilink") is a named replication event. Each sync has a source herd; because we created two herds above, we'll go ahead and create two syncs as well. One will be a [pushdelta](/pushdelta "wikilink") sync, the other will be a [fullcopy](/fullcopy "wikilink") sync.
 
-` $ bucardo_ctl add sync benchdelta source=alpha targetdb=test2 type=pushdelta`
+` $ bucardo add sync benchdelta source=alpha targetdb=test2 type=pushdelta`
 ` Added sync "benchdelta"`
 
-` $ bucardo_ctl add sync benchcopy source=beta targetdb=test2 type=fullcopy`
+` $ bucardo add sync benchcopy source=beta targetdb=test2 type=fullcopy`
 ` Added sync "benchcopy"`
 
-We are ready to kick off Bucardo at this point. Before we do, let's use the **list** options to bucardo_ctl to check everything out.
+We are ready to kick off Bucardo at this point. Before we do, let's use the **list** options to bucardo to check everything out.
 
-` $ bucardo_ctl list herds`
+` $ bucardo list herds`
 ` Herd: alpha Members: public.branches, public.tellers, public.accounts`
 `   Used in syncs: benchdelta`
 ` Herd: beta  Members: public.history`
 `   Used in syncs: benchcopy`
 
-` $ bucardo_ctl list syncs`
+` $ bucardo list syncs`
 ` Sync: benchcopy   (fullcopy )  beta  =>  test2  (Active)`
 ` Sync: benchdelta  (pushdelta)  alpha =>  test2  (Active)`
 
-` $ bucardo_ctl list dbs`
+` $ bucardo list dbs`
 ` Database: test1  Status: active  Conn: psql -p 5432 -U bucardo -d test1`
 ` Database: test2  Status: active  Conn: psql -p 5432 -U bucardo -d test2`
 
-` $ bucardo_ctl list tables`
+` $ bucardo list tables`
 ` Table: public.accounts  DB: test1  PK: aid (int4)`
 ` Table: public.branches  DB: test1  PK: bid (int4)`
 ` Table: public.history   DB: test1  PK: none`
@@ -158,7 +158,7 @@ Start Bucardo
 
 The final step is to fire it up:
 
-` bucardo_ctl start`
+` bucardo start`
 
 After a few seconds, the prompt will return. There will be a log file in the current directory called **log.bucardo** that you can look through. To disable the logfile and just rely on syslog use the [--debugfile=0](/--debugfile=0 "wikilink") argument. You can also verify that the Bucardo daemons are running by doing a:
 
@@ -211,7 +211,7 @@ How about the history table, which has not primary key? We cannot track row by r
 ` $ psql -At -d test2 -c 'select count(*) from history'`
 ` 3`
 
-` $ bucardo_ctl kick benchcopy`
+` $ bucardo kick benchcopy`
 
 ` $ psql -At -d test1 -c 'select count(*) from history'`
 ` 3`
@@ -220,11 +220,11 @@ How about the history table, which has not primary key? We cannot track row by r
 
 This ends the demonstration. Feel free to play around more. To stop Bucardo when done, just issue:
 
-` bucardo_ctl stop`
+` bucardo stop`
 
 As you experiment, you might also want to look at the syncs in more detail with:
 
-` bucardo_ctl status`
-` bucardo_ctl status benchdelta`
-` bucardo_ctl status benchcopy`
+` bucardo status`
+` bucardo status benchdelta`
+` bucardo status benchcopy`
 

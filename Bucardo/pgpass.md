@@ -7,7 +7,7 @@ title: Bucardo pgpass
 
 Bucardo can read .pgpass files to obtain database connection passwords if 'trust' authentication is not in use.
 
-The .pgpass file to read for a given database is specified by the pgpass field in bucardo's db table. The field should contain the full path and filename of the .pgpass files to read. The value can be entered either by editing the db table or using the bucardo_ctl command line tool to specify a pgpass= option when adding a database.
+The .pgpass file to read for a given database is specified by the pgpass field in bucardo's db table. The field should contain the full path and filename of the .pgpass files to read. The value can be entered either by editing the db table or using the bucardo command line tool to specify a pgpass= option when adding a database.
 
 **File format**
 

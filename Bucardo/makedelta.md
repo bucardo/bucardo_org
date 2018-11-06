@@ -15,8 +15,8 @@ There are four columns that control the use of makedelta:
 
 The easiest way to enable makedelta is to simply set it as needed at the sync level. In the example above, you would do:
 
-` bucardo_ctl update sync alpha target_makedelta=1`
+` bucardo update sync alpha target_makedelta=1`
 
 However, if you have many syncs using the same tables, it's easiest to leave the sync level as null, and update the tables:
 
-` bucardo_ctl update table tab1 target_makedelta=1`
+` bucardo update table tab1 target_makedelta=1`

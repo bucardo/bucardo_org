@@ -20,7 +20,7 @@ The Bucardo test suite is a good test to prove a system can run Bucardo successf
 |06-multicolpk.t|Tests multi-column primary keys in a pushdelta sync|
 |06-multicolpushdelta.t|Similar to 06-multicolpk.t, including more difficult scenarios|
 |07-multicolswap.t|Tests multi-column primary keys in a swap sync|
-|08-wildkick.t|Tests using bucardo_ctl's kick command with a wildcard instead of an exact sync name|
+|08-wildkick.t|Tests using bucardo's kick command with a wildcard instead of an exact sync name|
 |09-uniqueconstraint.t|Tests handling of various scenarios involving unique constraints|
 |10-makedelta.t|Creates three databases (A, B, and C), and uses makedelta to replicate rows from A to B, and then from B to C.|
 |11-customselect.t|Tests transforming rows during replication using customselect|

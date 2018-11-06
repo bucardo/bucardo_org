@@ -31,17 +31,17 @@ Notices issued by the [MCP](/MCP "wikilink"):
 -   bucardo_reloaded_sync_\$syncname
 -   bucardo_activated_sync_\$syncname
 -   bucardo_deactivated_sync_\$syncname
--   bucardo_ctl_kick_\$syncname
+-   bucardo_kick_\$syncname
 
 Items the [CTL](/CTL "wikilink") listens for:
 
--   bucardo_ctl_\$\$_ping
--   bucardo_ctl_kick_\$syncname
+-   bucardo_\$\$_ping
+-   bucardo_kick_\$syncname
 -   bucardo_syncdone_\$syncname_\$db
 
 Notices issued by the [CTL](/CTL "wikilink"):
 
--   bucardo_ctl_\$\$_pong
+-   bucardo_\$\$_pong
 -   bucardo_syncdone_\$syncname
 -   bucardo_q_\$syncname_\$targetdb
 

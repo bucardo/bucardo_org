@@ -6,5 +6,5 @@ Databases can be grouped together inside of Bucardo, so that a sync may point to
 
 To create a new database group, run:
 
-` bucardo_ctl add dbgroup `<name>` db1 db2 db3...`
+` bucardo add dbgroup `<name>` db1 db2 db3...`
 

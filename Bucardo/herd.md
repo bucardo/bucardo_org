@@ -6,7 +6,7 @@ A **herd** is simply a named group of [goats](/goat "wikilink"). Herds are used 
 
 Herds can be created by running:
 
-` bucardo_ctl add herd `<name>` goat1 goat2 goat3...`
+` bucardo add herd `<name>` goat1 goat2 goat3...`
 
 The list of goats is optional.
 

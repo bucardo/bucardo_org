@@ -13,9 +13,9 @@ To upgrade Bucardo, install the new Bucardo file by downloading the [latest vers
 
 Then upgrade your existing Bucardo database by running:
 
-` bucardo_ctl upgrade`
+` bucardo upgrade`
 
 This will modify your existing Bucardo schema as needed. You should also validate all your syncs by running:
 
-` bucardo_ctl validate all`
+` bucardo validate all`
 

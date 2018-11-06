@@ -2,39 +2,39 @@
 title: Bucardo schema
 ---
 
-The main [Bucardo](/Bucardo "wikilink") schema is contained in the **bucardo.schema** file. This file is processed when running *bucardo_ctl install* to create the Bucardo control database. There are also some tables and functions that are created on the remote databases. All tables and functions are always in the 'bucardo' schema.
+The main [Bucardo](/Bucardo "wikilink") schema is contained in the **bucardo.schema** file. This file is processed when running *bucardo install* to create the Bucardo control database. There are also some tables and functions that are created on the remote databases. All tables and functions are always in the 'bucardo' schema.
 
 Main Bucardo tables
 -------------------
 
 -   [bucardo_config](/Bucardo/table/bucardo_config "wikilink")
-    -   Holds global configuration information: use **bucardo_ctl show all** to view
+    -   Holds global configuration information: use **bucardo show all** to view
 -   [db](/Bucardo/table/db "wikilink")
-    -   Contains information about each replicated database. Use **bucardo_ctl list dbs** to view.
+    -   Contains information about each replicated database. Use **bucardo list dbs** to view.
 -   [dbgroup](/Bucardo/table/dbgroup "wikilink")
-    -   Contains the names of database groups. View with **bucardo_ctl list dbgroups**'
+    -   Contains the names of database groups. View with **bucardo list dbgroups**'
 -   [dbmap](/Bucardo/table/dbmap "wikilink")
     -   Maps databases to database groups (many to many)
 -   [goat](/Bucardo/table/goat "wikilink")
-    -   Contains information on specific items to be replicated: tables or sequences. View with **bucardo_ctl list goats**
+    -   Contains information on specific items to be replicated: tables or sequences. View with **bucardo list goats**
 -   [herd](/Bucardo/table/herd "wikilink")
-    -   A group of goats is a herd: this contains the names of all herds. View with **bucardo_ctl list herds**
+    -   A group of goats is a herd: this contains the names of all herds. View with **bucardo list herds**
 -   [herdmap](/Bucardo/table/herdmap "wikilink")
     -   Maps goats to herds (many to many)
 -   [sync](/Bucardo/table/sync "wikilink")
-    -   A single named replication event. Links a specific source herd to a remote database or database group. View with **bucardo_ctl list syncs**
+    -   A single named replication event. Links a specific source herd to a remote database or database group. View with **bucardo list syncs**
 -   [customcode](/Bucardo/table/customcode "wikilink")
-    -   Perl subroutines that fire at some point in the replication process. Contains code for conflict handling and exception handling. View with **bucardo_ctl list codes**
+    -   Perl subroutines that fire at some point in the replication process. Contains code for conflict handling and exception handling. View with **bucardo list codes**
 -   [customcode_map](/Bucardo/table/customcode_map "wikilink")
     -   Maps customcodes to a specific sync or a goat
 -   [upgrade_log](/Bucardo/table/upgrade_log "wikilink")
-    -   Populated when you run **bucardo_ctl upgrade**
+    -   Populated when you run **bucardo upgrade**
 -   [bucardo_rate](/Bucardo/table/bucardo_rate "wikilink")
     -   Track latency and speed of sync, when the "track_rates" column of a sync is set to true
 -   [bucardo_custom_trigger](/Bucardo/table/bucardo_custom_trigger "wikilink")
     -   Allows replacement of the standard trigger for replication of only some rows in a table.
 -   [bucardo_log_message](/Bucardo/table/bucardo_log_message "wikilink")
-    -   Used internally for the messaging feature, e.g. **bucardo_ctl message Foobar**
+    -   Used internally for the messaging feature, e.g. **bucardo message Foobar**
 -   [q](/Bucardo/table/q "wikilink")
     -   Internal table used by Bucardo to coordinate active syncs
 -   [audit_pid](/Bucardo/table/audit_pid "wikilink")
