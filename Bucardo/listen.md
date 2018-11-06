@@ -4,7 +4,7 @@ title: Bucardo listen
 
 Bucardo uses the LISTEN/NOTIFY system to communicate between processes (MCP, CTLs, and KIDs).
 
-Items the [MCP](/MCP "wikilink") listens for:
+Items the [MCP](/Bucardo/MCP "wikilink") listens for:
 
 -   bucardo_mcp_ping
 -   bucardo_activate_sync_\$syncname
@@ -16,7 +16,7 @@ Items the [MCP](/MCP "wikilink") listens for:
 -   bucardo_reload_config
 -   bucardo_log_message
 
-Notices issued by the [MCP](/MCP "wikilink"):
+Notices issued by the [MCP](/Bucardo/MCP "wikilink"):
 
 -   bucardo_mcp_pong
 -   bucardo_boot
@@ -33,24 +33,24 @@ Notices issued by the [MCP](/MCP "wikilink"):
 -   bucardo_deactivated_sync_\$syncname
 -   bucardo_kick_\$syncname
 
-Items the [CTL](/CTL "wikilink") listens for:
+Items the [CTL](/Bucardo/CTL "wikilink") listens for:
 
 -   bucardo_\$\$_ping
 -   bucardo_kick_\$syncname
 -   bucardo_syncdone_\$syncname_\$db
 
-Notices issued by the [CTL](/CTL "wikilink"):
+Notices issued by the [CTL](/Bucardo/CTL "wikilink"):
 
 -   bucardo_\$\$_pong
 -   bucardo_syncdone_\$syncname
 -   bucardo_q_\$syncname_\$targetdb
 
-Items the [KID](/KID "wikilink") listens for:
+Items the [KID](/Bucardo/KID "wikilink") listens for:
 
 -   bucardo_kid_\$\$_ping
 -   bucardo_q_\$syncname_\$targetdb
 
-Notices issued by the [KID](/KID "wikilink"):
+Notices issued by the [KID](/Bucardo/KID "wikilink"):
 
 -   bucardo_kid_\$\$_pong
 -   bucardo_syncdone_\$syncname_\$targetdb

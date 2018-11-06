@@ -140,7 +140,7 @@ Add tables and sequences:
 ` bucardo add all tables`
 ` bucardo add all sequences`
 
-Add [syncs](/sync "wikilink"):
+Add [syncs](/Bucardo/sync "wikilink"):
 
 ` bucardo add sync `<syncname>` type=`<synctype>` source=`<db>` targetdb=`<db>` tables=tab1,tab2,...`
 

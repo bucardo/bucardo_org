@@ -2,7 +2,7 @@
 title: Herd
 ---
 
-A **herd** is simply a named group of [goats](/goat "wikilink"). Herds are used to designate the "source" of a [sync](/sync "wikilink").
+A **herd** is simply a named group of [goats](/Bucardo/goat "wikilink"). Herds are used to designate the "source" of a [sync](/Bucardo/sync "wikilink").
 
 Herds can be created by running:
 

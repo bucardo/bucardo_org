@@ -13,10 +13,10 @@ The first step in running Bucardo is to add two or more databases to the main bu
 
 Once Bucardo has been set up, triggers begin storing information about which rows were changed in all the tables of interest. For a swap sync (multi-master), the process goes like this:
 
-1.  A change is made to the table and gets recorded in the [bucardo_delta](/bucardo_delta "wikilink") table.
+1.  A change is made to the table and gets recorded in the [bucardo_delta](/Bucardo/bucardo_delta "wikilink") table.
 2.  A notice is sent to the main Bucardo daemon, letting it know that the table has changed.
 3.  The daemon notifies the controller for that sync and returns to listening.
-4.  The controller creates a "[kid](/kid "wikilink")" to handle the replication, or signals an existing one.
+4.  The controller creates a "[kid](/Bucardo/kid "wikilink")" to handle the replication, or signals an existing one.
 5.  The kid starts a new transaction and disables triggers and rules on the tables in question.
 6.  It then gathers a list of which rows have changed since the last replication, and then compares the two to figure out what should be done.
 7.  If there is a conflict, then either the standard conflict handler, or a custom one, set per table, is run to sort things out.

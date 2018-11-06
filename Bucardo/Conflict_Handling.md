@@ -38,9 +38,9 @@ While it is still possible to resolve all conflicts by only listing N-1 of the d
 Custom conflict strategies with customcodes
 -------------------------------------------
 
-Conflicts can also be resolved by the use of [customcodes](/customcodes "wikilink"), which are Perl scripts which can be associated with a sync. The script will receive some information from Bucardo, and is responsible for letting Bucardo know how to handle the conflict. More than one customcode can be defined per sync, and they will be executed in alphabetic order.
+Conflicts can also be resolved by the use of [customcodes](/Bucardo/customcodes "wikilink"), which are Perl scripts which can be associated with a sync. The script will receive some information from Bucardo, and is responsible for letting Bucardo know how to handle the conflict. More than one customcode can be defined per sync, and they will be executed in alphabetic order.
 
-The script will be passed in a hashref as the first and only argument. This hashref includes information about Bucardo, the current sync and table, and the conflicting rows. It also contains [safe database handles](/DBIx::Safe "wikilink") to each database involved in the sync. It contains a few other items as well: see below for the complete list.
+The script will be passed in a hashref as the first and only argument. This hashref includes information about Bucardo, the current sync and table, and the conflicting rows. It also contains [safe database handles](/Bucardo/DBIx::Safe "wikilink") to each database involved in the sync. It contains a few other items as well: see below for the complete list.
 
 To resolve a conflict, the customcode has two major options: set an overall winner, or declare a winner itself for each row. To set an overall winner, the customcode should set a value (list of preferred databases) for one of these four keys in the hashref:
 

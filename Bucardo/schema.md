@@ -53,7 +53,7 @@ Main Bucardo functions
 Remote Bucardo tables
 ---------------------
 
-Each database that is used as a source for a [swap](/swap "wikilink") or [pushdelta](/pushdelta "wikilink") sync has the following tables installed into the bucardo schema:
+Each database that is used as a source for a [swap](/Bucardo/swap "wikilink") or [pushdelta](/Bucardo/pushdelta "wikilink") sync has the following tables installed into the bucardo schema:
 
 -   [bucardo_delta](/Bucardo/table/bucardo_delta "wikilink")
     -   Stores which rows have changed for each replicated table

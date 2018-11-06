@@ -23,7 +23,7 @@ Usages:
 -   herd
     -   The [Bucardo herd](/Bucardo_herd "wikilink") containing the tables and sequences to be replicated
 -   dbs
-    -   The [Bucardo database group](/Bucardo_database_group "wikilink") to use in this sync, or a comma-separated list of databases. If the latter, a new database group with the same name as the sync will be created. By default, the first database will be considered the [source](/source_database "wikilink"), and all others [targets](/target_database "wikilink"). To specify the [role](/database_role "wikilink") of a database, add a colon and the role. For example, to create a sync with three source databases and two targets:
+    -   The [Bucardo database group](/Bucardo_database_group "wikilink") to use in this sync, or a comma-separated list of databases. If the latter, a new database group with the same name as the sync will be created. By default, the first database will be considered the [source](/Bucardo/source_database "wikilink"), and all others [targets](/Bucardo/target_database "wikilink"). To specify the [role](/Bucardo/database_role "wikilink") of a database, add a colon and the role. For example, to create a sync with three source databases and two targets:
 
 ` bucardo add sync foobar herd=myherd dbs=A:source,B:target,C:target,D:source,E:source`
 

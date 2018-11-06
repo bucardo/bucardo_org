@@ -2,7 +2,7 @@
 title: Bucardo pgbench example
 ---
 
-This page describes the steps needed to replicate a sample database, created by the pgbench utility, with Bucardo. This will demonstrate simply master to slave behavior, using the [pushdelta](/pushdelta "wikilink") and [fullcopy](/fullcopy "wikilink") sync types.
+This page describes the steps needed to replicate a sample database, created by the pgbench utility, with Bucardo. This will demonstrate simply master to slave behavior, using the [pushdelta](/Bucardo/pushdelta "wikilink") and [fullcopy](/Bucardo/fullcopy "wikilink") sync types.
 
 Install Bucardo
 ---------------
@@ -39,7 +39,7 @@ Finally, install as a user with appropriate rights. One way to do this is:
 
 ` sudo make install`
 
-You should now have a global [bucardo](/bucardo "wikilink") file available. Test that you can run it and that you are using the correct version:
+You should now have a global [bucardo](/Bucardo/bucardo "wikilink") file available. Test that you can run it and that you are using the correct version:
 
 ` bucardo --version`
 
@@ -95,7 +95,7 @@ Now that we have some data, let's get Bucardo to replicate it.
 Add the databases
 -----------------
 
-Bucardo needs to know about each database it needs to talk to. The [bucardo](/bucardo "wikilink") program does this with the [add db](/add_db "wikilink") option.
+Bucardo needs to know about each database it needs to talk to. The [bucardo](/Bucardo/bucardo "wikilink") program does this with the [add db](/Bucardo/add_db "wikilink") option.
 
 ` bucardo add db test1`
 ` bucardo add db test2`
@@ -105,7 +105,7 @@ We've kept it simple for this example, but you generally will end up replicating
 Add the tables
 --------------
 
-Bucardo also needs to know about any tables that it may be called on to replicate. Adding tables by the [add table](/add_table "wikilink") command does not actually start replicating them. In this case, we're going to use the handy **add all tables** feature. Tables are grouped together inside of Bucardo into [herds](/herd "wikilink"), so we'll also place the newly added tables into a named herd. Finally, the history table has no primary key or unique index, so we cannot replicate it by using the [pushdelta](/pushdelta "wikilink") method, so we're going to exclude it from the alpha herd, using the [-T](/-T "wikilink") switch, and add it in the next setup with the [-t](/-t "wikilink") switch.
+Bucardo also needs to know about any tables that it may be called on to replicate. Adding tables by the [add table](/Bucardo/add_table "wikilink") command does not actually start replicating them. In this case, we're going to use the handy **add all tables** feature. Tables are grouped together inside of Bucardo into [herds](/Bucardo/herd "wikilink"), so we'll also place the newly added tables into a named herd. Finally, the history table has no primary key or unique index, so we cannot replicate it by using the [pushdelta](/Bucardo/pushdelta "wikilink") method, so we're going to exclude it from the alpha herd, using the [-T](/Bucardo/-T "wikilink") switch, and add it in the next setup with the [-t](/Bucardo/-t "wikilink") switch.
 
 ` $ bucardo add all tables db=test1 -T history --herd=alpha --verbose`
 ` New tables:`
@@ -123,7 +123,7 @@ Bucardo also needs to know about any tables that it may be called on to replicat
 Add the syncs
 -------------
 
-A [sync](/sync "wikilink") is a named replication event. Each sync has a source herd; because we created two herds above, we'll go ahead and create two syncs as well. One will be a [pushdelta](/pushdelta "wikilink") sync, the other will be a [fullcopy](/fullcopy "wikilink") sync.
+A [sync](/Bucardo/sync "wikilink") is a named replication event. Each sync has a source herd; because we created two herds above, we'll go ahead and create two syncs as well. One will be a [pushdelta](/Bucardo/pushdelta "wikilink") sync, the other will be a [fullcopy](/Bucardo/fullcopy "wikilink") sync.
 
 ` $ bucardo add sync benchdelta source=alpha targetdb=test2 type=pushdelta`
 ` Added sync "benchdelta"`
@@ -160,7 +160,7 @@ The final step is to fire it up:
 
 ` bucardo start`
 
-After a few seconds, the prompt will return. There will be a log file in the current directory called **log.bucardo** that you can look through. To disable the logfile and just rely on syslog use the [--debugfile=0](/--debugfile=0 "wikilink") argument. You can also verify that the Bucardo daemons are running by doing a:
+After a few seconds, the prompt will return. There will be a log file in the current directory called **log.bucardo** that you can look through. To disable the logfile and just rely on syslog use the [--debugfile=0](/Bucardo/--debugfile=0 "wikilink") argument. You can also verify that the Bucardo daemons are running by doing a:
 
 ` ps -Afw | grep -i Bucardo`
 
@@ -197,7 +197,7 @@ Now let's make changes to that record, and verify that it gets propagated to the
 ` -----+-----+----------+--------`
 `    1 | 999 |        0 |`
 
-How about the history table, which has not primary key? We cannot track row by row changes, and don't want to copy the whole thing every time the table changes, so we've got to [kick](/kick "wikilink") that sync manually when we want to change it:
+How about the history table, which has not primary key? We cannot track row by row changes, and don't want to copy the whole thing every time the table changes, so we've got to [kick](/Bucardo/kick "wikilink") that sync manually when we want to change it:
 
 ` $ psql -d -At test1 -c 'select count(*) from history'`
 ` 0`

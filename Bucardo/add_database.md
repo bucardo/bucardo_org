@@ -10,7 +10,7 @@ Example:
 
 ` bucardo add database A host=example.com dbname=sales`
 
-This will creates a new database entry named **A** which resides on host **example.com** and is named **sales**. Note that "sales" is the actual database name that Bucardo will connect to, while "A" is how Bucardo refers to this specific database, for example when calling [add dbgroup](/add_dbgroup "wikilink"). A connection to the database will be attempted right away: see the Verification section below.
+This will creates a new database entry named **A** which resides on host **example.com** and is named **sales**. Note that "sales" is the actual database name that Bucardo will connect to, while "A" is how Bucardo refers to this specific database, for example when calling [add dbgroup](/Bucardo/add_dbgroup "wikilink"). A connection to the database will be attempted right away: see the Verification section below.
 
 Usage:
 
@@ -43,9 +43,9 @@ The alternate form **add db** is also accepted.
 -   status
     -   Defaults to 'active'; the only other choice is 'inactive'
 -   dbgroup
-    -   Which internal [database group](/database_group "wikilink") to put this database into. Will be created if needed.
+    -   Which internal [database group](/Bucardo/database_group "wikilink") to put this database into. Will be created if needed.
 -   addalltables
-    -   Automatically add all tables inside of this database. For finer control, see [add_table](/add_table "wikilink")
+    -   Automatically add all tables inside of this database. For finer control, see [add_table](/Bucardo/add_table "wikilink")
 -   addallsequences
     -   Automatically add all sequences inside of this database
 -   server_side_prepares (can also use 'ssp')
@@ -66,7 +66,7 @@ Before a new database is added, a simple connection test if performed to make su
 
 ### Internals
 
-New databases cause an insert to the [bucardo.db table](/bucardo.db_table "wikilink"). A new database group will cause an insert to the [bucardo.dbgroup table](/bucardo.dbgroup_table "wikilink"). Databases added to that group will cause an insert to the [bucardo.dbmap table](/bucardo.dbmap_table "wikilink"). Adding tables and sequences will cause inserts to the [bucardo.goat table](/bucardo.goat_table "wikilink").
+New databases cause an insert to the [bucardo.db table](/Bucardo/bucardo.db_table "wikilink"). A new database group will cause an insert to the [bucardo.dbgroup table](/Bucardo/bucardo.dbgroup_table "wikilink"). Databases added to that group will cause an insert to the [bucardo.dbmap table](/Bucardo/bucardo.dbmap_table "wikilink"). Adding tables and sequences will cause inserts to the [bucardo.goat table](/Bucardo/bucardo.goat_table "wikilink").
 
 ### See also:
 
