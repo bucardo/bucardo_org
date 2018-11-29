@@ -6,24 +6,24 @@ title: Bucardo Command Line Tool
 
 You can tell `bucardo` where to find the main [Bucardo database](/Bucardo/Bucardo_database "wikilink") by use of the following arguments:
 
-` --dbport`
-` --dbhost`
-` --dbname`
-` --dbuser`
+- ` --dbport`
+- ` --dbhost`
+- ` --dbname`
+- ` --dbuser`
 
 Additional bucardo arguments include:
 
-` --quiet=0`
-` --verbose=0`
-` --bcverbose=1`
-` --sendmail=0`
-` --extraname=''`
-` --debugfilesep=0`
-` --debugdir='.'`
-` --debugname=''`
-` --debugsyslog=1  Enables/Disables Syslog`
-` --debugfile=1    Enables/Disables local log file ./log.bucardo`
-` --cleandebugs=0`
+- ` --quiet=0`
+- ` --verbose=0`
+- ` --bcverbose=1`
+- ` --sendmail=0`
+- ` --extraname=''`
+- ` --debugfilesep=0`
+- ` --debugdir='.'`
+- ` --debugname=''`
+- ` --debugsyslog=1` _Enables/Disables Syslog_
+- ` --debugfile=1`    _Enables/Disables local log file ./log.bucardo_
+- ` --cleandebugs=0`
 
 Rather than enter those every time, you may place the arguments into a [bucardorc](/Bucardo/bucardorc "wikilink") file. All of the arguments below, except for "install", require that enough options exist to find the main Bucardo database.
 
@@ -117,7 +117,7 @@ Bucardo works by running one or more replication events called [syncs](/Bucardo/
 
 Syncs are fired by changes to the underlying tables, or manually started by [kicking](/Bucardo/kick "wikilink") them. To kick a sync, use:
 
-` bucardo kick `<syncname>` [timeout]`
+` bucardo kick <syncname> [timeout]`
 
 The optional timeout argument tells how long `bucardo` will wait for a response from Bucardo indicating that the sync has finished. If no timeout argument is given, the program sends the kick signal and returns immediately. If a value of "0" is given, `bucardo` will wait indefinitely for the sync to finish, and also give a running tab of how long the sync has taken.
 
@@ -129,7 +129,7 @@ Multiple syncs arguements can be given. If not timeout is given, they will all b
 
 To reload a sync:
 
-` bucardo reload `<syncname>
+` bucardo reload <syncname>`
 
 One or more named syncs can be reloaded this way. Each will be reloaded in turn, and `bucardo` will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/Bucardo/MCP "wikilink") process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/Bucardo/onetimecopy "wikilink") attribute.
 
@@ -137,13 +137,13 @@ One or more named syncs can be reloaded this way. Each will be reloaded in turn,
 
 To activate a sync that is not currently running, use:
 
-` bucardo activate `<syncname>
+` bucardo activate <syncname>`
 
 #### Deactivating a sync
 
 To deactivate a sync that is currently active and running, use:
 
-` bucardo deactivate `<syncname>
+` bucardo deactivate <syncname>`
 
 ### Viewing information
 
@@ -155,7 +155,7 @@ This will list general information about each sync
 
 #### Detailed sync information
 
-` bucardo status `<syncname>
+` bucardo status `<syncname>`
 
 This will show detailed information about a specific sync, including the last time it successfully ran, the number of rows transferred, and the last time it failed.
 
@@ -201,23 +201,23 @@ To list all [herds](/Bucardo/herd "wikilink"):
 
 To list only one or more specific herds, add their names:
 
-` bucardo list herd `<herdname>
+` bucardo list herd <herdname>`
 
 To get a list of all tables that belong to a herd, use the verbose argument:
 
-` bucardo list herd `<herdname>` --verbose`
+` bucardo list herd <herdname> --verbose`
 
 ### Adding things
 
 To add new items, the general syntax is:
 
-` bucardo add `<thing>` `<name>` additional_information`
+` bucardo add <thing> <name> additional_information`
 
 #### Adding a database
 
 Bucardo needs to know how to connect to each database involved in replication. You can teach it about a new database by using:
 
-` bucardo add db `<dbname>` [options]`
+` bucardo add db <dbname> [options]`
 
 The "dbname" is the name of the database inside of Postgres. The other optional arguments are entered in the format name=value and can include:
 
@@ -251,7 +251,7 @@ An optional list of databases to add to this group can be given. For example:
 
 Bucardo needs to know about all tables that might be used in replication. Adding a tables is simply:
 
-` bucardo add table `<tablename>` db=dbname`
+` bucardo add table <tablename> db=dbname`
 
 The tablename can be schema qualified, but does not have to be. The "dbname" refers to the internal name Bucardo uses to identify databases. The "db=dbname" can be left off if there is only one database in the db table. Note that you only need to add tables from the source database(s).
 
@@ -265,7 +265,7 @@ This will not actually change these tables or replicate them, it will merely tel
 
 Bucardo can also replicate sequences that it knows about. To add a sequence:
 
-` bucardo add sequence `<seqname>` db=dbname`
+` bucardo add sequence <seqname> db=dbname`
 
 To add all sequences:
 
@@ -277,7 +277,7 @@ All the notes that apply to 'add table' above apply here as well.
 
 A [herd](/Bucardo/herd "wikilink") is a named group of tables that are replicated together. To add a herd:
 
-` bucardo add herd `<name>` [goat goat]`
+` bucardo add herd <name> [goat goat]`
 
 The list of goats are tables or sequences that should be part of this herd.
 
@@ -285,7 +285,7 @@ The list of goats are tables or sequences that should be part of this herd.
 
 To add a sync:
 
-` bucardo add sync `<name>` source=`<herdname>` type=`<synctype>` target`
+` bucardo add sync <name> source=<herdname> type=<synctype> target`
 
 The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](/Bucardo/fullcopy "wikilink"), [pushdelta](/Bucardo/pushdelta "wikilink"), or [swap](/Bucardo/swap "wikilink"). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
 
