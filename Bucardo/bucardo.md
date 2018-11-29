@@ -21,8 +21,8 @@ Additional bucardo arguments include:
 - ` --debugfilesep=0`
 - ` --debugdir='.'`
 - ` --debugname=''`
-- ` --debugsyslog=1  Enables/Disables Syslog`
-- ` --debugfile=1    Enables/Disables local log file ./log.bucardo`
+- ` --debugsyslog=1` _Enables/Disables Syslog_
+- ` --debugfile=1`    _Enables/Disables local log file ./log.bucardo_
 - ` --cleandebugs=0`
 
 Rather than enter those every time, you may place the arguments into a [bucardorc](/Bucardo/bucardorc "wikilink") file. All of the arguments below, except for "install", require that enough options exist to find the main Bucardo database.
