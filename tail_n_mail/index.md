@@ -230,14 +230,14 @@ Note: the config file is rewritten by tail_n_mail each time it is run, so items 
 
 Here is a complete sample config file that grabs all "fatal" errors from today's Postgres log, while excluding any errors caused by trying to connect to a non-existent database:
 
-` ## Config file for the tail_n_mail program`
-` ## This file is automatically updated`
-` EMAIL: greg@endpoint.com`
-` MAILSUBJECT: HOST Postgres fatal errors (FILE)`
-` `
-` FILE: /var/log/postgresql-%Y-%m-%d.log`
-` INCLUDE: FATAL:  `
-` EXCLUDE: database ".+" does not exist`
+    ## Config file for the tail_n_mail program`
+    ## This file is automatically updated`
+    EMAIL: greg@endpoint.com`
+    MAILSUBJECT: HOST Postgres fatal errors (FILE)`
+
+    FILE: /var/log/postgresql-%Y-%m-%d.log`
+    INCLUDE: FATAL:  `
+    EXCLUDE: database ".+" does not exist`
 
 Note that there are two spaces after the final colon in the INCLUDE line. This regex might pick up some false positives, but it's good enough for everyday use. If the name of the file above was "tnm.config.fatals.txt", it could be run every five minutes by adding the following line to your crontab:
 
