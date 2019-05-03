@@ -30,11 +30,11 @@ Bugs should be reported at [our github page](https://github.com/bucardo/check_po
 
 Two mailing lists are available. For discussions about the program, bug reports, and feature requests, send email to check_postgres@bucardo.org
 
--   <https://mail.endcrypt.com/mailman/listinfo/check_postgres>
+-   <https://bucardo.org/mailman/listinfo/check_postgres>
 
 A low-volume list for announcement of new versions and important notices is the 'check_postgres-announce' list:
 
--   <https://mail.endcrypt.com/mailman/listinfo/check_postgres-announce>
+-   <https://bucardo.org/mailman/listinfo/check_postgres-announce>
 
 ### Development
 

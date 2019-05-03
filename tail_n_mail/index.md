@@ -253,8 +253,8 @@ If you need to temporarily disable tail_n_mail from running (for example, during
 
 There are two mailing lists related to tail_n_mail:
 
--   [TNM](https://mail.endcrypt.com/mailman/listinfo/tnm) - General information and discussion
--   [TNM-announce](https://mail.endcrypt.com/mailman/listinfo/tnm-announce) - Low volume announcement list
+-   [TNM](https://bucardo.org/mailman/listinfo/tnm) - General information and discussion
+-   [TNM-announce](https://bucardo.org/mailman/listinfo/tnm-announce) - Low volume announcement list
 
 ### Bugs and Feature Requests
 

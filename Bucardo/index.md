@@ -41,9 +41,8 @@ There are many ways you can help the Bucardo project:
 
 Three Bucardo mailing lists are available:
 
--   [Bucardo-announce](https://mail.endcrypt.com/mailman/listinfo/bucardo-announce): This is a low volume list used for notices of new versions, important bugs, and security warnings. It is highly recommended that anyone using Bucardo subscribe to this list.
--   [Bucardo-general](https://mail.endcrypt.com/mailman/listinfo/bucardo-general): Used to discuss any aspect of Bucardo. Bug reports, usage questions, feature requests, and general discussions should be sent to this list.
--   [Bucardo-commits](https://mail.endcrypt.com/mailman/listinfo/bucardo-commits): All commits to the projects are sent to this list as an inline diff, with one email per commit whenever a push is made to the master branch. Mostly useful to those following Bucardo's development.
+-   [Bucardo-announce](https://bucardo.org/mailman/listinfo/bucardo-announce): This is a low volume list used for notices of new versions, important bugs, and security warnings. It is highly recommended that anyone using Bucardo subscribe to this list.
+-   [Bucardo-general](https://bucardo.org/mailman/listinfo/bucardo-general): Used to discuss any aspect of Bucardo. Bug reports, usage questions, feature requests, and general discussions should be sent to this list.
 
 Bucardo users have real-time chat in the [\#bucardo IRC channel on Freenode](http://webchat.freenode.net/?channels=#bucardo).
 
