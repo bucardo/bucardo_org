@@ -2,11 +2,11 @@
 title: Tail n mail
 ---
 
-**tail_n_mail** (sometimes abbreviated TNM or tnm) is a Perl script for automatically detecting interesting items that appear in log files and mailing them out to interested parties. It is primarily aimed at [Postgres](/Postgres "wikilink") log files but can be used for any files. It was developed at End Point Corporation by Greg Sabino Mullane.
+**tail_n_mail** (sometimes abbreviated TNM or tnm) is a Perl script for automatically detecting interesting items that appear in log files and mailing them out to interested parties. It is primarily aimed at [Postgres](/Postgres "wikilink") log files but can be used for any files. It was originally developed at End Point Corporation by Greg Sabino Mullane.
 
 ### Download
 
-The latest version, 2.6.0, can be downloaded here:
+The latest version, 2.7.0, can be downloaded here:
 
 -   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail)
 -   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc)
@@ -147,6 +147,8 @@ There is only one mandatory command line option, and that is the name of a confi
     -   Prevents the sending of email, and outputs the command it would have used.
 -   --debug
     -   Greatly increases the level of verbosity
+-   -- yesfile and --nofile
+    -   Filter out which files to use by regex
 -   --file=XXX
     -   Use the specified file rather than determining the log file from the config file.
 -   --offset=XXX
@@ -186,8 +188,12 @@ Note: the config file is rewritten by tail_n_mail each time it is run, so items 
     -   A file that has configuration parameters inside of it. This allows you to use a single file containing a centralized list of strings to include and exclude, for example, and have many configuration files point to it. The inherit file can contain most of the parameters that a config file can, with the exception of FILE, OFFSET, and LASTFILE.
 -   INCLUDE:
     -   A regular expression indicating which lines match for possible mailing out. More than one INCLUDE item line can be used.
+-   INCLUDE_VIA_FILE:
+    -   Similar to INCLUDE, but for specific files. Format is string_regex ~ file_regex
 -   EXCLUDE:
     -   A regular expression indicating which lines to exclude. This is applied after the INCLUDE rules above. More than one EXCLUDE item line can be used.
+-   EXCLUDE_VIA_FILE:
+    -   Similar to EXCLUDE, but for specific files. Format is string_regex ~ file_regex
 -   EXCLUDE_PREFIX:
     -   A regular expression which indicates which lines to exclude by looking at the prefix of the line, rather than the content. The prefix typically contains things such as the timestamp and PID.
 -   EXCLUDE_NON_PARSED:
