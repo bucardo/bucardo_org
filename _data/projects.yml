@@ -1,9 +1,9 @@
 bucardo:
-  version: "5.5.0"
+  version: "5.6.0"
   title: "Bucardo"
-  release_date: "2018-11-05"
+  release_date: "2020-02-28"
   issue_url: "https://github.com/bucardo/bucardo/issues"
-  download_url: "https://bucardo.org/downloads/Bucardo-5.5.0.tar.gz"
+  download_url: "https://bucardo.org/downloads/Bucardo-5.6.0.tar.gz"
   clone_url: "https://github.com/bucardo/bucardo"
   blurb: "Multi-master Database Replication"
   main_site_link: "Bucardo"
