@@ -6,7 +6,7 @@ title: Tail n mail
 
 ### Download
 
-The latest version, 2.7.1, can be downloaded here:
+The latest version, 2.8.0, can be downloaded here:
 
 -   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail)
 -   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc)
@@ -231,6 +231,9 @@ Note: the config file is rewritten by tail_n_mail each time it is run, so items 
     -   The thousands separator: see discussion in the basic options section.
 -   LOG_LINE_PREFIX:
     -   The current log_line_prefix setting
+-   LOG_LINE_PREFIX_REGEX:
+    -   Can be used multiple times to set different log_level_prefix values to file names matching a regex. Format is regex = 'myprefix'. For example: LOG_LINE_PREFIX_REGEX: warehouse = '%t %u@%d [%p] '
+
 
 ### Config File Example
 
