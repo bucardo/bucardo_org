@@ -1,29 +1,16 @@
 ---
-title: Bucardo remove table
+title: Bucardo remove sequence
 ---
 
 __NOTOC__
 
-The **remove table** command is used to remove a table from the internal Bucardo database.
-
-Examples:
-
-` bucardo remove table public.sales`
-
-Removes the table named **sales** in the public schema from Bucardo.
-
-Database name should be specified if there are two or more tables with same name in different databases.
-
-` bucardo remove table public.sales db=bazzo`
-` `
-
-Removes the table named **sales** from the database **bazzo** in the public schema from Bucardo.
+The **remove sequence** command is used to remove a sequence from the internal Bucardo database.
 
 Usage:
 
-` bucardo remove table `<name(s)>` (db=`<dbname>`)`
+` bucardo remove sequence `<name(s)>` `
 
-Removes one or more tables: the schema is required.
+Removes one or more sequences: the schema is required.
 
 This will not change any running syncs: to do that, you should run:
 
