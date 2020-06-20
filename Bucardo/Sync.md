@@ -10,7 +10,7 @@ title: Sync
 
 To add a new sync, run:
 
-` bucardo add sync `<syncname>` source=xx targetdb=yy targetgroup=zz type=`<type>` tables=x,y,z`
+    bucardo add sync <syncname> source=xx targetdb=yy targetgroup=zz type=<type> tables=x,y,z
 
 -   *syncname* is what you want to name this sync - keep it short and descriptive
 -   *source* is the name of a [source herd](/Bucardo/source_herd "wikilink")
@@ -21,7 +21,7 @@ To add a new sync, run:
 
 To modify an existing sync, run:
 
-` bucardo update sync name=value`
+    bucardo update sync name=value
 
 Where name is one of the columns of the [sync table](/Bucardo/sync_table "wikilink")
 

@@ -7,23 +7,24 @@ __NOTOC__
 The **list dbgroup** command is used to list information about one or more Bucardo database groups.
 
 Example:
+    
+    # Shows a list of all database groups, one per line, in alphabetical order.
+    bucardo list dbgroup
 
-` bucardo list dbgroups`
 
-Shows a list of all database groups, one per line, in alphabetical order.
 
 Usage:
 
-` bucardo list dbgroup `<name(s)>
+    bucardo list dbgroup <name(s)>
 
 If one or more group names are given, only lists the given ones. Wildcards can be used. To view detailed information, use the **--vv** (very verbose) argument.
 
 ### Examples
 
-` bucardo list dbgroup`
+    $ bucardo list dbgroup
 
-` Database group: alpha  Members: db1:source db2:target`
-` Database group: beta   Members: db1:source db2:source db3:target`
+    Database group: alpha  Members: db1:source db2:target
+    Database group: beta   Members: db1:source db2:source db3:target
 
 ### Internals
 

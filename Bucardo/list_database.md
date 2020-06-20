@@ -8,7 +8,7 @@ The **list database** command is used to list information about one or more data
 
 Example:
 
-` bucardo list database`
+bucardo list database`
 
 Shows a list of all databases, one per line, in alphabetical order.
 

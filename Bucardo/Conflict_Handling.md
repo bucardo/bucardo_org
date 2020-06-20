@@ -9,7 +9,7 @@ Built-in conflict strategies
 
 Bucardo has a small selection of built-in conflict strategies, which can be set per-table or per-sync. A table-level setting will override a sync-level setting. Both tables and syncs have an attribute named **conflict_strategy** that can be set when creating or updating syncs and tables. The default conflict_strategy for syncs is **bucardo_latest**. Tables have no default value. For example, to change a sync named foobar to a conflict_strategy of bucardo_latest_all_tables, run:
 
-` bucardo update sync conflict_strategy=bucardo_latest_all_tables`
+    bucardo update sync conflict_strategy=bucardo_latest_all_tables
 
 ### bucardo_latest
 
@@ -28,8 +28,8 @@ Database list conflict strategy
 
 Another option that can be given to conflict_strategy is a simple list of databases, separated by spaces. This indicates the preferred order of "winning" databases. Conflicting rows will consult this list and declare the first database found in the list that is part of the conflict as the winner. The database names given are the names as created by the "bucardo add database" command. As an example, if we have three databases (alpha, bravo, and charlie), we can create a sync and give it a preferred ordering like so:
 
-` bucardo add db alpha,bravo,charlie dbname=sales dbhost=east,west,central`
-` bucardo add sync foobar dbs=alpha:s,beta:s,charlie:s tables=all conflict='beta alpha charlie'`
+    bucardo add db alpha,bravo,charlie dbname=sales dbhost=east,west,central
+    bucardo add sync foobar dbs=alpha:s,beta:s,charlie:s tables=all conflict='beta alpha charlie'
 
 In the example above, any rows caused by a conflict in all three databases will be won by database beta, which means the row from that database will overwrite the same row in databases alpha and charlie. If a conflict is only between alpha and charlie, alpha will win.
 

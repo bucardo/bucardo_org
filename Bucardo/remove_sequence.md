@@ -8,7 +8,7 @@ The **remove sequence** command is used to remove a sequence from the internal B
 
 Usage:
 
-` bucardo remove sequence `<name(s)>` `
+    bucardo remove sequence <name(s)>
 
 Removes one or more sequences: the schema is required.
 

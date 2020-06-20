@@ -55,9 +55,8 @@ Development
 
 Bucardo development is managed in the [Git](http://git-scm.com/) version control system. Bucardo is composed of two separate projects, each of which can be downloaded for local development as follows:
 
-```
-git clone git@github.com:bucardo/bucardo.git
-git clone git@github.com:bucardo/dbixsafe.git
-```
+    git clone git@github.com:bucardo/bucardo.git
+    git clone git@github.com:bucardo/dbixsafe.git
+
 
 See the main [GitHub project](http://github.com/bucardo) for easy patch contribution by the general public.

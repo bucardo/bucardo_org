@@ -8,13 +8,13 @@ The **remove customname** command removes one or more custom name mappings from 
 
 Example:
 
-` bucardo remove customname 1 4`
+    # Removes the custom names with internal IDs of 1 and 4
+    bucardo remove customname 1 4
 
-Removes the custom names with internal IDs of 1 and 4
 
 Usage:
 
-` bucardo remove customname `<numbers>
+    bucardo remove customname <numbers>
 
 The numbers are internal IDs that can be seen by issuing the [list customname](/bucardo/list_customname "wikilink") command.
 
