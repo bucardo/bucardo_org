@@ -7,7 +7,7 @@ This page describes the steps needed to replicate a sample database, created by 
 Install Bucardo
 ---------------
 
-The first step is to install Bucardo. Detailed instructions can be found on the [installation page](/Bucardo/install "wikilink"), but the quick steps are:
+The first step is to install Bucardo. Detailed instructions can be found on the [installation page]({% link Bucardo/Installation/Installation.md %}), but the quick steps are:
 
 ### Install Perl modules
 
