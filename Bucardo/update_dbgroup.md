@@ -2,8 +2,6 @@
 title: Bucardo update dbgroup
 ---
 
-__NOTOC__
-
 The **update dbgroup** command is used to change an existing Bucardo database group.
 
 Example:

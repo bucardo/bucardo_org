@@ -2,8 +2,6 @@
 title: Bucardo add table
 ---
 
-__NOTOC__
-
 The **add table** command is used to teach Bucardo about a table.
 
 Example:

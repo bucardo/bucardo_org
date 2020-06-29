@@ -2,8 +2,6 @@
 title: Bucardo remove table
 ---
 
-__NOTOC__
-
 The **remove table** command is used to remove a table from the internal Bucardo database.
 
 Examples:

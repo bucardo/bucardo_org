@@ -2,8 +2,6 @@
 title: Bucardo list customname
 ---
 
-__NOTOC__
-
 The **list customname** command is used to list information about one or more Bucardo custom name mappings.
 
 Example:

@@ -2,8 +2,6 @@
 title: Bucardo remove dbgroup
 ---
 
-__NOTOC__
-
 The **remove dbgroup** command removes one or more database groups from Bucardo's internal tables.
 
 Example:

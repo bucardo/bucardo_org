@@ -2,8 +2,6 @@
 title: Bucardo remove database
 ---
 
-__NOTOC__
-
 The **remove database** command removes one or more databases from Bucardo's internal tables.
 
 Example:

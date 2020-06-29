@@ -2,8 +2,6 @@
 title: Bucardo list dbgroup
 ---
 
-__NOTOC__
-
 The **list dbgroup** command is used to list information about one or more Bucardo database groups.
 
 Example:

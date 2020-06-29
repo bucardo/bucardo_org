@@ -2,8 +2,6 @@
 title: Bucardo add database
 ---
 
-__NOTOC__
-
 The **add database** command is used to teach Bucardo about a database that will be involved in replication. It is usually the first step performed after the initial [install](/Bucardo/install "wikilink").
 
 Example:

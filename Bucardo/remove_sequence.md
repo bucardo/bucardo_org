@@ -2,8 +2,6 @@
 title: Bucardo remove sequence
 ---
 
-__NOTOC__
-
 The **remove sequence** command is used to remove a sequence from the internal Bucardo database.
 
 Usage:
