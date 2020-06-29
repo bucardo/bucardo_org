@@ -47,7 +47,7 @@ Three Bucardo mailing lists are available:
 
 Bucardo users have real-time chat in the [\#bucardo IRC channel on Freenode](http://webchat.freenode.net/?channels=#bucardo).
 
-We track bugs for Bucardo at github.
+We track bugs for Bucardo at [github](https://github.com/bucardo/bucardo/issues/).
 
 You can learn more about the Bucardo source code at the [Bucardo Ohloh project page](https://www.ohloh.net/p/bucardo).
 
