@@ -29,17 +29,8 @@ Rather than enter those every time, you may place the arguments into a [bucardor
 
 ### Installing and upgrading Bucardo
 
-To install Bucardo for the first time, simply enter
-
-    bucardo install
-
-See the [Bucardo installation](/Bucardo/Installation "wikilink") page for complete details.
-
-To upgrade Bucardo, use:
-
-    bucardo upgrade
-
-See the [Bucardo upgrade](/Bucardo/Upgrade "wikilink") page for complete details.
+-    To install Bucardo for the first time, see the [Bucardo installation]({% link Bucardo/Installation.md %}) page.
+-    To upgrade Bucardo, See the [Bucardo upgrade]({% link Bucardo/Upgrade.md %}).
 
 ### Controlling Bucardo
 

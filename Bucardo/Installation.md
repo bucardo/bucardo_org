@@ -2,21 +2,22 @@
 title: Bucardo Installation
 ---
 
-[Bucardo](/Bucardo "wikilink") Installation
+Bucardo Installation
+--------------------
 
-This page describes how to install Bucardo. If you want a packaged version, skip to **Installation From Packages**, FreeBSD users can skip to **[Installation From FreeBSD Ports](/Bucardo/Installation#Installation_From_FreeBSD_Ports "wikilink")**. For the impatient, here's the short version:
+This page describes how to install Bucardo. If you want a packaged version, skip to **Installation From Packages**, FreeBSD users can skip to **Installation From FreeBSD Ports**. For the impatient, here's the short version:
 
 Quick version
 -------------
 
-    # Install DBIx::Safe and boolean
+    # Install Requirements
     # Download and untar the latest Bucardo
     perl Makefile.PL && make && sudo make install
     bucardo install
 
 The rest of this document goes into details about the installation process.
 
-Install DBIx::Safe
+Install Requirements
 ------------------
 
 Bucardo requires the Perl module DBIx::Safe to be installed. Some distributions have it available as a package, in which case the installation is as simple as:
@@ -35,13 +36,7 @@ To install it manually, grab the [latest DBIx::Safe tarball](http://bucardo.org/
     make test
     sudo make install
 
-
-Other Perl prerequisites that may or may not be installed already on your system include:
-
--    DBI
--    DBD::Pg
--    Test::Simple
--    boolean
+Other Perl requirements that may or may not be installed already on your system are listed in the [Requirements]({% link Bucardo/Requirements.md %}) page
 
 Download and unpack the Bucardo tarball
 ---------------------------------------
@@ -129,18 +124,20 @@ The installation process will automatically install all the dependancies such as
 Configuring Replication
 -----------------------
 
-Add databases:
+This is a quick summary. See the specific pages for more information.
+
+[Add databases]({% link Bucardo/add_database.md %}):
 
     bucardo add database <dbname>
 
-Add tables and sequences:
+[Add tables and sequences]({% link Bucardo/add_table.md %}):
 
     bucardo add all tables`
     bucardo add all sequences`
 
-Add [syncs](/Bucardo/sync "wikilink"):
+[Add syncs]({% link Bucardo/add_sync.md %}):
 
-    bucardo add sync <syncname> type=`<synctype> source=<db> targetdb=<db> tables=tab1,tab2,...
+    bucardo add sync <syncname> type=<synctype> source=<db> targetdb=<db> tables=tab1,tab2,...
 
 Start Bucardo:
 
