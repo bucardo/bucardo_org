@@ -2,7 +2,7 @@
 title: Bucardo Upgrade
 ---
 
-Upgrading Bucardo
+Bucardo Upgrade
 -----------------
 
 To upgrade Bucardo, install the new Bucardo file by downloading the [latest version](/Bucardo#Obtaining_Bucardo "wikilink"), and then running:
