@@ -20,4 +20,4 @@ Glossary of Terms
 -    CTL : The "Controller" is in charge of running a single sync (one named replication set). Will create one or more kids (KID) to do the actual work. In charge of corralling the kids and reporting things back to the MCP. May be short-lived or persistent (configurable).
 -    KID : A child program forked off by the CTL in charge of doing the actual work. Usually created with a specific mandate, such as "replicate from A to B for sync X". Only talks to the CTL that created it. Also configurable as to whether it exits after doing its work, or hangs around waiting for another job from the controller.
 -    VAC : An internal vacuum process primarily reponsible for keeping the bucardo_delta_\* tables trimmed. Replaces the cron jobs needed in Bucardo 4.
-
+-    Bucardo.pm: is the main Perl file containing the Bucardo code. It is called by the `bucardo` command line tool
