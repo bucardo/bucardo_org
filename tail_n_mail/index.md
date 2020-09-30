@@ -6,7 +6,7 @@ title: Tail n mail
 
 ### Download
 
-The latest version, 3.0.0, can be downloaded here:
+The latest version, 3.1.0, can be downloaded here:
 
 -   [tail_n_mail](http://bucardo.org/downloads/tail_n_mail)
 -   [tail_n_mail.asc](http://bucardo.org/downloads/tail_n_mail.asc)
