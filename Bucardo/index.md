@@ -48,8 +48,6 @@ Bucardo users have real-time chat in the [\#bucardo IRC channel on Freenode](htt
 
 We track bugs for Bucardo at github.
 
-You can learn more about the Bucardo source code at the [Bucardo Ohloh project page](https://www.ohloh.net/p/bucardo).
-
 Development
 -----------
 
