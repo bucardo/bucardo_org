@@ -35,9 +35,9 @@ dbix_safe:
   color: "green"
   show_in_index: "1"
 tail_n_mail:
-  version: "3.1.0"
+  version: "3.2.0"
   title: "tail_n_mail"
-  release_date: "2020-09-30"
+  release_date: "2020-12-09"
   issue_url: "https://github.com/bucardo/tail_n_mail/issues"
   download_url: "http://bucardo.org/downloads/tail_n_mail"
   clone_url: "https://github.com/bucardo/tail_n_mail"
