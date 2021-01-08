@@ -18,3 +18,11 @@ Databases involved in replication must be Postgres version 8.1 or higher. The la
 
 In addition, the Bucardo daemon requires a Unix-like system. Currently, it has only been tested on Linux variants, but it should work on BSD, Solaris, and other similar systems. Bucardo will not currently work on Windows, but the ability to do so is probably not that difficult to achieve at this point so let us know if you'd like to help with that. However, you can have a Bucardo daemon on a Linux box that replicates Postgres between two Window boxes.
 
+Extra requirements for bucardo-report:
+
+- `CGI`
+
+Extra requirements for developers to build or test Bucardo:
+
+- `Encode::Locale`
+- `Pod::Parser`
