@@ -23,7 +23,8 @@ Online documentation is available for the following parts of Bucardo:
 
 -   [Overview of Bucardo](Overview.md): A quick overview of Bucardo, explaining what it is and what it is capable of
 -   [Bucardo FAQ (Frequently Asked Questions)](FAQ.md): Answers to commonly asked questions about Bucardo
--   [Bucardo installation](Installation.md): Installation instructions for Bucardo
+-   [Bucardo installation]({% link Bucardo/Installation/Installation.md %}): Installation instructions for Bucardo
+-   [Bucardo Upgrade]({% link Bucardo/Installation/Upgrade.md %}): Upgrade instructions for Bucardo
 -   [pgbench tutorial](pgbench_example.md): An example of how to use Bucardo to replicate a database
 -   [bucardo](bucardo.md): A script used to control an existing Bucardo installation
 -   [DBIx::Safe](../DBIx-Safe/index.md): Helper module needed by Bucardo that provides safe versions of DBI database handles
@@ -46,16 +47,15 @@ Three Bucardo mailing lists are available:
 
 Bucardo users have real-time chat in the [\#bucardo IRC channel on Freenode](http://webchat.freenode.net/?channels=#bucardo).
 
-We track bugs for Bucardo at github.
+We track bugs for Bucardo at [github](https://github.com/bucardo/bucardo/issues/).
 
 Development
 -----------
 
 Bucardo development is managed in the [Git](http://git-scm.com/) version control system. Bucardo is composed of two separate projects, each of which can be downloaded for local development as follows:
 
-```
-git clone git@github.com:bucardo/bucardo.git
-git clone git@github.com:bucardo/dbixsafe.git
-```
+    git clone git@github.com:bucardo/bucardo.git
+    git clone git@github.com:bucardo/dbixsafe.git
+
 
 See the main [GitHub project](http://github.com/bucardo) for easy patch contribution by the general public.

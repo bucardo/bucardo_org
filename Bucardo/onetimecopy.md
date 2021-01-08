@@ -15,7 +15,7 @@ If the target table is \*not\* empty, but is not identical to the source, the be
 
 To change the onetimecopy value of a sync, just run:
 
-` bucardo update sync `<syncname>` onetimecopy=2`
+    bucardo update sync <syncname> onetimecopy=2
 
 A onetimecopy event will appear as a [fullcopy](/Bucardo/fullcopy "wikilink") sync in the [web stats](/Bucardo/web_stats "wikilink") page.
 

@@ -6,13 +6,13 @@ The **add customname** command creates a new Bucardo custom name mapping. This a
 
 Example:
 
-` bucardo add customname public.foobar public.baz`
+    bucardo add customname public.foobar public.baz
 
 Creates a mapping across all databases and syncs such that replication from the 'public.foobar' table will go to the 'public.baz' table on the targets.
 
 Usage:
 
-` bucardo add customname oldname newname [db=name] [sync=name]`
+    bucardo add customname oldname newname [db=name] [sync=name]
 
 Maps an existing table to a new name on the target. The oldname must contain the schema as well as the table name (if the source database supports schemas). You can limit it to one or more databases, and/or to one or more syncs.
 

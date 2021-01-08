@@ -2,13 +2,11 @@
 title: Bucardo list database
 ---
 
-__NOTOC__
-
 The **list database** command is used to list information about one or more databases that Bucardo knows about. It can also be called as **list db**
 
 Example:
 
-` bucardo list database`
+bucardo list database`
 
 Shows a list of all databases, one per line, in alphabetical order.
 
