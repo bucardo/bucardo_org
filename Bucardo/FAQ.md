@@ -49,7 +49,7 @@ There is no simple answer to this question, as it depends on how many tables you
 
 ### Can Bucardo replicate DDL?
 
-No, Bucardo relies on triggers, and Postgres does not yet provide DDL triggers or triggers on its system tables.
+No
 
 ### What does "Could not add to q" mean
 
