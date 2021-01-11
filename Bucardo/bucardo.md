@@ -208,25 +208,54 @@ To add new items, the general syntax is:
 
 Bucardo needs to know how to connect to each database involved in replication. You can teach it about a new database by using:
 
-    bucardo add db <dbname> [options]
+    bucardo add db <name> [options]
 
-The "dbname" is the name of the database inside of Postgres. The other optional arguments are entered in the format name=value and can include:
+The "name" is the name by which the database will be known to Bucardo,
+and must be unique.  This may vary from the actual database name,
+as multiple hosts might have databases with the same name.
 
--   name: the internal name used by Bucardo to refer to this database
+The other optional arguments are entered in the format name=value and can
+include:
+
+-   dbname: the name of the database inside Postgres.  Required unless using
+    a service file or setting it via dbdsn.
+-   type: The type of the database. Defaults to "postgres". Currently
+    supported values are: "postgres", "drizzle", "mongo", "mysql", "maria",
+    "oracle", "redis", "sqlite"
+-   dbdsn: A direct DSN to connect to a database. Will override all other
+    connection options if set.
 -   port: the port this database runs on. Defaults to 5432.
 -   host: the host this database is on. Defaults to no host (Unix socket)
 -   user: the user to connect as. Defaults to 'bucardo'
 -   pass: the password to connect with. Don't use this, use a .pgpass file instead!
 -   conn: Any additional information add to the connection string, e.g. sslmode=require
--   sourcelimit: The maximum number of replication events that can run at one time using this database as a source. Defaults to 0 (no limit)
--   targetlimit: The maximum number of replication events that can run at one time using this database as a target. Defaults to 0 (no limit)
--   pgpass: Full path and filename of a [Bucardo/pgpass](/Bucardo/pgpass "wikilink") file to use for this connection
+-   service: The service name Bucardo should use when connecting to this
+    database.
+-   status: Initial status of this database. Defaults to "active" but can be
+    set to "inactive".
+-   dbgroup: Name of the database group this database should belong to.
+-   addalltables: Automatically add all tables from this database.
+-   addallsequences: Automatically add all sequences from this database.
+-   ssp (server_side_prepares): Set to 1 or 0 to enable or disable server-side
+    prepares. Defaults to 1.
+-   makedelta:  Set to 1 or 0 to enable or disable makedelta. Defaults to 0.
+
+Additional parameters:
+
+-   --force: Forces the database to be added without running a connection test.
 
 For example, to add three new databases on different hosts:
 
-    bucardo add database sales name=sales_master host=int-db-sales1
-    bucardo add database sales name=sales_slave1 host=int-db-sales2
-    bucardo add database sales name=sales_slave2 host=int-db-sales3
+    bucardo add db sales1 dbname=sales host=int-db-sales1
+    bucardo add db sales2 dbname=sales host=int-db-sales2
+    bucardo add db sales3 dbname=sales host=int-db-sales3
+
+Note: As a convenience, if the "user" value is its default value,
+"bucardo", in the event that Bucardo cannot connect to the database, it
+will try connecting as "postgres" and create a superuser named
+"bucardo".  This is to make things easier for folks getting started with
+Bucardo, but will not work if it cannot connect as "postgres", or if it
+the connection failed due to an authentication failure.
 
 #### Adding a database group
 
