@@ -259,13 +259,18 @@ the connection failed due to an authentication failure.
 
 #### Adding a database group
 
-Databases can be grouped together, so that one master can push to a group of slave databases rather than a single database. To create a new named group:
+Databases can be grouped together, so that one master can push to a group
+of slave databases rather than a single database.  To create a new named group:
 
-    bucardo add dbgroup [db db]
+    bucardo add dbgroup name db1:source db2:source db3:target ...
 
-An optional list of databases to add to this group can be given. For example:
+This adds one or more databases to the named dbgroup.  If the dbgroup doesn't
+exist, it will be created.  The database parameters should specify their
+roles, either "source" or "target".
 
-    bucardo add dbgroup sales sales_slave1 sales_slave2
+For example:
+
+    bucardo add dbgroup sales sales1:source sales2:target sales3:target
 
 #### Adding tables
 
