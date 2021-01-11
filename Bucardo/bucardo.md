@@ -310,17 +310,18 @@ The list of goats are tables or sequences that should be part of this herd.
 
 To add a sync:
 
-     bucardo add sync <name> source=<herdname> type=<synctype> target
+     bucardo add sync <name> dbgroup=<dbgroupname> relgroup=<herdname>
 
 The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](/Bucardo/fullcopy "wikilink"), [pushdelta](/Bucardo/pushdelta "wikilink"), or [swap](/Bucardo/swap "wikilink"). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
 
 As a shortcut for creating new syncs, you can also give a comma-separated list of tables, like so:
 
-     bucardo add sync abc source=db1 targetdb=db2 tables=sales,marketing,userdb
+     bucardo add sync abc dbgroup=<dbgroupname> tables=sales,marketing,userdb
 
 This will create a herd of the same name as the sync if it does not already exist, add the tables to it, and then create the sync.
 
-Other options that can be added to 'add sync', in the format name=value:
+Some of the other options that can be added to 'add sync',
+in the format name=value:
 
 -   onetimecopy: set the [onetimecopy](/Bucardo/onetimecopy "wikilink") value for this sync
 -   status: set the initial status for the sync. Defaults to 'active'
