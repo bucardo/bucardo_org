@@ -112,7 +112,7 @@ Syncs are fired by changes to the underlying tables, or manually started by [kic
 
 The optional timeout argument tells how long `bucardo` will wait for a response from Bucardo indicating that the sync has finished. If no timeout argument is given, the program sends the kick signal and returns immediately. If a value of "0" is given, `bucardo` will wait indefinitely for the sync to finish, and also give a running tab of how long the sync has taken.
 
-Multiple syncs arguements can be given. If not timeout is given, they will all be kicked at once. Otherwise, they will be kicked in the order given, each starting when the previous one has completed. For example, to kick the syncs "sales" and "marketing", while while waiting for each to finish, you could use:
+Multiple syncs arguments can be given. If not timeout is given, they will all be kicked at once. Otherwise, they will be kicked in the order given, each starting when the previous one has completed. For example, to kick the syncs "sales" and "marketing", while while waiting for each to finish, you could use:
 
     bucardo kick sales marketing 0
 
