@@ -5,7 +5,10 @@ title: Bucardo Installation
 Bucardo Installation
 --------------------
 
-This page describes how to install Bucardo. If you want a packaged version, skip to **Installation From Packages**, FreeBSD users can skip to **Installation From FreeBSD Ports**. For the impatient, here's the short version:
+This page describes how to install Bucardo.  If you are looking for upgrading
+from a previous version see [Bucardo Upgrade](upgrade)
+
+If you want a packaged version, skip to **Installation From Packages**, FreeBSD users can skip to **Installation From FreeBSD Ports**. For the impatient, here's the short version:
 
 Quick version
 -------------
