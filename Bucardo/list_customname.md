@@ -25,9 +25,9 @@ Without any arguments, lists all custom names. Arguments can be a number, repres
 
 ### Internals
 
-Information is read from the [bucardo.customname](/bucardo.customname "wikilink") table
+Information is read from the [bucardo.customname](/Bucardo/bucardo.customname) table
 
 ### See also:
 
--   [add_customname](/Bucardo/add_customname "wikilink")
--   [remove_customname](/Bucardo/remove_customname "wikilink")
+-   [add_customname](/Bucardo/add_customname)
+-   [remove_customname](/Bucardo/remove_customname)

@@ -128,7 +128,7 @@ Definition
 </tr>
 <tr>
 <td>
-<b>bucardo_rate_[sync](/Bucardo/sync "wikilink")</b>
+<b>bucardo_rate_[sync](/Bucardo/sync)</b>
 
 </td>
 <td>
@@ -136,7 +136,7 @@ No
 
 </td>
 <td>
-([sync](/Bucardo/sync "wikilink"))
+([sync](/Bucardo/sync))
 
 </td>
 </tr>

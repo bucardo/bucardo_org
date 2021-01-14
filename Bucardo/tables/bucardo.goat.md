@@ -186,7 +186,7 @@ NULL
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff "wikilink")
+[ONOFF](/Bucardo/domains/bucardo.onoff)
 
 </td>
 <td>
@@ -200,7 +200,7 @@ NOT NULL DEFAULT <b>'inherits'</b>
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff "wikilink")
+[ONOFF](/Bucardo/domains/bucardo.onoff)
 
 </td>
 <td>
@@ -376,7 +376,7 @@ PRIMARY KEY (id)
 
 </td>
 <td>
-FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db "wikilink")(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -406,7 +406,7 @@ CHECK (reltype IN ('table','sequence'))
 
 </td>
 <td>
-CHECK ([customselect](/Bucardo/customselect "wikilink") IS NULL OR length(pkey) \> 1)
+CHECK ([customselect](/Bucardo/customselect) IS NULL OR length(pkey) \> 1)
 
 </td>
 </tr>

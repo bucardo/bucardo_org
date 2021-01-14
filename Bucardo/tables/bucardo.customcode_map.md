@@ -128,7 +128,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/tables/bucardo.customcode "wikilink")(id) ON DELETE CASCADE
+FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/tables/bucardo.customcode)(id) ON DELETE CASCADE
 
 </td>
 </tr>
@@ -138,7 +138,7 @@ FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/tables/bucardo.custo
 
 </td>
 <td>
-FOREIGN KEY ([sync](/Bucardo/sync "wikilink")) REFERENCES [bucardo.sync](/Bucardo/tables/bucardo.sync "wikilink")(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/tables/bucardo.sync)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -148,17 +148,17 @@ FOREIGN KEY ([sync](/Bucardo/sync "wikilink")) REFERENCES [bucardo.sync](/Bucard
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/goat "wikilink")) REFERENCES [bucardo.goat](/Bucardo/tables/bucardo.goat "wikilink")(id) ON DELETE SET NULL
+FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/tables/bucardo.goat)(id) ON DELETE SET NULL
 
 </td>
 </tr>
 <tr>
 <td>
-<b>customcode_map_sync[goat](/Bucardo/goat "wikilink")</b>
+<b>customcode_map_sync[goat](/Bucardo/goat)</b>
 
 </td>
 <td>
-CHECK ([sync](/Bucardo/sync "wikilink") IS NULL OR [goat](/Bucardo/goat "wikilink") IS NULL)
+CHECK ([sync](/Bucardo/sync) IS NULL OR [goat](/Bucardo/goat) IS NULL)
 
 </td>
 </tr>
@@ -180,7 +180,7 @@ Definition
 </tr>
 <tr>
 <td>
-<b>customcode_map_unique_[sync](/Bucardo/sync "wikilink")</b>
+<b>customcode_map_unique_[sync](/Bucardo/sync)</b>
 
 </td>
 <td>
@@ -188,13 +188,13 @@ Yes
 
 </td>
 <td>
-(code,[sync](/Bucardo/sync "wikilink")) WHERE [sync](/Bucardo/sync "wikilink") IS NOT NULL
+(code,[sync](/Bucardo/sync)) WHERE [sync](/Bucardo/sync) IS NOT NULL
 
 </td>
 </tr>
 <tr>
 <td>
-<b>customcode_map_unique_[goat](/Bucardo/goat "wikilink")</b>
+<b>customcode_map_unique_[goat](/Bucardo/goat)</b>
 
 </td>
 <td>
@@ -202,7 +202,7 @@ Yes
 
 </td>
 <td>
-(code,[goat](/Bucardo/goat "wikilink")) WHERE [goat](/Bucardo/goat "wikilink") IS NOT NULL
+(code,[goat](/Bucardo/goat)) WHERE [goat](/Bucardo/goat) IS NOT NULL
 
 </td>
 </tr>

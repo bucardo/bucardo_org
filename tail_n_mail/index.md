@@ -2,7 +2,7 @@
 title: Tail n mail
 ---
 
-**tail_n_mail** (sometimes abbreviated TNM or tnm) is a Perl script for automatically detecting interesting items that appear in log files and mailing them out to interested parties. It is primarily aimed at [Postgres](/Postgres "wikilink") log files but can be used for any files. It was originally developed at End Point Corporation by Greg Sabino Mullane.
+**tail_n_mail** (sometimes abbreviated TNM or tnm) is a Perl script for automatically detecting interesting items that appear in log files and mailing them out to interested parties. It is primarily aimed at [Postgres](/Postgres) log files but can be used for any files. It was originally developed at End Point Corporation by Greg Sabino Mullane.
 
 ### Download
 

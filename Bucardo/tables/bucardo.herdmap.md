@@ -9,7 +9,7 @@ Table: bucardo.herdmap
 </h2>
 <table border="1" cellpadding="3">
 <caption>
-<b>Associates a [goat](/Bucardo/goat "wikilink") with one or more herds</b>
+<b>Associates a [goat](/Bucardo/goat) with one or more herds</b>
 
 </caption>
 <tr>
@@ -100,7 +100,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd "wikilink")(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd "wikil
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/goat "wikilink")) REFERENCES [bucardo.goat](/Bucardo/tables/bucardo.goat "wikilink")(id) ON DELETE CASCADE
+FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/tables/bucardo.goat)(id) ON DELETE CASCADE
 
 </td>
 </tr>
@@ -140,7 +140,7 @@ Yes
 
 </td>
 <td>
-(herd,[goat](/Bucardo/goat "wikilink"))
+(herd,[goat](/Bucardo/goat))
 
 </td>
 </tr>

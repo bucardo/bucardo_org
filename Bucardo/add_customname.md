@@ -18,9 +18,9 @@ Maps an existing table to a new name on the target. The oldname must contain the
 
 ### Internals
 
-New customnames are inserted to the [bucardo.customname table](/bucardo.customname_table "wikilink").
+New customnames are inserted to the [bucardo.customname table](/Bucardo/bucardo.customname_table).
 
 ### See also:
 
--   [list_customname](/Bucardo/list_customname "wikilink")
--   [remove_customname](/Bucardo/remove_customname "wikilink")
+-   [list_customname](/Bucardo/list_customname)
+-   [remove_customname](/Bucardo/remove_customname)

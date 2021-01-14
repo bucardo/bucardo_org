@@ -5,7 +5,7 @@ title: Bucardo Upgrade
 Bucardo Upgrade
 -----------------
 
-To upgrade Bucardo, install the new Bucardo file by downloading the [latest version](/Bucardo#Obtaining_Bucardo "wikilink"), and then running:
+To upgrade Bucardo, install the new Bucardo file by downloading the [latest version](/Bucardo/#obtaining-bucardo), and then running:
 
     perl Makefile.PL
     make

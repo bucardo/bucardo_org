@@ -180,7 +180,7 @@ PRIMARY KEY (id)
 
 </td>
 <td>
-CHECK (whenrun IN ('before_txn', 'before_check_rows', 'before_trigger_drop', 'after_trigger_drop', 'after_table_[sync](/Bucardo/sync "wikilink")', 'exception', 'conflict', 'before_trigger_enable', 'after_trigger_enable', 'after_txn', 'before_[sync](/Bucardo/sync "wikilink")', 'after_[sync](/Bucardo/sync "wikilink")'))
+CHECK (whenrun IN ('before_txn', 'before_check_rows', 'before_trigger_drop', 'after_trigger_drop', 'after_table_[sync](/Bucardo/sync)', 'exception', 'conflict', 'before_trigger_enable', 'after_trigger_enable', 'after_txn', 'before_[sync](/Bucardo/sync)', 'after_[sync](/Bucardo/sync)'))
 
 </td>
 </tr>

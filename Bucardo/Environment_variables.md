@@ -2,7 +2,7 @@
 title: Environment variables
 ---
 
-All the environment variables used by [Bucardo](/Bucardo "wikilink")
+All the environment variables used by [Bucardo](/Bucardo/)
 
 Items on initial setup via Makefile.PL
 --------------------------------------
@@ -10,7 +10,7 @@ Items on initial setup via Makefile.PL
 -   INSTALL_BUCARDODIR
     -   A directory in which everything will be installed. Useful for testing. Sample usage: **INSTALL_BUCARDODIR=. perl Makefile.PL**
 
-Items used by the [bucardo script](/bucardo_script "wikilink")
+Items used by the [bucardo script](/Bucardo/bucardo_script)
 --------------------------------------------------------------
 
 -   BUCARDO_DATEFORMAT
@@ -18,13 +18,13 @@ Items used by the [bucardo script](/bucardo_script "wikilink")
 -   BUCARDO_SHORTDATEFORMAT
     -   How the time part of timestamps are displayed. Defaults to **HH24:MI:SS**
 -   HOME
-    -   Used to help locate a valid [.bucardorc](/.bucardorc "wikilink") file
+    -   Used to help locate a valid [.bucardorc](/Bucardo/.bucardorc) file
 -   BUCARDO_CONFIRM
     -   If set, forces a confirmation prompt after all actions
 -   BUCARDO_DEBUG
     -   Prints varying amounts of output to stderr when set. Defaults to 0, verbosity increases as the value does.
 
-Items used when installing Bucardo via the [bucardo script](/bucardo_script "wikilink")
+Items used when installing Bucardo via the [bucardo script](/Bucardo/bucardo_script)
 ---------------------------------------------------------------------------------------
 
 -   HOME

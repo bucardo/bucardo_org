@@ -18,10 +18,10 @@ If there are any syncs that are using the database groups to be removed, the com
 
 ### Internals
 
-Removed database groups will cause a delete from the [bucardo.dbgroup table](/bucardo.dbgroup_table "wikilink") and deletes from the [bucardo.dbmap table](/bucardo.dbmap_table "wikilink"). The --force option may cause deletes from the [bucardo.sync table](/bucardo.sync_table "wikilink").
+Removed database groups will cause a delete from the [bucardo.dbgroup table](/Bucardo/bucardo.dbgroup_table) and deletes from the [bucardo.dbmap table](/Bucardo/bucardo.dbmap_table). The --force option may cause deletes from the [bucardo.sync table](/Bucardo/bucardo.sync_table).
 
 ### See also:
 
--   [add_dbgroup](/Bucardo/add_dbgroup "wikilink")
--   [list_dbgroup](/Bucardo/list_dbgroup "wikilink")
--   [update_dbgroup](/Bucardo/update_dbgroup "wikilink")
+-   [add_dbgroup](/Bucardo/add_dbgroup)
+-   [list_dbgroup](/Bucardo/list_dbgroup)
+-   [update_dbgroup](/Bucardo/update_dbgroup)

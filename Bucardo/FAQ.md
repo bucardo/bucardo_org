@@ -5,7 +5,7 @@ title: Bucardo FAQ
 Bucardo Frequently Asked Questions
 ----------------------------------
 
-If you have a question that is not answered here, try checking the main [Bucardo](/Bucardo "wikilink") page and see the links and community information there.
+If you have a question that is not answered here, try checking the main [Bucardo](/Bucardo/) page and see the links and community information there.
 
 ### What is Bucardo?
 
@@ -13,7 +13,7 @@ Bucardo is a replication program for two or more Postgres databases. Specificall
 
 ### What are the requirements for use?
 
-See [Requirements]({% link Bucardo/Installation/Requirements.md %}) documentation.
+See [Requirements](/Bucardo/Installation/Requirements) documentation.
 
 ### Can Bucardo do master/slave replication?
 
@@ -55,5 +55,5 @@ It would be nice to get Bucardo working at some point as a native Windows servic
 
 ### Does Bucardo support truncate events?
 
-Bucardo supports replication of truncate events, but only if the source database is version 8.4 or higher. In addition, truncate support is currently only completely working for [pushdelta]({% link Bucardo/pushdelta.md %}) syncs.
+Bucardo supports replication of truncate events, but only if the source database is version 8.4 or higher. In addition, truncate support is currently only completely working for [pushdelta](/Bucardo/pushdelta) syncs.
 

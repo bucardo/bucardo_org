@@ -210,11 +210,11 @@ NOT NULL DEFAULT <b>'true'</b>
 </tr>
 <tr>
 <td>
-<b>[makedelta](/Bucardo/makedelta "wikilink")</b>
+<b>[makedelta](/Bucardo/makedelta)</b>
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff "wikilink")
+[ONOFF](/Bucardo/domains/bucardo.onoff)
 
 </td>
 <td>
@@ -270,11 +270,11 @@ CHECK (status IN ('active','inactive'))
 </tr>
 <tr>
 <td>
-<b>db_[makedelta](/Bucardo/makedelta "wikilink")</b>
+<b>db_[makedelta](/Bucardo/makedelta)</b>
 
 </td>
 <td>
-CHECK ([makedelta](/Bucardo/makedelta "wikilink") \<\> 'inherit')
+CHECK ([makedelta](/Bucardo/makedelta) \<\> 'inherit')
 
 </td>
 </tr>

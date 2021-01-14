@@ -22,10 +22,10 @@ Note that not all fields can be changed (e.g. cdate)
 
 ### Internals
 
-Changes will update the [bucardo.db table](/bucardo.db_table "wikilink").
+Changes will update the [bucardo.db table](/Bucardo/bucardo.db_table).
 
 ### See also:
 
--   [add_database](/Bucardo/add_database "wikilink")
--   [list_database](/Bucardo/list_database "wikilink")
--   [remove_database](/Bucardo/remove_database "wikilink")
+-   [add_database](/Bucardo/add_database)
+-   [list_database](/Bucardo/list_database)
+-   [remove_database](/Bucardo/remove_database)

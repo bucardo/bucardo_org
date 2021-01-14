@@ -240,7 +240,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY ([sync](/Bucardo/sync "wikilink")) REFERENCES [bucardo.sync](/Bucardo/tables/bucardo.sync "wikilink")(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/tables/bucardo.sync)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -250,7 +250,7 @@ FOREIGN KEY ([sync](/Bucardo/sync "wikilink")) REFERENCES [bucardo.sync](/Bucard
 
 </td>
 <td>
-FOREIGN KEY ([sourcedb](/Bucardo/sourcedb "wikilink")) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db "wikilink")(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([sourcedb](/Bucardo/sourcedb)) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -260,7 +260,7 @@ FOREIGN KEY ([sourcedb](/Bucardo/sourcedb "wikilink")) REFERENCES [bucardo.db](/
 
 </td>
 <td>
-FOREIGN KEY ([targetdb](/Bucardo/targetdb "wikilink")) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db "wikilink")(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([targetdb](/Bucardo/targetdb)) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -290,7 +290,7 @@ Yes
 
 </td>
 <td>
-([sync](/Bucardo/sync "wikilink"),[sourcedb](/Bucardo/sourcedb "wikilink"),[targetdb](/Bucardo/targetdb "wikilink")) WHERE started IS NULL
+([sync](/Bucardo/sync),[sourcedb](/Bucardo/sourcedb),[targetdb](/Bucardo/targetdb)) WHERE started IS NULL
 
 </td>
 </tr>
@@ -318,7 +318,7 @@ No
 
 </td>
 <td>
-([sync](/Bucardo/sync "wikilink")) WHERE started IS NOT NULL AND aborted IS NOT NULL AND ended IS NULL
+([sync](/Bucardo/sync)) WHERE started IS NOT NULL AND aborted IS NOT NULL AND ended IS NULL
 
 </td>
 </tr>
@@ -346,7 +346,7 @@ No
 
 </td>
 <td>
-(cdate, [sync](/Bucardo/sync "wikilink")) WHERE ended IS NOT NULL
+(cdate, [sync](/Bucardo/sync)) WHERE ended IS NOT NULL
 
 </td>
 </tr>

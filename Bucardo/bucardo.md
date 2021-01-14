@@ -4,7 +4,7 @@ title: Bucardo Command Line Tool
 
 **bucardo** is the main interface to Bucardo - it is used to start, stop, and control Bucardo.
 
-You can tell `bucardo` where to find the main [Bucardo database](/Bucardo/Bucardo_database "wikilink") by use of the following arguments:
+You can tell `bucardo` where to find the main [Bucardo database](/Bucardo/Bucardo_database) by use of the following arguments:
 
 - --dbport
 - --dbhost
@@ -25,12 +25,12 @@ Additional bucardo arguments include:
 - --debugfile=1    _Enables/Disables local log file ./log.bucardo_
 - --cleandebugs=0
 
-Rather than enter those every time, you may place the arguments into a [bucardorc](/Bucardo/bucardorc "wikilink") file. All of the arguments below, except for "install", require that enough options exist to find the main Bucardo database.
+Rather than enter those every time, you may place the arguments into a [bucardorc](/Bucardo/bucardorc) file. All of the arguments below, except for "install", require that enough options exist to find the main Bucardo database.
 
 ### Installing and upgrading Bucardo
 
--    To install Bucardo for the first time, see the [Bucardo installation]({% link Bucardo/Installation/Installation.md %}) page.
--    To upgrade Bucardo, See the [Bucardo upgrade]({% link Bucardo/Installation/Upgrade.md %}) page.
+-    To install Bucardo for the first time, see the [Bucardo installation](/Bucardo/Installation/Installation) page.
+-    To upgrade Bucardo, See the [Bucardo upgrade](/Bucardo/Installation/Upgrade) page.
 
 ### Controlling Bucardo
 
@@ -58,7 +58,7 @@ Restarting is just:
 
 #### Checking that Bucardo is alive
 
-To send a "ping" to the [MCP](/Bucardo/MCP "wikilink") process of a running Bucardo, use:
+To send a "ping" to the [MCP](/Bucardo/MCP) process of a running Bucardo, use:
 
     bucardo ping [timeout]
 
@@ -66,7 +66,7 @@ If successful, an exit value of 0 will be returned. The string returned by this 
 
 ### Bucardo configuration
 
-Bucardo stores important configuration variables in the database inside the `bucardo_config` table. See the [Bucardo configuration](/Bucardo/configuration "wikilink") page for a complete list.
+Bucardo stores important configuration variables in the database inside the `bucardo_config` table. See the [Bucardo configuration](/Bucardo/configuration) page for a complete list.
 
 #### Viewing configuration values
 
@@ -102,11 +102,11 @@ To tell a running Bucardo to re-read the configuration table:
 
 ### Controlling syncs
 
-Bucardo works by running one or more replication events called [syncs](/Bucardo/sync "wikilink"). The main interface for controlling these is `bucardo`
+Bucardo works by running one or more replication events called [syncs](/Bucardo/sync). The main interface for controlling these is `bucardo`
 
 #### Kicking a sync
 
-Syncs are fired by changes to the underlying tables, or manually started by [kicking](/Bucardo/kick "wikilink") them. To kick a sync, use:
+Syncs are fired by changes to the underlying tables, or manually started by [kicking](/Bucardo/kick) them. To kick a sync, use:
 
     bucardo kick <syncname> [timeout]
 
@@ -122,7 +122,7 @@ To reload a sync:
 
     bucardo reload <syncname>
 
-One or more named syncs can be reloaded this way. Each will be reloaded in turn, and `bucardo` will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/Bucardo/MCP "wikilink") process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/Bucardo/onetimecopy "wikilink") attribute.
+One or more named syncs can be reloaded this way. Each will be reloaded in turn, and `bucardo` will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/Bucardo/MCP) process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/Bucardo/onetimecopy) attribute.
 
 #### Activating a sync
 
@@ -152,11 +152,11 @@ This will show detailed information about a specific sync, including the last ti
 
 #### Listing syncs
 
-To get a list of all [syncs](/Bucardo/sync "wikilink"):
+To get a list of all [syncs](/Bucardo/sync):
 
     bucardo list syncs
 
-This list will show the sync name, it's type ([fullcopy](/Bucardo/fullcopy "wikilink"), [pushdelta](/Bucardo/pushdelta "wikilink"), or [swap](/Bucardo/swap "wikilink")), the source [herd](/Bucardo/herd "wikilink"), the target database (or database group), and current status. For more details on a specific sync, use the 'status' command above.
+This list will show the sync name, it's type ([fullcopy](/Bucardo/fullcopy), [pushdelta](/Bucardo/pushdelta), or [swap](/Bucardo/swap)), the source [herd](/Bucardo/herd), the target database (or database group), and current status. For more details on a specific sync, use the 'status' command above.
 
 #### Listing databases
 
@@ -168,7 +168,7 @@ This will show the name of the database (as used by Bucardo, not its actual name
 
 #### Listing database groups
 
-To get a list of all known [database groups](/Bucardo/database_group "wikilink"):
+To get a list of all known [database groups](/Bucardo/database_group):
 
     bucardo list dbgroups
 
@@ -186,7 +186,7 @@ To list all known sequences:
 
 #### Listing herds
 
-To list all [herds](/Bucardo/herd "wikilink"):
+To list all [herds](/Bucardo/herd):
 
     bucardo list herds
 
@@ -300,7 +300,7 @@ All the notes that apply to 'add table' above apply here as well.
 
 #### Adding a herd
 
-A [herd](/Bucardo/herd "wikilink") is a named group of tables that are replicated together. To add a herd:
+A [herd](/Bucardo/herd) is a named group of tables that are replicated together. To add a herd:
 
      bucardo add herd <name> [goat goat]
 
@@ -312,7 +312,7 @@ To add a sync:
 
      bucardo add sync <name> dbgroup=<dbgroupname> relgroup=<herdname>
 
-The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](/Bucardo/fullcopy "wikilink"), [pushdelta](/Bucardo/pushdelta "wikilink"), or [swap](/Bucardo/swap "wikilink"). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
+The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](/Bucardo/fullcopy), [pushdelta](/Bucardo/pushdelta), or [swap](/Bucardo/swap). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
 
 As a shortcut for creating new syncs, you can also give a comma-separated list of tables, like so:
 
@@ -323,11 +323,11 @@ This will create a herd of the same name as the sync if it does not already exis
 Some of the other options that can be added to 'add sync',
 in the format name=value:
 
--   onetimecopy: set the [onetimecopy](/Bucardo/onetimecopy "wikilink") value for this sync
+-   onetimecopy: set the [onetimecopy](/Bucardo/onetimecopy) value for this sync
 -   status: set the initial status for the sync. Defaults to 'active'
--   lifetime: set the [lifetime](/Bucardo/lifetime "wikilink") for this sync - how long to run before the sync is restarted
--   maxkicks: sets the [maxkicks](/Bucardo/maxkicks "wikilink") for this sync - how many times it runs before being restarted
--   makedelta: set the [makedelta](/Bucardo/makedelta "wikilink") value for this sync. Defaults to 0.
+-   lifetime: set the [lifetime](/Bucardo/lifetime) for this sync - how long to run before the sync is restarted
+-   maxkicks: sets the [maxkicks](/Bucardo/maxkicks) for this sync - how many times it runs before being restarted
+-   makedelta: set the [makedelta](/Bucardo/makedelta) value for this sync. Defaults to 0.
 
 ### Other actions
 
@@ -337,7 +337,7 @@ To write a custom message to the log file that a current Bucardo process is writ
 
     bucardo message "Your message here"
 
-The message will be written by the [MCP](/Bucardo/MCP "wikilink") process to the logs in the format:
+The message will be written by the [MCP](/Bucardo/MCP) process to the logs in the format:
 
     MESSAGE (date): string
 

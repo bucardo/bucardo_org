@@ -36,12 +36,12 @@ To install it manually, grab the [latest DBIx::Safe tarball](http://bucardo.org/
     make test
     sudo make install
 
-Other Perl requirements that may or may not be installed already on your system are listed in the [Requirements]({% link Bucardo/Installation/Requirements.md %}) page
+Other Perl requirements that may or may not be installed already on your system are listed in the [Requirements](/Bucardo/Installation/Requirements) page
 
 Download and unpack the Bucardo tarball
 ---------------------------------------
 
-The latest version of Bucardo can be found on [the Bucardo download page](/Bucardo#Obtaining_Bucardo "wikilink"). Untar it and switch to the directory:
+The latest version of Bucardo can be found on [the Bucardo download page](/Bucardo/#obtaining-bucardo). Untar it and switch to the directory:
 
     tar xvfz Bucardo-5.6.0.tar.gz
     cd Bucardo-5.6.0
@@ -126,16 +126,16 @@ Configuring Replication
 
 This is a quick summary. See the specific pages for more information.
 
-[Add databases]({% link Bucardo/add_database.md %}):
+[Add databases](/Bucardo/add_database):
 
     bucardo add database <dbname>
 
-[Add tables and sequences]({% link Bucardo/add_table.md %}):
+[Add tables and sequences](/Bucardo/add_table):
 
     bucardo add all tables`
     bucardo add all sequences`
 
-[Add syncs]({% link Bucardo/add_sync.md %}):
+[Add syncs](/Bucardo/add_sync):
 
     bucardo add sync <syncname> type=<synctype> source=<db> targetdb=<db> tables=tab1,tab2,...
 

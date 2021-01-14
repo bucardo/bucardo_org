@@ -22,10 +22,10 @@ Note: the following fields cannot be changed: id, cdate, db, reltype
 
 ### Internals
 
-Changes will update the [bucardo.goat table](/bucardo.goat_table "wikilink").
+Changes will update the [bucardo.goat table](/Bucardo/bucardo.goat_table).
 
 ### See also:
 
--   [add_table](/Bucardo/add_table "wikilink")
--   [list_table](/Bucardo/list_table "wikilink")
--   [remove_table](/Bucardo/remove_table "wikilink")
+-   [add_table](/Bucardo/add_table)
+-   [list_table](/Bucardo/list_table)
+-   [remove_table](/Bucardo/remove_table)

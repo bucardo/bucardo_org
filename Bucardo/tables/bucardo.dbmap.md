@@ -100,7 +100,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db "wikilink")(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db "wikilink")(
 
 </td>
 <td>
-FOREIGN KEY (dbgroup) REFERENCES [bucardo.dbgroup](/Bucardo/tables/bucardo.dbgroup "wikilink")(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (dbgroup) REFERENCES [bucardo.dbgroup](/Bucardo/tables/bucardo.dbgroup)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>

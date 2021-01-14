@@ -27,10 +27,10 @@ Use the name= form to change the name of an existing database group. Otherwise, 
 
 ### Internals
 
-Changes will update the [bucardo.dbmap table](/bucardo.dbmap_table "wikilink").
+Changes will update the [bucardo.dbmap table](/Bucardo/bucardo.dbmap_table).
 
 ### See also:
 
--   [add_dbgroup](/Bucardo/add_dbgroup "wikilink")
--   [list_dbgroup](/Bucardo/list_dbgroup "wikilink")
--   [remove_dbgroup](/Bucardo/remove_dbgroup "wikilink")
+-   [add_dbgroup](/Bucardo/add_dbgroup)
+-   [list_dbgroup](/Bucardo/list_dbgroup)
+-   [remove_dbgroup](/Bucardo/remove_dbgroup)

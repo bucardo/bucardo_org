@@ -2,7 +2,7 @@
 title: Bucardo bucardorc
 ---
 
-Options for [bucardo](/Bucardo/bucardo "wikilink") can be specified either at the command line or inside configuration files. There are three files that are checked in order, and the first one that is found is used:
+Options for [bucardo](/Bucardo/bucardo) can be specified either at the command line or inside configuration files. There are three files that are checked in order, and the first one that is found is used:
 
 -   .bucardorc in the current directory
 -   .bucardorc in the user's home directory

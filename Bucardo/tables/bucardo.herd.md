@@ -9,7 +9,7 @@ Table: bucardo.herd
 </h2>
 <table border="1" cellpadding="3">
 <caption>
-<b>Named group of tables or sequences from the [goat](/Bucardo/goat "wikilink") table: used as the 'source' for syncs</b>
+<b>Named group of tables or sequences from the [goat](/Bucardo/goat) table: used as the 'source' for syncs</b>
 
 </caption>
 <tr>

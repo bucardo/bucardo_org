@@ -126,7 +126,7 @@ NOT NULL DEFAULT <b>'true'</b>
 </tr>
 <tr>
 <td>
-<b>use[customselect](/Bucardo/customselect "wikilink")</b>
+<b>use[customselect](/Bucardo/customselect)</b>
 
 </td>
 <td>
@@ -256,7 +256,7 @@ NOT NULL DEFAULT <b>'active'</b>
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff "wikilink")
+[ONOFF](/Bucardo/domains/bucardo.onoff)
 
 </td>
 <td>
@@ -270,7 +270,7 @@ NOT NULL DEFAULT <b>'inherits'</b>
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff "wikilink")
+[ONOFF](/Bucardo/domains/bucardo.onoff)
 
 </td>
 <td>
@@ -474,7 +474,7 @@ PRIMARY KEY (name)
 
 </td>
 <td>
-FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd "wikilink")(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -484,7 +484,7 @@ FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd "wik
 
 </td>
 <td>
-FOREIGN KEY ([targetdb](/Bucardo/targetdb "wikilink")) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db "wikilink")(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY ([targetdb](/Bucardo/targetdb)) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -494,7 +494,7 @@ FOREIGN KEY ([targetdb](/Bucardo/targetdb "wikilink")) REFERENCES [bucardo.db](/
 
 </td>
 <td>
-FOREIGN KEY ([targetgroup](/Bucardo/targetgroup "wikilink")) REFERENCES [bucardo.dbgroup](/Bucardo/tables/bucardo.dbgroup "wikilink")(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY ([targetgroup](/Bucardo/targetgroup)) REFERENCES [bucardo.dbgroup](/Bucardo/tables/bucardo.dbgroup)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -504,7 +504,7 @@ FOREIGN KEY ([targetgroup](/Bucardo/targetgroup "wikilink")) REFERENCES [bucardo
 
 </td>
 <td>
-CHECK (synctype IN ('[pushdelta](/Bucardo/pushdelta "wikilink")','[fullcopy](/Bucardo/fullcopy "wikilink")','[swap](/Bucardo/swap "wikilink")'))
+CHECK (synctype IN ('[pushdelta](/Bucardo/pushdelta)','[fullcopy](/Bucardo/fullcopy)','[swap](/Bucardo/swap)'))
 
 </td>
 </tr>
@@ -534,7 +534,7 @@ CHECK (deletemethod IN ('truncate', 'delete', 'truncate_cascade'))
 
 </td>
 <td>
-CHECK ((([targetdb](/Bucardo/targetdb "wikilink") IS NULL) AND ([targetgroup](/Bucardo/targetgroup "wikilink") IS NOT NULL)) OR (([targetdb](/Bucardo/targetdb "wikilink") IS NOT NULL) AND ([targetgroup](/Bucardo/targetgroup "wikilink") IS NULL)))
+CHECK ((([targetdb](/Bucardo/targetdb) IS NULL) AND ([targetgroup](/Bucardo/targetgroup) IS NOT NULL)) OR (([targetdb](/Bucardo/targetdb) IS NOT NULL) AND ([targetgroup](/Bucardo/targetgroup) IS NULL)))
 
 </td>
 </tr>
@@ -544,7 +544,7 @@ CHECK ((([targetdb](/Bucardo/targetdb "wikilink") IS NULL) AND ([targetgroup](/B
 
 </td>
 <td>
-CHECK (synctype \<\> '[swap](/Bucardo/swap "wikilink")' OR [targetdb](/Bucardo/targetdb "wikilink") IS NOT NULL)
+CHECK (synctype \<\> '[swap](/Bucardo/swap)' OR [targetdb](/Bucardo/targetdb) IS NOT NULL)
 
 </td>
 </tr>
@@ -574,7 +574,7 @@ Yes
 
 </td>
 <td>
-(source, [targetdb](/Bucardo/targetdb "wikilink"), synctype)
+(source, [targetdb](/Bucardo/targetdb), synctype)
 
 </td>
 </tr>
@@ -588,7 +588,7 @@ Yes
 
 </td>
 <td>
-(source, [targetgroup](/Bucardo/targetgroup "wikilink"), synctype)
+(source, [targetgroup](/Bucardo/targetgroup), synctype)
 
 </td>
 </tr>

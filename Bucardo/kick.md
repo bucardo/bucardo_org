@@ -2,7 +2,7 @@
 title: Bucardo kick
 ---
 
-A Bucardo **kick** is the action of starting a specific [sync](/Bucardo/sync "wikilink") event. The normal way to kick a sync is through the [bucardo](/Bucardo/bucardo "wikilink") program, like so:
+A Bucardo **kick** is the action of starting a specific [sync](/Bucardo/sync) event. The normal way to kick a sync is through the [bucardo](/Bucardo/bucardo) program, like so:
 
     bucardo kick foobar
 
@@ -12,7 +12,7 @@ In addition to specifying syncs by their exact name, users can also include SQL 
 
     bucardo kick foo%
 
-After kicking, you can check the status of a sync by running the [status](/Bucardo/status "wikilink") command:
+After kicking, you can check the status of a sync by running the [status](/Bucardo/status) command:
 
     bucardo status foobar
 

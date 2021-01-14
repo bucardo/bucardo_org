@@ -16,10 +16,10 @@ This will not change any running syncs: to do that, you should run:
 
 ### Internals
 
-Items are removed from the [bucardo.goat table](/bucardo.goat_table "wikilink"). Due to cascading foreign keys, deletion may also remove rows from the [bucardo.herdmap table](/bucardo.herdmap_table "wikilink"), the [bucardo.customname table](/bucardo.customname_table "wikilink"), the [bucardo.customcols table](/bucardo.customcols_table "wikilink"), and the [bucardo.bucardo_custom_trigger table](/bucardo.bucardo_custom_trigger_table "wikilink").
+Items are removed from the [bucardo.goat table](/Bucardo/bucardo.goat_table). Due to cascading foreign keys, deletion may also remove rows from the [bucardo.herdmap table](/Bucardo/bucardo.herdmap_table), the [bucardo.customname table](/Bucardo/bucardo.customname_table), the [bucardo.customcols table](/Bucardo/bucardo.customcols_table), and the [bucardo.bucardo_custom_trigger table](/Bucardo/bucardo.bucardo_custom_trigger_table).
 
 ### See also:
 
--   [add_table](/Bucardo/add_table "wikilink")
--   [list_table](/Bucardo/list_table "wikilink")
--   [update_table](/Bucardo/update_table "wikilink")
+-   [add_table](/Bucardo/add_table)
+-   [list_table](/Bucardo/list_table)
+-   [update_table](/Bucardo/update_table)

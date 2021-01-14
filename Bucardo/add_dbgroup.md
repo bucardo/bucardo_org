@@ -24,10 +24,10 @@ You can also add new databases to a group with the add dbgroup command. Database
 
 ### Internals
 
-New database groups are created with an insert to the [bucardo.dbgroup table](/bucardo.dbgroup_table "wikilink"). Databases that are added to this group cause an insert to the [bucardo.dbmap table](/bucardo.dbmap_table "wikilink").
+New database groups are created with an insert to the [bucardo.dbgroup table](/Bucardo/bucardo.dbgroup_table). Databases that are added to this group cause an insert to the [bucardo.dbmap table](/Bucardo/bucardo.dbmap_table).
 
 ### See also:
 
--   [list_dbgroup](/Bucardo/list_dbgroup "wikilink")
--   [update_dbgroup](/Bucardo/update_dbgroup "wikilink")
--   [remove_dbgroup](/Bucardo/remove_dbgroup "wikilink")
+-   [list_dbgroup](/Bucardo/list_dbgroup)
+-   [update_dbgroup](/Bucardo/update_dbgroup)
+-   [remove_dbgroup](/Bucardo/remove_dbgroup)
