@@ -13,7 +13,7 @@ Bucardo is a replication program for two or more Postgres databases. Specificall
 
 ### What are the requirements for use?
 
-See [Requirements](/Bucardo/Installation/Requirements) documentation.
+See [Requirements](/Bucardo/installation/requirements) documentation.
 
 ### Can Bucardo do master/slave replication?
 

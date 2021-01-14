@@ -10,7 +10,7 @@ Bucardo itself is a Perl daemon that communicates with a master Bucardo database
 -   Sys::Hostname, at least version 1.11
 -   Sys::Syslog, at least version 0.13
 -   [DBIx::Safe](/Bucardo/DBIx::Safe), at least version 1.2.4
--   [boolean](/Bucardo/Installation/boolean)
+-   [boolean](/Bucardo/installation/boolean)
 
 Bucardo requires a database to install the main bucardo schema on. This database must be Postgres version 8.1 or higher, and must have both the languages [PL/pgSQL](https://www.postgresql.org/docs/current/plpgsql-overview.html) and [PL/PerlU](https://www.postgresql.org/docs/current/plperl.html) available. In addition, the install script requires installation as a superuser: creating a new user named 'bucardo' for this purpose is highly recommended.
 

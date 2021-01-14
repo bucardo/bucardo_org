@@ -36,7 +36,7 @@ To install it manually, grab the [latest DBIx::Safe tarball](http://bucardo.org/
     make test
     sudo make install
 
-Other Perl requirements that may or may not be installed already on your system are listed in the [Requirements](/Bucardo/Installation/Requirements) page
+Other Perl requirements that may or may not be installed already on your system are listed in the [Requirements](/Bucardo/installation/requirements) page
 
 Download and unpack the Bucardo tarball
 ---------------------------------------
