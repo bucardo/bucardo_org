@@ -23,7 +23,7 @@ Online documentation is available for the following parts of Bucardo:
 
 -   [Overview of Bucardo](/Bucardo/Overview): A quick overview of Bucardo, explaining what it is and what it is capable of
 -   [Bucardo FAQ (Frequently Asked Questions)](/Bucardo/FAQ): Answers to commonly asked questions about Bucardo
--   [Bucardo installation](/Bucardo/installation/installation): Installation instructions for Bucardo
+-   [Bucardo Installation](/Bucardo/installation/): Installation instructions for Bucardo
 -   [Bucardo Upgrade](/Bucardo/installation/upgrade): Upgrade instructions for Bucardo
 -   [pgbench tutorial](/Bucardo/pgbench_example): An example of how to use Bucardo to replicate a database
 -   [bucardo](/Bucardo/bucardo): A script used to control an existing Bucardo installation
