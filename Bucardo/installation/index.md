@@ -122,7 +122,7 @@ To install prebuilt packages using the new packaging system on FreeBSD:
 
     sudo pkg install databases/p5-Bucardo
 
-The installation process will automatically install all the dependancies such as **DBIx::Safe**
+The installation process will automatically install all the dependencies such as **DBIx::Safe**
 
 Configuring Replication
 -----------------------
