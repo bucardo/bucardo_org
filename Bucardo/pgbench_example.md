@@ -41,7 +41,7 @@ Finally, install as a user with appropriate rights. One way to do this is:
 
     sudo make install
 
-You should now have a global [bucardo](/Bucardo/bucardo) file available. Test that you can run it and that you are using the correct version:
+You should now have a global [bucardo](/Bucardo/cli/) file available. Test that you can run it and that you are using the correct version:
 
     bucardo --version
 
@@ -109,7 +109,7 @@ We've kept it simple for this example, but you generally will end up replicating
 Add the tables
 --------------
 
-Bucardo also needs to know about any tables that it may be called on to replicate. Adding tables by the [add table](/Bucardo/add_table) command does not actually start replicating them. In this case, we're going to use the handy **add all tables** feature. Tables are grouped together inside of Bucardo into [herds](/Bucardo/herd), so we'll also place the newly added tables into a named herd. Finally, the history table has no primary key or unique index, so we cannot replicate it by using the [pushdelta](/Bucardo/pushdelta) method, so we're going to exclude it from the alpha herd, using the [-T](/Bucardo/-T) switch, and add it in the next setup with the [-t](/Bucardo/-t) switch.
+Bucardo also needs to know about any tables that it may be called on to replicate. Adding tables by the [add table](/Bucardo/cli/add_table) command does not actually start replicating them. In this case, we're going to use the handy **add all tables** feature. Tables are grouped together inside of Bucardo into [herds](/Bucardo/cli/herd), so we'll also place the newly added tables into a named herd. Finally, the history table has no primary key or unique index, so we cannot replicate it by using the [pushdelta](/Bucardo/cli/pushdelta) method, so we're going to exclude it from the alpha herd, using the [-T](/Bucardo/-T) switch, and add it in the next setup with the [-t](/Bucardo/-t) switch.
 
     $ bucardo add all tables db=test1 -T history --herd=alpha --verbose
     New tables:

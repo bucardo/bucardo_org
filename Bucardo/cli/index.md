@@ -106,7 +106,7 @@ Bucardo works by running one or more replication events called [syncs](/Bucardo/
 
 #### Kicking a sync
 
-Syncs are fired by changes to the underlying tables, or manually started by [kicking](/Bucardo/kick) them. To kick a sync, use:
+Syncs are fired by changes to the underlying tables, or manually started by [kicking](/Bucardo/cli/kick) them. To kick a sync, use:
 
     bucardo kick <syncname> [timeout]
 
@@ -122,7 +122,7 @@ To reload a sync:
 
     bucardo reload <syncname>
 
-One or more named syncs can be reloaded this way. Each will be reloaded in turn, and `bucardo` will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/Bucardo/MCP) process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/Bucardo/onetimecopy) attribute.
+One or more named syncs can be reloaded this way. Each will be reloaded in turn, and `bucardo` will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/Bucardo/MCP) process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/Bucardo/operations/onetimecopy) attribute.
 
 #### Activating a sync
 
@@ -323,11 +323,11 @@ This will create a herd of the same name as the sync if it does not already exis
 Some of the other options that can be added to 'add sync',
 in the format name=value:
 
--   onetimecopy: set the [onetimecopy](/Bucardo/onetimecopy) value for this sync
+-   onetimecopy: set the [onetimecopy](/Bucardo/operations/onetimecopy) value for this sync
 -   status: set the initial status for the sync. Defaults to 'active'
 -   lifetime: set the [lifetime](/Bucardo/lifetime) for this sync - how long to run before the sync is restarted
 -   maxkicks: sets the [maxkicks](/Bucardo/maxkicks) for this sync - how many times it runs before being restarted
--   makedelta: set the [makedelta](/Bucardo/makedelta) value for this sync. Defaults to 0.
+-   makedelta: set the [makedelta](/Bucardo/operations/makedelta) value for this sync. Defaults to 0.
 
 ### Other actions
 
@@ -343,3 +343,25 @@ The message will be written by the [MCP](/Bucardo/MCP) process to the logs in th
 
 where date is the timestamp the message was added, and string was the message provided
 
+Separate documentation exist for the following commands:
+
+-   [add customname](/Bucardo/cli/add_customname)
+-   [add database](/Bucardo/cli/add_database)
+-   [add dbgroup](/Bucardo/cli/add_dbgroup)
+-   [add herd](/Bucardo/cli/add_herd)
+-   [add sync](/Bucardo/cli/add_sync)
+-   [add table](/Bucardo/cli/add_table)
+-   [kick](/Bucardo/cli/kick)
+-   [list customname](/Bucardo/cli/list_customname)
+-   [list database](/Bucardo/cli/list_database)
+-   [list dbgroup](/Bucardo/cli/list_dbgroup)
+-   [list table](/Bucardo/cli/list_table)
+-   [remove customname](/Bucardo/cli/remove_customname)
+-   [remove database](/Bucardo/cli/remove_database)
+-   [remove dbgroup](/Bucardo/cli/remove_dbgroup)
+-   [remove sequence](/Bucardo/cli/remove_sequence)
+-   [remove table](/Bucardo/cli/remove_table)
+-   [update customname](/Bucardo/cli/update_customname)
+-   [update database](/Bucardo/cli/update_database)
+-   [update dbgroup](/Bucardo/cli/update_dbgroup)
+-   [update table](/Bucardo/cli/update_table)

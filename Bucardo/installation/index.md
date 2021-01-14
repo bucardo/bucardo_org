@@ -129,16 +129,16 @@ Configuring Replication
 
 This is a quick summary. See the specific pages for more information.
 
-[Add databases](/Bucardo/add_database):
+[Add databases](/Bucardo/cli/add_database):
 
     bucardo add database <dbname>
 
-[Add tables and sequences](/Bucardo/add_table):
+[Add tables and sequences](/Bucardo/cli/add_table):
 
     bucardo add all tables`
     bucardo add all sequences`
 
-[Add syncs](/Bucardo/add_sync):
+[Add syncs](/Bucardo/cli/add_sync):
 
     bucardo add sync <syncname> type=<synctype> source=<db> targetdb=<db> tables=tab1,tab2,...
 

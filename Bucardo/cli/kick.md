@@ -2,7 +2,7 @@
 title: Bucardo kick
 ---
 
-A Bucardo **kick** is the action of starting a specific [sync](/Bucardo/sync) event. The normal way to kick a sync is through the [bucardo](/Bucardo/bucardo) program, like so:
+A Bucardo **kick** is the action of starting a specific [sync](/Bucardo/sync) event. The normal way to kick a sync is through the [bucardo](/Bucardo/cli/) program, like so:
 
     bucardo kick foobar
 
