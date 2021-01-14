@@ -27,6 +27,7 @@ Online documentation is available for the following parts of Bucardo:
 -   [Bucardo Upgrade](/Bucardo/installation/upgrade): Upgrade instructions for Bucardo
 -   [pgbench tutorial](/Bucardo/pgbench_example): An example of how to use Bucardo to replicate a database
 -   [bucardo](/Bucardo/bucardo): A script used to control an existing Bucardo installation
+-   [Bucardo Schema](/Bucardo/schema/): Explanation of the Bucardo tables and functions
 -   [DBIx::Safe](/DBIx-Safe/): Helper module needed by Bucardo that provides safe versions of DBI database handles
 
 Community
