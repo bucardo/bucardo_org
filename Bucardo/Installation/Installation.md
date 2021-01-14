@@ -79,10 +79,10 @@ You will have an opportunity to change the default parameters:
     This will install the bucardo database into an existing Postgres cluster.
     Postgres must have been compiled with Perl support,
     and you must connect as a superuser
-    
+
     We will create a new superuser named 'bucardo',
     and make it the owner of a new database named 'bucardo'
-    
+
     Current connection settings:
     1. Host:          <none>
     2. Port:          5432

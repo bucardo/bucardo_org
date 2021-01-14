@@ -5,7 +5,7 @@ title: Bucardo list dbgroup
 The **list dbgroup** command is used to list information about one or more Bucardo database groups.
 
 Example:
-    
+
     # Shows a list of all database groups, one per line, in alphabetical order.
     bucardo list dbgroup
 

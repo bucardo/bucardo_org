@@ -142,7 +142,7 @@ We are ready to kick off Bucardo at this point. Before we do, let's use the **li
       Used in syncs: benchdelta
     Herd: beta  Members: public.history
       Used in syncs: benchcopy
-   
+
     $ bucardo list syncs
     Sync: benchcopy   (fullcopy )  beta  =>  test2  (Active)
     Sync: benchdelta  (pushdelta)  alpha =>  test2  (Active)
@@ -150,7 +150,7 @@ We are ready to kick off Bucardo at this point. Before we do, let's use the **li
     $ bucardo list dbs
     Database: test1  Status: active  Conn: psql -p 5432 -U bucardo -d test1
     Database: test2  Status: active  Conn: psql -p 5432 -U bucardo -d test2
-   
+
     $ bucardo list tables
     Table: public.accounts  DB: test1  PK: aid (int4)
     Table: public.branches  DB: test1  PK: bid (int4)
@@ -180,11 +180,11 @@ To verify that things are working properly, let's get some baseline counts:
     10
 
     $ psql -d test1 -c 'select * from tellers where tid = 1'
-     tid | bid | tbalance | filler 
+     tid | bid | tbalance | filler
     -----+-----+----------+--------
        1 |   1 |        0 |
     (1 row)
-   
+
     $ psql -d test2 -c 'select * from tellers where tid = 1'
      tid | bid | tbalance | filler
     -----+-----+----------+--------
@@ -195,28 +195,28 @@ Now let's make changes to that record, and verify that it gets propagated to the
 
     $ psql -d test1 -c 'update tellers set bid=999 where tid = 1'
     UPDATE 1
-   
+
     $ psql -d test2 -c 'select * from tellers where tid = 1'
      tid | bid | tbalance | filler
     -----+-----+----------+--------
        1 | 999 |        0 |
-   
+
 How about the history table, which has not primary key? We cannot track row by row changes, and don't want to copy the whole thing every time the table changes, so we've got to [kick](/Bucardo/kick "wikilink") that sync manually when we want to change it:
 
     $ psql -d -At test1 -c 'select count(*) from history'
     0
     $ psql -d -At test2 -c 'select count(*) from history'
     0
-   
+
     $ pgbench -t3 test1
-   
+
     $ psql -At -d test1 -c 'select count(*) from history'
     3
     $ psql -At -d test2 -c 'select count(*) from history'
     3
-   
+
     $ bucardo kick benchcopy
-   
+
     $ psql -At -d test1 -c 'select count(*) from history'
     3
     $ psql -At -d test2 -c 'select count(*) from history'

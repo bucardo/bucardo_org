@@ -19,18 +19,18 @@ If one or more table names is given, only lists the given ones. Wildcards can be
 ### Examples
 
     $ bucardo list tables
-    
+
     1. Table: public.t1  Database: db1 Syncs: alpha,beta,charlie
     3. Table: public.t2  Database: db1 Syncs: alpha,beta,charlie
     2. Table: public.t3  Database: db1 Syncs: alpha,beta,charlie
     4. Table: public.t4  Database: db1 Syncs: alpha,beta,charlie
     5. Table: public.t5  Database: db1
-    
+
     $ bucardo list table %4
     4. Table: public.t4  Database: db1 Syncs: alpha,beta,charlie
-    
+
     $ bucardo list table t1 -vv
-    
+
     Table: public.t1 Database: db1 Syncs: alpha,beta,charlie
 
     analyze_after_copy   = 1
