@@ -40,7 +40,7 @@ Because the first database given always defaults to a source role, and all other
 -   rebuild_index
     -   Whether to rebuild indexes after each sync, defaults to off (0)
 -   onetimecopy
-    -   Controls if we switch to fullcopy mode for normal targets. Default is 0 (off). A setting of 1 indicates a normal onetimecopy. A setting of 2 indicates that we only copy if the source table is not-empty and the target table is empty. After a successful sync, Bucardo will flip this value back to 0 itself. See [onetimecopy](/Bucardo/onetimecopy) for more information.
+    -   Controls if we switch to fullcopy mode for normal targets. Default is 0 (off). A setting of 1 indicates a normal onetimecopy. A setting of 2 indicates that we only copy if the source table is not-empty and the target table is empty. After a successful sync, Bucardo will flip this value back to 0 itself. See [onetimecopy](/Bucardo/operations/onetimecopy) for more information.
 -   ping
     -   Determine if triggers are created that signal Bucardo to run when a table on one of the source databases for this sync has changes. Defaults to 1 (on).
 
