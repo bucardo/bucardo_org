@@ -2,7 +2,7 @@
 title: Bucardo pgbench example
 ---
 
-This page describes the steps needed to replicate a sample database, created by the pgbench utility, with Bucardo. This will demonstrate simply master to slave behavior, using the [pushdelta](/Bucardo/pushdelta) and [fullcopy](/Bucardo/fullcopy) sync types.
+This page describes the steps needed to replicate a sample database, created by the pgbench utility, with Bucardo. This will demonstrate simply master to slave behavior, using the [pushdelta](/Bucardo/object_types/pushdelta) and [fullcopy](/Bucardo/object_types/fullcopy) sync types.
 
 Install Bucardo
 ---------------
@@ -127,7 +127,7 @@ Bucardo also needs to know about any tables that it may be called on to replicat
 Add the syncs
 -------------
 
-A [sync](/Bucardo/sync) is a named replication event. Each sync has a source herd; because we created two herds above, we'll go ahead and create two syncs as well. One will be a [pushdelta](/Bucardo/pushdelta) sync, the other will be a [fullcopy](/Bucardo/fullcopy) sync.
+A [sync](/Bucardo/sync) is a named replication event. Each sync has a source herd; because we created two herds above, we'll go ahead and create two syncs as well. One will be a [pushdelta](/Bucardo/object_types/pushdelta) sync, the other will be a [fullcopy](/Bucardo/object_types/fullcopy) sync.
 
     $ bucardo add sync benchdelta source=alpha targetdb=test2 type=pushdelta
     Added sync "benchdelta"

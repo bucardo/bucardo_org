@@ -122,7 +122,7 @@ To reload a sync:
 
     bucardo reload <syncname>
 
-One or more named syncs can be reloaded this way. Each will be reloaded in turn, and `bucardo` will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/Bucardo/MCP) process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/Bucardo/operations/onetimecopy) attribute.
+One or more named syncs can be reloaded this way. Each will be reloaded in turn, and `bucardo` will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/Bucardo/MCP) process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/Bucardo/operation/onetimecopy) attribute.
 
 #### Activating a sync
 
@@ -156,7 +156,7 @@ To get a list of all [syncs](/Bucardo/sync):
 
     bucardo list syncs
 
-This list will show the sync name, it's type ([fullcopy](/Bucardo/fullcopy), [pushdelta](/Bucardo/pushdelta), or [swap](/Bucardo/swap)), the source [herd](/Bucardo/herd), the target database (or database group), and current status. For more details on a specific sync, use the 'status' command above.
+This list will show the sync name, it's type ([fullcopy](/Bucardo/object_types/fullcopy), [pushdelta](/Bucardo/object_types/pushdelta), or [swap](/Bucardo/object_types/swap)), the source [herd](/Bucardo/object_types/herd), the target database (or database group), and current status. For more details on a specific sync, use the 'status' command above.
 
 #### Listing databases
 
@@ -168,7 +168,7 @@ This will show the name of the database (as used by Bucardo, not its actual name
 
 #### Listing database groups
 
-To get a list of all known [database groups](/Bucardo/database_group):
+To get a list of all known [database groups](/Bucardo/object_types/database_group):
 
     bucardo list dbgroups
 
@@ -186,7 +186,7 @@ To list all known sequences:
 
 #### Listing herds
 
-To list all [herds](/Bucardo/herd):
+To list all [herds](/Bucardo/object_types/herd):
 
     bucardo list herds
 
@@ -300,7 +300,7 @@ All the notes that apply to 'add table' above apply here as well.
 
 #### Adding a herd
 
-A [herd](/Bucardo/herd) is a named group of tables that are replicated together. To add a herd:
+A [herd](/Bucardo/object_types/herd) is a named group of tables that are replicated together. To add a herd:
 
      bucardo add herd <name> [goat goat]
 
@@ -312,7 +312,7 @@ To add a sync:
 
      bucardo add sync <name> dbgroup=<dbgroupname> relgroup=<herdname>
 
-The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](/Bucardo/fullcopy), [pushdelta](/Bucardo/pushdelta), or [swap](/Bucardo/swap). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
+The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](/Bucardo/object_types/fullcopy), [pushdelta](/Bucardo/object_types/pushdelta), or [swap](/Bucardo/object_types/swap). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
 
 As a shortcut for creating new syncs, you can also give a comma-separated list of tables, like so:
 
@@ -323,11 +323,11 @@ This will create a herd of the same name as the sync if it does not already exis
 Some of the other options that can be added to 'add sync',
 in the format name=value:
 
--   onetimecopy: set the [onetimecopy](/Bucardo/operations/onetimecopy) value for this sync
+-   onetimecopy: set the [onetimecopy](/Bucardo/operation/onetimecopy) value for this sync
 -   status: set the initial status for the sync. Defaults to 'active'
 -   lifetime: set the [lifetime](/Bucardo/lifetime) for this sync - how long to run before the sync is restarted
 -   maxkicks: sets the [maxkicks](/Bucardo/maxkicks) for this sync - how many times it runs before being restarted
--   makedelta: set the [makedelta](/Bucardo/operations/makedelta) value for this sync. Defaults to 0.
+-   makedelta: set the [makedelta](/Bucardo/operation/makedelta) value for this sync. Defaults to 0.
 
 ### Other actions
 

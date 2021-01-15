@@ -41,7 +41,7 @@ The alternate form **add db** is also accepted.
 -   status
     -   Defaults to 'active'; the only other choice is 'inactive'
 -   dbgroup
-    -   Which internal [database group](/Bucardo/database_group) to put this database into. Will be created if needed.
+    -   Which internal [database group](/Bucardo/object_types/database_group) to put this database into. Will be created if needed.
 -   addalltables
     -   Automatically add all tables inside of this database. For finer control, see [add_table](/Bucardo/add_table)
 -   addallsequences

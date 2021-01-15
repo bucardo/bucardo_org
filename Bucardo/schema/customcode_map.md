@@ -148,17 +148,17 @@ FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/bu
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE SET NULL
+FOREIGN KEY ([goat](/Bucardo/object_types/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE SET NULL
 
 </td>
 </tr>
 <tr>
 <td>
-<b>customcode_map_sync[goat](/Bucardo/goat)</b>
+<b>customcode_map_sync[goat](/Bucardo/object_types/goat)</b>
 
 </td>
 <td>
-CHECK ([sync](/Bucardo/sync) IS NULL OR [goat](/Bucardo/goat) IS NULL)
+CHECK ([sync](/Bucardo/sync) IS NULL OR [goat](/Bucardo/object_types/goat) IS NULL)
 
 </td>
 </tr>
@@ -194,7 +194,7 @@ Yes
 </tr>
 <tr>
 <td>
-<b>customcode_map_unique_[goat](/Bucardo/goat)</b>
+<b>customcode_map_unique_[goat](/Bucardo/object_types/goat)</b>
 
 </td>
 <td>
@@ -202,7 +202,7 @@ Yes
 
 </td>
 <td>
-(code,[goat](/Bucardo/goat)) WHERE [goat](/Bucardo/goat) IS NOT NULL
+(code,[goat](/Bucardo/object_types/goat)) WHERE [goat](/Bucardo/object_types/goat) IS NOT NULL
 
 </td>
 </tr>

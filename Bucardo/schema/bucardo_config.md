@@ -128,7 +128,7 @@ Definition
 
 </td>
 <td>
-CHECK (type IN ('[sync](/Bucardo/sync)','[goat](/Bucardo/goat)'))
+CHECK (type IN ('[sync](/Bucardo/sync)','[goat](/Bucardo/object_types/goat)'))
 
 </td>
 </tr>

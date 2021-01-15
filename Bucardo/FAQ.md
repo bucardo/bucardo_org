@@ -55,5 +55,5 @@ It would be nice to get Bucardo working at some point as a native Windows servic
 
 ### Does Bucardo support truncate events?
 
-Bucardo supports replication of truncate events, but only if the source database is version 8.4 or higher. In addition, truncate support is currently only completely working for [pushdelta](/Bucardo/pushdelta) syncs.
+Bucardo supports replication of truncate events, but only if the source database is version 8.4 or higher. In addition, truncate support is currently only completely working for [pushdelta](/Bucardo/object_types/pushdelta) syncs.
 

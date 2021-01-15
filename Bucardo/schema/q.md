@@ -250,7 +250,7 @@ FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/bu
 
 </td>
 <td>
-FOREIGN KEY ([sourcedb](/Bucardo/sourcedb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([sourcedb](/Bucardo/object_types/sourcedb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -260,7 +260,7 @@ FOREIGN KEY ([sourcedb](/Bucardo/sourcedb)) REFERENCES [bucardo.db](/Bucardo/sch
 
 </td>
 <td>
-FOREIGN KEY ([targetdb](/Bucardo/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([targetdb](/Bucardo/object_types/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -290,7 +290,7 @@ Yes
 
 </td>
 <td>
-([sync](/Bucardo/sync),[sourcedb](/Bucardo/sourcedb),[targetdb](/Bucardo/targetdb)) WHERE started IS NULL
+([sync](/Bucardo/sync),[sourcedb](/Bucardo/object_types/sourcedb),[targetdb](/Bucardo/object_types/targetdb)) WHERE started IS NULL
 
 </td>
 </tr>

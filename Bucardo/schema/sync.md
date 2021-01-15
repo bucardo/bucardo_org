@@ -126,7 +126,7 @@ NOT NULL DEFAULT <b>'true'</b>
 </tr>
 <tr>
 <td>
-<b>use[customselect](/Bucardo/operations/customselect)</b>
+<b>use[customselect](/Bucardo/operation/customselect)</b>
 
 </td>
 <td>
@@ -484,7 +484,7 @@ FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(nam
 
 </td>
 <td>
-FOREIGN KEY ([targetdb](/Bucardo/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY ([targetdb](/Bucardo/object_types/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -494,7 +494,7 @@ FOREIGN KEY ([targetdb](/Bucardo/targetdb)) REFERENCES [bucardo.db](/Bucardo/sch
 
 </td>
 <td>
-FOREIGN KEY ([targetgroup](/Bucardo/targetgroup)) REFERENCES [bucardo.dbgroup](/Bucardo/schema/bucardo.dbgroup)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY ([targetgroup](/Bucardo/object_types/targetgroup)) REFERENCES [bucardo.dbgroup](/Bucardo/schema/bucardo.dbgroup)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -504,7 +504,7 @@ FOREIGN KEY ([targetgroup](/Bucardo/targetgroup)) REFERENCES [bucardo.dbgroup](/
 
 </td>
 <td>
-CHECK (synctype IN ('[pushdelta](/Bucardo/pushdelta)','[fullcopy](/Bucardo/fullcopy)','[swap](/Bucardo/swap)'))
+CHECK (synctype IN ('[pushdelta](/Bucardo/object_types/pushdelta)','[fullcopy](/Bucardo/object_types/fullcopy)','[swap](/Bucardo/object_types/swap)'))
 
 </td>
 </tr>
@@ -534,7 +534,7 @@ CHECK (deletemethod IN ('truncate', 'delete', 'truncate_cascade'))
 
 </td>
 <td>
-CHECK ((([targetdb](/Bucardo/targetdb) IS NULL) AND ([targetgroup](/Bucardo/targetgroup) IS NOT NULL)) OR (([targetdb](/Bucardo/targetdb) IS NOT NULL) AND ([targetgroup](/Bucardo/targetgroup) IS NULL)))
+CHECK ((([targetdb](/Bucardo/object_types/targetdb) IS NULL) AND ([targetgroup](/Bucardo/object_types/targetgroup) IS NOT NULL)) OR (([targetdb](/Bucardo/object_types/targetdb) IS NOT NULL) AND ([targetgroup](/Bucardo/object_types/targetgroup) IS NULL)))
 
 </td>
 </tr>
@@ -544,7 +544,7 @@ CHECK ((([targetdb](/Bucardo/targetdb) IS NULL) AND ([targetgroup](/Bucardo/targ
 
 </td>
 <td>
-CHECK (synctype \<\> '[swap](/Bucardo/swap)' OR [targetdb](/Bucardo/targetdb) IS NOT NULL)
+CHECK (synctype \<\> '[swap](/Bucardo/object_types/swap)' OR [targetdb](/Bucardo/object_types/targetdb) IS NOT NULL)
 
 </td>
 </tr>
@@ -574,7 +574,7 @@ Yes
 
 </td>
 <td>
-(source, [targetdb](/Bucardo/targetdb), synctype)
+(source, [targetdb](/Bucardo/object_types/targetdb), synctype)
 
 </td>
 </tr>
@@ -588,7 +588,7 @@ Yes
 
 </td>
 <td>
-(source, [targetgroup](/Bucardo/targetgroup), synctype)
+(source, [targetgroup](/Bucardo/object_types/targetgroup), synctype)
 
 </td>
 </tr>

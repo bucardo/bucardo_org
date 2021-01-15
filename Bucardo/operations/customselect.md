@@ -5,7 +5,7 @@ title: Bucardo customselect
 CustomSelect / CustomCols
 -------------------------
 
-The **customselect** feature allows you to control what rows & columns get synchronized from one database to another. This functionality works both on the fly (when CRUD invokes a trigger), and when doing a [fullcopy](/Bucardo/fullcopy).
+The **customselect** feature allows you to control what rows & columns get synchronized from one database to another. This functionality works both on the fly (when CRUD invokes a trigger), and when doing a [fullcopy](/Bucardo/object_types/fullcopy).
 
 The command takes a SELECT statement, and is helpful in the following scenarios:
 

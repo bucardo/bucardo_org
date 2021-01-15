@@ -406,7 +406,7 @@ CHECK (reltype IN ('table','sequence'))
 
 </td>
 <td>
-CHECK ([customselect](/Bucardo/operations/customselect) IS NULL OR length(pkey) \> 1)
+CHECK ([customselect](/Bucardo/operation/customselect) IS NULL OR length(pkey) \> 1)
 
 </td>
 </tr>

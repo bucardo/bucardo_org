@@ -9,7 +9,7 @@ Table: bucardo.dbgroup
 </h2>
 <table border="1" cellpadding="3">
 <caption style="white-space: nowrap">
-<b>Named groups of databases: used as '[targetgroup](/Bucardo/targetgroup)' for syncs</b>
+<b>Named groups of databases: used as '[targetgroup](/Bucardo/object_types/targetgroup)' for syncs</b>
 
 </caption>
 <tr>

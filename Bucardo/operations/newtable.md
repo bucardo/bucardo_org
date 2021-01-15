@@ -13,7 +13,7 @@ The next step is:
 
     bucardo update sync <syncname> add table <tab1> <tab2> ...
 
-This adds one or more tables to an existing sync, by adding them to the source [herd](/Bucardo/herd) for this sync. If the tables are already in the sync, no changes are made.
+This adds one or more tables to an existing sync, by adding them to the source [herd](/Bucardo/object_types/herd) for this sync. If the tables are already in the sync, no changes are made.
 
     bucardo validate <syncname>
 
@@ -21,7 +21,7 @@ This tells Bucardo to run the validate_sync() function, which makes any changes 
 
     bucardo update sync onetimecopy=2
 
-This instructs the sync to enter [onetimecopy](/Bucardo/operations/onetimecopy) mode. This step is not needed if the sync is [fullcopy](/Bucardo/fullcopy). The value of 2 means that only empty tables will be copied over. We do this to ensure that all rows in the new table are copied from the master to the slave. Once they are all copied, only the differences are copied from that point forward.
+This instructs the sync to enter [onetimecopy](/Bucardo/operation/onetimecopy) mode. This step is not needed if the sync is [fullcopy](/Bucardo/object_types/fullcopy). The value of 2 means that only empty tables will be copied over. We do this to ensure that all rows in the new table are copied from the master to the slave. Once they are all copied, only the differences are copied from that point forward.
 
 Optionally, you can ask Bucardo to defer index processing until the end of the COPY:
 

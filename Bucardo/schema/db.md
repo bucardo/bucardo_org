@@ -210,7 +210,7 @@ NOT NULL DEFAULT <b>'true'</b>
 </tr>
 <tr>
 <td>
-<b>[makedelta](/Bucardo/operations/makedelta)</b>
+<b>[makedelta](/Bucardo/operation/makedelta)</b>
 
 </td>
 <td>
@@ -270,11 +270,11 @@ CHECK (status IN ('active','inactive'))
 </tr>
 <tr>
 <td>
-<b>db_[makedelta](/Bucardo/operations/makedelta)</b>
+<b>db_[makedelta](/Bucardo/operation/makedelta)</b>
 
 </td>
 <td>
-CHECK ([makedelta](/Bucardo/operations/makedelta) \<\> 'inherit')
+CHECK ([makedelta](/Bucardo/operation/makedelta) \<\> 'inherit')
 
 </td>
 </tr>

@@ -53,7 +53,7 @@ Main Bucardo functions
 Remote Bucardo tables
 ---------------------
 
-Each database that is used as a source for a [swap](/Bucardo/swap) or [pushdelta](/Bucardo/pushdelta) sync has the following tables installed into the bucardo schema:
+Each database that is used as a source for a [swap](/Bucardo/object_types/swap) or [pushdelta](/Bucardo/object_types/pushdelta) sync has the following tables installed into the bucardo schema:
 
 -   [bucardo_delta](/Bucardo/schema/bucardo_delta)
     -   Stores which rows have changed for each replicated table

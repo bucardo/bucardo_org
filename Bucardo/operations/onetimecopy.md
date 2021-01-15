@@ -2,7 +2,7 @@
 title: Onetimecopy
 ---
 
-The **onetimecopy** mode of a sync instructs it to temporarily switch from a [pushdelta](/Bucardo/pushdelta) mode to a [fullcopy](/Bucardo/fullcopy) mode. In other words, it will unconditionally copy over all rows for each table in the sync from the master to the slaves. When finished, Bucardo will automatically set this value back to 0.
+The **onetimecopy** mode of a sync instructs it to temporarily switch from a [pushdelta](/Bucardo/object_types/pushdelta) mode to a [fullcopy](/Bucardo/object_types/fullcopy) mode. In other words, it will unconditionally copy over all rows for each table in the sync from the master to the slaves. When finished, Bucardo will automatically set this value back to 0.
 
 If this value is set to **2**, tables will only be copied if:
 
@@ -17,5 +17,5 @@ To change the onetimecopy value of a sync, just run:
 
     bucardo update sync <syncname> onetimecopy=2
 
-A onetimecopy event will appear as a [fullcopy](/Bucardo/fullcopy) sync in the [web stats](/Bucardo/web_stats) page.
+A onetimecopy event will appear as a [fullcopy](/Bucardo/object_types/fullcopy) sync in the [web stats](/Bucardo/web_stats) page.
 
