@@ -25,7 +25,7 @@ Additional bucardo arguments include:
 - --debugfile=1    _Enables/Disables local log file ./log.bucardo_
 - --cleandebugs=0
 
-Rather than enter those every time, you may place the arguments into a [bucardorc](/Bucardo/bucardorc) file. All of the arguments below, except for "install", require that enough options exist to find the main Bucardo database.
+Rather than enter those every time, you may place the arguments into a [bucardorc](/Bucardo/configuration/bucardorc) file. All of the arguments below, except for "install", require that enough options exist to find the main Bucardo database.
 
 ### Installing and upgrading Bucardo
 
