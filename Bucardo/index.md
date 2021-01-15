@@ -23,11 +23,17 @@ Online documentation is available for the following parts of Bucardo:
 
 -   [Overview of Bucardo](/Bucardo/Overview): A quick overview of Bucardo, explaining what it is and what it is capable of
 -   [Bucardo FAQ (Frequently Asked Questions)](/Bucardo/FAQ): Answers to commonly asked questions about Bucardo
+-   [Bucardo Glossary](/Bucardo/glossary): Glossary of Bucardo terms
 -   [Bucardo Installation](/Bucardo/installation/): Installation instructions for Bucardo
 -   [Bucardo Upgrade](/Bucardo/installation/upgrade): Upgrade instructions for Bucardo
 -   [pgbench tutorial](/Bucardo/pgbench_example): An example of how to use Bucardo to replicate a database
 -   [Bucardo Command Line Tool](/Bucardo/cli/): The script used to control an existing Bucardo installation
+-   [Bucardo Configuration](/Bucardo/configuration/): Environment variables and configuration files used by Bucardo
+-   [Bucardo Operations](/Bucardo/operations/): Help about some operations with Bucardo
+-   [Bucardo Object Types](/Bucardo/object_types/): Explanation of the Bucardo object types
 -   [Bucardo Schema](/Bucardo/schema/): Explanation of the Bucardo tables and functions
+-   [Bucardo Internals](/Bucardo/internals/): Articles about Bucardo internals
+-   [Bucardo Presentations](/Bucardo/presentations/): Collected presentations about Bucardo
 -   [DBIx::Safe](/DBIx-Safe/): Helper module needed by Bucardo that provides safe versions of DBI database handles
 
 Community
