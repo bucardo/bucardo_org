@@ -2,7 +2,7 @@
 title: Boxinfo Example
 ---
 
-This is a sample output of the [boxinfo](/Boxinfo/.) program. Some sections were left out to make the page smaller and more readable
+This is a sample output of the [boxinfo](/Boxinfo/) program. Some sections were left out to make the page smaller and more readable.
 
 <h2>
 [ACME](/ACME) Postgres server core:

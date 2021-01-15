@@ -201,7 +201,7 @@ Now let's make changes to that record, and verify that it gets propagated to the
     -----+-----+----------+--------
        1 | 999 |        0 |
 
-How about the history table, which has not primary key? We cannot track row by row changes, and don't want to copy the whole thing every time the table changes, so we've got to [kick](/Bucardo/kick) that sync manually when we want to change it:
+How about the history table, which has no primary key? We cannot track row by row changes, and don't want to copy the whole thing every time the table changes, so we've got to [kick](/Bucardo/kick) that sync manually when we want to change it:
 
     $ psql -d -At test1 -c 'select count(*) from history'
     0
