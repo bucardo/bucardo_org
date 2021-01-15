@@ -180,7 +180,7 @@ PRIMARY KEY (id)
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/tables/bucardo.goat)(id) ON DELETE CASCADE
+FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE CASCADE
 
 </td>
 </tr>

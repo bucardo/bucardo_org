@@ -474,7 +474,7 @@ PRIMARY KEY (name)
 
 </td>
 <td>
-FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -484,7 +484,7 @@ FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd)(nam
 
 </td>
 <td>
-FOREIGN KEY ([targetdb](/Bucardo/targetdb)) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY ([targetdb](/Bucardo/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -494,7 +494,7 @@ FOREIGN KEY ([targetdb](/Bucardo/targetdb)) REFERENCES [bucardo.db](/Bucardo/tab
 
 </td>
 <td>
-FOREIGN KEY ([targetgroup](/Bucardo/targetgroup)) REFERENCES [bucardo.dbgroup](/Bucardo/tables/bucardo.dbgroup)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY ([targetgroup](/Bucardo/targetgroup)) REFERENCES [bucardo.dbgroup](/Bucardo/schema/bucardo.dbgroup)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>

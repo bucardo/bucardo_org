@@ -376,7 +376,7 @@ PRIMARY KEY (id)
 
 </td>
 <td>
-FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/tables/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>

@@ -100,7 +100,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/tables/bucardo.herd)(name)
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/tables/bucardo.goat)(id) ON DELETE CASCADE
+FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE CASCADE
 
 </td>
 </tr>

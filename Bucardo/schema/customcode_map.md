@@ -128,7 +128,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/tables/bucardo.customcode)(id) ON DELETE CASCADE
+FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/schema/bucardo.customcode)(id) ON DELETE CASCADE
 
 </td>
 </tr>
@@ -138,7 +138,7 @@ FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/tables/bucardo.custo
 
 </td>
 <td>
-FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/tables/bucardo.sync)(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/bucardo.sync)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -148,7 +148,7 @@ FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/tables/bu
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/tables/bucardo.goat)(id) ON DELETE SET NULL
+FOREIGN KEY ([goat](/Bucardo/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE SET NULL
 
 </td>
 </tr>
