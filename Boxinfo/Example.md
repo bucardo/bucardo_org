@@ -2,10 +2,10 @@
 title: Boxinfo Example
 ---
 
-This is a sample output of the [boxinfo](/boxinfo "wikilink") program. Some sections were left out to make the page smaller and more readable
+This is a sample output of the [boxinfo](/Boxinfo/.) program. Some sections were left out to make the page smaller and more readable
 
 <h2>
-[ACME](/ACME "wikilink") Postgres server core:
+[ACME](/ACME) Postgres server core:
 
 </h2>
 <table class="boxinfo" style="border: solid black 2px">

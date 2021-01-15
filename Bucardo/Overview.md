@@ -5,7 +5,7 @@ title: Bucardo Overview
 Bucardo Overview
 ----------------
 
-This page gives a quick overview of what Bucardo is and how it works. Please consult the [Bucardo]({% link Bucardo/index.md %}) page and the rest of the wiki for more details, and be sure and read the [Frequently Asked Questions page]({% link Bucardo/FAQ.md %}).
+This page gives a quick overview of what Bucardo is and how it works. Please consult the [Bucardo](/Bucardo/) page and the rest of the wiki for more details, and be sure and read the [Frequently Asked Questions page](/Bucardo/FAQ).
 
 Bucardo is at its heart a Perl daemon that listens for NOTIFY requests and acts on them, by connecting to remote databases and copying data back and forth. All the specific information that the daemon needs is stored in the main bucardo database, including a list of all the databases involved in the replication and how to reach them, all the tables that are to be replicated, and how each is to be replicated.
 
@@ -13,7 +13,7 @@ The first step in running Bucardo is to add two or more databases to the main bu
 
 Once Bucardo has been set up, triggers begin storing information about which rows were changed in all the tables of interest. For a swap sync (multi-master), the process goes like this:
 
-1. A change is made to the table and gets recorded in the [bucardo_delta]({% link Bucardo/tables/bucardo.bucardo_delta.md %}) table.
+1. A change is made to the table and gets recorded in the [bucardo_delta](/Bucardo/schema/bucardo.bucardo_delta) table.
 2. A notice is sent to the main Bucardo daemon, letting it know that the table has changed.
 3. The daemon notifies the controller for that sync and returns to listening.
 4. The controller creates a "kid" to handle the replication, or signals an existing one.

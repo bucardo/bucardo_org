@@ -15,7 +15,7 @@ The latest version of pgsi, 1.7.1, can be downloaded at:
 
 ### Basic Usage
 
-To use pgsi, you must run it against a [Postgres](/Postgres "wikilink") logfile that has full logging enabled. Then run:
+To use pgsi, you must run it against a [Postgres](/Postgres) logfile that has full logging enabled. Then run:
 
 ` perl pgsi.pl --file=logfile > pgsi.html`
 

@@ -2,7 +2,7 @@
 title: Boxinfo
 ---
 
-**boxinfo** is a Perl script for quickly gathering all sorts of interesting information about a particular computer, which is then put into a HTML or MediaWiki page. It is very handy for being able to see a quick overview of the boxes that you are responsible for. The script has a highly developed [Postgres](/Postgres "wikilink") section. It was developed at End Point Corporation by Greg Sabino Mullane.
+**boxinfo** is a Perl script for quickly gathering all sorts of interesting information about a particular computer, which is then put into a HTML or MediaWiki page. It is very handy for being able to see a quick overview of the boxes that you are responsible for. The script has a highly developed [Postgres](/Postgres) section. It was developed at End Point Corporation by Greg Sabino Mullane.
 
 ### Download
 
@@ -21,7 +21,7 @@ It is preferred that the script gets run as the 'root' user, as some of the info
 
 #### boxinfo.html
 
-This is the final result, either in HTML or MediaWiki format (see the --format argument below). A [sample output page](/Boxinfo/Example "wikilink") is available.
+This is the final result, either in HTML or MediaWiki format (see the --format argument below). A [sample output page](/Boxinfo/Example) is available.
 
 #### boxinfo.debug
 
