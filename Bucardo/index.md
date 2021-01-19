@@ -26,7 +26,7 @@ Online documentation is available for the following parts of Bucardo:
 -   [Bucardo Glossary](/Bucardo/glossary): Glossary of Bucardo terms
 -   [Bucardo Installation](/Bucardo/installation/): Installation instructions for Bucardo
 -   [Bucardo Upgrade](/Bucardo/installation/upgrade): Upgrade instructions for Bucardo
--   [pgbench tutorial](/Bucardo/pgbench_example): An example of how to use Bucardo to replicate a database
+-   [Bucardo Tutorial](/Bucardo/pgbench_example): An example of how to use Bucardo to replicate a database
 -   [Bucardo Command Line Tool](/Bucardo/cli/): The script used to control an existing Bucardo installation
 -   [Bucardo Configuration](/Bucardo/configuration/): Environment variables and configuration files used by Bucardo
 -   [Bucardo Operations](/Bucardo/operations/): Help about some operations with Bucardo
