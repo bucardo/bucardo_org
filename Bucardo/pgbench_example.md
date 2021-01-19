@@ -79,7 +79,15 @@ We've kept it simple for this example, but you generally will end up replicating
 Add the tables
 --------------
 
-Bucardo also needs to know about any tables that it may be called on to replicate. Adding tables by the [add table](/Bucardo/cli/add_table) command does not actually start replicating them. In this case, we're going to use the handy **add all tables** feature. Tables are grouped together inside of Bucardo into [herds](/Bucardo/cli/herd), so we'll also place the newly added tables into a named herd. Finally, the history table has no primary key or unique index, so we cannot replicate it by using the [pushdelta](/Bucardo/cli/pushdelta) method, so we're going to exclude it from the alpha herd, using the [-T](/Bucardo/-T) switch, and add it in the next setup with the [-t](/Bucardo/-t) switch.
+Bucardo also needs to know about any tables that it may be called on to
+replicate.  Adding tables by the [add table](/Bucardo/cli/add_table) command
+does not actually start replicating them.  In this case, we're going to use
+the handy **add all tables** feature.  Tables are grouped together inside of
+Bucardo into [herds](/Bucardo/cli/herd), so we'll also place the newly added
+tables into a named herd.  Finally, the history table has no primary key or
+unique index, so we cannot replicate it by using the [pushdelta](/Bucardo/object_types/pushdelta)
+method, so we're going to exclude it from the alpha herd, using the -T switch,
+and add it in the next setup with the -t switch.
 
     $ bucardo add all tables db=test1 -T history --herd=alpha --verbose
     New tables:
@@ -97,7 +105,10 @@ Bucardo also needs to know about any tables that it may be called on to replicat
 Add the syncs
 -------------
 
-A [sync](/Bucardo/sync) is a named replication event. Each sync has a source herd; because we created two herds above, we'll go ahead and create two syncs as well. One will be a [pushdelta](/Bucardo/object_types/pushdelta) sync, the other will be a [fullcopy](/Bucardo/object_types/fullcopy) sync.
+A [sync](/Bucardo/object_types/sync) is a named replication event.
+Each sync has a source herd; because we created two herds above,
+we'll go ahead and create two syncs as well.  One will be a [pushdelta](/Bucardo/object_types/pushdelta)
+sync, the other will be a [fullcopy](/Bucardo/object_types/fullcopy) sync.
 
     $ bucardo add sync benchdelta source=alpha targetdb=test2 type=pushdelta
     Added sync "benchdelta"
@@ -134,7 +145,10 @@ The final step is to fire it up:
 
     bucardo start
 
-After a few seconds, the prompt will return. There will be a log file in the current directory called **log.bucardo** that you can look through. To disable the logfile and just rely on syslog use the [--debugfile=0](/Bucardo/--debugfile=0) argument. You can also verify that the Bucardo daemons are running by doing a:
+After a few seconds, the prompt will return.  There will be a log file in
+the current directory called **log.bucardo** that you can look through.
+To disable the logfile and just rely on syslog use the --debugfile=0 argument.
+You can also verify that the Bucardo daemons are running by doing a:
 
     ps -Afw | grep -i Bucardo
 
@@ -171,7 +185,10 @@ Now let's make changes to that record, and verify that it gets propagated to the
     -----+-----+----------+--------
        1 | 999 |        0 |
 
-How about the history table, which has no primary key? We cannot track row by row changes, and don't want to copy the whole thing every time the table changes, so we've got to [kick](/Bucardo/kick) that sync manually when we want to change it:
+How about the history table, which has no primary key? We cannot track row by
+row changes, and don't want to copy the whole thing every time the table
+changes, so we've got to [kick](/Bucardo/cli/kick) that sync manually
+when we want to change it:
 
     $ psql -d -At test1 -c 'select count(*) from history'
     0
