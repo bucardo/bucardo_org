@@ -7,41 +7,11 @@ This page describes the steps needed to replicate a sample database, created by 
 Install Bucardo
 ---------------
 
-The first step is to install Bucardo. Detailed instructions can be found on the [installation page](/Bucardo/installation/), but the quick steps are:
+The first step is to install Bucardo. Detailed instructions can be found on the [installation page](/Bucardo/installation/).
 
-### Install Perl modules
-
-Bucardo requires the following Perl modules to be installed:
-
--   DBD::Pg
--   DBIx::Safe
-
-### Download and unpack Bucardo
-
-The latest version of Bucardo can be found at [the download page](/Bucardo/#obtaining-bucardo). Alternatively, you can pull the development version from git by doing:
-
-    git clone git://github.com/bucardo/bucardo.git
-
-Either way, you should end up in a bucardo directory, and ready for the next step.
-
-### make and install
-
-Run the following commands:
-
-
-    perl Makefile.PL
-    make
-
-
-The following step is optional but recommended:
-
-    make test
-
-Finally, install as a user with appropriate rights. One way to do this is:
-
-    sudo make install
-
-You should now have a global [bucardo](/Bucardo/cli/) file available. Test that you can run it and that you are using the correct version:
+Once you installed, you should now have a global [bucardo](/Bucardo/cli/)
+command available.  Test that you can run it and that you are using
+the correct version:
 
     bucardo --version
 
