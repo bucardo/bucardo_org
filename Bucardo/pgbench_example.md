@@ -84,21 +84,21 @@ replicate.  Adding tables by the [add table](/Bucardo/cli/add_table) command
 does not actually start replicating them.  In this case, we're going to use
 the handy **add all tables** feature.  Tables are grouped together inside of
 Bucardo into [herds](/Bucardo/cli/herd), so we'll also place the newly added
-tables into a named herd.  Finally, the history table has no primary key or
+tables into a named herd.  Finally, the pgbench_history table has no primary key or
 unique index, so we cannot replicate it by using the [pushdelta](/Bucardo/object_types/pushdelta)
 method, so we're going to exclude it from the alpha herd, using the -T switch,
 and add it in the next setup with the -t switch.
 
-    $ bucardo add all tables db=test1 -T history --herd=alpha --verbose
+    $ bucardo add all tables db=test1 -T pgbench_history --herd=alpha --verbose
     New tables:
-      public.accounts
-      public.branches
-      public.tellers
+      public.pgbench_accounts
+      public.pgbench_branches
+      public.pgbench_tellers
     New tables added: 3
     Already added: 0
-    $ bucardo add all tables db=test1 -t history --herd=beta --verbose
+    $ bucardo add all tables db=test1 -t pgbench_history --herd=beta --verbose
     New tables:
-      public.history
+      public.pgbench_history
     New tables added: 1
     Already added: 0
 
@@ -119,9 +119,9 @@ sync, the other will be a [fullcopy](/Bucardo/object_types/fullcopy) sync.
 We are ready to kick off Bucardo at this point. Before we do, let's use the **list** options to bucardo to check everything out.
 
     $ bucardo list herds
-    Herd: alpha Members: public.branches, public.tellers, public.accounts
+    Herd: alpha Members: public.pgbench_branches, public.pgbench_tellers, public.pgbench_accounts
       Used in syncs: benchdelta
-    Herd: beta  Members: public.history
+    Herd: beta  Members: public.pgbench_history
       Used in syncs: benchcopy
 
     $ bucardo list syncs
@@ -133,10 +133,10 @@ We are ready to kick off Bucardo at this point. Before we do, let's use the **li
     Database: test2  Status: active  Conn: psql -p 5432 -U bucardo -d test2
 
     $ bucardo list tables
-    Table: public.accounts  DB: test1  PK: aid (int4)
-    Table: public.branches  DB: test1  PK: bid (int4)
-    Table: public.history   DB: test1  PK: none
-    Table: public.tellers   DB: test1  PK: tid (int4)
+    Table: public.pgbench_accounts  DB: test1  PK: aid (int4)
+    Table: public.pgbench_branches  DB: test1  PK: bid (int4)
+    Table: public.pgbench_history   DB: test1  PK: none
+    Table: public.pgbench_tellers   DB: test1  PK: tid (int4)
 
 Start Bucardo
 -------------
@@ -157,19 +157,19 @@ Test Replication
 
 To verify that things are working properly, let's get some baseline counts:
 
-    $ psql -d test1 -At -c 'select count(*) from tellers'
+    $ psql -d test1 -At -c 'select count(*) from pgbench_tellers'
     10
 
-    $ psql -d test2 -At -c 'select count(*) from tellers'
+    $ psql -d test2 -At -c 'select count(*) from pgbench_tellers'
     10
 
-    $ psql -d test1 -c 'select * from tellers where tid = 1'
+    $ psql -d test1 -c 'select * from pgbench_tellers where tid = 1'
      tid | bid | tbalance | filler
     -----+-----+----------+--------
        1 |   1 |        0 |
     (1 row)
 
-    $ psql -d test2 -c 'select * from tellers where tid = 1'
+    $ psql -d test2 -c 'select * from pgbench_tellers where tid = 1'
      tid | bid | tbalance | filler
     -----+-----+----------+--------
        1 |   1 |        0 |
@@ -177,36 +177,36 @@ To verify that things are working properly, let's get some baseline counts:
 
 Now let's make changes to that record, and verify that it gets propagated to the slave (test2)
 
-    $ psql -d test1 -c 'update tellers set bid=999 where tid = 1'
+    $ psql -d test1 -c 'update pgbench_tellers set bid=999 where tid = 1'
     UPDATE 1
 
-    $ psql -d test2 -c 'select * from tellers where tid = 1'
+    $ psql -d test2 -c 'select * from pgbench_tellers where tid = 1'
      tid | bid | tbalance | filler
     -----+-----+----------+--------
        1 | 999 |        0 |
 
-How about the history table, which has no primary key? We cannot track row by
+How about the pgbench_history table, which has no primary key? We cannot track row by
 row changes, and don't want to copy the whole thing every time the table
 changes, so we've got to [kick](/Bucardo/cli/kick) that sync manually
 when we want to change it:
 
-    $ psql -d -At test1 -c 'select count(*) from history'
+    $ psql -d -At test1 -c 'select count(*) from pgbench_history'
     0
-    $ psql -d -At test2 -c 'select count(*) from history'
+    $ psql -d -At test2 -c 'select count(*) from pgbench_history'
     0
 
     $ pgbench -t3 test1
 
-    $ psql -At -d test1 -c 'select count(*) from history'
+    $ psql -At -d test1 -c 'select count(*) from pgbench_history'
     3
-    $ psql -At -d test2 -c 'select count(*) from history'
+    $ psql -At -d test2 -c 'select count(*) from pgbench_history'
     3
 
     $ bucardo kick benchcopy
 
-    $ psql -At -d test1 -c 'select count(*) from history'
+    $ psql -At -d test1 -c 'select count(*) from pgbench_history'
     3
-    $ psql -At -d test2 -c 'select count(*) from history'
+    $ psql -At -d test2 -c 'select count(*) from pgbench_history'
     3
 
 This ends the demonstration. Feel free to play around more. To stop Bucardo when done, just issue:
@@ -215,9 +215,6 @@ This ends the demonstration. Feel free to play around more. To stop Bucardo when
 
 As you experiment, you might also want to look at the syncs in more detail with:
 
-
     bucardo status
     bucardo status benchdelta
     bucardo status benchcopy
-
-
