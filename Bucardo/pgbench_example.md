@@ -69,12 +69,12 @@ Now that we have some data, let's get Bucardo to replicate it.
 Add the databases
 -----------------
 
-Bucardo needs to know about each database it needs to talk to. The [bucardo](/Bucardo/bucardo) program does this with the [add db](/Bucardo/add_db) option.
+Bucardo needs to know about each database it needs to talk to.
+The [bucardo](/Bucardo/cli/) program does this with the [add database](/Bucardo/cli/add_database)
+option.
 
-    bucardo add db test1
-    bucardo add db test2
-
-We've kept it simple for this example, but you generally will end up replicating databases with the same name, and thus should add an extra internal database name. Since we did not provide one, they default to the actual database names.
+    bucardo add database test1 dbname=test1
+    bucardo add database test2 dbname=test2
 
 Add the tables
 --------------
