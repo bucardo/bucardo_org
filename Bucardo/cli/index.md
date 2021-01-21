@@ -122,7 +122,13 @@ To reload a sync:
 
     bucardo reload <syncname>
 
-One or more named syncs can be reloaded this way. Each will be reloaded in turn, and `bucardo` will let you know when each has been reloaded. When a sync is reloaded, the [MCP](/Bucardo/MCP) process will stop the existing sync, reload information about the sync from the database, and start it up again. This is typically used when you want to make changes to an existing sync that is already running, e.g. the [onetimecopy](/Bucardo/operation/onetimecopy) attribute.
+One or more named syncs can be reloaded this way.  Each will be reloaded
+in turn, and `bucardo` will let you know when each has been reloaded.
+When a sync is reloaded, the MCP process will stop the existing sync,
+reload information about the sync from the database, and start it up again.
+This is typically used when you want to make changes to an existing sync
+that is already running, e.g. the [onetimecopy](/Bucardo/operations/onetimecopy)
+attribute.
 
 #### Activating a sync
 
@@ -325,9 +331,9 @@ in the format name=value:
 
 -   onetimecopy: set the [onetimecopy](/Bucardo/operation/onetimecopy) value for this sync
 -   status: set the initial status for the sync. Defaults to 'active'
--   lifetime: set the [lifetime](/Bucardo/lifetime) for this sync - how long to run before the sync is restarted
--   maxkicks: sets the [maxkicks](/Bucardo/maxkicks) for this sync - how many times it runs before being restarted
--   makedelta: set the [makedelta](/Bucardo/operation/makedelta) value for this sync. Defaults to 0.
+-   lifetime: set the lifetime for this sync - how long to run before the sync is restarted
+-   maxkicks: sets the maxkicks for this sync - how many times it runs before being restarted
+-   makedelta: set the [makedelta](/Bucardo/operations/makedelta) value for this sync. Defaults to 0.
 
 ### Other actions
 
