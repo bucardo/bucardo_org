@@ -58,7 +58,7 @@ Restarting is just:
 
 #### Checking that Bucardo is alive
 
-To send a "ping" to the [MCP](/Bucardo/MCP) process of a running Bucardo, use:
+To send a "ping" to the MCP process of a running Bucardo, use:
 
     bucardo ping [timeout]
 
@@ -343,7 +343,7 @@ To write a custom message to the log file that a current Bucardo process is writ
 
     bucardo message "Your message here"
 
-The message will be written by the [MCP](/Bucardo/MCP) process to the logs in the format:
+The message will be written by the MCP process to the logs in the format:
 
     MESSAGE (date): string
 
