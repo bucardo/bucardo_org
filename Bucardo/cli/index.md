@@ -4,7 +4,8 @@ title: Bucardo Command Line Tool
 
 **bucardo** is the main interface to Bucardo - it is used to start, stop, and control Bucardo.
 
-You can tell `bucardo` where to find the main [Bucardo database](/Bucardo/Bucardo_database) by use of the following arguments:
+You can tell `bucardo` where to find the main Bucardo database by use of
+the following arguments:
 
 - --dbport
 - --dbhost
@@ -66,7 +67,9 @@ If successful, an exit value of 0 will be returned. The string returned by this 
 
 ### Bucardo configuration
 
-Bucardo stores important configuration variables in the database inside the `bucardo_config` table. See the [Bucardo configuration](/Bucardo/configuration) page for a complete list.
+Bucardo stores important configuration variables in the database inside
+the `bucardo_config` table.  See the [Bucardo configuration](/Bucardo/configuration/)
+page for a complete list.
 
 #### Viewing configuration values
 
@@ -102,7 +105,8 @@ To tell a running Bucardo to re-read the configuration table:
 
 ### Controlling syncs
 
-Bucardo works by running one or more replication events called [syncs](/Bucardo/sync). The main interface for controlling these is `bucardo`
+Bucardo works by running one or more replication events called [syncs](/Bucardo/object_types/sync).
+The main interface for controlling these is `bucardo`
 
 #### Kicking a sync
 
@@ -162,7 +166,11 @@ To get a list of all [syncs](/Bucardo/sync):
 
     bucardo list syncs
 
-This list will show the sync name, it's type ([fullcopy](/Bucardo/object_types/fullcopy), [pushdelta](/Bucardo/object_types/pushdelta), or [swap](/Bucardo/object_types/swap)), the source [herd](/Bucardo/object_types/herd), the target database (or database group), and current status. For more details on a specific sync, use the 'status' command above.
+This list will show the sync name, it's type ([fullcopy](/Bucardo/object_types/fullcopy),
+[pushdelta](/Bucardo/object_types/pushdelta), or [swap](/Bucardo/object_types/swap)),
+the source [herd](/Bucardo/object_types/herd), the target database
+(or database group), and current status.  For more details on a specific sync,
+use the 'status' command above.
 
 #### Listing databases
 

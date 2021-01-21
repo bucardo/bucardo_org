@@ -8,7 +8,10 @@ Example:
 
     bucardo list tables
 
-Shows a list of all tables, one per line, in alphabetical order. Also shows which database and syncs they belong to. The number at the start of the line is the internal id for the table, and is primarily used to feed to the [remove_table](/Bucardo/remove_table) command.
+Shows a list of all tables, one per line, in alphabetical order.  Also shows
+which database and syncs they belong to.  The number at the start of the line
+is the internal id for the table, and is primarily used to feed to the [remove_table](/Bucardo/cli/remove_table)
+command.
 
 Usage:
 
@@ -59,10 +62,12 @@ If one or more table names is given, only lists the given ones. Wildcards can be
 
 ### Internals
 
-Information is read from the [bucardo.goat table](/Bucardo/bucardo.goat_table) for the main information, from the [bucardo.herdmap](/Bucardo/bucardo.herdmap) and the [bucardo.sync table](/Bucardo/bucardo.sync_table) table for the sync information.
+Information is read from the [goat table](/Bucardo/schema/schema/goat) for
+the main information, from the [herdmap table](/Bucardo/schema/herdmap) and
+the [sync table](/Bucardo/schema/sync) table for the sync information.
 
 ### See also:
 
--   [add_table](/Bucardo/add_table)
--   [update_table](/Bucardo/update_table)
--   [remove_table](/Bucardo/remove_table)
+-   [add_table](/Bucardo/cli/add_table)
+-   [update_table](/Bucardo/cli/update_table)
+-   [remove_table](/Bucardo/cli/remove_table)

@@ -22,10 +22,12 @@ To add all the tables in the database, run:
 
 ### Internals
 
-New tables cause an insert to the [bucardo.goat table](/Bucardo/bucardo.goat_table). A new herd causes an insert to the [bucardo.herd table](/Bucardo/bucardo.herd_table). Adding a table to a herd results in an insert to the [bucardo.herdmap table](/Bucardo/bucardo.herdmap_table).
+New tables cause an insert to the [goat table](/Bucardo/schema/goat).
+A new herd causes an insert to the [herd table](/Bucardo/schema/herd_table).
+Adding a table to a herd results in an insert to the [herdmap table](/Bucardo/schema/herdmap).
 
 ### See also:
 
--   [list_table](/Bucardo/list_table)
--   [update_table](/Bucardo/update_table)
--   [remove_table](/Bucardo/remove_table)
+-   [list_table](/Bucardo/cli/list_table)
+-   [update_table](/Bucardo/cli/update_table)
+-   [remove_table](/Bucardo/cli/remove_table)

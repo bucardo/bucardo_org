@@ -22,10 +22,10 @@ Note that not all fields can be changed (e.g. cdate)
 
 ### Internals
 
-Changes will update the [bucardo.db table](/Bucardo/bucardo.db_table).
+Changes will update the [db table](/Bucardo/schema/db).
 
 ### See also:
 
--   [add_database](/Bucardo/add_database)
--   [list_database](/Bucardo/list_database)
--   [remove_database](/Bucardo/remove_database)
+-   [add_database](/Bucardo/cli/add_database)
+-   [list_database](/Bucardo/cli/list_database)
+-   [remove_database](/Bucardo/cli/remove_database)

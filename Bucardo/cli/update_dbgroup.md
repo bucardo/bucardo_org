@@ -27,10 +27,10 @@ Use the name= form to change the name of an existing database group. Otherwise, 
 
 ### Internals
 
-Changes will update the [bucardo.dbmap table](/Bucardo/bucardo.dbmap_table).
+Changes will update the [dbmap table](/Bucardo/schema/dbmap).
 
 ### See also:
 
--   [add_dbgroup](/Bucardo/add_dbgroup)
--   [list_dbgroup](/Bucardo/list_dbgroup)
--   [remove_dbgroup](/Bucardo/remove_dbgroup)
+-   [add_dbgroup](/Bucardo/cli/add_dbgroup)
+-   [list_dbgroup](/Bucardo/cli/list_dbgroup)
+-   [remove_dbgroup](/Bucardo/cli/remove_dbgroup)

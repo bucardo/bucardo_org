@@ -22,10 +22,10 @@ Note: the following fields cannot be changed: id, cdate, db, reltype
 
 ### Internals
 
-Changes will update the [bucardo.goat table](/Bucardo/bucardo.goat_table).
+Changes will update the [goat table](/Bucardo/schema/goat).
 
 ### See also:
 
--   [add_table](/Bucardo/add_table)
--   [list_table](/Bucardo/list_table)
--   [remove_table](/Bucardo/remove_table)
+-   [add_table](/Bucardo/cli/add_table)
+-   [list_table](/Bucardo/cli/list_table)
+-   [remove_table](/Bucardo/cli/remove_table)

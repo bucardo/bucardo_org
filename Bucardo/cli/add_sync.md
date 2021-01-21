@@ -2,7 +2,7 @@
 title: Bucardo add sync
 ---
 
-The **add sync** command is used to create a new [Bucardo sync](/Bucardo/Bucardo_sync).
+The **add sync** command is used to create a new [Bucardo sync](/Bucardo/object_types/sync).
 
 Example:
 
@@ -21,9 +21,17 @@ Usages:
 ### Required arguments:
 
 -   herd
-    -   The [Bucardo herd](/Bucardo/Bucardo_herd) containing the tables and sequences to be replicated
+    -   The [Bucardo herd](/Bucardo/object_types/herd) containing the tables
+        and sequences to be replicated
 -   dbs
-    -   The [Bucardo database group](/Bucardo/Bucardo_database_group) to use in this sync, or a comma-separated list of databases. If the latter, a new database group with the same name as the sync will be created. By default, the first database will be considered the [source](/Bucardo/source_database), and all others [targets](/Bucardo/target_database). To specify the [role](/Bucardo/database_role) of a database, add a colon and the role. For example, to create a sync with three source databases and two targets:
+    -   The [Bucardo database group](/Bucardo/object_types/database_group)
+        to use in this sync, or a comma-separated list of databases.
+        If the latter, a new database group with the same name as the sync
+        will be created.  By default, the first database will be considered
+        the [source](/Bucardo/object_types/sourcedb), and all others [targets](/Bucardo/object_types/targetdb).
+        To specify the role of a database, add a colon and the role.
+        For example, to create a sync with three source databases and two
+        targets:
 
     bucardo add sync foobar herd=myherd dbs=A:source,B:target,C:target,D:source,E:source
 
@@ -34,9 +42,12 @@ Because the first database given always defaults to a source role, and all other
 ### Optional arguments:
 
 -   tables
-    -   A comma-separated list of tables which should be replicated by this sync. A new [herd](/Bucardo/Bucardo_herd) will be created with the same name as the sync to hold these tables.
+    -   A comma-separated list of tables which should be replicated by this
+        sync. A new [herd](/Bucardo/object_types/herd) will be created with
+        the same name as the sync to hold these tables.
 -   status
-    -   The initial status of this sync. Defaults to "active". The only other choice at the moment is "inactive"
+    -   The initial status of this sync. Defaults to "active".  The only other
+        choice at the moment is "inactive"
 -   rebuild_index
     -   Whether to rebuild indexes after each sync, defaults to off (0)
 -   onetimecopy
@@ -47,11 +58,13 @@ Because the first database given always defaults to a source role, and all other
         Bucardo will flip this value back to 0 itself.  See [onetimecopy](/Bucardo/operations/onetimecopy)
         for more information.
 -   ping
-    -   Determine if triggers are created that signal Bucardo to run when a table on one of the source databases for this sync has changes. Defaults to 1 (on).
+    -   Determine if triggers are created that signal Bucardo to run when
+        a table on one of the source databases for this sync has changes.
+        Defaults to 1 (on).
 
 ### See also:
 
--   [list_sync](/Bucardo/list_sync)
--   [update_sync](/Bucardo/update_sync)
--   [remove_sync](/Bucardo/remove_sync)
+-   [list_sync](/Bucardo/cli/list_sync)
+-   [update_sync](/Bucardo/cli/update_sync)
+-   [remove_sync](/Bucardo/cli/remove_sync)
 

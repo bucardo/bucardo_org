@@ -25,9 +25,9 @@ Without any arguments, lists all custom names. Arguments can be a number, repres
 
 ### Internals
 
-Information is read from the [bucardo.customname](/Bucardo/bucardo.customname) table
+Information is read from the [customname table](/Bucardo/schema/customname)
 
 ### See also:
 
--   [add_customname](/Bucardo/add_customname)
--   [remove_customname](/Bucardo/remove_customname)
+-   [add_customname](/Bucardo/cli/add_customname)
+-   [remove_customname](/Bucardo/cli/remove_customname)
