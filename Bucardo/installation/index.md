@@ -108,7 +108,9 @@ If all goes well at this point, Bucardo is installed. **Note:** Although you do 
 Installation From Packages
 --------------------------
 
-Bucardo has been packaged in both rpm and deb formats. The Fedora Project has built rpm's and has made them available through their EPEL repo. Packages are also available in Debian's "testing" distribution, and are planned for inclusion in Debian's "squeeze" release and Ubuntu's "Maverick" release.
+Bucardo has been packaged in RPM format and is available from the Fedora Project through their EPEL repo.
+
+Debian .deb packages are also available in Debian's repositories.
 
 Installation From FreeBSD Ports
 -------------------------------

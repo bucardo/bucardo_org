@@ -3,14 +3,11 @@ title: Swap
 ---
 
 **swap** is a type of Bucardo [sync](/Bucardo/object_types/sync)
-in which changes to tables on two databases are exchanged both ways -
+in which changes to tables on two databases are exchanged both ways,
 in other words, a master to master replication system.
-Note that this type of sync only works for exactly two databases TODO
-at the moment.
 
 With swap syncs, the two databases are referred to as "source" and "target",
-but things can flow both ways, so it may be helpful to think of them
-as 'left' and 'right'.
+but things can flow both ways.
 
 Because tables (and sequences) can be updated on both sides, there needs to be
 a way to resolve [conflicts](/Bucardo/operations/conflict_handling).

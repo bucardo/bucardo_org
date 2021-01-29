@@ -12,7 +12,6 @@ You can also install it directly from CPAN. If you have the CPAN module installe
 
     sudo cpan boolean
 
-### See also
+Or with a plenv-based Perl with cpanm you can run:
 
--   [Installing Bucardo on CentOS 5](http://imperialwicket.com/installing-bucardo-for-postgresql-replication-on-centos-5)
-
+    cpanm boolean

@@ -4,7 +4,7 @@ title: Pushdelta
 
 **pushdelta** is a type of Bucardo [sync](/Bucardo/object_types/sync)
 that involves pushing changed rows from one database (the master) to one or
-more slave databases.  It acts very similar to Slony.
+more slave databases.
 
 For each pushdelta sync, you tell Bucardo which tables and sequences you wish
 to replicate, and which databases to push the changes to.
