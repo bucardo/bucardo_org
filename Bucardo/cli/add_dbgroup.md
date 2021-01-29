@@ -24,10 +24,11 @@ You can also add new databases to a group with the add dbgroup command. Database
 
 ### Internals
 
-New database groups are created with an insert to the [bucardo.dbgroup table](/Bucardo/bucardo.dbgroup_table). Databases that are added to this group cause an insert to the [bucardo.dbmap table](/Bucardo/bucardo.dbmap_table).
+New database groups are created with an insert to the [dbgroup table](/Bucardo/schema/dbgroup).
+Databases that are added to this group cause an insert to the [dbmap table](/Bucardo/schema/dbmap).
 
 ### See also:
 
--   [list_dbgroup](/Bucardo/list_dbgroup)
--   [update_dbgroup](/Bucardo/update_dbgroup)
--   [remove_dbgroup](/Bucardo/remove_dbgroup)
+-   [list_dbgroup](/Bucardo/cli/list_dbgroup)
+-   [update_dbgroup](/Bucardo/cli/update_dbgroup)
+-   [remove_dbgroup](/Bucardo/cli/remove_dbgroup)

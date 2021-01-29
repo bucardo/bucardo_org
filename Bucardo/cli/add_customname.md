@@ -18,9 +18,9 @@ Maps an existing table to a new name on the target. The oldname must contain the
 
 ### Internals
 
-New customnames are inserted to the [bucardo.customname table](/Bucardo/bucardo.customname_table).
+New customnames are inserted to the [customname table](/Bucardo/schema/customname).
 
 ### See also:
 
--   [list_customname](/Bucardo/list_customname)
--   [remove_customname](/Bucardo/remove_customname)
+-   [list_customname](/Bucardo/cli/list_customname)
+-   [remove_customname](/Bucardo/cli/remove_customname)

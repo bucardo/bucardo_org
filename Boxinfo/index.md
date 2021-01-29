@@ -21,7 +21,7 @@ It is preferred that the script gets run as the 'root' user, as some of the info
 
 #### boxinfo.html
 
-This is the final result, either in HTML or MediaWiki format (see the --format argument below). A [sample output page](/Boxinfo/Example.html) is available.
+This is the final result, either in HTML or MediaWiki format (see the --format argument below). A [sample output page](/Boxinfo/Example) is available.
 
 #### boxinfo.debug
 

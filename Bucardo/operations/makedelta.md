@@ -2,7 +2,16 @@
 title: Bucardo makedelta
 ---
 
-The **makedelta** process is used by Bucardo to add entries to the [bucardo_delta](/Bucardo/schema/bucardo_delta) and [bucardo_track](/Bucardo/schema/bucardo_track) tables as replication is happening. This is needed if the updates made by a sync need to be read at a later time by a different sync. For example, if you had a [pushdelta](/Bucardo/object_types/pushdelta) sync "alpha" replicating rows from database A to database B, and another pushdelta sync replicating rows from database B to database C, you would need to turn on makedelta for sync "alpha", so that the rows copied from A to B are able to be pikced up as changed rows for the B to C sync.
+The **makedelta** process is used by Bucardo to add entries to
+the [bucardo_delta table](/Bucardo/schema/bucardo_delta) and
+the [bucardo_track table](/Bucardo/schema/bucardo_track) as replication
+is happening.  This is needed if the updates made by a sync need to be read
+at a later time by a different sync.  For example, if you had
+a [pushdelta](/Bucardo/object_types/pushdelta) sync "alpha" replicating rows
+from database A to database B, and another pushdelta sync replicating rows
+from database B to database C, you would need to turn on makedelta
+for sync "alpha", so that the rows copied from A to B are able
+to be picked up as changed rows for the B to C sync.
 
 There are four columns that control the use of makedelta:
 

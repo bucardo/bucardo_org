@@ -59,10 +59,13 @@ If one or more database names is given, only lists the given ones. Wildcards can
 
 ### Internals
 
-Information is read from the [bucardo.db table](/Bucardo/bucardo.db_table) for the main information, from the [bucardo.dbmap table](/Bucardo/bucardo.dbmap_table) for dbgroup memberships, and from the [bucardo.sync table](/Bucardo/bucardo.sync_table) and [bucardo.dbgroup](/Bucardo/bucardo.dbgroup) table for sync information.
+Information is read from the [db table](/Bucardo/schema/db) for the main
+information, from the [dbmap table](/Bucardo/schema/dbmap) for dbgroup
+memberships, and from the [sync table](/Bucardo/schema/sync) and
+[dbgroup table](/Bucardo/schema/dbgroup) for sync information.
 
 ### See also:
 
--   [add_db](/Bucardo/add_db)
--   [update_db](/Bucardo/update_db)
--   [remove_db](/Bucardo/remove_db)
+-   [add_db](/Bucardo/cli/add_db)
+-   [update_db](/Bucardo/cli/update_db)
+-   [remove_db](/Bucardo/cli/remove_db)

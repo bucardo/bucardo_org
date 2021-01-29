@@ -126,7 +126,7 @@ NOT NULL DEFAULT <b>'true'</b>
 </tr>
 <tr>
 <td>
-<b>use[customselect](/Bucardo/operation/customselect)</b>
+<b>use[customselect](/Bucardo/operations/customselect)</b>
 
 </td>
 <td>

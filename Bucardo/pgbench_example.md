@@ -1,47 +1,19 @@
 ---
-title: Bucardo pgbench example
+title: Bucardo Tutorial
 ---
 
-This page describes the steps needed to replicate a sample database, created by the pgbench utility, with Bucardo. This will demonstrate simply master to slave behavior, using the [pushdelta](/Bucardo/object_types/pushdelta) and [fullcopy](/Bucardo/object_types/fullcopy) sync types.
+This page describes the steps needed to replicate a sample database,
+created by the pgbench utility, with Bucardo.  This will demonstrate simply
+master to slave behavior.
 
 Install Bucardo
 ---------------
 
-The first step is to install Bucardo. Detailed instructions can be found on the [installation page](/Bucardo/installation/), but the quick steps are:
+The first step is to install Bucardo. Detailed instructions can be found on the [installation page](/Bucardo/installation/).
 
-### Install Perl modules
-
-Bucardo requires the following Perl modules to be installed:
-
--   DBD::Pg
--   DBIx::Safe
-
-### Download and unpack Bucardo
-
-The latest version of Bucardo can be found at [the download page](/Bucardo/#obtaining-bucardo). Alternatively, you can pull the development version from git by doing:
-
-    git clone git://github.com/bucardo/bucardo.git
-
-Either way, you should end up in a bucardo directory, and ready for the next step.
-
-### make and install
-
-Run the following commands:
-
-
-    perl Makefile.PL
-    make
-
-
-The following step is optional but recommended:
-
-    make test
-
-Finally, install as a user with appropriate rights. One way to do this is:
-
-    sudo make install
-
-You should now have a global [bucardo](/Bucardo/cli/) file available. Test that you can run it and that you are using the correct version:
+Once you installed, you should now have a global [bucardo](/Bucardo/cli/)
+command available.  Test that you can run it and that you are using
+the correct version:
 
     bucardo --version
 
@@ -99,63 +71,60 @@ Now that we have some data, let's get Bucardo to replicate it.
 Add the databases
 -----------------
 
-Bucardo needs to know about each database it needs to talk to. The [bucardo](/Bucardo/bucardo) program does this with the [add db](/Bucardo/add_db) option.
+Bucardo needs to know about each database it needs to talk to.
+The [bucardo](/Bucardo/cli/) program does this with the [add database](/Bucardo/cli/add_database)
+option.
 
-    bucardo add db test1
-    bucardo add db test2
-
-We've kept it simple for this example, but you generally will end up replicating databases with the same name, and thus should add an extra internal database name. Since we did not provide one, they default to the actual database names.
+    bucardo add database test1 dbname=test1
+    bucardo add database test2 dbname=test2
 
 Add the tables
 --------------
 
-Bucardo also needs to know about any tables that it may be called on to replicate. Adding tables by the [add table](/Bucardo/cli/add_table) command does not actually start replicating them. In this case, we're going to use the handy **add all tables** feature. Tables are grouped together inside of Bucardo into [herds](/Bucardo/cli/herd), so we'll also place the newly added tables into a named herd. Finally, the history table has no primary key or unique index, so we cannot replicate it by using the [pushdelta](/Bucardo/cli/pushdelta) method, so we're going to exclude it from the alpha herd, using the [-T](/Bucardo/-T) switch, and add it in the next setup with the [-t](/Bucardo/-t) switch.
+Bucardo also needs to know about any tables that it may be called on to
+replicate.  Adding tables by the [add table](/Bucardo/cli/add_table) command
+does not actually start replicating them.  In this case, we're going to use
+the handy **add all tables** feature.  Tables are grouped together inside of
+Bucardo into [herds](/Bucardo/cli/herd), so we'll also place the newly added
+tables into a named herd.  Finally, the pgbench_history table has
+no primary key or unique index, therefore we cannot replicate it,
+so we're going to exclude it from the herd, using the -T switch.
 
-    $ bucardo add all tables db=test1 -T history --herd=alpha --verbose
+    $ bucardo add all tables db=test1 -T pgbench_history --herd=pgbench --verbose
     New tables:
-      public.accounts
-      public.branches
-      public.tellers
+      public.pgbench_accounts
+      public.pgbench_branches
+      public.pgbench_tellers
     New tables added: 3
-    Already added: 0
-    $ bucardo add all tables db=test1 -t history --herd=beta --verbose
-    New tables:
-      public.history
-    New tables added: 1
     Already added: 0
 
 Add the syncs
 -------------
 
-A [sync](/Bucardo/sync) is a named replication event. Each sync has a source herd; because we created two herds above, we'll go ahead and create two syncs as well. One will be a [pushdelta](/Bucardo/object_types/pushdelta) sync, the other will be a [fullcopy](/Bucardo/object_types/fullcopy) sync.
+A [sync](/Bucardo/object_types/sync) is a named replication event.
+Each sync has a source herd; we'll go ahead and create a syncs as well.
 
-    $ bucardo add sync benchdelta source=alpha targetdb=test2 type=pushdelta
+    $ bucardo add sync benchdelta relgroup=pgbench dbs=test1,test2
     Added sync "benchdelta"
-
-    $ bucardo add sync benchcopy source=beta targetdb=test2 type=fullcopy
-    Added sync "benchcopy"
 
 We are ready to kick off Bucardo at this point. Before we do, let's use the **list** options to bucardo to check everything out.
 
     $ bucardo list herds
-    Herd: alpha Members: public.branches, public.tellers, public.accounts
+    Herd: pgbench Members: public.pgbench_branches, public.pgbench_tellers, public.pgbench_accounts
       Used in syncs: benchdelta
-    Herd: beta  Members: public.history
-      Used in syncs: benchcopy
 
     $ bucardo list syncs
-    Sync: benchcopy   (fullcopy )  beta  =>  test2  (Active)
-    Sync: benchdelta  (pushdelta)  alpha =>  test2  (Active)
+    Sync "benchdelta"  Relgroup "pgbench"   [Active]
+      DB group "benchdelta" test1:source test2:target
 
     $ bucardo list dbs
     Database: test1  Status: active  Conn: psql -p 5432 -U bucardo -d test1
     Database: test2  Status: active  Conn: psql -p 5432 -U bucardo -d test2
 
     $ bucardo list tables
-    Table: public.accounts  DB: test1  PK: aid (int4)
-    Table: public.branches  DB: test1  PK: bid (int4)
-    Table: public.history   DB: test1  PK: none
-    Table: public.tellers   DB: test1  PK: tid (int4)
+    1.  Table: public.pgbench_accounts  DB: sales_master  PK: aid (integer)
+    2.  Table: public.pgbench_branches  DB: sales_master  PK: bid (integer)
+    3.  Table: public.pgbench_tellers   DB: sales_master  PK: tid (integer)
 
 Start Bucardo
 -------------
@@ -164,7 +133,10 @@ The final step is to fire it up:
 
     bucardo start
 
-After a few seconds, the prompt will return. There will be a log file in the current directory called **log.bucardo** that you can look through. To disable the logfile and just rely on syslog use the [--debugfile=0](/Bucardo/--debugfile=0) argument. You can also verify that the Bucardo daemons are running by doing a:
+After a few seconds, the prompt will return.  There will be a log file in
+the current directory called **log.bucardo** that you can look through.
+To disable the logfile and just rely on syslog use the --debugfile=0 argument.
+You can also verify that the Bucardo daemons are running by doing a:
 
     ps -Afw | grep -i Bucardo
 
@@ -173,19 +145,19 @@ Test Replication
 
 To verify that things are working properly, let's get some baseline counts:
 
-    $ psql -d test1 -At -c 'select count(*) from tellers'
+    $ psql -d test1 -At -c 'select count(*) from pgbench_tellers'
     10
 
-    $ psql -d test2 -At -c 'select count(*) from tellers'
+    $ psql -d test2 -At -c 'select count(*) from pgbench_tellers'
     10
 
-    $ psql -d test1 -c 'select * from tellers where tid = 1'
+    $ psql -d test1 -c 'select * from pgbench_tellers where tid = 1'
      tid | bid | tbalance | filler
     -----+-----+----------+--------
        1 |   1 |        0 |
     (1 row)
 
-    $ psql -d test2 -c 'select * from tellers where tid = 1'
+    $ psql -d test2 -c 'select * from pgbench_tellers where tid = 1'
      tid | bid | tbalance | filler
     -----+-----+----------+--------
        1 |   1 |        0 |
@@ -193,34 +165,13 @@ To verify that things are working properly, let's get some baseline counts:
 
 Now let's make changes to that record, and verify that it gets propagated to the slave (test2)
 
-    $ psql -d test1 -c 'update tellers set bid=999 where tid = 1'
+    $ psql -d test1 -c 'update pgbench_tellers set bid=999 where tid = 1'
     UPDATE 1
 
-    $ psql -d test2 -c 'select * from tellers where tid = 1'
+    $ psql -d test2 -c 'select * from pgbench_tellers where tid = 1'
      tid | bid | tbalance | filler
     -----+-----+----------+--------
        1 | 999 |        0 |
-
-How about the history table, which has no primary key? We cannot track row by row changes, and don't want to copy the whole thing every time the table changes, so we've got to [kick](/Bucardo/kick) that sync manually when we want to change it:
-
-    $ psql -d -At test1 -c 'select count(*) from history'
-    0
-    $ psql -d -At test2 -c 'select count(*) from history'
-    0
-
-    $ pgbench -t3 test1
-
-    $ psql -At -d test1 -c 'select count(*) from history'
-    3
-    $ psql -At -d test2 -c 'select count(*) from history'
-    3
-
-    $ bucardo kick benchcopy
-
-    $ psql -At -d test1 -c 'select count(*) from history'
-    3
-    $ psql -At -d test2 -c 'select count(*) from history'
-    3
 
 This ends the demonstration. Feel free to play around more. To stop Bucardo when done, just issue:
 
@@ -228,9 +179,5 @@ This ends the demonstration. Feel free to play around more. To stop Bucardo when
 
 As you experiment, you might also want to look at the syncs in more detail with:
 
-
     bucardo status
     bucardo status benchdelta
-    bucardo status benchcopy
-
-

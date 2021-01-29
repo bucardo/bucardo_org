@@ -9,8 +9,6 @@ Example:
     # Shows a list of all database groups, one per line, in alphabetical order.
     bucardo list dbgroup
 
-
-
 Usage:
 
     bucardo list dbgroup <name(s)>
@@ -26,10 +24,11 @@ If one or more group names are given, only lists the given ones. Wildcards can b
 
 ### Internals
 
-Information is read from the [bucardo.dbgroup table](/Bucardo/bucardo.dbgroup_table) and [bucardo.dbmap](/Bucardo/bucardo.dbmap) tables.
+Information is read from the [dbgroup table](/Bucardo/schema/dbgroup) and
+[dbmap table](/Bucardo/schema/dbmap).
 
 ### See also:
 
--   [add_dbgroup](/Bucardo/add_dbgroup)
--   [update_dbgroup](/Bucardo/update_dbgroup)
--   [remove_dbgroup](/Bucardo/remove_dbgroup)
+-   [add_dbgroup](/Bucardo/cli/add_dbgroup)
+-   [update_dbgroup](/Bucardo/cli/update_dbgroup)
+-   [remove_dbgroup](/Bucardo/cli/remove_dbgroup)

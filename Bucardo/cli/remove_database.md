@@ -18,10 +18,12 @@ If there are any tables that Bucardo knows about that reside in this database, o
 
 ### Internals
 
-Removed databases will cause a delete from the [bucardo.db table](/Bucardo/bucardo.db_table). Database group mappings will cause deletes from the [bucardo.dbmap table](/Bucardo/bucardo.dbmap_table). Table removals will cause deletes from the [bucardo.goat table](/Bucardo/bucardo.goat_table).
+Removed databases will cause a delete from the [db table](/Bucardo/schema/db).
+Database group mappings will cause deletes from the [dbmap table](/Bucardo/schema/dbmap).
+Table removals will cause deletes from the [goat table](/Bucardo/schema/goat).
 
 ### See also:
 
--   [add_database](/Bucardo/add_database)
--   [list_database](/Bucardo/list_database)
--   [update_database](/Bucardo/update_database)
+-   [add_database](/Bucardo/cli/add_database)
+-   [list_database](/Bucardo/cli/list_database)
+-   [update_database](/Bucardo/cli/update_database)

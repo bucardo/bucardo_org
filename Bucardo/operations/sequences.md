@@ -7,12 +7,21 @@ Postgres **sequences** can be replicated.
 Pushdelta syncs and sequences
 -----------------------------
 
-In most cases, you will not need to replicate sequences, unless your slaves are not read only, or if you want your slaves to be ready for [failover](/Bucardo/failover). If you do decide to replicate them, just treat them like you would a table - add them to the [goat table](/Bucardo/object_types/goat_table), gather them into [herds](/Bucardo/object_types/herds), and associate them with one or more [syncs](/Bucardo/syncs).
+In most cases, you will not need to replicate sequences, unless your slaves
+are not read only, or if you want your slaves to be ready
+for [failover](/Bucardo/operations/failover).  If you do decide to replicate
+them, just treat them like you would a table - add them to the [goat table](/Bucardo/schema/goat),
+gather them into [herds](/Bucardo/object_types/herd), and associate them
+with one or more [syncs](/Bucardo/object_types/sync).
 
 Swap syncs and sequences
 ------------------------
 
-If you are using a [swap sync](/Bucardo/object_types/swap_sync), the best practice is to \*not\* replicate sequences, but to make sure that they are different on both sides, such that an insert on database A will never conflict with an insert on database B. There are three general ways to do this:
+If you are using a [swap sync](/Bucardo/object_types/swap),
+the best practice is to \*not\* replicate sequences,
+but to make sure that they are different on both sides,
+such that an insert on database A will never conflict with an insert
+on database B.  There are three general ways to do this:
 
 1.  Use interleaving sequences. On database A, define the sequence as START WITH 1 INCREMENT BY 2. On database B, define the sequence as START WITH 2 INCREMENT BY 2. Thus, the two sequences will never have the same value.
 2.  Use different ranges. For example, database A would use a sequence of START WITH 1, while database B uses START WITH 100000000. This is not foolproof, as A can eventually catch up with B, although you can define A as MAXVALUE 99999999.
