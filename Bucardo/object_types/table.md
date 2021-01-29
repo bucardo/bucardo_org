@@ -1,7 +1,7 @@
 ---
-title: Bucardo goat
+title: Bucardo table
 ---
 
-A **goat** is an object inside of Bucardo, and is represented in
-the [goat table](/Bucardo/schema/goat) table.  Currently, a goat must be
-either a table or a sequence.
+A **table** is an object inside of Bucardo, representing either a table or a sequence. It is stored in the [goat table](/Bucardo/schema/goat).
+
+In earlier Bucardo versions, a table was called a "goat".

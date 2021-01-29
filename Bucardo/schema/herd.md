@@ -2,16 +2,11 @@
 title: Bucardo tables bucardo.herd
 ---
 
+## Table: bucardo.herd
 
-<h2>
-Table: bucardo.herd
+Named group of tables or sequences from the [goat](/Bucardo/schema/goat) table: used as the 'source' for syncs.
 
-</h2>
 <table border="1" cellpadding="3">
-<caption>
-<b>Named group of tables or sequences from the [goat](/Bucardo/object_types/goat) table: used as the 'source' for syncs</b>
-
-</caption>
 <tr>
 <th>
 Column

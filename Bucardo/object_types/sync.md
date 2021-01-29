@@ -14,11 +14,11 @@ To add a new sync, run:
     bucardo add sync <syncname> source=xx targetdb=yy targetgroup=zz type=<type> tables=x,y,z
 
 -   *syncname* is what you want to name this sync - keep it short and descriptive
--   *source* is the name of a source [herd](/Bucardo/object_types/herd)
+-   *source* is the name of a source [relgroup](/Bucardo/object_types/relgroup)
 -   *targetdb* is the name of a database
 -   *targetgroup* is the name of a [database group](/Bucardo/object_types/database_group) (note: only one of targetdb or targetgroup is required)
 -   *type* is one of the three sync types: pushdelta, fullcopy, or swap
--   *tables* is an optional list of tables that should be immediately added to the new sync. A [herd](/Bucardo/object_types/herd) with the same name as the sync itself will be automatically created to contain these tables.
+-   *tables* is an optional list of tables that should be immediately added to the new sync. A [relgroup](/Bucardo/object_types/relgroup) with the same name as the sync itself will be automatically created to contain these tables.
 
 To modify an existing sync, run:
 

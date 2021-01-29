@@ -16,8 +16,8 @@ to be picked up as changed rows for the B to C sync.
 There are four columns that control the use of makedelta:
 
 -   [goat](/Bucardo/schema/goat).target_makedelta. Controls if a specific table should insert makedelta entries on the target. This can be null, in which case the value of whatever sync it is in is used, 0 to not do makedelta, and 1 to always do makedelta.
--   goat.source_makdelta. Same as above, but for the source database. This is only used by [swap](/Bucardo/object_types/swap) syncs.
--   [sync](/Bucardo/schema/sync).target_makedelta. Controls if this sync should insert makedelta entries or not for each of the tables within that sync. If this is set to 1, all tables will have makedelta enabled, regardless of the goat.target_makedelta setting. If this is set to 0, then makedelta will not be enabled (again, the goat.target_makedelta setting is ignored). However, if sync.target_makdelta is set to NULL, then any goats set as target_makedelta will be run as makedelta (and only those goats).
+-   goat.source_makedelta. Same as above, but for the source database. This is only used by [swap](/Bucardo/object_types/swap) syncs.
+-   [sync](/Bucardo/schema/sync).target_makedelta. Controls if this sync should insert makedelta entries or not for each of the tables within that sync. If this is set to 1, all tables will have makedelta enabled, regardless of the goat.target_makedelta setting. If this is set to 0, then makedelta will not be enabled (again, the goat.target_makedelta setting is ignored). However, if sync.target_makedelta is set to NULL, then any goats set as target_makedelta will be run as makedelta (and only those goats).
 -   sync.source_makedelta. Same as above, but for the source database. This is only used by [swap](/Bucardo/object_types/swap) syncs.
 
 [swap](/Bucardo/object_types/swap) syncs require both source and target makedelta settings, at either the goat or sync level.

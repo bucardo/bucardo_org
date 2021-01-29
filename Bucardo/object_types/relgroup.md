@@ -1,12 +1,12 @@
 ---
-title: Herd
+title: Bucardo relgroup
 ---
 
-A **herd** is simply a named group of [goats](/Bucardo/object_types/goat).
-Herds are used to designate the "source" of a [sync](/Bucardo/object_types/sync).
+A **relgroup** is simply a named group of [tables](/Bucardo/object_types/table). Relgroups are used to designate the "source" of a [sync](/Bucardo/object_types/sync).
+Relgroups can be created by running:
 
-Herds can be created by running:
+    bucardo add relgroup <name> table1 table2 table3...
 
-    bucardo add herd <name> goat1 goat2 goat3...
+The list of tables is optional.
 
-The list of goats is optional.
+Relgroups are stored in the [herd table](/Bucardo/schema/herd). In old versions of Bucardo relgroups were called herds.
