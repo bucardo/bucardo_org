@@ -2,33 +2,30 @@
 title: Bucardo Tutorial
 ---
 
-This page describes the steps needed to replicate a sample database,
-created by the pgbench utility, with Bucardo.  This will demonstrate simple
-master to slave behavior.
+This page describes the steps needed to replicate a sample database, created by the pgbench utility, with Bucardo. This will demonstrate simple one-direction source to target replication behavior.
 
-Install Bucardo
----------------
+Install the Bucardo software
+----------------------------
 
 The first step is to install Bucardo. Detailed instructions can be found on the [installation page](/Bucardo/installation/).
 
-Once you installed, you should now have a global [bucardo](/Bucardo/cli/)
-command available.  Test that you can run it and that you are using
-the correct version:
+Once you installed, you should now have a global [bucardo](/Bucardo/cli/) command available. Test that you can run it and that you are using the current version:
 
-    bucardo --version
+    $ bucardo --version
+    bucardo version 5.6.0
 
-### Create and populate the database
+Install the bucardo database
+----------------------------
 
-Bucardo needs a central database. The install option of bucardo will create and install this database for you. All you need to provide is the location of a Postgres instance you want to use, and a valid PID directory. For this example, we'll use the default values of no host, port 5432, and a user named 'Postgres'. We'll use the **/tmp/bucardo** directory as our piddir value.
+Bucardo needs a central database. The `install` option of bucardo creates and installs this database for you. All you need to provide is the location of a Postgres instance you want to use and a valid PID directory.
 
+For this example, we'll use the default values of no host (localhost UNIX socket), port 5432, database superuser `postgres`, and we'll set `/tmp/bucardo` as our PID directory:
 
-    mkdir /tmp/bucardo
-    bucardo install --piddir=/tmp/bucardo
-
-
-You will need to enter a "P" to tell it to proceed. If all goes well, you should see a message like this:
-
+    $ mkdir /tmp/bucardo
     $ bucardo install --piddir=/tmp/bucardo
+
+You should see output like this:
+
     This will install the bucardo database into an existing Postgres cluster.
     Postgres must have been compiled with Perl support,
     and you must connect as a superuser
@@ -39,8 +36,11 @@ You will need to enter a "P" to tell it to proceed. If all goes well, you should
     2. Port:          5432
     3. User:          postgres
     4. PID directory: /tmp/bucardo
-    Enter a number to change it, P to proceed, or Q to quit: p
-    Postgres version is: 8.4
+    Enter a number to change it, P to proceed, or Q to quit:
+
+Type "p" and press the Enter key to tell it to proceed. If all goes well, you should see:
+
+    Postgres version is: 13
     Attempting to create and populate the bucardo database and schema
     Database creation is complete
     Connecting to database 'bucardo' as user 'bucardo'
@@ -51,94 +51,98 @@ You will need to enter a "P" to tell it to proceed. If all goes well, you should
     bucardo show all
     Change any setting by using: bucardo set foo=bar
 
-That's it! Time to setup our test databases. NOTE: In this example the source/master and target/slave databases reside within a single instance of he Postgres server, and this installation step is normally only required for the source/master node. In the real world where source/master and target/slave are hosted in separate Postgres servers, each slave node will need to have the role 'bucardo' manually created before proceeding to the next step.
+Bucardo is now set up and ready to be told what to replicate.
 
-Setup the pgbench databases
----------------------------
+Note: In this example the source and target databases reside within a single Postgres server instance, and this installation step is normally only required for the source node. In the real world where source and target databases are almost always hosted in separate Postgres servers, each target node will need to have the role 'bucardo' manually created before proceeding to the next step.
 
-The **pgbench** utility that comes with Postgres can be used to create some simple test tables in an existing database. Let's create two databases, test1 (the master), and test2 (the slave).
+Set up the pgbench test databases
+---------------------------------
 
-    createdb test1
-    createdb test2
+The **pgbench** utility that comes with Postgres can be used to create some simple test tables in a database. Let's create two new databases to use for this: test1 (the source), and test2 (the target).
 
-Next, we'll install the pgbench files on each.
+    $ createdb test1
+    $ createdb test2
 
-    pgbench -i test1
-    pgbench -i test2
+Next, we'll have pgbench install its sample data in each database:
 
-Now that we have some data, let's get Bucardo to replicate it.
+    $ pgbench -i test1
+    $ pgbench -i test2
+
+You may need to specify the path to your specific Postgres version's executable, for example:
+
+    $ /usr/pgsql-13/bin/pgbench -i test1
+
+Now that we have some identical data in two databases, let's get Bucardo to replicate changes we make to the source.
 
 Add the databases
 -----------------
 
-Bucardo needs to know about each database it needs to talk to.
-The [bucardo](/Bucardo/cli/) program does this with the [add database](/Bucardo/cli/add_database)
-option.
+First Bucardo needs to know about each database it needs to talk to. The [bucardo](/Bucardo/cli/) program does this with the [add database](/Bucardo/cli/add_database) option:
 
-    bucardo add database test1 dbname=test1
-    bucardo add database test2 dbname=test2
+    $ bucardo add database test1 dbname=test1
+    $ bucardo add database test2 dbname=test2
 
 Add the tables
 --------------
 
-Bucardo also needs to know about any tables that it may be called on to
-replicate.  Adding tables by the [add table](/Bucardo/cli/add_table) command
-does not actually start replicating them.  In this case, we're going to use
-the handy **add all tables** feature.  Tables are grouped together inside of
-Bucardo into [herds](/Bucardo/cli/herd), so we'll also place the newly added
-tables into a named herd.  Finally, the pgbench_history table has
-no primary key or unique index, therefore we cannot replicate it,
-so we're going to exclude it from the herd, using the -T switch.
+Bucardo also needs to know about any tables that it may be called on to replicate. (Adding tables by the [add table](/Bucardo/cli/add_table) command does not actually start replicating them.)
 
-    $ bucardo add all tables db=test1 -T pgbench_history --herd=pgbench --verbose
+In this case, we're going to use the handy **add all tables** feature. Tables are grouped together inside of Bucardo into [relgroups](/Bucardo/object_types/relgroup), so we'll also place the newly added tables into a named relgroup. The pgbench_history table has no primary key or unique index, therefore we cannot replicate it, so let's exclude it from the relgroup by using the -T switch:
+
+    $ bucardo add all tables db=test1 -T pgbench_history --relgroup=pgbench --verbose
+    Creating relgroup: pgbench
+    Added table public.pgbench_accounts to relgroup pgbench
+    Added table public.pgbench_branches to relgroup pgbench
+    Added table public.pgbench_tellers to relgroup pgbench
     New tables:
       public.pgbench_accounts
       public.pgbench_branches
       public.pgbench_tellers
     New tables added: 3
-    Already added: 0
 
 Add the syncs
 -------------
 
-A [sync](/Bucardo/object_types/sync) is a named replication event.
-Each sync has a source herd; we'll go ahead and create a syncs as well.
+A [sync](/Bucardo/object_types/sync) is a named replication event. Each sync has a source relgroup. Here's how we create a sync:
 
     $ bucardo add sync benchdelta relgroup=pgbench dbs=test1,test2
     Added sync "benchdelta"
+    Created a new dbgroup named "benchdelta"
 
-We are ready to kick off Bucardo at this point. Before we do, let's use the **list** options to bucardo to check everything out.
+Now that everything is set up, let's use the **list** options to bucardo to verify:
 
-    $ bucardo list herds
-    Herd: pgbench Members: public.pgbench_branches, public.pgbench_tellers, public.pgbench_accounts
+    $ bucardo list dbs
+    Database: test1    Status: active  Conn: psql -U bucardo -d test1
+    Database: test2    Status: active  Conn: psql -U bucardo -d test2
+
+    $ bucardo list dbgroups
+    dbgroup: benchdelta   Members: test1:source test2:target
+
+    $ bucardo list relgroups
+    Relgroup: pgbench    DB: test1  Members: public.pgbench_accounts, public.pgbench_branches, public.pgbench_tellers
       Used in syncs: benchdelta
 
     $ bucardo list syncs
     Sync "benchdelta"  Relgroup "pgbench"   [Active]
       DB group "benchdelta" test1:source test2:target
 
-    $ bucardo list dbs
-    Database: test1  Status: active  Conn: psql -p 5432 -U bucardo -d test1
-    Database: test2  Status: active  Conn: psql -p 5432 -U bucardo -d test2
-
     $ bucardo list tables
-    1.  Table: public.pgbench_accounts  DB: sales_master  PK: aid (integer)
-    2.  Table: public.pgbench_branches  DB: sales_master  PK: bid (integer)
-    3.  Table: public.pgbench_tellers   DB: sales_master  PK: tid (integer)
+    1.  Table: public.pgbench_accounts  DB: test1  PK: aid (integer)
+    2.  Table: public.pgbench_branches  DB: test1  PK: bid (integer)
+    3.  Table: public.pgbench_tellers   DB: test1  PK: tid (integer)
 
 Start Bucardo
 -------------
 
-The final step is to fire it up:
+The final step is to start the Bucardo service:
 
-    bucardo start
+    $ bucardo start
 
-After a few seconds, the prompt will return.  There will be a log file in
-the current directory called **log.bucardo** that you can look through.
-To disable the logfile and just rely on syslog use the --debugfile=0 argument.
-You can also verify that the Bucardo daemons are running by doing a:
+After a few seconds, the prompt will return. There will be a log file in the current directory called **log.bucardo** that you can look through. To disable this logfile and have Bucardo write logs to syslog, use the `--debugfile=0` argument.
 
-    ps -Afw | grep -i Bucardo
+You can also verify that the Bucardo daemons are running by looking for their processes:
+
+    $ ps -Afw | grep Bucardo
 
 Test Replication
 ----------------
@@ -150,6 +154,8 @@ To verify that things are working properly, let's get some baseline counts:
 
     $ psql -d test2 -At -c 'select count(*) from pgbench_tellers'
     10
+
+And let's look at the data from a row that we will modify:
 
     $ psql -d test1 -c 'select * from pgbench_tellers where tid = 1'
      tid | bid | tbalance | filler
@@ -163,7 +169,7 @@ To verify that things are working properly, let's get some baseline counts:
        1 |   1 |        0 |
     (1 row)
 
-Now let's make changes to that record, and verify that it gets propagated to the slave (test2)
+Now let's make changes to that row on the source (test1) and verify that it gets propagated to the target (test2):
 
     $ psql -d test1 -c 'update pgbench_tellers set bid=999 where tid = 1'
     UPDATE 1
@@ -173,11 +179,42 @@ Now let's make changes to that record, and verify that it gets propagated to the
     -----+-----+----------+--------
        1 | 999 |        0 |
 
-This ends the demonstration. Feel free to play around more. To stop Bucardo when done, just issue:
+Checking Status
+---------------
 
-    bucardo stop
+You can look at the syncs in more detail with:
 
-As you experiment, you might also want to look at the syncs in more detail with:
+    $ bucardo status
+    PID of Bucardo MCP: 397396
+     Name         State    Last good    Time    Last I/D    Last bad    Time
+    ============+========+============+=======+===========+===========+=======
+     benchdelta | Good   | 19:05:59   | 1m 9s | 1/1       | none      |
 
-    bucardo status
-    bucardo status benchdelta
+    $ bucardo status benchdelta
+    ======================================================================
+    Last good                : Jan 28, 2021 19:05:59 (time to run: 1s)
+    Rows deleted/inserted    : 1 / 1
+    Sync name                : benchdelta
+    Current state            : Good
+    Source relgroup/database : pgbench / test1
+    Tables in sync           : 3
+    Status                   : Active
+    Check time               : None
+    Overdue time             : 00:00:00
+    Expired time             : 00:00:00
+    Stayalive/Kidsalive      : Yes / Yes
+    Rebuild index            : No
+    Autokick                 : Yes
+    Onetimecopy              : No
+    Post-copy analyze        : Yes
+    Last error:              :
+    ======================================================================
+
+This ends the demonstration. Feel free to play around more on your own!
+
+Stopping Replication
+--------------------
+
+When you're done, stop Bucardo with the command:
+
+    $ bucardo stop
