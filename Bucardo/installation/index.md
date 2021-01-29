@@ -30,7 +30,7 @@ Bucardo requires the Perl module DBIx::Safe to be installed. Some distributions 
     apt-get install libdbix-safe-perl
 
 
-To install it manually, grab the [latest DBIx::Safe tarball](http://bucardo.org/downloads/dbix_safe.tar.gz), then unpack the tarball and install as a normal Perl module:
+To install it manually, grab the [latest DBIx::Safe tarball](https://bucardo.org/downloads/dbix_safe.tar.gz), then unpack the tarball and install as a normal Perl module:
 
     tar xvfz dbix_safe.tar.gz
     cd DBIx-Safe-1.2.5

@@ -35,7 +35,7 @@ The alternate form **add db** is also accepted.
 -   dbuser (can also use 'username' or 'user')
     -   The username to connect as. Defaults to 'bucardo'.
 -   dbpass (can also use 'password')
-    -   The password to connect with. Please avoid if possible by using things such as [Postgres' pgpass file](http://www.postgresql.org/docs/current/static/libpq-pgpass.html).
+    -   The password to connect with. Please avoid if possible by using things such as [Postgres' pgpass file](https://www.postgresql.org/docs/current/libpq-pgpass.html).
 -   dbport (can also use 'port')
     -   The database port to connect to.
 -   dbhost (can also use 'host')
