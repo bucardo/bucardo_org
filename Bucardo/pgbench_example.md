@@ -3,7 +3,7 @@ title: Bucardo Tutorial
 ---
 
 This page describes the steps needed to replicate a sample database,
-created by the pgbench utility, with Bucardo.  This will demonstrate simply
+created by the pgbench utility, with Bucardo.  This will demonstrate simple
 master to slave behavior.
 
 Install Bucardo

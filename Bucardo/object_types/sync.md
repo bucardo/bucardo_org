@@ -24,7 +24,7 @@ To modify an existing sync, run:
 
     bucardo update sync name=value
 
-Where name is one of the columns of the [sync table](/Bucardo/schema/sync)
+Where name is one of the columns of the [sync table](/Bucardo/schema/sync).
 
 To add a database to an existing sync the **update dbgroup** command should be
 used (see [update_dbgroup](/Bucardo/cli/update_dbgroup)).

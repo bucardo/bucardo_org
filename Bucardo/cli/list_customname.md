@@ -2,13 +2,11 @@
 title: Bucardo list customname
 ---
 
-The **list customname** command is used to list information about one or more Bucardo custom name mappings.
+The **list customname** command lists information about one or more Bucardo custom name mappings with their internal IDs.
 
 Example:
 
-    # Shows a list of all custom name mappings with their internal ID.
     bucardo list customnames
-
 
 Usage:
 
@@ -25,7 +23,7 @@ Without any arguments, lists all custom names. Arguments can be a number, repres
 
 ### Internals
 
-Information is read from the [customname table](/Bucardo/schema/customname)
+Information is read from the [customname table](/Bucardo/schema/customname).
 
 ### See also:
 

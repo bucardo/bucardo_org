@@ -8,7 +8,7 @@ Bucardo requires the use of the Perl module named **boolean**. This should be av
 -   yum install perl-boolean
 -   (BSD systems) cd /usr/port/devel/p5-boolean; make install clean
 
-You can also install it directly from CPAN. If you have the CPAN module installed (may need to do 'yum install perl-CPAN'), you can simply run:
+You can also install it directly from CPAN. If you have the CPAN module installed (may need to do `yum install perl-CPAN`), you can simply run:
 
     sudo cpan boolean
 

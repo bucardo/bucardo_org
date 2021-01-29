@@ -59,7 +59,7 @@ Restarting is just:
 
 #### Checking that Bucardo is alive
 
-To send a "ping" to the MCP process of a running Bucardo, use:
+To send a "ping" to the MCP of a running Bucardo, use:
 
     bucardo ping [timeout]
 
@@ -106,7 +106,7 @@ To tell a running Bucardo to re-read the configuration table:
 ### Controlling syncs
 
 Bucardo works by running one or more replication events called [syncs](/Bucardo/object_types/sync).
-The main interface for controlling these is `bucardo`
+The main interface for controlling these is `bucardo`.
 
 #### Kicking a sync
 
@@ -128,7 +128,7 @@ To reload a sync:
 
 One or more named syncs can be reloaded this way.  Each will be reloaded
 in turn, and `bucardo` will let you know when each has been reloaded.
-When a sync is reloaded, the MCP process will stop the existing sync,
+When a sync is reloaded, the MCP will stop the existing sync,
 reload information about the sync from the database, and start it up again.
 This is typically used when you want to make changes to an existing sync
 that is already running, e.g. the [onetimecopy](/Bucardo/operations/onetimecopy)
@@ -156,7 +156,7 @@ This will list general information about each sync
 
 #### Detailed sync information
 
-    bucardo status `<syncname>
+    bucardo status <syncname>
 
 This will show detailed information about a specific sync, including the last time it successfully ran, the number of rows transferred, and the last time it failed.
 
@@ -166,7 +166,7 @@ To get a list of all [syncs](/Bucardo/sync):
 
     bucardo list syncs
 
-This list will show the sync name, it's type ([fullcopy](/Bucardo/object_types/fullcopy),
+This list will show the sync name, its type ([fullcopy](/Bucardo/object_types/fullcopy),
 [pushdelta](/Bucardo/object_types/pushdelta), or [swap](/Bucardo/object_types/swap)),
 the source [herd](/Bucardo/object_types/herd), the target database
 (or database group), and current status.  For more details on a specific sync,
@@ -338,9 +338,9 @@ Some of the other options that can be added to 'add sync',
 in the format name=value:
 
 -   onetimecopy: set the [onetimecopy](/Bucardo/operation/onetimecopy) value for this sync
--   status: set the initial status for the sync. Defaults to 'active'
--   lifetime: set the lifetime for this sync - how long to run before the sync is restarted
--   maxkicks: sets the maxkicks for this sync - how many times it runs before being restarted
+-   status: set the initial status for the sync. Defaults to 'active'.
+-   lifetime: set the lifetime for this sync: how long to run before the sync is restarted
+-   maxkicks: set the maxkicks for this sync: how many times it runs before being restarted
 -   makedelta: set the [makedelta](/Bucardo/operations/makedelta) value for this sync. Defaults to 0.
 
 ### Other actions
@@ -351,13 +351,13 @@ To write a custom message to the log file that a current Bucardo process is writ
 
     bucardo message "Your message here"
 
-The message will be written by the MCP process to the logs in the format:
+The message will be written by the MCP to the logs in the format:
 
     MESSAGE (date): string
 
 where date is the timestamp the message was added, and string was the message provided
 
-Separate documentation exist for the following commands:
+Separate documentation exists for the following commands:
 
 -   [add customname](/Bucardo/cli/add_customname)
 -   [add database](/Bucardo/cli/add_database)

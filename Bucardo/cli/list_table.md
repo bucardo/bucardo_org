@@ -2,7 +2,7 @@
 title: Bucardo list table
 ---
 
-The **list table** command is used to list information about one or more tables that Bucardo knows about. It can also be called as **list tables**
+The **list table** command is used to list information about one or more tables that Bucardo knows about. It can also be called as **list tables**.
 
 Example:
 
@@ -10,7 +10,7 @@ Example:
 
 Shows a list of all tables, one per line, in alphabetical order.  Also shows
 which database and syncs they belong to.  The number at the start of the line
-is the internal id for the table, and is primarily used to feed to the [remove_table](/Bucardo/cli/remove_table)
+is the internal ID for the table, and is primarily used to feed to the [remove_table](/Bucardo/cli/remove_table)
 command.
 
 Usage:

@@ -2,7 +2,7 @@
 title: Environment variables
 ---
 
-All the environment variables used by Bucardo
+All the environment variables used by Bucardo:
 
 Items on initial setup via Makefile.PL
 --------------------------------------

@@ -6,15 +6,15 @@ Bucardo Installation
 --------------------
 
 This page describes how to install Bucardo.  If you are looking for upgrading
-from a previous version see [Bucardo Upgrade](upgrade)
+from a previous version see [Bucardo Upgrade](upgrade).
 
 If you want a packaged version, skip to **Installation From Packages**, FreeBSD users can skip to **Installation From FreeBSD Ports**. For the impatient, here's the short version:
 
 Quick version
 -------------
 
-    # Install Requirements
-    # Download and untar the latest Bucardo
+    # Install requirements
+    # Download and untar the latest Bucardo, then:
     perl Makefile.PL && make && sudo make install
     bucardo install
 
@@ -32,21 +32,21 @@ Bucardo requires the Perl module DBIx::Safe to be installed. Some distributions 
 
 To install it manually, grab the [latest DBIx::Safe tarball](https://bucardo.org/downloads/dbix_safe.tar.gz), then unpack the tarball and install as a normal Perl module:
 
-    tar xvfz dbix_safe.tar.gz
+    tar xzf dbix_safe.tar.gz
     cd DBIx-Safe-1.2.5
     perl Makefile.PL
     make
     make test
     sudo make install
 
-Other Perl requirements that may or may not be installed already on your system are listed in the [Requirements](/Bucardo/installation/requirements) page
+Other Perl requirements that may or may not be installed already on your system are listed in the [Requirements](/Bucardo/installation/requirements) page.
 
 Download and unpack the Bucardo tarball
 ---------------------------------------
 
 The latest version of Bucardo can be found on [the Bucardo download page](/Bucardo/#obtaining-bucardo). Untar it and switch to the directory:
 
-    tar xvfz Bucardo-5.6.0.tar.gz
+    tar xzf Bucardo-5.6.0.tar.gz
     cd Bucardo-5.6.0
 
 Install the Bucardo software
@@ -67,7 +67,7 @@ If you want to install all the files to a single directory, for testing purposes
 Create the Bucardo database
 ---------------------------
 
-Bucardo needs to be installed into a database. This database must have the pl/perlu language available. For systems installed via packaging, installing Pl/PerlU may be as simple as:
+Bucardo needs to be installed into a database. This database must have the PL/PerlU language available. For systems installed via packaging, installing PL/PerlU may be as simple as:
 
     yum install postgresql-plperl
     # or
@@ -97,13 +97,13 @@ Note that the installation will create the bucardo Postgres account without a pa
 
 -    The stock pg_hba.conf includes "trust" entries for local connections. Use a trust method connection (perhaps temporarily) to allow it to connect as the bucardo user.
 
--    For pg_hba.conf's "md5" method, create the bucardo Postgres user ahead of time with a password and set that in the .pgpass file of the user running the installation.
+-    For pg_hba.conf's "md5" method, create the bucardo Postgres user ahead of time with a password and set that in the ~/.pgpass file of the user running the installation.
 
 -    Use the "ident" method in pg_hba.conf, and create both a bucardo system account and a bucardo Postgres account. The ident method is enabled by default in Debian-based packages, and will allow the installation to log in if run under the bucardo system account.
 
-If all goes well at this point, Bucardo is installed. NOTE: Although you do not need to run the install script on each slave node in your cluster, you will need to manually create the 'bucardo' role on each slave node before proceeding with the installation and configuration.
+If all goes well at this point, Bucardo is installed. **Note:** Although you do not need to run the install script on each slave node in your cluster, you will need to manually create the 'bucardo' role on each slave node before proceeding with the installation and configuration.
 
-TIP: If you run into errors during install or in subsequent steps, the best thing to do is to completely remove the bucardo-owned objects and start fresh with the `bucardo install` step. This includes doing a cascaded drop of the 'bucardo' schema and the 'bucardo' role. This should completely remove any traces of bucardo and allow you to run the installation step cleanly again.
+**Tip:** If you run into errors during install or in subsequent steps, the best thing to do is to completely remove the bucardo-owned objects and start fresh with the `bucardo install` step. This includes doing a cascaded drop of the 'bucardo' schema and the 'bucardo' role. This should completely remove any traces of bucardo and allow you to run the installation step cleanly again.
 
 Installation From Packages
 --------------------------
@@ -140,7 +140,7 @@ This is a quick summary. See the specific pages for more information.
 
 [Add syncs](/Bucardo/cli/add_sync):
 
-    bucardo add sync <syncname> type=<synctype> source=<db> targetdb=<db> tables=tab1,tab2,...
+    bucardo add sync <syncname> type=<synctype> source=<db> targetdb=<db> tables=<table1>,<table2>,...
 
 Start Bucardo:
 

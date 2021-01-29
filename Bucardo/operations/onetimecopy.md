@@ -12,7 +12,7 @@ If this value is set to **2**, tables will only be copied if:
 This is handy for adding new tables to a [sync](/Bucardo/object_types/sync),
 in which the target table is empty.
 
-If the target table is \*not\* empty, but is not identical to the source, the best way to get them in sync is to truncate or delete all the rows from the slave, and then set onetimecopy to a value of 2. (While you can do the same thing by simply setting it to 1, that will also copy over all the rows for every other table in the sync).
+If the target table is *not* empty, but is not identical to the source, the best way to get them in sync is to truncate or delete all the rows from the slave, and then set onetimecopy to a value of 2. (While you can do the same thing by simply setting it to 1, that will also copy over all the rows for every other table in the sync.)
 
 To change the onetimecopy value of a sync, just run:
 

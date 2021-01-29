@@ -5,13 +5,13 @@ title: Bucardo newtable
 Adding a new table to an existing sync in Bucardo
 -------------------------------------------------
 
-Adding a new table to an existing [sync](/Bucardo/object_types/sync) is a fairly easy process. This process that Bucardo already knows about the table: if not, just run:
+Adding a new table to an existing [sync](/Bucardo/object_types/sync) is a fairly easy process. This process that Bucardo already knows about the table; if not, just run:
 
     bucardo add all tables
 
 The next step is:
 
-    bucardo update sync <syncname> add table <tab1> <tab2> ...
+    bucardo update sync <syncname> add table <table1> <table2> ...
 
 This adds one or more tables to an existing sync, by adding them to the source [herd](/Bucardo/object_types/herd) for this sync. If the tables are already in the sync, no changes are made.
 
