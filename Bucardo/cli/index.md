@@ -362,7 +362,7 @@ Separate documentation exists for the following commands:
 -   [add customname](/Bucardo/cli/add_customname)
 -   [add database](/Bucardo/cli/add_database)
 -   [add dbgroup](/Bucardo/cli/add_dbgroup)
--   [add herd](/Bucardo/cli/add_herd)
+-   [add relgroup](/Bucardo/cli/add_relgroup)
 -   [add sync](/Bucardo/cli/add_sync)
 -   [add table](/Bucardo/cli/add_table)
 -   [kick](/Bucardo/cli/kick)
