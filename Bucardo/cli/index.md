@@ -168,7 +168,7 @@ To get a list of all [syncs](/Bucardo/sync):
 
 This list will show the sync name, its type ([fullcopy](/Bucardo/object_types/fullcopy),
 [pushdelta](/Bucardo/object_types/pushdelta), or [swap](/Bucardo/object_types/swap)),
-the source [herd](/Bucardo/object_types/herd), the target database
+the source [relgroup](/Bucardo/object_types/relgroup), the target database
 (or database group), and current status.  For more details on a specific sync,
 use the 'status' command above.
 
@@ -198,19 +198,19 @@ To list all known sequences:
 
     bucardo list sequences
 
-#### Listing herds
+#### Listing relgroups
 
-To list all [herds](/Bucardo/object_types/herd):
+To list all [relgroup](/Bucardo/object_types/relgroup):
 
-    bucardo list herds
+    bucardo list relgroup
 
-To list only one or more specific herds, add their names:
+To list only one or more specific relgroups, add their names:
 
-    bucardo list herd <herdname>
+    bucardo list relgroup <relgroup>
 
-To get a list of all tables that belong to a herd, use the verbose argument:
+To get a list of all tables that belong to a relgroup, use the verbose argument:
 
-    bucardo list herd <herdname> --verbose
+    bucardo list relgroup <relgroup> --verbose
 
 ### Adding things
 
@@ -312,27 +312,25 @@ To add all sequences:
 
 All the notes that apply to 'add table' above apply here as well.
 
-#### Adding a herd
+#### Adding a relgroup
 
-A [herd](/Bucardo/object_types/herd) is a named group of tables that are replicated together. To add a herd:
+A [relgroup](/Bucardo/object_types/relgroup) is a named group of tables that are replicated together. To add a relgroup:
 
-     bucardo add herd <name> [goat goat]
-
-The list of goats are tables or sequences that should be part of this herd.
+     bucardo add relgroup <name> [table table]
 
 #### Adding a sync
 
 To add a sync:
 
-     bucardo add sync <name> dbgroup=<dbgroupname> relgroup=<herdname>
+     bucardo add sync <name> dbgroup=<dbgroupname> relgroup=<relgroup>
 
-The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the herd that we are replicating from. The type is one of [fullcopy](/Bucardo/object_types/fullcopy), [pushdelta](/Bucardo/object_types/pushdelta), or [swap](/Bucardo/object_types/swap). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
+The name is simply an internal name used by Bucardo. Keep it short but descriptive: it is used quite often in day to day use. The source is the name of the relgroup that we are replicating from. The type is one of [fullcopy](/Bucardo/object_types/fullcopy), [pushdelta](/Bucardo/object_types/pushdelta), or [swap](/Bucardo/object_types/swap). The target is either a database (targetdb=<dbname>) or a database group (targetgroup=<groupname>.
 
 As a shortcut for creating new syncs, you can also give a comma-separated list of tables, like so:
 
      bucardo add sync abc dbgroup=<dbgroupname> tables=sales,marketing,userdb
 
-This will create a herd of the same name as the sync if it does not already exist, add the tables to it, and then create the sync.
+This will create a relgroup of the same name as the sync if it does not already exist, add the tables to it, and then create the sync.
 
 Some of the other options that can be added to 'add sync',
 in the format name=value:

@@ -11,7 +11,7 @@ In most cases, you will not need to replicate sequences, unless your slaves
 are not read-only, or if you want your slaves to be ready
 for [failover](/Bucardo/operations/failover).  If you do decide to replicate
 them, just treat them like you would a table: add them to the [goat table](/Bucardo/schema/goat),
-gather them into [herds](/Bucardo/object_types/herd), and associate them
+gather them into [relgroups](/Bucardo/object_types/relgroup), and associate them
 with one or more [syncs](/Bucardo/object_types/sync).
 
 Swap syncs and sequences
