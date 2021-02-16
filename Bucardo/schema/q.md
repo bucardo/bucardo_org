@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.q
+title: Bucardo tables q
 ---
 
 
@@ -240,7 +240,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/bucardo.sync)(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/sync)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -250,7 +250,7 @@ FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/bu
 
 </td>
 <td>
-FOREIGN KEY ([sourcedb](/Bucardo/object_types/sourcedb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([sourcedb](/Bucardo/object_types/sourcedb)) REFERENCES [bucardo.db](/Bucardo/schema/db)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -260,7 +260,7 @@ FOREIGN KEY ([sourcedb](/Bucardo/object_types/sourcedb)) REFERENCES [bucardo.db]
 
 </td>
 <td>
-FOREIGN KEY ([targetdb](/Bucardo/object_types/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([targetdb](/Bucardo/object_types/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/db)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>

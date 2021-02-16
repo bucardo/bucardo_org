@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.bucardo log message
+title: Bucardo tables bucardo log message
 ---
 
 

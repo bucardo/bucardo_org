@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.bucardo truncate trigger log
+title: Bucardo tables bucardo truncate trigger log
 ---
 
 

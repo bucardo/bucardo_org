@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.dbmap
+title: Bucardo tables dbmap
 ---
 
 
@@ -100,7 +100,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/schema/db)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UP
 
 </td>
 <td>
-FOREIGN KEY (dbgroup) REFERENCES [bucardo.dbgroup](/Bucardo/schema/bucardo.dbgroup)(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (dbgroup) REFERENCES [bucardo.dbgroup](/Bucardo/schema/dbgroup)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>

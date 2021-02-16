@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.bucardo rate
+title: Bucardo tables bucardo rate
 ---
 
 

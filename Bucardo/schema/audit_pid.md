@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.audit pid
+title: Bucardo tables audit pid
 ---
 
 

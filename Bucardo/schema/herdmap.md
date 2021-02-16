@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.herdmap
+title: Bucardo tables herdmap
 ---
 
 
@@ -100,7 +100,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/schema/herd)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(name)
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/object_types/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE CASCADE
+FOREIGN KEY ([goat](/Bucardo/object_types/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/goat)(id) ON DELETE CASCADE
 
 </td>
 </tr>

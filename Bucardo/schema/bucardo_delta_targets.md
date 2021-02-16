@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.bucardo delta targets
+title: Bucardo tables bucardo delta targets
 ---
 
 

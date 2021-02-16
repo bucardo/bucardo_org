@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.bucardo config
+title: Bucardo tables bucardo config
 ---
 
 

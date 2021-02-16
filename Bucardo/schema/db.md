@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.db
+title: Bucardo tables db
 ---
 
 
@@ -214,7 +214,7 @@ NOT NULL DEFAULT <b>'true'</b>
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff)
+ONOFF
 
 </td>
 <td>

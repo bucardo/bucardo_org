@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.customcode
+title: Bucardo tables customcode
 ---
 
 

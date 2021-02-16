@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.customcode map
+title: Bucardo tables customcode map
 ---
 
 
@@ -128,7 +128,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/schema/bucardo.customcode)(id) ON DELETE CASCADE
+FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/schema/customcode)(id) ON DELETE CASCADE
 
 </td>
 </tr>
@@ -138,7 +138,7 @@ FOREIGN KEY (code) REFERENCES [bucardo.customcode](/Bucardo/schema/bucardo.custo
 
 </td>
 <td>
-FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/bucardo.sync)(name) ON UPDATE CASCADE ON DELETE SET NULL
+FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/sync)(name) ON UPDATE CASCADE ON DELETE SET NULL
 
 </td>
 </tr>
@@ -148,7 +148,7 @@ FOREIGN KEY ([sync](/Bucardo/sync)) REFERENCES [bucardo.sync](/Bucardo/schema/bu
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/object_types/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE SET NULL
+FOREIGN KEY ([goat](/Bucardo/object_types/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/goat)(id) ON DELETE SET NULL
 
 </td>
 </tr>

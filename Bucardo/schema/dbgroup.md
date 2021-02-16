@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.dbgroup
+title: Bucardo tables dbgroup
 ---
 
 
