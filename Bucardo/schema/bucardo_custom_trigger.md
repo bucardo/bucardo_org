@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.bucardo custom trigger
+title: Bucardo tables bucardo custom trigger
 ---
 
 
@@ -180,7 +180,7 @@ PRIMARY KEY (id)
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/object_types/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE CASCADE
+FOREIGN KEY ([goat](/Bucardo/object_types/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/goat)(id) ON DELETE CASCADE
 
 </td>
 </tr>

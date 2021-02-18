@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.bucardo track
+title: Bucardo tables bucardo track
 ---
 
 

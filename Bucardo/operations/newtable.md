@@ -13,7 +13,9 @@ The next step is:
 
     bucardo update sync <syncname> add table <table1> <table2> ...
 
-This adds one or more tables to an existing sync, by adding them to the source [herd](/Bucardo/object_types/herd) for this sync. If the tables are already in the sync, no changes are made.
+This adds one or more tables to an existing sync, by adding them to
+the source [relgroup](/Bucardo/object_types/relgroup) for this sync.
+If the tables are already in the sync, no changes are made.
 
     bucardo validate <syncname>
 

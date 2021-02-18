@@ -12,9 +12,13 @@ Example:
 
 Usage:
 
-    bucardo add table <name(s)> [herd=herdname]
+    bucardo add table <name(s)> [relgroup=relgroup]
 
-Adds one or more tables: the schema is optional: if not given, will add all tables with that name regardless of schema. Wildcards can be used as well: the preferred form is a percent sign (%) as the wildcard. A herd can be specified as well: all new tables will be added to this herd. The herd will be created if it does not already exist.
+Adds one or more tables: the schema is optional: if not given, will add all
+tables with that name regardless of schema.  Wildcards can be used as well:
+the preferred form is a percent sign (%) as the wildcard.  A relgroup can be
+specified as well: all new tables will be added to this relgroup.
+The relgroup will be created if it does not already exist.
 
 To add all the tables in the database, run:
 
@@ -23,8 +27,8 @@ To add all the tables in the database, run:
 ### Internals
 
 New tables cause an insert to the [goat table](/Bucardo/schema/goat).
-A new herd causes an insert to the [herd table](/Bucardo/schema/herd_table).
-Adding a table to a herd results in an insert to the [herdmap table](/Bucardo/schema/herdmap).
+A new relgroup causes an insert to the [herd table](/Bucardo/schema/herd_table).
+Adding a table to a relgroup results in an insert to the [herdmap table](/Bucardo/schema/herdmap).
 
 ### See also:
 

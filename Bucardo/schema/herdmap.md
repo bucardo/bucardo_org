@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.herdmap
+title: Bucardo tables herdmap
 ---
 
 
@@ -9,7 +9,7 @@ Table: bucardo.herdmap
 </h2>
 <table border="1" cellpadding="3">
 <caption>
-<b>Associates a [goat](/Bucardo/object_types/goat) with one or more herds</b>
+<b>Associates a [table](/Bucardo/object_types/table) with one or more [relgroups](/Bucardo/object_types/relgroup)</b>
 
 </caption>
 <tr>
@@ -100,7 +100,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/schema/herd)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>
@@ -110,7 +110,7 @@ FOREIGN KEY (herd) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(name)
 
 </td>
 <td>
-FOREIGN KEY ([goat](/Bucardo/object_types/goat)) REFERENCES [bucardo.goat](/Bucardo/schema/bucardo.goat)(id) ON DELETE CASCADE
+FOREIGN KEY ([table](/Bucardo/object_types/table)) REFERENCES [bucardo.goat](/Bucardo/schema/goat)(id) ON DELETE CASCADE
 
 </td>
 </tr>
@@ -140,7 +140,7 @@ Yes
 
 </td>
 <td>
-(herd,[goat](/Bucardo/object_types/goat))
+([relgroup](/Bucardo/object_types/relgroup),[table](/Bucardo/object_types/table))
 
 </td>
 </tr>

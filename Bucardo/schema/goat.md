@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.goat
+title: Bucardo tables goat
 ---
 
 
@@ -186,7 +186,7 @@ NULL
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff)
+ONOFF
 
 </td>
 <td>
@@ -200,7 +200,7 @@ NOT NULL DEFAULT <b>'inherits'</b>
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff)
+ONOFF
 
 </td>
 <td>
@@ -376,7 +376,7 @@ PRIMARY KEY (id)
 
 </td>
 <td>
-FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/schema/db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>

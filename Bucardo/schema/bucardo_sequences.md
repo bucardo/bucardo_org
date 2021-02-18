@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.bucardo sequences
+title: Bucardo tables bucardo sequences
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.sync
+title: Bucardo tables sync
 ---
 
 
@@ -256,7 +256,7 @@ NOT NULL DEFAULT <b>'active'</b>
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff)
+ONOFF
 
 </td>
 <td>
@@ -270,7 +270,7 @@ NOT NULL DEFAULT <b>'inherits'</b>
 
 </td>
 <td>
-[ONOFF](/Bucardo/domains/bucardo.onoff)
+ONOFF
 
 </td>
 <td>
@@ -474,7 +474,7 @@ PRIMARY KEY (name)
 
 </td>
 <td>
-FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/schema/herd)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -484,7 +484,7 @@ FOREIGN KEY (source) REFERENCES [bucardo.herd](/Bucardo/schema/bucardo.herd)(nam
 
 </td>
 <td>
-FOREIGN KEY ([targetdb](/Bucardo/object_types/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY ([targetdb](/Bucardo/object_types/targetdb)) REFERENCES [bucardo.db](/Bucardo/schema/db)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>
@@ -494,7 +494,7 @@ FOREIGN KEY ([targetdb](/Bucardo/object_types/targetdb)) REFERENCES [bucardo.db]
 
 </td>
 <td>
-FOREIGN KEY ([targetgroup](/Bucardo/object_types/targetgroup)) REFERENCES [bucardo.dbgroup](/Bucardo/schema/bucardo.dbgroup)(name) ON UPDATE CASCADE ON DELETE RESTRICT
+FOREIGN KEY ([targetgroup](/Bucardo/object_types/targetgroup)) REFERENCES [bucardo.dbgroup](/Bucardo/schema/dbgroup)(name) ON UPDATE CASCADE ON DELETE RESTRICT
 
 </td>
 </tr>

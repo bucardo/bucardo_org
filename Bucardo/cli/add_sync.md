@@ -6,22 +6,24 @@ The **add sync** command is used to create a new [Bucardo sync](/Bucardo/object_
 
 Example:
 
-    bucardo add sync alpha herd=gill dbs=A,B,C
+    bucardo add sync alpha relgroup=gill dbs=A,B,C
 
-Creates a new sync named **alpha** which replicates tables in the herd **gill** and replicates from source database **A** to target databases **B** and **C**
+Creates a new sync named **alpha** which replicates tables in
+the relgroup **gill** and replicates from source database **A** to
+target databases **B** and **C**
 
 Usages:
 
-    bucardo add sync <name> herd=<herdname> dbs=<database group>
+    bucardo add sync <name> relgroup=<relgroup> dbs=<database group>
 
-    bucardo add sync <name> herd=<herdname> dbs=<list of databases>
+    bucardo add sync <name> relgroup=<relgroup> dbs=<list of databases>
 
     bucardo add sync <name> tables=products,categories,sales dbs=<list of databases>
 
 ### Required arguments:
 
--   herd
-    -   The [Bucardo herd](/Bucardo/object_types/herd) containing the tables
+-   relgroup
+    -   The [Bucardo relgroup](/Bucardo/object_types/relgroup) containing the tables
         and sequences to be replicated
 -   dbs
     -   The [Bucardo database group](/Bucardo/object_types/database_group)
@@ -33,17 +35,17 @@ Usages:
         For example, to create a sync with three source databases and two
         targets:
 
-    bucardo add sync foobar herd=myherd dbs=A:source,B:target,C:target,D:source,E:source
+    bucardo add sync foobar relgroup=myrelgroup dbs=A:source,B:target,C:target,D:source,E:source
 
 Because the first database given always defaults to a source role, and all others default to a target role, the above sync could also be created with:
 
-    bucardo add sync foobar herd=myherd dbs=A,B,C,D:source,E:source
+    bucardo add sync foobar relgroup=myrelgroup dbs=A,B,C,D:source,E:source
 
 ### Optional arguments:
 
 -   tables
     -   A comma-separated list of tables which should be replicated by this
-        sync. A new [herd](/Bucardo/object_types/herd) will be created with
+        sync. A new [relgroup](/Bucardo/object_types/relgroup) will be created with
         the same name as the sync to hold these tables.
 -   status
     -   The initial status of this sync. Defaults to "active".  The only other

@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.herd
+title: Bucardo tables herd
 ---
 
 ## Table: bucardo.herd

@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.upgrade log
+title: Bucardo tables upgrade log
 ---
 
 

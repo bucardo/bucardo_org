@@ -1,5 +1,5 @@
 ---
-title: Bucardo tables bucardo.db connlog
+title: Bucardo tables db connlog
 ---
 
 
@@ -114,7 +114,7 @@ Definition
 
 </td>
 <td>
-FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/schema/bucardo.db)(name) ON UPDATE CASCADE ON DELETE CASCADE
+FOREIGN KEY (db) REFERENCES [bucardo.db](/Bucardo/schema/db)(name) ON UPDATE CASCADE ON DELETE CASCADE
 
 </td>
 </tr>
