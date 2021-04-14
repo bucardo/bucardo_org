@@ -7,26 +7,30 @@ title: Bucardo Command Line Tool
 You can tell `bucardo` where to find the main Bucardo database by use of
 the following arguments:
 
-- --dbport
-- --dbhost
-- --dbname
-- --dbuser
+- `--dbport`
+- `--dbhost`
+- `--dbname`
+- `--dbuser`
 
 Additional bucardo arguments include:
 
-- --quiet=0
-- --verbose=0
-- --bcverbose=1
-- --sendmail=0
-- --extraname=''
-- --debugfilesep=0
-- --debugdir='.'
-- --debugname=''
-- --debugsyslog=1 _Enables/Disables Syslog_
-- --debugfile=1    _Enables/Disables local log file ./log.bucardo_
-- --cleandebugs=0
+- `--quiet=0|1` _eliminate most output?_
+- `--verbose=0|1` _increase detail in output?_
+- `--debug=0|1` _enable debug output?_
+- `--sendmail=0|1` _send mail on interesting events? (startup, shutdown, and errors)_
+- `--loglevel=warn|terse|normal|verbose|debug|debug2`
+- `--logdest=stderr|syslog|none|filepath` _multiple allowed_
+- `--logextension=''` _suffix to add to log file name, e.g. '.log' -> log.bucardo.log_
+- `--logseparate` _write separate log for each Bucardo process, name ending with &lt;type&gt;.pid_
+- `--logshowline` _in logs show origin line number in Bucardo source code_
+- `--logclean` _remove any existing file logs_
+- `--extraname=''` _any string to append to Bucardo process name, visible in tools like ps_
 
 Rather than enter those every time, you may place the arguments into a [bucardorc](/Bucardo/configuration/bucardorc) file. All of the arguments below, except for "install", require that enough options exist to find the main Bucardo database.
+
+If you use `--logdest=syslog`, the syslog facility LOCAL1 will be used by default. That is determined by a Bucardo setting in its configuration database, and can be changed to e.g. LOCAL7 like this:
+
+    bucardo set syslog_facility=log_local7
 
 ### Installing and upgrading Bucardo
 
