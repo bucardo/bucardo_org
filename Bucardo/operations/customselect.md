@@ -35,4 +35,4 @@ Notes
 -----
 
 1.  You can't sync from a view, you can only sync from tables
-2.  The same view definition can be adapted to become the \`customcols\` query
+2.  The same view definition can be adapted to become the "customcols" query

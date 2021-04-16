@@ -11,7 +11,7 @@ Bucardo is at its heart a Perl daemon that listens for NOTIFY requests and acts 
 
 The first step in running Bucardo is to add two or more databases to the main bucardo database. Once this is done, information on which tables are to be replicated are added, as well as any groupings of tables. Then the syncs are added. Syncs are named replication actions, copying a specific set of tables from one server to another server or group of servers.
 
-Once Bucardo has been set up, triggers begin storing information about which rows were changed in all the tables of interest. For a swap sync (multi-master), the process goes like this:
+Once Bucardo has been set up, triggers begin storing information about which rows were changed in all the tables of interest. For a swap sync (multi-source), the process goes like this:
 
 1. A change is made to the table and gets recorded in the [bucardo_delta](/Bucardo/schema/bucardo.bucardo_delta) table.
 2. A notice is sent to the main Bucardo daemon, letting it know that the table has changed.

@@ -2,7 +2,7 @@
 title: Bucardo
 ---
 
-**Bucardo** is an asynchronous [PostgreSQL](https://www.postgresql.org/) replication system, allowing for both multi-master and multi-slave operations. It was developed at [Backcountry](https://www.backcountry.com/) by Jon Jensen and Greg Sabino Mullane of [End Point Corporation](https://www.endpoint.com/), and is now in use at many other organizations. Bucardo is free and open source software released under [the BSD license](/Bucardo/LICENSE).
+**Bucardo** is an asynchronous [PostgreSQL](https://www.postgresql.org/) replication system, allowing for multi-source, multi-target operations. It was developed at [Backcountry](https://www.backcountry.com/) by Jon Jensen and Greg Sabino Mullane of [End Point Corporation](https://www.endpoint.com/), and is now in use at many other organizations. Bucardo is free and open source software released under [the BSD license](/Bucardo/LICENSE).
 
 Obtaining Bucardo
 -----------------
@@ -42,7 +42,7 @@ Community
 There are many ways you can help the Bucardo project:
 
 -   Tell us how you are using Bucardo (different platforms, Postgres versions, configurations)
--   Edit this wiki
+-   Submit pull requests to this documentation
 -   Submit bug reports
 -   Fix bugs
 -   Write code (including helper programs)
@@ -59,10 +59,10 @@ We track bugs for Bucardo at [GitHub](https://github.com/bucardo/bucardo/issues/
 Development
 -----------
 
-Bucardo development is managed in the [Git](https://git-scm.com/) version control system. Bucardo is composed of two separate projects, each of which can be downloaded for local development as follows:
+Bucardo development is managed in the [Git](https://git-scm.com/) version control system. Bucardo is composed of two code projects and one documentation repository, each of which can be downloaded for local development as follows:
 
     git clone git@github.com:bucardo/bucardo.git
     git clone git@github.com:bucardo/dbixsafe.git
-
+    git clone git@github.com:bucardo/bucardo_org.git
 
 See the main [GitHub project](https://github.com/bucardo) for easy patch contribution by the general public.

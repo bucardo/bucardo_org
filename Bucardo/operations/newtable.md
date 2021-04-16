@@ -23,7 +23,7 @@ This tells Bucardo to run the validate_sync() function, which makes any changes 
 
     bucardo update sync onetimecopy=2
 
-This instructs the sync to enter [onetimecopy](/Bucardo/operations/onetimecopy) mode. This step is not needed if the sync is [fullcopy](/Bucardo/object_types/fullcopy). The value of 2 means that only empty tables will be copied over. We do this to ensure that all rows in the new table are copied from the master to the slave. Once they are all copied, only the differences are copied from that point forward.
+This instructs the sync to enter [onetimecopy](/Bucardo/operations/onetimecopy) mode. This step is not needed if the sync is [fullcopy](/Bucardo/object_types/fullcopy). The value of 2 means that only empty tables will be copied over. We do this to ensure that all rows in the new table are copied from the source to the target. Once they are all copied, only the differences are copied from that point forward.
 
 Optionally, you can ask Bucardo to defer index processing until the end of the COPY:
 

@@ -101,7 +101,7 @@ Note that the installation will create the bucardo Postgres account without a pa
 
 -    Use the "ident" method in pg_hba.conf, and create both a bucardo system account and a bucardo Postgres account. The ident method is enabled by default in Debian-based packages, and will allow the installation to log in if run under the bucardo system account.
 
-If all goes well at this point, Bucardo is installed. **Note:** Although you do not need to run the install script on each slave node in your cluster, you will need to manually create the 'bucardo' role on each slave node before proceeding with the installation and configuration.
+If all goes well at this point, Bucardo is installed. **Note:** Although you do not need to run the install script on each node in your cluster, you need to manually create the 'bucardo' Postgres role on each node before proceeding with the installation and configuration.
 
 **Tip:** If you run into errors during install or in subsequent steps, the best thing to do is to completely remove the bucardo-owned objects and start fresh with the `bucardo install` step. This includes doing a cascaded drop of the 'bucardo' schema and the 'bucardo' role. This should completely remove any traces of bucardo and allow you to run the installation step cleanly again.
 

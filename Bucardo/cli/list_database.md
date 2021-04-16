@@ -14,7 +14,7 @@ Usage:
 
 ` bucardo list database `<name(s)>
 
-If one or more database names is given, only lists the given ones. Wildcards can be used. To view detailed information, use the **--vv** (very verbose) argument. The alternate forms **list databases**, *list db*', and **list dbs** are also accepted.
+If one or more database names is given, only lists the given ones. Wildcards can be used. To view detailed information, use the `--vv` (very verbose) argument. The alternate forms **list databases**, *list db*', and **list dbs** are also accepted.
 
 ### Examples
 

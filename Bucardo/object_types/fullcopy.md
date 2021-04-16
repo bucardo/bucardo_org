@@ -3,8 +3,8 @@ title: Fullcopy
 ---
 
 **fullcopy** is a type of Bucardo [sync](/Bucardo/object_types/sync)
-that copies an entire table from one database (the master) to one or more
-slave databases.  Any rows on the slaves are removed first, and the table
+that copies an entire table from one database (the source) to one or more
+target databases.  Any rows on the targets are removed first, and the table
 is populated using the COPY command.  This is the only sync that can be used
 for tables that have no primary key and no unique index.  Because it copies
 the entire table every time, it is not efficient and should not be run often

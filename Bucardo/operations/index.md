@@ -11,5 +11,4 @@ Some operations are explained in this section:
 -   [Makedelta](/Bucardo/operations/makedelta)
 -   [Adding a new table to an existing sync](/Bucardo/operations/newtable)
 -   [Onetimecopy](/Bucardo/operations/onetimecopy)
--   [Readonly Setup](/Bucardo/operations/readonly)
 -   [Replication Sequences](/Bucardo/operations/sequences)

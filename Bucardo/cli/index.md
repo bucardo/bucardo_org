@@ -260,7 +260,7 @@ include:
 
 Additional parameters:
 
--   --force: Forces the database to be added without running a connection test.
+-   `--force`: Forces the database to be added without running a connection test.
 
 For example, to add three new databases on different hosts:
 
@@ -277,8 +277,8 @@ the connection failed due to an authentication failure.
 
 #### Adding a database group
 
-Databases can be grouped together, so that one master can push to a group
-of slave databases rather than a single database.  To create a new named group:
+Databases can be grouped together, so that one source database can push to a group
+of target databases rather than a single database. To create a new named group:
 
     bucardo add dbgroup name db1:source db2:source db3:target ...
 

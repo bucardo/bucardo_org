@@ -8,9 +8,8 @@ Options for [bucardo](/Bucardo/cli/) can be specified either at the command line
 -   .bucardorc in the user's home directory
 -   /etc/bucardorc
 
-The format of each file is simply **name=value**, where name is any of the options passed to the bucardo program. Any command line options will override the options in the bucardorc file.
+The format of each file is simply `name=value`, where name is any of the options passed to the bucardo program. Any command line options will override the options in the bucardorc file.
 
-If the option **--no-bucardorc** is given to bucardo, none of the bucardorc files will be used.
+If the option `--no-bucardorc` is given to bucardo, none of the bucardorc files will be used.
 
-You can also specify the location of a bucardorc file to use, by using **--bucardorc=filename**. If this option is used, all other default locations above will be ignored, and the program will error out if the file is not found.
-
+You can also specify the location of a bucardorc file to use, by using `--bucardorc=filename`. If this option is used, all other default locations above will be ignored, and the program will abort if the file is not found.

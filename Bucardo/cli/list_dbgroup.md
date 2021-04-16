@@ -13,7 +13,7 @@ Usage:
 
     bucardo list dbgroup <name(s)>
 
-If one or more group names are given, only lists the given ones. Wildcards can be used. To view detailed information, use the **--vv** (very verbose) argument.
+If one or more group names are given, only lists the given ones. Wildcards can be used. To view detailed information, use the `--vv` (very verbose) argument.
 
 ### Examples
 

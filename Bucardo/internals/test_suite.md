@@ -15,7 +15,7 @@ The Bucardo test suite is a good test to prove a system can run Bucardo successf
 |02-simple.t|Creates a simple pushdelta sync between two test databases and ensures it works|
 |03-goat.t|Currently contains no tests|
 |04-pushdelta.t|Creates a pushdelta sync and tests correct handling of database constraints and triggers|
-|04-pushdelta_twosyncs.t|Similar to 04-pushdelta.t, but with two slave databases|
+|04-pushdelta_twosyncs.t|Similar to 04-pushdelta.t, but with two target databases|
 |05-fullcopy.t|Tests tables and sequences in a fullcopy sync, including testing customselect|
 |06-multicolpk.t|Tests multi-column primary keys in a pushdelta sync|
 |06-multicolpushdelta.t|Similar to 06-multicolpk.t, including more difficult scenarios|
