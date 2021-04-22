@@ -18,6 +18,17 @@ The list of databases is optional, and can include the type of role as well. By 
 
     bucardo add dbgroup horses A:source B:target C:target
 
+The roles are "source", "target", or "fullcopy".  The data is going
+to flow from the "source" database to the "target" or "fullcopy" database.
+
+"fullcopy" role allows entire tables from the "source" to be copied.
+Any rows on the "fullcopy" databases are removed first, and the tables
+are populated using the COPY command.  This mode is useful for tables
+that have no primary key or unique index.  Because it copies the entire
+tables every time, it is not efficient and should not be used for large
+tables.  It is better on most cases to a unique index to the table and
+use the "target" role.
+
 You can also add new databases to a group with the add dbgroup command. Databases can only be added this way: they are never removed from the group. For example, to add a new database to the same group with a role of fullcopy, use:
 
     bucardo add dbgroup horses D:fullcopy

@@ -3,21 +3,17 @@ title: Sync
 ---
 
 Bucardo replication events happens in **syncs**, which replicate one or more
-tables and come in one of three types:
-
--   [fullcopy](/Bucardo/object_types/fullcopy)
--   [pushdelta](/Bucardo/object_types/pushdelta)
--   [swap](/Bucardo/object_types/swap)
+tables.
 
 To add a new sync, run:
 
-    bucardo add sync <syncname> source=xx targetdb=yy targetgroup=zz type=<type> tables=x,y,z
+    bucardo add sync name relgroup=xxx dbs=xxx
 
--   *syncname* is what you want to name this sync - keep it short and descriptive
--   *source* is the name of a source [relgroup](/Bucardo/object_types/relgroup)
--   *targetdb* is the name of a database
--   *targetgroup* is the name of a [database group](/Bucardo/object_types/database_group) (note: only one of targetdb or targetgroup is required)
--   *type* is one of the three sync types: pushdelta, fullcopy, or swap
+-   *name* is what you want to name this sync - keep it short and descriptive
+-   *relgroup* is the name of a source [relgroup](/Bucardo/object_types/relgroup)
+-   *dbs* are the names of databases
+-   *dbgroup* is the name of a [database group](/Bucardo/object_types/database_group)
+-   (note: only one of dbs or dbgroup is required)
 -   *tables* is an optional list of tables that should be immediately added to the new sync. A [relgroup](/Bucardo/object_types/relgroup) with the same name as the sync itself will be automatically created to contain these tables.
 
 To modify an existing sync, run:
@@ -28,4 +24,3 @@ Where name is one of the columns of the [sync table](/Bucardo/schema/sync).
 
 To add a database to an existing sync the **update dbgroup** command should be
 used (see [update_dbgroup](/Bucardo/cli/update_dbgroup)).
-
