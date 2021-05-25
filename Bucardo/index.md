@@ -52,7 +52,7 @@ Three Bucardo mailing lists are available:
 -   [Bucardo-announce](https://bucardo.org/mailman/listinfo/bucardo-announce): This is a low volume list used for notices of new versions, important bugs, and security warnings. It is highly recommended that anyone using Bucardo subscribe to this list.
 -   [Bucardo-general](https://bucardo.org/mailman/listinfo/bucardo-general): Used to discuss any aspect of Bucardo. Bug reports, usage questions, feature requests, and general discussions should be sent to this list.
 
-Bucardo users have real-time chat in the [\#bucardo IRC channel on Freenode](https://webchat.freenode.net/?channels=#bucardo) but the Bucardo-general mailing list tends to be a better venue for questions because it is asynchronous, seen by more people.
+Bucardo users have real-time chat in the [\#bucardo IRC channel on Libera Chat](https://libera.chat/) but the Bucardo-general mailing list tends to be a better venue for questions because it allows for more detailed descriptions and is seen by more people.
 
 We track bugs for Bucardo at [GitHub](https://github.com/bucardo/bucardo/issues/).
 
