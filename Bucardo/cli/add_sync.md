@@ -63,6 +63,15 @@ Because the first database given always defaults to a source role, and all other
     -   Determine if triggers are created that signal Bucardo to run when
         a table on one of the source databases for this sync has changes.
         Defaults to 1 (on).
+-   autokick
+    -   Set whether or not tables in the sync should automatically send
+        kick messages when they're modified.  May be overridden by
+        the "autokick" parameter of individual tables.  Defaults to 1 (on).
+    -   Setting it to 0 (off) ensures that while deltas are logged,
+        they will not be copied anywhere until you tell Bucardo to do so.
+        This option is useful to log the changes to buy time to prepare your
+        new database.
+
 
 ### See also:
 
