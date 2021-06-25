@@ -30,6 +30,12 @@ New tables cause an insert to the [goat table](/Bucardo/schema/goat).
 A new relgroup causes an insert to the [herd table](/Bucardo/schema/herd_table).
 Adding a table to a relgroup results in an insert to the [herdmap table](/Bucardo/schema/herdmap).
 
+### Optional arguments:
+
+-   autokick
+    -   Set whether or not table should automatically send kick messages
+        when it's modified.  Defaults to the setting of the "sync".
+
 ### See also:
 
 -   [list_table](/Bucardo/cli/list_table)
