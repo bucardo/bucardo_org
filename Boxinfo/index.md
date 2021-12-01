@@ -68,7 +68,7 @@ Everyone is encouraged to look over and make improvements to the code. The lates
 
 ### Contributors
 
--   Greg Sabino Mullane (greg@endpoint.com)
--   David Christensen (david@endpoint.com)
+-   Greg Sabino Mullane
+-   David Christensen
 -   Greg Smith (gsmith@gregsmith.com)
 -   Robert Treat (rob@xzilla.net)

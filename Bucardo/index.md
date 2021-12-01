@@ -2,7 +2,7 @@
 title: Bucardo
 ---
 
-**Bucardo** is an asynchronous [PostgreSQL](https://www.postgresql.org/) replication system, allowing for multi-source, multi-target operations. It was developed at [Backcountry](https://www.backcountry.com/) by Jon Jensen and Greg Sabino Mullane of [End Point Corporation](https://www.endpoint.com/), and is now in use at many other organizations. Bucardo is free and open source software released under [the BSD license](/Bucardo/LICENSE).
+**Bucardo** is an asynchronous [PostgreSQL](https://www.postgresql.org/) replication system, allowing for multi-source, multi-target operations. It was developed at [Backcountry](https://www.backcountry.com/) by Jon Jensen and Greg Sabino Mullane of [End Point Corporation](https://www.endpointdev.com/), and is now in use at many other organizations. Bucardo is free and open source software released under [the BSD license](/Bucardo/LICENSE).
 
 Obtaining Bucardo
 -----------------
