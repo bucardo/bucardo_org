@@ -987,6 +987,7 @@ select {
 .promo-block .promo-title .fa {
   color: rgba(0, 0, 0, 0.5);
 }
+
 .promo-block .figure-holder-inner {
   background: #fff;
   margin-bottom: 30px;
@@ -996,6 +997,7 @@ select {
 }
 .promo-block .figure-holder-inner img {
   border: 5px solid #fff;
+  max-width: 100%;
 }
 .promo-block .figure-holder-inner .mask {
   display: block;
