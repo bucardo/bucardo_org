@@ -18,7 +18,7 @@ The documentation is also available in HTML format:
 
 ### Download
 
-The latest version, 2.25.0, can be downloaded here:
+The latest version, 2.26.0, can be downloaded here:
 
 -   [check_postgres.tar.gz](http://bucardo.org/downloads/check_postgres.tar.gz)
 
