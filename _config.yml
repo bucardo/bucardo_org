@@ -4,6 +4,9 @@ title: Bucardo
 # Build settings
 markdown: kramdown
 
+kramdown:
+    gfm_quirks: [no_auto_typographic]
+
 baseurl: ""
 
 analytics: "G-RTPVZBNQFL"
@@ -41,7 +44,7 @@ defaults:
         values:
             project: "pgsi"
 
-gems:
+plugins:
     - jekyll-redirect-from
 
 exclude: ['README', 'Gemfile', 'Gemfile.lock']
